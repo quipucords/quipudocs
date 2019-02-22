@@ -4,6 +4,8 @@ Installing the Quipucords Command Line Tool
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 qpc, the command line tool that is installed by RPM, is available for `download <https://copr.fedorainfracloud.org/coprs/g/quipucords/qpc/>`_ from the Fedora COPR build and repository system. Use the following steps to install the command line tool.
 
+Download and Configure EPEL
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 1. Enable the EPEL repo for the server. You can find the appropriate architecture and version on the `EPEL wiki <https://fedoraproject.org/wiki/EPEL>`_.
 
   - For Red Hat Enterprise Linux 7 or CentOS 7, enter the following command::
@@ -33,20 +35,21 @@ qpc, the command line tool that is installed by RPM, is available for `download 
 
       # wget -O /etc/yum.repos.d/group_quipucords-qpc-fedora-28.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/qpc/repo/fedora-28/group_quipucords-qpc-fedora-28.repo
 
-3. Install the qpc package:
+Install the QPC Package:
+~~~~~~~~~~~~~~~~~~~~~~~~
 
   - For Red Hat Enterprise Linux 7 or CentOS 7, enter the following command::
 
-      # yum -y install qpc-0.0.45-1.git.7.f281c8d.el7
+      # yum -y install qpc-0.0.46-1.git.31.2c63673.el7
 
   - For Red Hat Enterprise Linux 6 or CentOS 6, enter the following command::
 
-      # yum -y install qpc-0.0.45-1.git.7.f281c8d.el6
+      # yum -y install qpc-0.0.46-1.git.31.2c63673.el6
 
   - For Fedora 27, enter the following command::
 
-      # yum -y install qpc-0.0.45-1.git.7.f281c8d.fc27
+      # yum -y install qpc-0.0.46-1.git.31.2c63673.fc27
 
   - For Fedora 28, enter the following command::
 
-      # yum -y install qpc-0.0.45-1.git.7.f281c8d.fc28
+      # yum -y install qpc-0.0.46-1.git.31.2c63673.fc28
