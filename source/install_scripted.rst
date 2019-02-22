@@ -1,22 +1,12 @@
 Scripted Installation
 ----------------------
-The scripted installation runs an installer that uses Ansible to install the command line tool and container image and any associated dependencies.
-
-**IMPORTANT:** Red Hat Enterprise Linux 7 users must enable the `Extras <https://access.redhat.com/solutions/912213>`_ (``rhel-7-server-extras-rpms``) and `Optional <https://access.redhat.com/solutions/265523>`_ (``rhel-7-server-optional-rpms``) repositories to use the scripted installation.
-
-When you run the scripted installation, the server is installed and started as described in `Configuring and Starting Quipucords <install.html#config-and-start>`_. However, you can also run the scripted installation with options if you want to change some of the defaults.
-
-Installing the Ansible Prerequisite
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Prepare the system to install the software by installing Ansible. For more information, see the `Ansible installation documentation <http://docs.ansible.com/ansible/latest/intro_installation.html#installing-the-control-machine>`_.
+The scripted installation runs an installer that uses Ansible to install the command line tool, quipucords server image, and the database image. When you run the scripted installation, the server is installed and started as described in `Configuring and Starting Quipucords <install.html#config-and-start>`_. However, you can change some of the defaults used by the scripted installation with the `Installation Options <install.html#install-opts>`_.
 
 Obtaining the Installer
 ^^^^^^^^^^^^^^^^^^^^^^^
-After Ansible is installed, use the following steps to obtain the installer for the Quipucords command line tool and server.
-
 1. Download the installer by entering the following command::
 
-    # curl -k -O -sSL https://github.com/quipucords/quipucords/releases/download/0.0.45/quipucords.install.tar.gz
+    # curl -k -O -sSL https://github.com/quipucords/quipucords/releases/download/0.0.46/quipucords.install.0.0.46.tar.gz
 
 2. Extract the installer by entering the following command::
 
@@ -26,9 +16,9 @@ Running the Installer
 ^^^^^^^^^^^^^^^^^^^^^
 You can run the installer in different ways, depending on your needs:
 
-- You can run with internet connectivity to download necessary packages or set up and pull for needed repositories. This choice is the recommended approach because it simplifies the installation.
+- **Online:** You can run with internet connectivity to install any associated dependencies, download required packages, and pull for needed repositories. This choice is the recommended approach because it simplifies the installation.
 
-- You can download the RPM packages and container image and place them in a specified directory. This choice is useful when you are installing on systems with limited or no access to the internet.
+- **Offline:** You can run the installer offline by manually installing dependencies, downloading RPM packages and container images and placing them into a specified directory. This choice is useful when you are installing on systems with limited or no access to the internet.
 
 Installing with Internet Connectivity
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -38,7 +28,7 @@ If you choose the internet connectivity option, use the following steps to run t
 
     # cd install/
 
-2. Start the installation by entering the following command. Alternatively, enter the following command with options as described in `Installation Options`_::
+2. Start the installation by entering the following command. Alternatively, enter the following command with options as described in `Installation Options <install.html#install-opts>`_::
 
     # ./install.sh
 
@@ -46,26 +36,36 @@ The output appears similar to the following example::
 
     Installation complete.
 
-Next Steps
-++++++++++
-When the installation completes, the Quipucords server is installed and started. In addition, a connection to the command line tool is configured on the same system on which the server is installed. However, you must still complete the following steps before you can begin using Quipucords:
+Installing without Internet Connectivity
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+If you choose the offline option to run the installer, you will need to obtain the following packages on a machine with internet connectivity.
 
-- `Changing the Default Password for the Quipucords Server <install.html#change-default-pw>`_
-- `Logging in to the Quipucords Server <cli_server_interaction.html#login>`_
+**Quipucords Server Package:**
 
-Installing with Downloaded Packages
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-If you choose the downloaded packages option to run the installer, you must first gather the necessary packages. Then use the following steps to run the installer.
+- Server Container Image (`Download <https://github.com/quipucords/quipucords/releases/download/0.0.46/quipucords.0.0.46.tar.gz>`_)
 
-To install the server, you must have the following items. For more information about download locations for specific operating systems, see `Installing the Quipucords Server Container Image <install.html#container>`_.
+**Build the Postgres Docker Image:**
 
-- Docker package
-- Server container image
+The Quipucords server requires a Postgres Docker image.  You must build the Docker image on a machine with internet connectivity.  Follow the steps documented below to create a Postgres Docker image.
 
-To install the command line tool, you must have the following items. For more information about download locations for specific operating systems, see `Installing the Quipucords Command Line Tool <install.html#commandline>`_.
+- Install Docker (`Documentation <https://docs.docker.com/install/>`_)
+- Create the postgres image tar with the following commands::
 
-- EPEL package
-- QPC package
+      # docker pull postgres:9.6.10
+      # docker save -o postgres.9.6.10.tar postgres:9.6.10
+
+**Note:** The offline installation script requires the postgres tar to be named ``postgres.9.6.10.tar``.
+
+**Command Line Tool RPM Package:**
+
+- RHEL & Centos 6 (`Download <https://github.com/quipucords/qpc/releases/download/0.0.46/qpc-0.0.46-1.git.31.2c63673.el6.noarch.rpm>`_)
+- RHEL & Centos 7 (`Download <https://github.com/quipucords/qpc/releases/download/0.0.46/qpc-0.0.46-1.git.31.2c63673.el7.noarch.rpm>`_)
+- Fedora 27 (`Download <https://github.com/quipucords/qpc/releases/download/0.0.46/qpc-0.0.46-1.git.31.2c63673.fc27.noarch.rpm>`_)
+- Fedora 28 (`Download <https://github.com/quipucords/qpc/releases/download/0.0.46/qpc-0.0.46-1.git.31.2c63673.fc28.noarch.rpm>`_)
+
+**Transfer Packages**
+
+After the required packages have been collected, they will need to be transferred to the machine where the Quipucords server will be installed.
 
 1. Change to the installer directory by entering following command::
 
@@ -75,24 +75,38 @@ To install the command line tool, you must have the following items. For more in
 
     # mkdir packages
 
-3. Copy the downloaded packages into the ``packages`` directory by entering the following command::
+3. Move the downloaded packages into the ``packages`` directory by entering the following command::
 
-    # cp /path/to/package ./packages/
+    # mv /path/to/package ./packages/
 
-4. Start the installation by entering the following command. Alternatively, enter the following command with options as described in `Installation Options`_::
+Offline Dependencies:
++++++++++++++++++++++
 
-    # ./install.sh
+The following associated dependencies must be installed onto the offline machine before the installation script can be executed.
+
+**Server Dependencies:**
+
+- `Ansible <install.html#installing-the-ansible-prerequisite>`_
+- `Docker <install.html#installing-docker-and-the-quipucords-server-container-image>`_
+
+**Command Line Tool Dependencies:**
+
+- `Download & Configure EPEL <install.html#commandline>`_
+- Python 3.4
+- Python 3.4-requests
+
+**Start Offline Install**
+
+Start the offline installation by entering the following command. Alternatively, enter the following command with options as described in `Installation Options`_::
+
+    # ./install.sh -e install_offline=true
 
 The output appears similar to the following example::
 
     Installation complete.
 
-Next Steps
-++++++++++
-When the installation completes, the Quipucords server is installed and started. In addition, a connection to the command line tool is configured on the same system on which the server is installed. However, you must still complete the following steps before you can begin using Quipucords:
 
-- `Changing the Default Password for the Quipucords Server <install.html#change-default-pw>`_
-- `Logging in to the Quipucords Server <cli_server_interaction.html#login>`_
+.. _install-opts:
 
 Installation Options
 ~~~~~~~~~~~~~~~~~~~~
@@ -101,6 +115,10 @@ The installer has various options, each of which has a default value. You can ei
     # ./install.sh -e option1=value1 -e option2=value2 ...
 
 Options:
+ - **install_offline**
+    - Contains a ``true`` or ``false`` value. Defaults to ``false``. Supply ``true`` to start an offline installation.
+ - **use_supervisord**
+    - Contains a ``true`` or ``false`` value. Defaults to ``true``. Supply ``false`` to start server without supervisord.
  - **install_server**
     - Contains a ``true`` or ``false`` value. Defaults to ``true``. Supply ``false`` to skip the installation of the server.
  - **install_cli**
@@ -110,7 +128,7 @@ Options:
  - **server_install_dir**
     - Contains the fully qualified path to the installation directory for the Quipucords server. Defaults to ``~/quipucords/``.
  - **server_port**
-    - Contains the port number for the Quipucords server. Defaults to ``443``.
+    - Contains the port number for the Quipucords server. Defaults to ``9443``.
  - **server_name**
     - Contains the name for the Quipucords server. Defaults to ``quipucords``.
  - **QPC_SERVER_TIMEOUT**
