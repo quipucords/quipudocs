@@ -38,7 +38,7 @@ Copyright 2017-2019, Red Hat, Inc.
 
 quipudocs is released under the `GNU Public License version 3 <LICENSE>`_.
 
-.. _readthedocs: https://quipudocs.readthedocs.io/en/latest/
+.. _readthedocs: https://quipucords.readthedocs.io/en/latest/
 .. |license| image:: https://img.shields.io/github/license/quipucords/quipudocs.svg
 .. |Updates| image:: https://pyup.io/repos/github/quipucords/quipudocs/shield.svg
    :target: https://pyup.io/repos/github/quipucords/quipudocs/
