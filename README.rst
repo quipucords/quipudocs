@@ -5,14 +5,14 @@ quipudocs - Documentation for Quipucords
 
 This *README* file contains information about the installation and development of quipudocs.
 
-- `Introduction to quipucords`_
+- `Introduction to quipudocs`_
 - `Development`_
 - `Authors`_
 - `Copyright and License`_
 
 
 Introduction to quipudocs
---------------------------
+-------------------------
 quipudocs is *sphinx* based information documentation.
 
 
