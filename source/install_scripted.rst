@@ -16,7 +16,7 @@ After Ansible is installed, use the following steps to obtain the installer for 
 
 1. Download the installer by entering the following command::
 
-    # curl -k -O -sSL https://github.com/quipucords/quipucords/releases/download/0.0.44/quipucords.install.tar.gz
+    # curl -k -O -sSL https://github.com/quipucords/quipucords/releases/download/0.0.45/quipucords.install.tar.gz
 
 2. Extract the installer by entering the following command::
 
@@ -115,3 +115,7 @@ Options:
     - Contains the name for the Quipucords server. Defaults to ``quipucords``.
  - **QPC_SERVER_TIMEOUT**
     - Contains the HTTP timeout length for the Quipucords server. Defaults to ``120``.
+ - **QPC_DBMS_USER**
+    - (Optional) Specifies the database user for postgres. Defaults to ``postgres``.
+ - **QPC_DBMS_PASSWORD**
+    - (Optional) Specifies the database password for postgres. Defaults to ``password``.
