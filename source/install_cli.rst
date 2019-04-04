@@ -27,13 +27,6 @@ Download and Configure EPEL
 
       # wget -O /etc/yum.repos.d/group_quipucords-qpc-epel-6.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/qpc/repo/epel-6/group_quipucords-qpc-epel-6.repo
 
-  - For Fedora 27, enter the following command::
-
-      # wget -O /etc/yum.repos.d/group_quipucords-qpc-fedora-27.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/qpc/repo/fedora-27/group_quipucords-qpc-fedora-27.repo
-
-  - For Fedora 28, enter the following command::
-
-      # wget -O /etc/yum.repos.d/group_quipucords-qpc-fedora-28.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/qpc/repo/fedora-28/group_quipucords-qpc-fedora-28.repo
 
 Install the QPC Package:
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,11 +38,3 @@ Install the QPC Package:
   - For Red Hat Enterprise Linux 6 or CentOS 6, enter the following command::
 
       # yum -y install qpc-0.0.47-ACTUAL_COPR_GIT_COMMIT.el6
-
-  - For Fedora 27, enter the following command::
-
-      # yum -y install qpc-0.0.47-ACTUAL_COPR_GIT_COMMIT.fc27
-
-  - For Fedora 28, enter the following command::
-
-      # yum -y install qpc-0.0.47-ACTUAL_COPR_GIT_COMMIT.fc28

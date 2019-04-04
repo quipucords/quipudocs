@@ -52,7 +52,7 @@ For Centos 6 or RHEL 6::
 
   # docker run --name qpc-db  -e POSTGRES_USER="postgres" -e POSTGRES_PASSWORD="password" -v /var/lib/docker/volumes/qpc-data:/var/lib/postgresql/data -d postgres:9.6.10
 
-For Centos7, RHEL 7, Fedora 27, or Fedora 28::
+For Centos7 and RHEL 7::
 
   # docker run --name qpc-db  -e POSTGRES_USER="postgres" -e POSTGRES_PASSWORD="password" -v qpc-data:/var/lib/postgresql/data -d postgres:9.6.10
 
