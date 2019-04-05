@@ -33,8 +33,8 @@ Install the QPC Package:
 
   - For Red Hat Enterprise Linux 7 or CentOS 7, enter the following command::
 
-      # yum -y install qpc-0.0.47-ACTUAL_COPR_GIT_COMMIT.el7
+      # yum -y install qpc-1.0.0-ACTUAL_COPR_GIT_COMMIT.el7
 
   - For Red Hat Enterprise Linux 6 or CentOS 6, enter the following command::
 
-      # yum -y install qpc-0.0.47-ACTUAL_COPR_GIT_COMMIT.el6
+      # yum -y install qpc-1.0.0-ACTUAL_COPR_GIT_COMMIT.el6
