@@ -48,11 +48,11 @@ Starting the Postgres DB
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Quipucords server requires the Postgres container to be running.   Run the following docker command::
 
-For Centos 6 or RHEL 6::
+For CentOS 6 or RHEL 6::
 
   # docker run --name qpc-db  -e POSTGRES_USER="postgres" -e POSTGRES_PASSWORD="password" -v /var/lib/docker/volumes/qpc-data:/var/lib/postgresql/data -d postgres:9.6.10
 
-For Centos7, RHEL 7, Fedora 27, or Fedora 28::
+For CentOS7 and RHEL 7::
 
   # docker run --name qpc-db  -e POSTGRES_USER="postgres" -e POSTGRES_PASSWORD="password" -v qpc-data:/var/lib/postgresql/data -d postgres:9.6.10
 
@@ -62,11 +62,11 @@ After you make the decisions on the configuration options for the server, you ca
 
 If your system does not have SELinux enabled, you can start the Quipucords server with the following Docker command::
 
-  # sudo docker run --name quipucords --link qpc-db:qpc-link -d -e "USE_SUPERVISORD=true" -e "QPC_DBMS_USER=postgres" -e "QPC_DBMS_PASSWORD=password" -e "QPC_DBMS_HOST=qpc-db" -p 9443:443 -v ~/quipucords/sshkeys:/sshkeys -v ~/quipucords/data:/var/data -v ~/quipucords/log:/var/log -i quipucords:0.0.47
+  # sudo docker run --name quipucords --link qpc-db:qpc-link -d -e "USE_SUPERVISORD=true" -e "QPC_DBMS_USER=postgres" -e "QPC_DBMS_PASSWORD=password" -e "QPC_DBMS_HOST=qpc-db" -p 9443:443 -v ~/quipucords/sshkeys:/sshkeys -v ~/quipucords/data:/var/data -v ~/quipucords/log:/var/log -i quipucords:1.0.0
 
 If your system does have SELinux enabled, you must append ``:z`` to each volume as follows::
 
-  # sudo docker run --name quipucords --link qpc-db:qpc-link -d -e "USE_SUPERVISORD=true" -e "QPC_DBMS_USER=postgres" -e "QPC_DBMS_PASSWORD=password" -e "QPC_DBMS_HOST=qpc-db" -p 9443:443 -v ~/quipucords/sshkeys:/sshkeys:z -v ~/quipucords/data:/var/data:z -v ~/quipucords/log:/var/log:z -i quipucords:0.0.47
+  # sudo docker run --name quipucords --link qpc-db:qpc-link -d -e "USE_SUPERVISORD=true" -e "QPC_DBMS_USER=postgres" -e "QPC_DBMS_PASSWORD=password" -e "QPC_DBMS_HOST=qpc-db" -p 9443:443 -v ~/quipucords/sshkeys:/sshkeys:z -v ~/quipucords/data:/var/data:z -v ~/quipucords/log:/var/log:z -i quipucords:1.0.0
 
 These commands start the server on port ``9443`` and map the ``sshkeys``, ``data``, and ``log`` directories to the ``~/quipucords`` home directory for the server.
 
@@ -87,7 +87,7 @@ You may also configure the quipucords server by setting the following environmen
 
 To set these values, pass the ``docker run`` command the ``-e "NAME=VALUE`` argument.  For example to set ``QPC_SERVER_TIMEOUT`` do::
 
-    # sudo docker run --name quipucords -d -e "QPC_SERVER_TIMEOUT=240" -p 9443:443 -v ~/quipucords/sshkeys:/sshkeys -v ~/quipucords/data:/var/data -v ~/quipucords/log:/var/log -i quipucords:0.0.47
+    # sudo docker run --name quipucords -d -e "QPC_SERVER_TIMEOUT=240" -p 9443:443 -v ~/quipucords/sshkeys:/sshkeys -v ~/quipucords/data:/var/data -v ~/quipucords/log:/var/log -i quipucords:1.0.0
 
 
 .. _change-default-pw:
