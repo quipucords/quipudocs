@@ -6,7 +6,7 @@ Obtaining the Installer
 ^^^^^^^^^^^^^^^^^^^^^^^
 1. Download the installer by entering the following command::
 
-    # curl -k -O -sSL https://github.com/quipucords/quipucords/releases/download/1.0.0/quipucords.install.1.0.0.tar.gz
+    # curl -k -O -sSL https://github.com/quipucords/quipucords/releases/download/1.0.0/quipucords.1.0.0.install.tar.gz
 
 2. Extract the installer by entering the following command::
 
