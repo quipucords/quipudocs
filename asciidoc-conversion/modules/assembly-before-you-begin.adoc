@@ -1,0 +1,3 @@
+[id='assembly-before-you-begin']
+
+== Before You Begin: Checking the Setup and Connection for the Quipucords Server
