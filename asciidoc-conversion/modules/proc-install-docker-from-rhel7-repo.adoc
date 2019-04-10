@@ -1,0 +1,37 @@
+[id='proc-install-docker-from-rhel7-repo']
+
+== Installing from the repository on Red Hat Enterprise Linux 7
+
+You can install Docker from the RHEL extras repository.
+
+You can set up the the Extras ('+rhel-7-server-extras-rpms+') and Optional ('+rhel-7-server-optional-rpms+') repositories and then install Docker from them. This is the recommended approach because it simplifies the installation and upgrade tasks. For more information about installing Docker with Red Hat Enterprise Linux 7, see Getting Docker in RHEL 7.
+
+.Procedure
+
+. Make sure that you are logged in as a user with '+sudo+' or '+root+' privileges.
+
+. Enable the required repositories:
++
+----
+# sudo subscription-manager repos --enable=rhel-7-server-rpms --enable=rhel-7-server-extras-rpms
+----
+
+. Install Docker from the repository:
++
+----
+# sudo yum install docker device-mapper-libs device-mapper-event-libs
+----
+
+. After you install Docker, you must start it and verify that it is running. Start Docker:
++
+----
+# sudo systemctl start docker
+----
+
+. Verify that Docker is installed correctly. To do this step, run the hello-world image:
++
+----
+# sudo docker run hello-world
+----
+
+After you complete the steps to install Docker for Red Hat Enterprise Linux 7, continue with the Quipucords server installation steps in Installing the Quipucords Server Container Image.

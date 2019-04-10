@@ -1,0 +1,39 @@
+[id='proc-install-qpc-no-connectivity']
+
+== Installing without Internet connectivity
+
+If you choose the offline option to run the installer, you will need to obtain the following packages on a machine with internet connectivity.
+
+.Procedure
+
+. *Quipicords Server Package:* https://github.com/quipucords/quipucords/releases/download/0.0.46/quipucords.0.0.46.tar.gz[Quipucords Server Package installed]
+
+. *Build the Postgres Docker Image:* The Quipucords server requires a Postgres Docker image. You must build the Docker image on a machine with internet connectivity. Follow the steps documented below to create a Postgres Docker image:
++
+----
+# docker pull postgres:9.6.10
+# docker save -o postgres.9.6.10.tar postgres:9.6.10
+----
+
+[NOTE]
+====
+The offline installation script requires the postgres tar to be named '+postgres.9.6.10.tar+'.
+====
+
+. Install the correct command line tool RPM package using one of the links under Additional Resources.
+
+. Transfer packages by changing to the installer, creating a new packages directory, and move the packages there.
++
+----
+# cd install/
+# mkdir packages
+# mv /path/to/package ./packages/
+---- 
+
+.Additional Resources
+
+. https://docs.docker.com/install/[Install Docker]
+. https://github.com/quipucords/qpc/releases/download/0.0.46/qpc-0.0.46-1.git.31.2c63673.el6.noarch.rpm[RPM package for RHEL 6 and CentOS 6]
+. https://github.com/quipucords/qpc/releases/download/0.0.46/qpc-0.0.46-1.git.31.2c63673.el7.noarch.rpm[RPM package for RHEL 7 and CentOS 7]
+. https://github.com/quipucords/qpc/releases/download/0.0.46/qpc-0.0.46-1.git.31.2c63673.fc27.noarch.rpm[RPM package for Fedora 27]
+. https://github.com/quipucords/qpc/releases/download/0.0.46/qpc-0.0.46-1.git.31.2c63673.fc28.noarch.rpm[RPM package for Fedora 28]
