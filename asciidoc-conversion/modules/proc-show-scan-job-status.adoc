@@ -1,0 +1,31 @@
+[id='proc-show-scan-job-status']
+
+== Showing Scan Job Status
+
+When you run the '+scan+' start command, the output provides an identifier for that scan job. You can show the status of the '+scan job+' by using the scan job command and specifying the provided identifier.
+
+[IMPORTANT]
+====
+The '+scan job+' command can show results only after the scan job starts running. You can also use this command on a scan job that is completed. 
+
+.Procedure
+
+. For example, you could run the following scan as the first scan in your environment:
++
+----
+# qpc scan start --name myscan
+----
+
+. The output for the command shows the following information, with '+1+' listed as the identifier:
++
+----
+Scan "1" started
+----
+
+. To show the scan status, you would enter the following command:
++
+----
+# qpc scan job --id 1
+----
+
+The output of this command includes the status of the scan job, the start time of the scan job, and (if applicable) the end time of the scan job.
