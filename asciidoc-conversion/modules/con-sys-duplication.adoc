@@ -1,0 +1,13 @@
+[id='con-sys-duplication']
+
+== System Deduplication and Merging
+
+You can gather system information by using one or more of the following types of sources for a scan:
+
+* Network
+* vCenter
+* Satellite
+
+A single system can be found in multiple sources during a scan. For example, a virtual machine on vCenter Server could be running a Red Hat Enterprise Linux operating system installation that is also managed by Satellite. If you construct a scan that contains a vcenter, satellite, and network source, then that single system is reported by all three vcenter, satellite, and network sources during the scan.
+
+To resolve this issue and build an accurate fingerprint, Quipucords feeds unprocessed system facts from the scan into a fingerprint engine. The fingerprint engine matches and merges data for systems that are found in more than one source by using the deduplication and merge processes.

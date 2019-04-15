@@ -1,0 +1,7 @@
+[id='con-scans-and-jobs']
+
+== Scans and Scan Jobs
+
+Quipucords can scan several types of sources. These include network systems, vCenter Server servers, and Satellite servers.
+
+You create a scan by providing a name for the scan and the sources to be scanned. You then start the scan, either immediately or at a later time by referencing the saved scan. For more information about these steps, see Working with Scans.

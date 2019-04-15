@@ -1,0 +1,5 @@
+[id='con-post-processing']
+
+== Post Processing
+
+After deduplication and merging are complete, there is a post-processing phase that creates derived system facts. A derived system fact is a fact that generated from the evaluation of more than one system fact. The majority of derived system facts are related to product identification data, such as the presence of a specific product and its version. The following information shows how the derived system fact '+system_creation_date+' is created.
