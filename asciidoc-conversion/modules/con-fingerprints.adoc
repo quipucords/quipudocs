@@ -1,0 +1,73 @@
+[id='con-fingerprints']
+
+== Fingerprints
+
+A fingerprint is composed of a set of facts about the system in addition to facts about products, entitlements, sources, and metadata. The following example shows fingerprint data. A fingerprint for a single system, even with very few Red Hat products installed on it, can be many lines. Therefore, only a partial fingerprint is used in this example.
+
+.Example
+
+----
+{
+    "os_release": "Red Hat Enterprise Linux Atomic Host 7.4",
+    "cpu_count": 4,
+    "products": [
+        {
+            "name": "JBoss EAP",
+            "version": null,
+            "presence": "absent",
+            "metadata": {
+                "source_id": 5,
+                "source_name": "S62Source",
+                "source_type": "satellite",
+                "raw_fact_key": null
+            }
+        }
+    ],
+    "entitlements": [
+        {
+            "name": "Satellite Tools 6.3",
+            "entitlement_id": 54,
+            "metadata": {
+                "source_id": 5,
+                "source_name": "S62Source",
+                "source_type": "satellite",
+                "raw_fact_key": "entitlements"
+            }
+        }
+    ],
+    "metadata": {
+        "os_release": {
+            "source_id": 5,
+            "source_name": "S62Source",
+            "source_type": "satellite",
+            "raw_fact_key": "os_release"
+        },
+        "cpu_count": {
+            "source_id": 4,
+            "source_name": "NetworkSource",
+            "source_type": "network",
+            "raw_fact_key": "os_release"
+        }
+    },
+    "sources": [
+        {
+            "id": 4,
+            "source_type": "network",
+            "name": "NetworkSource"
+        },
+        {
+            "id": 5,
+            "source_type": "satellite",
+            "name": "S62Source"
+        }
+    ]
+}
+----
+
+The first several lines of a fingerprint show facts about the system. For example, the '+os_release+' fact describes the installed operating system and release. For each system fact, there is a corresponding entry in the '+metadata+' section of the fingerprint that identifies the original source of that system fact.
+
+The fingerprint also lists the consumed entitlements for that system in the '+entitlements+' section. Each entitlement in the list has a name, ID, and metadata that describes the original source of that fact. In the example fingerprint, the system has the '+Satellite Tools 6.3+' entitlement.
+
+Next, the fingerprint lists the installed products in the '+products+' section. A product has a name, version, presence, and metadata field. Because the presence field shows '+absent+' as the value for JBoss EAP, the system in this example does not have JBoss EAP installed.
+
+Lastly, the fingerprint lists the sources that contain this system in the '+sources+' section. A system can be contained in more than one source. For example, for a scan that includes both a network source and a satellite source, a single system can be found in both parts of the scan.
