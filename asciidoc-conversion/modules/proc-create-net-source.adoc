@@ -1,0 +1,64 @@
+[id='proc-create-net-source']
+
+[IMPORTANT]
+====
+For a network scan, Quipucords must use the credentials to run some commands with elevated privileges. This access is provided by the use of sudo or similar commands. For more information about this requirement, see Commands Used in Scans of Remote Network Assets
+
+.Procedure
+
+1. Create at least one network credential with root-level access.
++
+----
+# qpc cred add --type network --name cred_name --username root_name [--sshkeyfile key_file] [--password]
+----
+
+[NOTE]
+====
+If you did not use the '+sshkeyfile+' option to provide an SSH key for the user name value, enter the password of the user with root-level access at the connection password prompt.
+
+If you want to use SSH keyfiles in the credential, you must copy the keys into the directory that you mapped to '+/sshkeys+' during Quipucords server configuration. In the example information for that procedure, that directory is'+~/quipucords/sshkeys+'. The server references these files locally, so refer to the keys as if they are in the '+/sshkeys+' directory from the qpc command.
+
+For example, for a network credential where the '+/sshkeys+' directory for the server is mapped to '+~/quipucords/sshkeys+', the credential name is '+roothost1+', the user with root-level access is '+root+', and the SSH key for the user is in the '+~/.ssh/id_rsa+' file, you would enter the following commands:
+
+----
+# cp ~/.ssh/id_rsa ~/quipucords/sshkeys
+# qpc cred add --type network --name roothost1 --username root --sshkeyfile /sshkeys/id_rsa
+----
+
+Privilege elevation with the '+become-method+', '+become-user+', and '+become-password+' options is also supported to create a network credential for a user to obtain root-level access. You can use the '+become-*+' options with either the '+sshkeyfile+' or the '+password+' option.
+
+For example, for a network credential where the credential name is '+sudouser1+', the user with root-level access is '+sysadmin+', and the access is obtained through the password option, you would enter the following command:
+
+----
+# qpc cred add --type network --name sudouser1 --username sysadmin --password --become-password
+----
+
+After you enter this command, you are prompted to enter two passwords. First, you would enter the connection password for the '+username+' user, and then you would enter the password for the '+become-method+', which is the '+sudo+' command by default.
+
+2. Create at least one network source that specifies one or more network identifiers, such as a host name or host names, an IP address, a list of IP addresses, or an IP range, and one or more network credentials to be used for the scan.
++
+----
+# qpc source add --type network --name source_name --hosts host_name_or_file --cred cred_name
+----
+
+[NOTE]
+====
+You can provide IP range values in CIDR or Ansible notation.
+
+For example, for a network source where the source name is '+mynetwork+', the network to be scanned is the '+192.0.2.0/24+' subnet, and the network credentials that are used to run the scan are '+roothost1+' and '+roothost2+', you would enter the following command:
+
+----
+# qpc source add --type network --name mynetwork --hosts 192.0.2.[1:254] --cred roothost1 roothost2
+----
+
+You can also use a file to pass in the network identifiers. If you use a file to enter multiple network identifiers, such as multiple individual IP addresses, enter each on a single line. For example, for a network profile where the path to this file is '+/home/user1/hosts_file+', you would enter the following command:
+
+----
+# qpc source add --type network --name mynetwork --hosts /home/user1/hosts_file --cred roothost1 roothost2
+----
+
+[NOTE]
+====
+For network sources, you can optionally supply an exclude-hosts field that will omit hosts from a scan. :: # qpc source add –type network –name mynetwork –hosts 192.0.2.[1:255] –exclude-hosts 192.0.2.255 –cred cred_name
+
+The '+exclude-hosts+' option supports all of the formatting methods supported by the hosts option.

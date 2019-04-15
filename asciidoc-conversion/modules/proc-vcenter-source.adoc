@@ -1,0 +1,25 @@
+[id='proc-vcenter-source']
+
+== Creating a vCenter Source
+
+.Procedure
+
+. Create at least one vcenter credential by entering the password of the user with access to the vCenter Server at the connection password prompt.
++
+----
+# qpc cred add --type vcenter --name cred_name --username vcenter_user --password
+----
+
+. Create at least one vcenter source that specifies the host name or IP address of the server for vCenter Server and one vcenter credential to be used for the scan:
++
+----
+# qpc source add --type vcenter --name source_name --hosts host_name --cred cred_name
+----
+
+For example, for a vcenter source where the source name is '+myvcenter', the server for the vCenter Server is located at the '+192.0.2.10' IP address, and the vcenter credential for that server is '+vcenter_admin+', you would enter the following command:
+
+# qpc source add --type vcenter --name myvcenter --hosts 192.0.2.10 --cred vcenter_admin
+
+[IMPORTANT]
+====
+By default, sources are scanned with full SSL validation, but you might need to adjust the level of SSL validation to connect properly to the server for vCenter Server. The '+source add+' command supports options that are commonly used to downgrade the SSL validation. The '+--ssl-cert-verify+' option can take a value of '+False+' to disable SSL certificate validation; this option would be used for any server with a self-signed certificate. The '+--disable-ssl+' option can take a value of '+True+' to connect to the server over standard HTTP.
