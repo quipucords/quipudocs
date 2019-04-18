@@ -1,0 +1,8 @@
+[id='proc-cli-backslash']
+
+Adding CLI Inputs with Backslashes
+A single backslash is used as an escape character in both Shell and Python, which can cause undesired values if only one backslash is present. Therefore, CLI inputs containing a backslash will need to be escaped with another backslash \\. For example if you wanted to add a credential with the username '+Domain\Username+', the value would have to be escaped:
+
+----
+# qpc cred add --type vcenter --name ActiveDirectory --username Domain\\Username --password
+----
