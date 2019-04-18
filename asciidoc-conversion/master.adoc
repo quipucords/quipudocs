@@ -97,3 +97,13 @@ include::modules/con-deduplication-sys.adoc[level=+4]
 include::modules/con-merging-sys.adoc[level=+4]
 include::modules/con-post-processing.adoc[level=+4]
 include::modules/con-sys-creation-date.adoc[level=+4]
+
+// Command line reference
+include::ref-qpc-man.adoc[level=+1]
+
+// Troubleshooting
+include::modules/con-troubleshooting.adoc[level=+1]
+include::modules/con-troubleshooting-cli.adoc[level=+2]
+include::modules/con-troubleshooting-server.adoc[level=+2]
+include::modules/proc-cleaning-the-db.adoc[level=+2]
+include::modules/proc-cli-backslash.adoc[level=+2]
