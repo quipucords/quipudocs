@@ -128,7 +128,7 @@ Options:
  - **server_port**
     - Contains the port number for the Quipucords server. Defaults to ``9443``.
  - **open_port**
-    - Contains a ``true`` or ``false`` value. Defaults to ``true``. Supply ``false`` to skip opening the server port on the machine running the server. Opening the port will be skipped if the installation script is not running with escalated privileges.
+    - Contains a ``true`` or ``false`` value. Defaults to ``true``. Supply ``false`` to install without opening the server port in the firewall. The installation script must run with elevated privileges to open the server port.
  - **server_name**
     - Contains the name for the Quipucords server. Defaults to ``quipucords``.
  - **QPC_SERVER_TIMEOUT**
