@@ -7,7 +7,7 @@ Uploading To Insights
 ^^^^^^^^^^^^^^^^^^^^^
 Use the ``qpc insights upload`` command to upload a deployments report to Red Hat Insights. You can upload a report to Insights using the associated report identifier or scan job identifier for the scan that is used to generate the report::
 
-  **qpc insights upload (--scan-job** *scan_job_identifier* **| --report** *report_identifiers* **| --input-file** *path_to_tar_gz* **) [--no-gpg]**
+  qpc insights upload (--scan-job scan_job_identifier | --report report_identifiers | --input-file path_to_tar_gz) [--no-gpg]
 
 For example, to create and upload the deployments report with a report identifier of ``1``, you would enter the following command::
 
