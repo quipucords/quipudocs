@@ -1,15 +1,15 @@
 [id='proc-selecting-server-config']
 
-== Selecting the Quipucords Server configuration options
+== Selecting the :product-title: Server configuration options
 
-When you run the command to start the Quipucords server, you supply values for several options that affect the configuration of that server. You must make the following decisions:
+When you run the command to start the :product-title: server, you supply values for several options that affect the configuration of that server. You must make the following decisions:
 
 * Accepting or changing the default exposed server port
 * Selecting a directory for SSH keys
 * Selecting a directory for the SQLite database
 * Selecting a directory for log output
-* Accepting or changing the default postgres user by specifying QPC_DBMS_USER
-* Accepting or changing the default postgres password by specifying QPC_DBMS_PASSWORD
+* Accepting or changing the default postgres user by specifying :product-title_cmd:_DBMS_USER
+* Accepting or changing the default postgres password by specifying :product-title_cmd:_DBMS_PASSWORD
 
 .Procedure
 
@@ -17,7 +17,7 @@ When you run the command to start the Quipucords server, you supply values for s
 ** If you select to expose port '+9443+', you would use the following option when you run the Docker command to start the server: '+-p 9443:443+'.
 ** If you want to remap the port on your system, you would supply a new value for the port when you run the Docker command to start the server. The syntax of this option is '+-p <host_port>:<container_port>+'. For example, to remap the port to '+8443+', you would enter the following option in the command: -p 8443:443. Additionally, Docker supplies an option to select a free port for all exposed ports by using the '+-P+' option; the port mapping is then available from the '+sudo docker ps+' command.
 
-. Select values for the directory for SSH key and the directory for the log output. The most efficient way to configure these options is to create a home directory for the Quipucords server and then use that home directory for each of these three options.
+. Select values for the directory for SSH key and the directory for the log output. The most efficient way to configure these options is to create a home directory for the :product-title: server and then use that home directory for each of these three options.
 
 .. Create the home directory. The following example command creates the home directory '+~/quipucords+':
 +
@@ -40,7 +40,7 @@ When you run the command to start the Quipucords server, you supply values for s
 
 . Accept or change the default variables used to configure and access the PostgreSQL Database:
 
-** QPC_DBMS_PASSWORD (Optional) The database password for Postgres. By default, the password is set to '+password+'. We recommend that you change it by using the following option when you run the Docker command to start the server: '+"QPC_DBMS_PASSWORD=yourPass"+'.
-** QPC_DBMS_USER (Optional) The database user for Postgres. By default, the user is set to '+postgres+'.
+** :product-title_cmd:_DBMS_PASSWORD (Optional) The database password for Postgres. By default, the password is set to '+password+'. We recommend that you change it by using the following option when you run the Docker command to start the server: '+":product-title_cmd:_DBMS_PASSWORD=yourPass"+'.
+** :product-title_cmd:_DBMS_USER (Optional) The database user for Postgres. By default, the user is set to '+postgres+'.
 *** If you select to keep the user as '+postgres+', no option is needed when you run the Docker command to start the server.
-*** If you select to specify a different user, you would use the following option when you run the Docker command to start the server: '+"QPC_DBMS_USER=yourUser"+'.
+*** If you select to specify a different user, you would use the following option when you run the Docker command to start the server: '+":product-title_cmd:_DBMS_USER=yourUser"+'.

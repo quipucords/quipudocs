@@ -7,7 +7,7 @@ A network source is composed of one or more host names, one or more IP addresses
 [IMPORTANT]
 
 ==
-For a network scan, Quipucords must use the credentials to run some commands with elevated privileges. This access is provided by the use of sudo or similar commands. For more information about this requirement, see https://quipucords.readthedocs.io/en/latest/commands.html[Commands Used in Scans of Remote Network Assets]
+For a network scan, :product-title: must use the credentials to run some commands with elevated privileges. This access is provided by the use of sudo or similar commands. For more information about this requirement, see https://:product-title:.readthedocs.io/en/latest/commands.html[Commands Used in Scans of Remote Network Assets]
 
 The following scenario provides examples of how you would create a network source and credential.
 
@@ -18,13 +18,13 @@ To create a network source, use the following steps:
 . Create a network credential with root-level access:
 +
 ----
-# qpc cred add --type network --name cred_name --username root_name [--sshkeyfile key_file] [--password]
+# :product-title_cmd: cred add --type network --name cred_name --username root_name [--sshkeyfile key_file] [--password]
 ----
-** If you did not use the '+sshkeyfile+' option to provide an SSH key for the user name value, enter the password of the user with root-level access at the connection password prompt. For more information, see https://quipucords.readthedocs.io/en/latest/working_with_sources.html[Working with Credentials and Sources].
+** If you did not use the '+sshkeyfile+' option to provide an SSH key for the user name value, enter the password of the user with root-level access at the connection password prompt. For more information, see https://:product-title:.readthedocs.io/en/latest/working_with_sources.html[Working with Credentials and Sources].
 ** For example, for a network credential where the credential name is '+sudouser1+', the user with root-level access is '+sysadmin+', and the access is obtained through the password option, you would enter the following command:
 +
 ----
-# qpc cred add --type network --name sudouser1 --username sysadmin --password --become-password
+# :product-title_cmd: cred add --type network --name sudouser1 --username sysadmin --password --become-password
 ----
 
 . After you enter this command, you are prompted to enter two passwords. First, you would enter the connection password for the '+username+' user, and then you would enter the '+password+' for the become-method, which is the '+sudo+' command by default.
@@ -32,13 +32,13 @@ To create a network source, use the following steps:
 . Create a network source that specifies one or more network identifiers, such as a host name or host names, an IP address, a list of IP addresses, or an IP range, and one or more network credentials to be used for the scan.
 +
 ----
-# qpc source add --type network --name source_name --hosts host_name_or_file --cred cred_name
+# :product-title_cmd: source add --type network --name source_name --hosts host_name_or_file --cred cred_name
 ----
 
 ** For example, for a network source where the source name is '+mynetwork+', the network to be scanned is the '+192.0.2.0/24+' subnet, and the network credential that is used to run the scan is '+sudouser1+', you would enter the following command:
 +
 ----
-# qpc source add --type network --name mynetwork --hosts 192.0.2.[1:254] --cred sudouser1
+# :product-title_cmd: source add --type network --name mynetwork --hosts 192.0.2.[1:254] --cred sudouser1
 ----
 
 For more information about creating credentials and sources, including credentials and sources for Satellite or vCenter Server scans, see Working with Credentials and Sources.

@@ -22,28 +22,28 @@
 # rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 ----
 
-. Add the COPR to your server. You can find the appropriate architecture and version on the https://copr.fedorainfracloud.org/coprs/g/quipucords/qpc/[COPR qpc page].
+. Add the COPR to your server. You can find the appropriate architecture and version on the https://copr.fedorainfracloud.org/coprs/g/quipucords/:product-title_cmd:/[COPR :product-title_cmd: page].
 
 ** For Red Hat Enterprise Linux 7 or CentOS 7, enter:
 +
 ----
-# wget -O /etc/yum.repos.d/group_quipucords-qpc-epel-7.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/qpc/repo/epel-7/group_quipucords-qpc-epel-7.repo
+# wget -O /etc/yum.repos.d/group_quipucords-:product-title_cmd:-epel-7.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/:product-title_cmd:/repo/epel-7/group_quipucords-:product-title_cmd:-epel-7.repo
 ----
 
 ** For Red Hat Enterprise Linux 6 or CentSO 6, enter:
 +
 ----
-# wget -O /etc/yum.repos.d/group_quipucords-qpc-epel-6.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/qpc/repo/epel-6/group_quipucords-qpc-epel-6.repo
+# wget -O /etc/yum.repos.d/group_quipucords-:product-title_cmd:-epel-6.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/:product-title_cmd:/repo/epel-6/group_quipucords-:product-title_cmd:-epel-6.repo
 ----
 
 ** For Fedora 27, enter:
 +
 ----
-# wget -O /etc/yum.repos.d/group_quipucords-qpc-fedora-27.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/qpc/repo/fedora-27/group_quipucords-qpc-fedora-27.repo
+# wget -O /etc/yum.repos.d/group_quipucords-:product-title_cmd:-fedora-27.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/:product-title_cmd:/repo/fedora-27/group_quipucords-:product-title_cmd:-fedora-27.repo
 ----
 
 ** For Fedora 28, enter:
 +
 ----
-# wget -O /etc/yum.repos.d/group_quipucords-qpc-fedora-28.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/qpc/repo/fedora-28/group_quipucords-qpc-fedora-28.repo
+# wget -O /etc/yum.repos.d/group_quipucords-:product-title_cmd:-fedora-28.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/:product-title_cmd:/repo/fedora-28/group_quipucords-:product-title_cmd:-fedora-28.repo
 ----

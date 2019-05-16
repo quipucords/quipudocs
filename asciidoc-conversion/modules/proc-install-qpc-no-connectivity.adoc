@@ -1,4 +1,4 @@
-[id='proc-install-qpc-no-connectivity']
+[id='proc-install-:product-title_cmd:-no-connectivity']
 
 == Installing without Internet connectivity
 
@@ -6,9 +6,9 @@ If you choose the offline option to run the installer, you will need to obtain t
 
 .Procedure
 
-. *Quipicords Server Package:* https://github.com/quipucords/quipucords/releases/download/0.0.46/quipucords.0.0.46.tar.gz[Quipucords Server Package installed]
+. *:product-title: Server Package:* https://github.com/:product-title:/:product-title:/releases/download/0.0.46/:product-title:.0.0.46.tar.gz[:product-title: Server Package installed]
 
-. *Build the Postgres Docker Image:* The Quipucords server requires a Postgres Docker image. You must build the Docker image on a machine with internet connectivity. Follow the steps documented below to create a Postgres Docker image:
+. *Build the Postgres Docker Image:* The :product-title: server requires a Postgres Docker image. You must build the Docker image on a machine with internet connectivity. Follow the steps documented below to create a Postgres Docker image:
 +
 ----
 # docker pull postgres:9.6.10
@@ -28,12 +28,12 @@ The offline installation script requires the postgres tar to be named '+postgres
 # cd install/
 # mkdir packages
 # mv /path/to/package ./packages/
----- 
+----
 
 .Additional Resources
 
 . https://docs.docker.com/install/[Install Docker]
-. https://github.com/quipucords/qpc/releases/download/0.0.46/qpc-0.0.46-1.git.31.2c63673.el6.noarch.rpm[RPM package for RHEL 6 and CentOS 6]
-. https://github.com/quipucords/qpc/releases/download/0.0.46/qpc-0.0.46-1.git.31.2c63673.el7.noarch.rpm[RPM package for RHEL 7 and CentOS 7]
-. https://github.com/quipucords/qpc/releases/download/0.0.46/qpc-0.0.46-1.git.31.2c63673.fc27.noarch.rpm[RPM package for Fedora 27]
-. https://github.com/quipucords/qpc/releases/download/0.0.46/qpc-0.0.46-1.git.31.2c63673.fc28.noarch.rpm[RPM package for Fedora 28]
+. https://github.com/:product-title:/:product-title_cmd:/releases/download/0.0.46/:product-title_cmd:-0.0.46-1.git.31.2c63673.el6.noarch.rpm[RPM package for RHEL 6 and CentOS 6]
+. https://github.com/:product-title:/:product-title_cmd:/releases/download/0.0.46/:product-title_cmd:-0.0.46-1.git.31.2c63673.el7.noarch.rpm[RPM package for RHEL 7 and CentOS 7]
+. https://github.com/:product-title:/:product-title_cmd:/releases/download/0.0.46/:product-title_cmd:-0.0.46-1.git.31.2c63673.fc27.noarch.rpm[RPM package for Fedora 27]
+. https://github.com/:product-title:/:product-title_cmd:/releases/download/0.0.46/:product-title_cmd:-0.0.46-1.git.31.2c63673.fc28.noarch.rpm[RPM package for Fedora 28]

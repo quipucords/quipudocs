@@ -15,5 +15,5 @@ The following associated dependencies must be installed onto the offline machine
 |Docker
 
 |Python 3.4-requests
-| 
+|
 |===

@@ -1,5 +1,5 @@
 [id='con-config-start-qpc']
 
-== Configuring and starting Quipucords
+== Configuring and starting :product-title:
 
-After you install the Quipucords server container image in the image registry, you must select configuration options to be used at the time that you start the server and the command line tool. When you are sure of the options that you want to use, you can start Quipucords by starting the server and the command line tool.
+After you install the :product-title: server container image in the image registry, you must select configuration options to be used at the time that you start the server and the command line tool. When you are sure of the options that you want to use, you can start :product-title: by starting the server and the command line tool.
