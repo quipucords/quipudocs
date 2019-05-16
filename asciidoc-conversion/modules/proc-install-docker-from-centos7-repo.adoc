@@ -36,4 +36,4 @@
 # sudo docker run hello-world
 -----
 
-After you complete the steps to install Docker for CentOS 7, continue with the Quipucords server installation steps in Installing the Quipucords Server Container Image.
+After you complete the steps to install Docker for CentOS 7, continue with the :product-title: server installation steps in Installing the :product-title: Server Container Image.

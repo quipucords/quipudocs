@@ -1,6 +1,6 @@
 [id='proc-install-qpc-pkg']
 
-== Install the QPC Package
+== Install the z Package
 
 .Procedure
 

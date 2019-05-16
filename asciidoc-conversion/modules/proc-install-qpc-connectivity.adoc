@@ -1,4 +1,4 @@
-[id='proc-install-qpc-connectivity']
+[id='proc-install-qpc']
 
 == Installing with Internet connectivity
 

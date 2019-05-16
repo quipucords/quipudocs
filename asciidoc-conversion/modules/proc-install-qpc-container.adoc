@@ -1,27 +1,27 @@
-[id='proc-install-qpc-container']
+[id='proc-install-qpc']
 
-== Installing the Quipucords Server Container Image
+== Installing the :product-title: Server Container Image
 
-After Docker is installed, you can obtain and install the container image that enables the use of the Quipucords server.
+After Docker is installed, you can obtain and install the container image that enables the use of the :product-title: server.
 
 .Procedure
 
 . Download the server container image by entering the following command:
 +
 ----
-# curl -k -O -sSL https://github.com/quipucords/quipucords/releases/download/0.0.46/quipucords.0.0.46.tar.gz
+# curl -k -O -sSL https://github.com/:product-title:/:product-title:/releases/download/0.0.46/:product-title:.0.0.46.tar.gz
 ----
 
 . Load the container image into the local Docker registry with the following command:
 +
 ----
-# sudo docker load -i quipucords.0.0.46.tar.gz
+# sudo docker load -i :product-title:.0.0.46.tar.gz
 ----
 
 . The output appears similar to the following example:
 +
 ----
-Loaded image: quipucords:0.0.46
+Loaded image: :product-title::0.0.46
 ----
 
 . Verify the image within the local Docker registry by entering the following command:
@@ -34,5 +34,5 @@ Loaded image: quipucords:0.0.46
 +
 ----
 REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
-quipucords              0.0.46               fdadcc4b326f        3 days ago          969MB
+:product-title_cmd:             0.0.46               fdadcc4b326f        3 days ago          969MB
 ----

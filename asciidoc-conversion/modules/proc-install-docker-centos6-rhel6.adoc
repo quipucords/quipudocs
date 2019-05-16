@@ -58,4 +58,4 @@ This message shows that your installation appears to be working correctly.
 # sudo chkconfig docker on
 ----
 
-After you complete the steps to install Docker for Red Hat Enterprise Linux 6.6 or later or CentOS 6.6 or later, you can continue with the Quipucords server installation steps in Installing the Quipucords Server Container Image.
+After you complete the steps to install Docker for Red Hat Enterprise Linux 6.6 or later or CentOS 6.6 or later, you can continue with the :product-title: server installation steps in Installing the :product-title: Server Container Image.

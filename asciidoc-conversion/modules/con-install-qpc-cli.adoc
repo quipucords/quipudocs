@@ -1,5 +1,5 @@
 [id='con-install-qpc-cli']
 
-== Install the Quipucords command line tool
+== Install the :product-title: command line tool
 
-'+qpc+', the command line tool that is installed by RPM, is available for download from the Fedora COPR build and repository system. Use the following steps to install the command line tool.
+'+:product-title_cmd:+', the command line tool that is installed by RPM, is available for download from the Fedora COPR build and repository system. Use the following steps to install the command line tool.

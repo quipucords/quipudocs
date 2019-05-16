@@ -34,4 +34,4 @@ You can set up the the Extras ('+rhel-7-server-extras-rpms+') and Optional ('+rh
 # sudo docker run hello-world
 ----
 
-After you complete the steps to install Docker for Red Hat Enterprise Linux 7, continue with the Quipucords server installation steps in Installing the Quipucords Server Container Image.
+After you complete the steps to install Docker for Red Hat Enterprise Linux 7, continue with the :product-title: server installation steps in Installing the :product-title: Server Container Image.
