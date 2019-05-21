@@ -1,0 +1,25 @@
+{
+  "name": "quipudocs",
+  "version": "0.0.0",
+  "description": "Locale and documentation for Quipucords.",
+  "author": "Red Hat",
+  "license": "GPL-3.0",
+  "private": true,
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quipucords/quipudocs.git"
+  },
+  "scripts": {
+    "asciidoctor": "node ./scripts/asciidoctor.js",
+    "test": "eslint --ext=json --ext=js ./dist"
+  },
+  "devDependencies": {
+    "asciidoctor": "^2.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-json": "^1.4.0"
+  }
+}
