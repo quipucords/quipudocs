@@ -1,0 +1,47 @@
+// Module included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+[id="proc-running-scans-deep-gui-{context}"]
+
+= Running scans with deep scanning
+// If this topic gets used, should the majority of it become conditionalized text to reuse across both scanning topics?
+
+You can run a new scan from the Sources view. You can run a scan for a single source or select multiple sources to combine into a single scan. As part of scan configuration, you might choose to use the deep scanning process to search for products.
+
+// This is probably really the assembly intro, if this topic gets used for a full "deep scanning" assembly.
+By default, discovery searches for and fingerprints products by using known metadata that relates to those products. However, it is possible that you have installed these products with a process or in an installation location that makes the search and fingerprinting algorithms less effective. In that case, you need to use deep scanning to find those products.
+
+The deep scanning process uses the `find` command, so the search process could be CPU resource intensive for the systems that are being scanned. Therefore, you should use discretion when selecting a deep scan for systems that require continuous availability, such as production systems.
+
+After you run a scan for the first time, the scan is saved to the Scans view. From that view,you can run the scan again to update its data.
+
+.Prerequisites
+
+* To run a scan, you must first add the sources that you want to scan and the credentials to access those sources.
+
+.Procedure
+
+. From the Sources view, select one or more sources. You can select sources of different types to combine them into a single scan.
+
+. Click the btn:[Scan] button that is appropriate for the selected sources:
+  * For a single source, click btn:[Scan] on the row for that source. Selecting the check box for the source is optional.
+  * If you selected multiple sources, click btn:[Scan] in the toolbar.
+  The Scan wizard opens.
+
+. In the btn:[Name] field, enter a descriptive name for the scan.
+
+. If you want to change the default number of maximum concurrent scans, set a new value in the btn:[Maximum concurrent scans] field. This value is the maximum number of machines or virtual machines that are scanned in parallel during a scan.
+
+. To use the deep scanning process on one or more products, supply the following information:
+  * Select the applicable btn:[Deep scan for these products] check boxes.
+  * Optionally, enter the directories that you want discovery to scan. The default directories that are used in a deep scan are the `/`, `/opt`, `/app`, `/home`, and `/usr` directories.
+
+. To begin the scan process, click btn:[Scan].
+
+.Verification steps
+When the scan process begins, a notification displays in the Sources view. The running scan also displays in the Scans view, with a message about the progress of the scan.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.
