@@ -24,11 +24,11 @@ Default logging levels for the server can be altered by setting logging environm
 - DJANGO_LOGGING_LEVEL
   - Infrastructure logging
 
-If your system does not have SELinux enabled, you can start the Quipucords server with the following Docker command with increased logging::
+If your system does not have SELinux enabled and you are installing release 1.0.0, you can start the Quipucords server with the following Docker command with increased logging::
 
   # sudo docker run --name quipucords -d -p 9443:443 -e QUIPUCORDS_LOGGING_LEVEL=DEBUG -e DJANGO_LOGGING_LEVEL=DEBUG -v ~/quipucords/sshkeys:/sshkeys -v ~/quipucords/data:/var/data -v ~/quipucords/log:/var/log -i quipucords:1.0.0
 
-If your system does have SELinux enabled, you must append ``:z`` to each volume as follows::
+If your system does have SELinux enabled and you are installing release 1.0.0, you must append ``:z`` to each volume as follows::
 
   # sudo docker run --name quipucords -d -p 9443:443 -e QUIPUCORDS_LOGGING_LEVEL=DEBUG -e DJANGO_LOGGING_LEVEL=DEBUG -v ~/quipucords/sshkeys:/sshkeys:z -v ~/quipucords/data:/var/data:z -v ~/quipucords/log:/var/log:z -i quipucords:1.0.0
 
