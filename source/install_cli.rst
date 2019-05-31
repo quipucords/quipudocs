@@ -2,7 +2,7 @@
 
 Installing the Quipucords Command Line Tool
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-qpc, the command line tool that is installed by RPM, is available for `download <yum -y install https://github.com/quipucords/qpc/releases/latest/>`_ from the Fedora COPR build and repository system. Use the following steps to install the command line tool.
+qpc, the command line tool that is installed by RPM, is available for `download <https://github.com/quipucords/qpc/releases/latest/>`_ from the GitHub. Use the following steps to install the command line tool.
 
 Install the QPC Package:
 ~~~~~~~~~~~~~~~~~~~~~~~~
