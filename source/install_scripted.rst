@@ -6,11 +6,11 @@ Obtaining the Installer
 ^^^^^^^^^^^^^^^^^^^^^^^
 1. Download the installer by entering the following command::
 
-    # curl -k -O -sSL https://github.com/quipucords/quipucords/releases/download/0.0.46/quipucords.0.0.46.install.tar.gz
+    # curl -k -O -sSL https://github.com/quipucords/quipucords-installer/releases/latest/download/quipucords_install.tar.gz
 
 2. Extract the installer by entering the following command::
 
-    # tar -xvzf quipucords.install.tar.gz
+    # tar -xvzf quipucords_install.tar.gz
 
 Running the Installer
 ^^^^^^^^^^^^^^^^^^^^^
@@ -42,7 +42,7 @@ If you choose the offline option to run the installer, you will need to obtain t
 
 **Quipucords Server Package:**
 
-- Server Container Image (`Download <https://github.com/quipucords/quipucords/releases/download/0.0.46/quipucords.0.0.46.tar.gz>`_)
+- Server Container Image (`Download <https://github.com/quipucords/quipucords/releases/latest/download/quipucords_server_image.tar.gz>`_)
 
 **Build the Postgres Docker Image:**
 
@@ -58,10 +58,8 @@ The Quipucords server requires a Postgres Docker image.  You must build the Dock
 
 **Command Line Tool RPM Package:**
 
-- RHEL & Centos 6 (`Download <https://github.com/quipucords/qpc/releases/download/0.0.46/qpc-0.0.46-2.git.32.29f7529.el6.noarch.rpm>`_)
-- RHEL & Centos 7 (`Download <https://github.com/quipucords/qpc/releases/download/0.0.46/qpc-0.0.46-2.git.32.29f7529.el7.noarch.rpm>`_)
-- Fedora 27 (`Download <https://github.com/quipucords/qpc/releases/download/0.0.46/qpc-0.0.46-2.git.32.29f7529.fc27.noarch.rpm>`_)
-- Fedora 28 (`Download <https://github.com/quipucords/qpc/releases/download/0.0.46/qpc-0.0.46-2.git.32.29f7529.fc28.noarch.rpm>`_)
+- RHEL & CentOS 6 (`Download <https://github.com/quipucords/qpc/releases/latest/download/qpc.el6.noarch.rpm>`_)
+- RHEL & CentOS 7 (`Download <https://github.com/quipucords/qpc/releases/latest/download/qpc.el7.noarch.rpm>`_)
 
 **Transfer Packages**
 

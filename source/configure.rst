@@ -60,11 +60,11 @@ Starting the Quipucords Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 After you make the decisions on the configuration options for the server, you can start the Quipucords server. The following commands assume that you used the default port and the recommended steps to create a home directory and subdirectories for the SSH keys, the default options for the PostgreSQL database, and the default log output during the Quipucords server configuration.
 
-If your system does not have SELinux enabled, you can start the Quipucords server with the following Docker command::
+If your system does not have SELinux enabled, you can start the Quipucords server with the following Docker command, where 1.0.0 is the installed version of Quipucords::
 
   # sudo docker run --name quipucords --link qpc-db:qpc-link -d -e "USE_SUPERVISORD=true" -e "QPC_DBMS_USER=postgres" -e "QPC_DBMS_PASSWORD=password" -e "QPC_DBMS_HOST=qpc-db" -p 9443:443 -v ~/quipucords/sshkeys:/sshkeys -v ~/quipucords/data:/var/data -v ~/quipucords/log:/var/log -i quipucords:0.0.46
 
-If your system does have SELinux enabled, you must append ``:z`` to each volume as follows::
+If your system does have SELinux enabled, you must append :z to each volume as follows, where 1.0.0 is the installed version of Quipucords::
 
   # sudo docker run --name quipucords --link qpc-db:qpc-link -d -e "USE_SUPERVISORD=true" -e "QPC_DBMS_USER=postgres" -e "QPC_DBMS_PASSWORD=password" -e "QPC_DBMS_HOST=qpc-db" -p 9443:443 -v ~/quipucords/sshkeys:/sshkeys:z -v ~/quipucords/data:/var/data:z -v ~/quipucords/log:/var/log:z -i quipucords:0.0.46
 
@@ -85,7 +85,7 @@ You may also configure the quipucords server by setting the following environmen
   - DJANGO_LOGGING_LEVEL
     - Infrastructure logging level
 
-To set these values, pass the ``docker run`` command the ``-e "NAME=VALUE`` argument.  For example to set ``QPC_SERVER_TIMEOUT`` do::
+To set these values, pass the the -e "NAME=VALUE argument for the docker run command. For example, the following command shows how to set QPC_SERVER_TIMEOUT value, where 1.0.0 is the installed version of Quipucords::
 
     # sudo docker run --name quipucords -d -e "QPC_SERVER_TIMEOUT=240" -p 9443:443 -v ~/quipucords/sshkeys:/sshkeys -v ~/quipucords/data:/var/data -v ~/quipucords/log:/var/log -i quipucords:0.0.46
 
