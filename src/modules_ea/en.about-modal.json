@@ -1,0 +1,8 @@
+{
+  "about-modal": {
+    "browser-version": "Browser Version",
+    "browser-os": "Browser OS",
+    "server-version": "Server Version",
+    "ui-version": "UI Version"
+  }
+}

@@ -1,0 +1,42 @@
+:toc:
+:toclevels: 
+:numbered:
+:experimental:
+
+include::shared/attributes_dsc.adoc
+
+// Define product's name
+:FullProductName: Red Hat discovery tool
+:ShortProductName: discovery
+:cmd: dsc
+
+// Used to include content which is specific to Red Hat discovery tool
+:dsc:
+
+// Requirements for installing Quipucords
+include::modules/ref-qpc-requirements.adoc[level=+1]
+
+// Installing and configuring Quipucords
+include::modules/con-install-qpc.adoc[level=+1]
+
+// Scripted installation for Quipucords
+include::modules/con-scripted-installation.adoc[level=+1]
+include::modules/proc-obtain-installer.adoc[level=+2]
+include::modules/con-running-installer.adoc[level=+2]
+include::modules/proc-install-qpc-connectivity.adoc[level=+2]
+include::modules/proc-install-qpc-no-connectivity.adoc[level=+2]
+include::modules/con-offline-dependencies.adoc[level=+3]
+include::modules/ref-installation-options.adoc[level=+3]
+
+// Step-by-step installation for Quipucords
+include::modules/con-step-by-step.adoc[level=+1]
+include::modules/con-install-qpc-cli.adoc[level=+2]
+include::modules/proc-download-epel.adoc[level=+3]
+include::modules/proc-install-qpc-pkg.adoc[level=+3]
+include::modules/con-install-docker-qpc-container.adoc[level=+2]
+include::modules/proc-install-docker-from-rhel7-repo.adoc[level=+3]
+include::modules/con-install-docker-centos7.adoc[level=+3]
+include::modules/proc-install-docker-from-centos7-repo.adoc[level=+4]
+include::modules/proc-install-docker-from-pkg-centos7.adoc[level=+4]
+include::modules/con-install-docker-centos6-rhel6.adoc[level=+3]
+include::modules/proc-install-qpc-container.adoc[level=+3]

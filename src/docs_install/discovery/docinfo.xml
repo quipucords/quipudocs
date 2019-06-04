@@ -1,0 +1,15 @@
+<title>Installing and Configuring Red Hat Product Discovery Tool</title>
+<productname>Red Hat Product Discovery Tool</productname>
+<productnumber>1</productnumber>
+<subtitle>For Use with Red Hat Ansible</subtitle>
+<abstract>
+    <para>This guide provides information to help users install, configure, and use Red Hat Product Discovery Tool</para>
+</abstract>
+<authorgroup id="Author_Group">
+        <author>
+                <firstname>Red Hat</firstname>
+                <surname>Documentation Team</surname>
+                <email>rhsm-docs@redhat.com</email>
+        </author>
+</authorgroup>
+<xi:include href="Common_Content/Legal_Notice.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
