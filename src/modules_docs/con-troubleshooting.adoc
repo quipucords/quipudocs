@@ -1,0 +1,5 @@
+[id='con-troubleshooting']
+
+== Troubleshooting
+
+The following sections provide a reference for viewing logging information from the command line and server to enable troubleshooting of various activities being performed with Quipucords.

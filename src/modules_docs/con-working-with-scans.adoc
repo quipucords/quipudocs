@@ -1,0 +1,5 @@
+[id='con-working-with-scans']
+
+== Working with Scans
+
+A scan is an object that groups one or more sources into a unit that can be scanned in a reproducible way. The following information describes how to create scans and how to start scans.

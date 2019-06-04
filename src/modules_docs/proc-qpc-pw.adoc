@@ -1,0 +1,20 @@
+[id='proc-qpc-pw']
+
+== Changing the default password for the :product-title: Server
+
+The :product-title: server has a default administrator user with a default user name of '+admin+' and a default password of '+pass+'. To ensure the security of your :product-title: server, it is recommended that you change the default password to a different password.
+
+.Procedure
+
+. In a browser window, enter the URL to the :product-title: server. When you enter the URL to the :product-title: server, the browser loads a web page that shows an administrative login dialog box.
+
+** If the browser window is running on the same system as the server and you used the default port of '+9443+' for the server, the URL is '+https://localhost:9433/admin+'.
+** If the browser window is running on a remote system, or if it is on the same system but you changed the default HTTPS port, enter the URL in the following format: '+https://ip_address:port/admin+'. For example, if the IP address for the server is '+192.0.2.0+' and the port is remapped to '+8443+', you would enter '+https://192.0.2.0:8443/admin+' in the browser window.
+
+. In the resulting web page that contains the :product-title: administrative login dialog box, enter the default user name '+admin+' and the default password '+pass+' to log in to the :product-title: server.
+
+. Click *Change password* to enter a new password for the :product-title: server. Record the new password in an enterprise password management solution or other password management tool, as determined by the best practices for your organization.
+
+[NOTE]
+====
+You can also enter the local or remote URL (as applicable) for the :product-title: server in a browser window to verify that the :product-title: server is responding.

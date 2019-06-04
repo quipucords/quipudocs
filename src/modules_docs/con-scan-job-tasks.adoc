@@ -1,0 +1,7 @@
+[id='con-scan-job-tasks']
+
+== Scan Job Tasks
+
+A scan job moves through two phases, or tasks. The first task is a _connection task_ that determines the ability to connect to the source and finds the number of systems that can be inspected for the defined source. The second task is an _inspection task that gathers data from each of the systems in the defined source to output the scan results.
+
+If the scan is configured so that it contains several sources, then when the scan job runs, these two tasks are created for each source. First, all of the connection tasks for all of the sources run to establish connections to the sources and find the systems that can be inspected. Then all of the inspection tasks for all of the sources run to inspect the contents of the systems that are contained in the sources.

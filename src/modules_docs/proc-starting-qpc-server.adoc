@@ -1,0 +1,23 @@
+[id='proc-starting-:product-title_cmd:-server']
+
+== Starting the :product-title: Server
+
+After you make the decisions on the configuration options for the server, you can start the :product-title: server. The following commands assume that you used the default port and the recommended steps to create a home directory and subdirectories for the SSH keys, the default options for the PostgreSQL database, and the default log output during the :product-title: server configuration.
+
+If your system does not have SELinux enabled, you can start the :product-title: server with the following Docker command:
++
+----
+# sudo docker run --name quipucords --link :product-title_cmd:-db::product-title_cmd:-link -d -e "USE_SUPERVISORD=true" -e ":product-title_cmd:_DBMS_USER=postgres" -e ":product-title_cmd:_DBMS_PASSWORD=password" -e ":product-title_cmd:_DBMS_HOST=:product-title_cmd:-db" -p 9443:443 -v ~/quipucords/sshkeys:/sshkeys -v ~/quipucords/data:/var/data -v ~/quipucords/log:/var/log -i quipucords:0.0.46
+----
+
+If your system does have SELinux enabled, you must append '+:z+' to each volume as follows:
++
+----
+# sudo docker run --name quipucords --link :product-title_cmd:-db::product-title_cmd:-link -d -e "USE_SUPERVISORD=true" -e ":product-title_cmd:_DBMS_USER=postgres" -e ":product-title_cmd:_DBMS_PASSWORD=password" -e ":product-title_cmd:_DBMS_HOST=:product-title_cmd:-db" -p 9443:443 -v ~/quipucords/sshkeys:/sshkeys:z -v ~/quipucords/data:/var/data:z -v ~/quipucords/log:/var/log:z -i quipucords:0.0.46
+----
+
+These commands start the server on port +'9443+' and map the '+sshkeys+', '+data+', and '+log+' directories to the '+~/quipucords+' home directory for the server. To view the status of the server after it is running, enter the following command:
++
+----
+# sudo docker ps
+----

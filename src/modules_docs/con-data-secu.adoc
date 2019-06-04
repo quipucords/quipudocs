@@ -1,0 +1,7 @@
+[id='con-data-secu']
+
+== Data Security
+
+Due to the sensitive nature of encryption keys, authentication passwords, and SSH key passphrases, access must be limited for the directory that contains the secret key. Use the security standards for your organization to limit access to this directory.
+
+If you want to choose your own secret key, you can replace the contents of the '+secret.txt+' file. However, you must do this step before storing any data that will be encrypted.

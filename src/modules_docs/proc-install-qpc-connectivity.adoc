@@ -1,0 +1,25 @@
+[id='proc-install-qpc']
+
+== Installing with Internet connectivity
+
+If you choose the internet connectivity option, use the following steps to run the installer.
+
+.Procedure
+
+. Change to the installer directory:
++
+----
+# cd install/
+----
+
+. Start the installation by entering the following command. Alternatively, enter the following command with options as described in Installation Options:
++
+----
+# ./install.sh
+----
+
+The output appears similar to the following example:
++
+----
+Installation complete.
+----

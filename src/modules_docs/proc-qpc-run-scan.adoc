@@ -1,0 +1,21 @@
+[id='proc-qpc-run-scan']
+
+== Running a scan
+
+.Procedure
+
+. Run the scan by using the '+scan+' start command, specifying the name of a scan for the '+name+' option:
++
+----
+# :product-title_cmd: scan start --name scan_name1
+----
+
+.Example
+
+If you want to run the scan '+ myscan+', you would enter the following command:
++
+----
+# :product-title_cmd: scan start --name myscan
+----
+
+When you run the '+scan start+' command, the output provides an identifier for that instance of the scan, or scan job. You can show the scan job results to follow the status of the scan job. For more information, see Working with Scan Jobs.

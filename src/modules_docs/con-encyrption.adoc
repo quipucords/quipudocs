@@ -1,0 +1,5 @@
+[id='con-encyrption']
+
+== Encryption
+
+Quipucords stores authentication passwords and SSH key passphrases within its database. This sensitive data is encrypted upon creation by using the vault feature of Ansible. For more information, see Ansible Vault.

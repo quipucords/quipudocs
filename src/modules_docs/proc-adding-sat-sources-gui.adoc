@@ -1,0 +1,43 @@
+// Module included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+[id="proc-adding-sat-sources-gui-{context}"]
+
+= Adding satellite sources
+
+You can add sources from the initial Welcome page or from the Sources view.
+
+.Prerequisites
+
+// Any prereqs?
+
+.Procedure
+
+. Click the option to add a new credential based on your location:
+  * From the Welcome page, click btn:[Add Source].
+  * From the Sources view, click btn:[Add].
+
+. On the Type page, select btn:[Satellite] as the source type and click btn:[Next].
+
+. On the Credentials page, enter the following information.
+.. In the btn:[Name] field, enter a descriptive name.
+.. In the btn:[IP Address or Hostname] field, enter the IP address or host name of the Satellite Server for this source. Enter a different port if you do not want a scan for this source to run on the default port 443. For example, if the IP address of the Satellite Server is 192.0.2.15 and you want to change the port to 80, you would enter `192.0.2.15:80`.
+// NOTE: 80 is just a guess...
+.. In the btn:[Credentials] list, select the credential that is required to access the Satellite Server for this source. If a required credential does not exist, click the btn:[Add a credential] icon to open the Add Credential wizard.
+.. In the btn:[Connection] list, select the SSL protocol to be used for a secure connection during a scan of this source. Select btn:[Disable SSL] to disable secure communication during a scan of this source.
+.. If you need to downgrade the SSL validation for the Satellite Server for this source, clear the btn:[Verify SSL Certificate] check box.
++
+[NOTE]
+====
+By default, sources are scanned with full SSL validation, but you might need to adjust the level of SSL validation to connect properly to Satellite Server. For example, you would downgrade SSL validation if Satellite Server uses self-signed certificates.
+====
+
+. Click btn:[Save] to save the source and then click btn:[Close] to close the Add Source wizard.
+
+// .Verification steps
+// (Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.

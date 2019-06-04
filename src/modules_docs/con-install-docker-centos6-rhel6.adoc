@@ -1,0 +1,21 @@
+[id='con-install-docker-centos6-rhel6']
+
+== Installing Docker on Red Hat Enterprise Linux and CentOS 6.6 or later
+
+To install Docker on Red Hat Enterprise Linux or CentOS 6.6 or later, you must have kernel 2.6.32-431 or later installed.
+
+To check the current kernel release, open a terminal session and use the uname command to display the kernel release information, as shown in the following example:
+
+----
+# uname -r
+----
+
+The output of this command is similar to the following example:
+
+----
+2.6.32-573.el6.x86_64
+----
+
+[NOTE]
+====
+After you confirm that you have at least the minimum required kernel release, it is recommended that you fully update your system. Having a fully patched system can help you avoid kernel bugs that have already been fixed on the latest kernel packages.

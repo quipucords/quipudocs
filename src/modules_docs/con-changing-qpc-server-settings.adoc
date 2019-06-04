@@ -1,0 +1,15 @@
+[id='con-changing-qpc-server-settings']
+
+== Changing other :product-title: Server settings
+
+You may also configure the :product-title: server by setting the following environment variables:
+
+* *:product-title:_SERVER_TIMEOUT:* The default http request timeout. For example, this can be raised if you are merging a large number of reports.
+* *:product-title:_LOGGING_LEVEL:* Application logging level
+* *DJANGO_LOGGING_LEVEL:* Infrastructure logging level
+
+To set these values, pass the '+docker+' run command the '+-e "NAME=VALUE+' argument. For example to set '+:product_title:_SERVER_TIMEOUT+' do:
++
+----
+# sudo docker run --name :product-title: -d -e ":product-title_cmd:_SERVER_TIMEOUT=240" -p 9443:443 -v ~/:product-title:/sshkeys:/sshkeys -v ~/:product-title:/data:/var/data -v ~/:product-title:/log:/var/log -i :product-title::0.0.46
+----

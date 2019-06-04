@@ -1,0 +1,12 @@
+[id='con-merging-sys']
+
+== Merging Systems
+
+After Quipucords determines that two systems are duplicates, it performs a merge. The merged system has a union of system facts from each source. When Quipucords merges a fact that appears in both systems, it uses the following order of precedence to merge the fact, from highest to lowest:
+
+. Network
+. Satellite
+. vCenter
+
+
+A system fingerprint contains a '+metadata+' dictionary that captures the original source of each fact for that system.
