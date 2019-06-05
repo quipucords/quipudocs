@@ -18,13 +18,41 @@ quipudocs is *sphinx* based information documentation.
 
 Development
 -----------
+
+Read the Docs
+^^^^^^^^^^^^
 To work with the quipudocs code, begin by cloning the repository::
 
     git clone git@github.com:quipucords/quipudocs.git
+    cd ./quipudocs
     pipenv shell
     pip install -r requirements.txt
     make html
 
+Asciidoc
+^^^^^^^^
+The requirements for working with Asciidoc
+- Your system needs to be running `NodeJS version 10+ <https://nodejs.org/>`_
+- `Docker <https://docs.docker.com/engine/installation/>`_
+
+To work with the Asciidoc EA and Help guides, begin by cloning the repository::
+
+    git clone git@github.com:quipucords/quipudocs.git
+    cd ./quipudocs
+    npm install
+    npm start
+
+Build Asciidoc
+^^^^^^^^^^^^^^
+To build the Asciidoc EA and Help guides::
+
+    npm run build
+
+Test Asciidoc
+^^^^^^^^^^^^^^
+To test the Asciidoc EA and Help guides::
+
+    npm test
 
 Authors
 -------

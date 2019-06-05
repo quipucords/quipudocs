@@ -8,6 +8,7 @@ __pycache__/
 
 # Distribution / packaging
 node_modules
+.asciidoctor
 .Python
 env/
 build/

@@ -5,11 +5,14 @@ const path = require('path');
 const { execSync } = require('child_process');
 const languageCodes = require('iso-639-1');
 const inputDir = path.join(__dirname, '../src/modules_ea');
-const outputDir = path.join(__dirname, '../dist/gui/locales');
+const outputDir = path.join(__dirname, '../dist/locales');
 
 const moduleLocales = {};
 const locales = [];
 
+/**
+ * Clean up dist
+ */
 execSync(`rm -rf ${outputDir}/*`);
 
 /**
@@ -25,7 +28,7 @@ fs.readdirSync(inputDir).forEach(file => {
 });
 
 /**
- * Cycle available locales, write to JSON
+ * Cycle available locales, output to JSON
  */
 Object.keys(moduleLocales).forEach(locale => {
   locales.push({

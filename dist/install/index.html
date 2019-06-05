@@ -1,0 +1,2258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.9">
+<title>:product-title: requirements</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment @import statement to use as custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite::before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+:not(pre)>code.nobreak{word-wrap:normal}
+:not(pre)>code.nowrap{white-space:nowrap}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
+pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
+pre.pygments .lineno::before{content:"";margin-right:-.125em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin:0 0 1.25em;padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
+table.tableblock{max-width:100%;border-collapse:separate}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.frame-all{border-width:1px}
+table.frame-sides{border-width:0 1px}
+table.frame-topbot,table.frame-ends{border-width:1px 0}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="book">
+<div id="header">
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#ref-qpc-requirements">1. :product-title: requirements</a></li>
+<li><a href="#_hardware_requirements">2. Hardware Requirements</a></li>
+<li><a href="#con-install-qpc">3. Installing and configuring :product-title:</a></li>
+<li><a href="#con-scripted-installation">4. Scripted installation for :product-title:</a></li>
+<li><a href="#proc-obtain-installer">5. Obtaining the installer</a></li>
+<li><a href="#_running_the_installer">6. Running the installer</a></li>
+<li><a href="#_installing_with_internet_connectivity">7. Installing with Internet connectivity</a></li>
+<li><a href="#proc-install-:product-title_cmd:-no-connectivity">8. Installing without Internet connectivity</a></li>
+<li><a href="#_offline_dependencies">9. Offline dependencies</a></li>
+<li><a href="#ref-installation-options">10. Installation options</a></li>
+<li><a href="#con-step-by-step">11. Step-by-step installation</a></li>
+<li><a href="#con-install-qpc-cli">12. Install the :product-title: command line tool</a></li>
+<li><a href="#proc-download-epel">13. Download and configure EPEL</a></li>
+<li><a href="#_install_the_z_package">14. Install the z Package</a></li>
+<li><a href="#_installing_docker_and_the_product_title_server_container_image">15. Installing Docker and the :product-title: Server Container Image</a></li>
+<li><a href="#proc-install-docker-from-rhel7-repo">16. Installing from the repository on Red Hat Enterprise Linux 7</a></li>
+<li><a href="#con-install-docker-from-centos7-repo">17. Installing from the repository on CentOS 7</a></li>
+<li><a href="#proc-install-docker-from-centos7-repo">18. Installing from the repository on CentOS7</a></li>
+<li><a href="#_sudo_systemctl_start_docker">sudo systemctl start docker</a></li>
+<li><a href="#_sudo_docker_run_hello_world">sudo docker run hello-world</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="ref-qpc-requirements">1. :product-title: requirements</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Before installing :product-title: in your environment, review the following guidelines about installing and running :product-title</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>You must install :product-title: on a system that is running Red Hat Enterprise Linux 6 or 7, CentOS 7, or Fedora 27 or 28.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For an installation on Fedora, the scripted installation of :product-title: might not work correctly on all systems. Therefore, the best practice for a Fedora installation is to use the step-by-step installation instructions.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The system that :product-title: is installed on must have access to the systems to be discovered and inspected.</p>
+</li>
+<li>
+<p>Any network sources that are targeted for the inspection process must be running SSH.</p>
+</li>
+<li>
+<p>For a scan of network systems, the user account (credential) that :product-title: uses for the SSH connection into the target systems must have adequate permissions to run commands and read certain files on those systems. For example, some of the commands require privilege elevation to gather the complete set of facts for the scan. For more information about these commands, see Commands Used in Scans of Remote Network Assets</p>
+</li>
+<li>
+<p>The credential user account requires a 'bash' shell. For example, the shell cannot be the '/sbin/nologin' or '/bin/false' shell.</p>
+</li>
+<li>
+<p>:product-title: server requires a Postgres 9.6.10 database (this will be installed for scripted installations).</p>
+</li>
+<li>
+<p>The command line interface requires python 3.4+.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hardware_requirements">2. Hardware Requirements</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>CPU:</strong> 2 core minimum with a recommended 4 cores.</p>
+</li>
+<li>
+<p><strong>Disk:</strong> Storage: 30 GB</p>
+</li>
+<li>
+<p><strong>RAM:</strong> 1 GB minimum with a recommended 2 GB.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="con-install-qpc">3. Installing and configuring :product-title:</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="con-scripted-installation">4. Scripted installation for :product-title:</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The scripted installation runs an installer that uses Ansible to install the command line tool, :product-title: server image, and the database image. When you run the scripted installation, the server is installed and started as described in Configuring and Starting :product-title:. However, you can change some of the defaults used by the scripted installation with the Installation Options.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-obtain-installer">5. Obtaining the installer</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Download the installer:</p>
+<div class="listingblock">
+<div class="content">
+<pre># curl -k -O -sSL https://github.com/quipucords/quipucords/releases/download/0.0.46/quipucords.install.0.0.46.tar.gz</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Extract the installer:</p>
+<div class="listingblock">
+<div class="content">
+<pre># tar -xvzf quipucords.install.tar.gz</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_running_the_installer">6. Running the installer</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can run the installer in different ways, depending on your needs:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Online:</strong> You can run with internet connectivity to install any associated dependencies, download required packages, and pull for needed repositories. This choice is the recommended approach because it simplifies the installation.</p>
+</li>
+<li>
+<p><strong>Offline:</strong> You can run the installer offline by manually installing dependencies, downloading RPM packages and container images and placing them into a specified directory. This choice is useful when you are installing on systems with limited or no access to the internet.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installing_with_internet_connectivity">7. Installing with Internet connectivity</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you choose the internet connectivity option, use the following steps to run the installer.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Change to the installer directory:</p>
+<div class="listingblock">
+<div class="content">
+<pre># cd install/</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Start the installation by entering the following command. Alternatively, enter the following command with options as described in Installation Options:</p>
+<div class="listingblock">
+<div class="content">
+<pre># ./install.sh</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The output appears similar to the following example:</p>
+</div>
+<div class="paragraph">
+<p>+</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Installation complete.</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-install-:product-title_cmd:-no-connectivity">8. Installing without Internet connectivity</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you choose the offline option to run the installer, you will need to obtain the following packages on a machine with internet connectivity.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p><strong>:product-title: Server Package:</strong> <a href="https://github.com/:product-title:/:product-title:/releases/download/0.0.46/:product-title:.0.0.46.tar.gz">:product-title: Server Package installed</a></p>
+</li>
+<li>
+<p><strong>Build the Postgres Docker Image:</strong> The :product-title: server requires a Postgres Docker image. You must build the Docker image on a machine with internet connectivity. Follow the steps documented below to create a Postgres Docker image:</p>
+<div class="listingblock">
+<div class="content">
+<pre># docker pull postgres:9.6.10
+# docker save -o postgres.9.6.10.tar postgres:9.6.10</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The offline installation script requires the postgres tar to be named 'postgres.9.6.10.tar'.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Install the correct command line tool RPM package using one of the links under Additional Resources.</p>
+</li>
+<li>
+<p>Transfer packages by changing to the installer, creating a new packages directory, and move the packages there.</p>
+<div class="listingblock">
+<div class="content">
+<pre># cd install/
+# mkdir packages
+# mv /path/to/package ./packages/</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Additional Resources</div>
+<ol class="arabic">
+<li>
+<p><a href="https://docs.docker.com/install/">Install Docker</a></p>
+</li>
+<li>
+<p><a href="https://github.com/:product-title:/:product-title_cmd:/releases/download/0.0.46/:product-title_cmd:-0.0.46-1.git.31.2c63673.el6.noarch.rpm">RPM package for RHEL 6 and CentOS 6</a></p>
+</li>
+<li>
+<p><a href="https://github.com/:product-title:/:product-title_cmd:/releases/download/0.0.46/:product-title_cmd:-0.0.46-1.git.31.2c63673.el7.noarch.rpm">RPM package for RHEL 7 and CentOS 7</a></p>
+</li>
+<li>
+<p><a href="https://github.com/:product-title:/:product-title_cmd:/releases/download/0.0.46/:product-title_cmd:-0.0.46-1.git.31.2c63673.fc27.noarch.rpm">RPM package for Fedora 27</a></p>
+</li>
+<li>
+<p><a href="https://github.com/:product-title:/:product-title_cmd:/releases/download/0.0.46/:product-title_cmd:-0.0.46-1.git.31.2c63673.fc28.noarch.rpm">RPM package for Fedora 28</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_offline_dependencies">9. Offline dependencies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following associated dependencies must be installed onto the offline machine before the installation script can be executed.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Offline dependencies</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">CLI Tool Dependencies</th>
+<th class="tableblock halign-left valign-top">Server Dependencies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Download and configure EPEL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ansible</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Python 3.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Docker</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Python 3.4-requests</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ref-installation-options">10. Installation options</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The installer has various options, each of which has a default value. You can either run the installer with no options to use all the default values, or provide values for one or more of these options. You can pass values for these options by using the -e flag when you run the command to start the installer:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ./install.sh -e option1=value1 -e option2=value2 ...</pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Table Title</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">install_offline</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">usesupervisord</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">install_server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">install_cli</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pkg_install_dir</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">server_install_dir</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">server_port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">server_name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:product-title_cmd:_SERVER_TIMEOUT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:product-title_cmd:_DBMS_USER</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:product-title_cmd:_DBMS_PASSWORD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains a 'true' or 'false' value. Defaults to 'false'. Supply 'true' to start an offline installation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains a ''true' or 'false' value. Defaults to 'true'. Supply 'false' to start server without supervisord.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains a 'true' or 'false' value. Defaults to 'true'. Supply 'false' to skip the installation of the server.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains a 'true' or 'false' value. Defaults to 'true'. Supply 'false' to skip the installation of the command line tool.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the fully qualified path to the downloaded packages for the installer. Defaults to '&lt;installer&gt;/packages/'.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the fully qualified path to the installation directory for the :product-title: server. Defaults to '~/quipucords/'.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the port number for the :product-title: server. Defaults to '9443'.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the name for the :product-title: server. Defaults to 'quipucords'.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the HTTP timeout length for the :product-title: server. Defaults to '120'.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(Optional) Specifies the database user for postgres. Defaults to 'postgres'.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(Optional) Specifies the database password for postgres. Defaults to 'password'.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="con-step-by-step">11. Step-by-step installation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can install the command line and server components by using the following instructions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="con-install-qpc-cli">12. Install the :product-title: command line tool</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>':product-title_cmd:', the command line tool that is installed by RPM, is available for download from the Fedora COPR build and repository system. Use the following steps to install the command line tool.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-download-epel">13. Download and configure EPEL</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<div class="title">Prerequisite</div>
+<ol class="arabic">
+<li>
+<p>Install Ansible.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Enable the EPEL repo for the server. You can find the appropriate architecture and version on the <a href="https://fedoraproject.org/wiki/EPEL">EPEL wiki</a>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For Red Hat Enterprise Linux 7or CentOS 7, enter:</p>
+<div class="listingblock">
+<div class="content">
+<pre># rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</pre>
+</div>
+</div>
+</li>
+<li>
+<p>For Red Hat Enterprise Linux 6 or CentOS 6, enter:</p>
+<div class="listingblock">
+<div class="content">
+<pre># rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Add the COPR to your server. You can find the appropriate architecture and version on the <a href="https://copr.fedorainfracloud.org/coprs/g/quipucords/:product-title_cmd:/">COPR :product-title_cmd: page</a>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For Red Hat Enterprise Linux 7 or CentOS 7, enter:</p>
+<div class="listingblock">
+<div class="content">
+<pre># wget -O /etc/yum.repos.d/group_quipucords-:product-title_cmd:-epel-7.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/:product-title_cmd:/repo/epel-7/group_quipucords-:product-title_cmd:-epel-7.repo</pre>
+</div>
+</div>
+</li>
+<li>
+<p>For Red Hat Enterprise Linux 6 or CentSO 6, enter:</p>
+<div class="listingblock">
+<div class="content">
+<pre># wget -O /etc/yum.repos.d/group_quipucords-:product-title_cmd:-epel-6.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/:product-title_cmd:/repo/epel-6/group_quipucords-:product-title_cmd:-epel-6.repo</pre>
+</div>
+</div>
+</li>
+<li>
+<p>For Fedora 27, enter:</p>
+<div class="listingblock">
+<div class="content">
+<pre># wget -O /etc/yum.repos.d/group_quipucords-:product-title_cmd:-fedora-27.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/:product-title_cmd:/repo/fedora-27/group_quipucords-:product-title_cmd:-fedora-27.repo</pre>
+</div>
+</div>
+</li>
+<li>
+<p>For Fedora 28, enter:</p>
+<div class="listingblock">
+<div class="content">
+<pre># wget -O /etc/yum.repos.d/group_quipucords-:product-title_cmd:-fedora-28.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/:product-title_cmd:/repo/fedora-28/group_quipucords-:product-title_cmd:-fedora-28.repo</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_install_the_z_package">14. Install the z Package</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Install the QPC package using yum</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For Red Hat Enterprise Linux 7 or CentOS 7, enter:</p>
+<div class="listingblock">
+<div class="content">
+<pre># yum -y install qpc-0.0.46-1.git.31.2c63673.el7</pre>
+</div>
+</div>
+</li>
+<li>
+<p>For Red Hat Enterprise Linux 6 or CentOS 6, enter:</p>
+<div class="listingblock">
+<div class="content">
+<pre># yum -y install qpc-0.0.46-1.git.31.2c63673.el6</pre>
+</div>
+</div>
+</li>
+<li>
+<p>For Fedora 27, enter:</p>
+<div class="listingblock">
+<div class="content">
+<pre># yum -y install qpc-0.0.46-1.git.31.2c63673.fc27</pre>
+</div>
+</div>
+</li>
+<li>
+<p>For Fedora 28, enter:</p>
+<div class="listingblock">
+<div class="content">
+<pre># yum -y install qpc-0.0.46-1.git.31.2c63673.fc28</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installing_docker_and_the_product_title_server_container_image">15. Installing Docker and the :product-title: Server Container Image</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The :product-title: server is delivered as a container image that runs on your server. First you must install and start the necessary prerequisite, Docker, to run the container. Then you can obtain and install the :product-title: server container image.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-install-docker-from-rhel7-repo">16. Installing from the repository on Red Hat Enterprise Linux 7</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can install Docker from the RHEL extras repository.</p>
+</div>
+<div class="paragraph">
+<p>You can set up the the Extras ('rhel-7-server-extras-rpms') and Optional ('rhel-7-server-optional-rpms') repositories and then install Docker from them. This is the recommended approach because it simplifies the installation and upgrade tasks. For more information about installing Docker with Red Hat Enterprise Linux 7, see Getting Docker in RHEL 7.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Make sure that you are logged in as a user with 'sudo' or 'root' privileges.</p>
+</li>
+<li>
+<p>Enable the required repositories:</p>
+<div class="listingblock">
+<div class="content">
+<pre># sudo subscription-manager repos --enable=rhel-7-server-rpms --enable=rhel-7-server-extras-rpms</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Install Docker from the repository:</p>
+<div class="listingblock">
+<div class="content">
+<pre># sudo yum install docker device-mapper-libs device-mapper-event-libs</pre>
+</div>
+</div>
+</li>
+<li>
+<p>After you install Docker, you must start it and verify that it is running. Start Docker:</p>
+<div class="listingblock">
+<div class="content">
+<pre># sudo systemctl start docker</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that Docker is installed correctly. To do this step, run the hello-world image:</p>
+<div class="listingblock">
+<div class="content">
+<pre># sudo docker run hello-world</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>After you complete the steps to install Docker for Red Hat Enterprise Linux 7, continue with the :product-title: server installation steps in Installing the :product-title: Server Container Image.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="con-install-docker-from-centos7-repo">17. Installing from the repository on CentOS 7</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can install Docker in different ways, depending on your needs:
+* You can set up the Docker repositories and then install from them. This choice is the recommended approach because it simplifies the installation and upgrade tasks.
+* You can download the RPM package, install it manually, and manage upgrades manually. This choice is useful when Docker is installed on systems with limited or no access to the internet.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-install-docker-from-centos7-repo">18. Installing from the repository on CentOS7</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Make sure that you are logged in as a user with 'sudo' or 'root' privileges.</p>
+</li>
+<li>
+<p>Install the required packages:</p>
+<div class="listingblock">
+<div class="content">
+<pre># sudo yum install -y yum-utils device-mapper-persistent-data lvm2</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add the repository:</p>
+<div class="listingblock">
+<div class="content">
+<pre># sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Install Docker from the repository:</p>
+<div class="listingblock">
+<div class="content">
+<pre># sudo yum install docker-ce</pre>
+</div>
+</div>
+</li>
+<li>
+<p>After you install Docker, you must start it and verify that it is running. Start Docker:</p>
+<div class="listingblock">
+<div class="content">
+<pre># sudo systemctl start docker</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that Docker is installed correctly. To do this step, run the hello-world image:</p>
+<div class="listingblock">
+<div class="content">
+<pre># sudo docker run hello-world
+-----
+
+After you complete the steps to install Docker for CentOS 7, continue with the :product-title: server installation steps in Installing the :product-title: Server Container Image.
+[id='proc-install-docker-from-pkg-centos7']
+
+== Installing from a package on CentOS7
+
+.Procedure
+
+. Go to https://download.docker.com/linux/centos/7/x86_64/stable/Packages/[CentOS 7 Packages]. For the Docker version that you want to install, download the RPM package to the intended installation system.
+
+. Make sure that you are logged in as a user with '+sudo+' or '+root+' privileges.
+
+. Install Docker, changing the path in the following example to the path where you downloaded the Docker package:
++</pre>
+</div>
+</div>
+<div class="paragraph">
+<p># sudo yum install /path/to/package.rpm</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>. After you install Docker, you must start it and verify that it is running. Start Docker:
++</pre>
+</div>
+</div>
+</div>
+</div>
+<h1 id="_sudo_systemctl_start_docker" class="sect0">sudo systemctl start docker</h1>
+<div class="openblock partintro">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>. Verify that Docker is installed correctly. To do this step, run the hello-world image:
++</pre>
+</div>
+</div>
+</div>
+</div>
+<h1 id="_sudo_docker_run_hello_world" class="sect0">sudo docker run hello-world</h1>
+<div class="openblock partintro">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>After you complete the steps to install Docker for CentOS 7, continue with the :product-title: server installation steps in Installing the :product-title: Server Container Image.
+[id='con-install-docker-centos6-rhel6']
+
+== Installing Docker on Red Hat Enterprise Linux and CentOS 6.6 or later
+
+To install Docker on Red Hat Enterprise Linux or CentOS 6.6 or later, you must have kernel 2.6.32-431 or later installed.
+
+To check the current kernel release, open a terminal session and use the uname command to display the kernel release information, as shown in the following example:
+
+----
+# uname -r
+----
+
+The output of this command is similar to the following example:
+
+----
+2.6.32-573.el6.x86_64
+----
+
+[NOTE]
+====
+After you confirm that you have at least the minimum required kernel release, it is recommended that you fully update your system. Having a fully patched system can help you avoid kernel bugs that have already been fixed on the latest kernel packages.
+Unresolved directive in master.adoc - include::modules/con-install-docker-fedora.adoc[level=+3]
+Unresolved directive in master.adoc - include::modules/proc-install-docker-fedora-repo.adoc[level=+4]
+Unresolved directive in master.adoc - include::modules/proc-install-docker-fedora-pkg.adoc[level=+4]
+[id='proc-install-qpc']
+
+== Installing the :product-title: Server Container Image
+
+After Docker is installed, you can obtain and install the container image that enables the use of the :product-title: server.
+
+.Procedure
+
+. Download the server container image by entering the following command:
++
+----
+# curl -k -O -sSL https://github.com/:product-title:/:product-title:/releases/download/0.0.46/:product-title:.0.0.46.tar.gz
+----
+
+. Load the container image into the local Docker registry with the following command:
++
+----
+# sudo docker load -i :product-title:.0.0.46.tar.gz
+----
+
+. The output appears similar to the following example:
++
+----
+Loaded image: :product-title::0.0.46
+----
+
+. Verify the image within the local Docker registry by entering the following command:
++
+----
+# sudo docker images
+----
+
+. The output appears similar to the following example:
++
+----
+REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+:product-title_cmd:             0.0.46               fdadcc4b326f        3 days ago          969MB
+----
+
+// Configuring and starting Quipucords
+[id='con-config-start-qpc']
+
+== Configuring and starting :product-title:
+
+After you install the :product-title: server container image in the image registry, you must select configuration options to be used at the time that you start the server and the command line tool. When you are sure of the options that you want to use, you can start :product-title: by starting the server and the command line tool.
+[id='proc-selecting-server-config']
+
+== Selecting the :product-title: Server configuration options
+
+When you run the command to start the :product-title: server, you supply values for several options that affect the configuration of that server. You must make the following decisions:
+
+* Accepting or changing the default exposed server port
+* Selecting a directory for SSH keys
+* Selecting a directory for the SQLite database
+* Selecting a directory for log output
+* Accepting or changing the default postgres user by specifying :product-title_cmd:_DBMS_USER
+* Accepting or changing the default postgres password by specifying :product-title_cmd:_DBMS_PASSWORD
+
+.Procedure
+
+** Accept or change the default exposed server port to use for HTTPS communication. By default, the server exposes port 9443, which is the standard HTTPS port. You can choose to use that port or remap the port to be used on your server.
+** If you select to expose port '+9443+', you would use the following option when you run the Docker command to start the server: '+-p 9443:443+'.
+** If you want to remap the port on your system, you would supply a new value for the port when you run the Docker command to start the server. The syntax of this option is '+-p &lt;host_port&gt;:&lt;container_port&gt;+'. For example, to remap the port to '+8443+', you would enter the following option in the command: -p 8443:443. Additionally, Docker supplies an option to select a free port for all exposed ports by using the '+-P+' option; the port mapping is then available from the '+sudo docker ps+' command.
+
+. Select values for the directory for SSH key and the directory for the log output. The most efficient way to configure these options is to create a home directory for the :product-title: server and then use that home directory for each of these three options.
+
+.. Create the home directory. The following example command creates the home directory '+~/quipucords+':
++
+----
+# mkdir -p ~/quipucords
+----
+
+.. Change to that home directory. For example:
++
+----
+# cd ~/quipucords
+----
+
+.. Create subdirectories to house the SSH keys, ('+~/quipucords/sshkeys+'), database ('+~/quipucords/data+'), and log output ('+~/quipucords/log+'). For example:
++
+----
+# mkdir sshkeys
+# mkdir log
+----
+
+. Accept or change the default variables used to configure and access the PostgreSQL Database:
+
+** :product-title_cmd:_DBMS_PASSWORD (Optional) The database password for Postgres. By default, the password is set to '+password+'. We recommend that you change it by using the following option when you run the Docker command to start the server: '+":product-title_cmd:_DBMS_PASSWORD=yourPass"+'.
+** :product-title_cmd:_DBMS_USER (Optional) The database user for Postgres. By default, the user is set to '+postgres+'.
+*** If you select to keep the user as '+postgres+', no option is needed when you run the Docker command to start the server.
+*** If you select to specify a different user, you would use the following option when you run the Docker command to start the server: '+":product-title_cmd:_DBMS_USER=yourUser"+'.
+[id='proc-starting-postgres-db']
+
+== Starting the Postgres DB
+
+.Procedure
+. Quipucords server requires the Postgres container to be running. Run the following docker command:
+
+** For CentOS 6 or Red Hat Enterprise Linux 6:
++
+----
+# docker run --name :product-title_cmd:-db  -e POSTGRES_USER="postgres" -e POSTGRES_PASSWORD="password" -v /var/lib/docker/volumes/:product-title_cmd:-data:/var/lib/postgresql/data -d postgres:9.6.10
+----
+
+** For CentOS 7, Red Hat Enterprise Linux 7, Fedora 27, or Fedora 28:
++
+----
+# docker run --name :product-title_cmd:-db  -e POSTGRES_USER="postgres" -e POSTGRES_PASSWORD="password" -v :product-title_cmd:-data:/var/lib/postgresql/data -d postgres:9.6.10
+----:product-title:
+[id='proc-starting-:product-title_cmd:-server']
+
+== Starting the :product-title: Server
+
+After you make the decisions on the configuration options for the server, you can start the :product-title: server. The following commands assume that you used the default port and the recommended steps to create a home directory and subdirectories for the SSH keys, the default options for the PostgreSQL database, and the default log output during the :product-title: server configuration.
+
+If your system does not have SELinux enabled, you can start the :product-title: server with the following Docker command:
++
+----
+# sudo docker run --name quipucords --link :product-title_cmd:-db::product-title_cmd:-link -d -e "USE_SUPERVISORD=true" -e ":product-title_cmd:_DBMS_USER=postgres" -e ":product-title_cmd:_DBMS_PASSWORD=password" -e ":product-title_cmd:_DBMS_HOST=:product-title_cmd:-db" -p 9443:443 -v ~/quipucords/sshkeys:/sshkeys -v ~/quipucords/data:/var/data -v ~/quipucords/log:/var/log -i quipucords:0.0.46
+----
+
+If your system does have SELinux enabled, you must append '+:z+' to each volume as follows:
++
+----
+# sudo docker run --name quipucords --link :product-title_cmd:-db::product-title_cmd:-link -d -e "USE_SUPERVISORD=true" -e ":product-title_cmd:_DBMS_USER=postgres" -e ":product-title_cmd:_DBMS_PASSWORD=password" -e ":product-title_cmd:_DBMS_HOST=:product-title_cmd:-db" -p 9443:443 -v ~/quipucords/sshkeys:/sshkeys:z -v ~/quipucords/data:/var/data:z -v ~/quipucords/log:/var/log:z -i quipucords:0.0.46
+----
+
+These commands start the server on port +'9443+' and map the '+sshkeys+', '+data+', and '+log+' directories to the '+~/quipucords+' home directory for the server. To view the status of the server after it is running, enter the following command:
++
+----
+# sudo docker ps
+----
+[id='con-changing-qpc-server-settings']
+
+== Changing other :product-title: Server settings
+
+You may also configure the :product-title: server by setting the following environment variables:
+
+* *:product-title:_SERVER_TIMEOUT:* The default http request timeout. For example, this can be raised if you are merging a large number of reports.
+* *:product-title:_LOGGING_LEVEL:* Application logging level
+* *DJANGO_LOGGING_LEVEL:* Infrastructure logging level
+
+To set these values, pass the '+docker+' run command the '+-e "NAME=VALUE+' argument. For example to set '+:product_title:_SERVER_TIMEOUT+' do:
++
+----
+# sudo docker run --name :product-title: -d -e ":product-title_cmd:_SERVER_TIMEOUT=240" -p 9443:443 -v ~/:product-title:/sshkeys:/sshkeys -v ~/:product-title:/data:/var/data -v ~/:product-title:/log:/var/log -i :product-title::0.0.46
+----
+[id='proc-qpc-pw']
+
+== Changing the default password for the :product-title: Server
+
+The :product-title: server has a default administrator user with a default user name of '+admin+' and a default password of '+pass+'. To ensure the security of your :product-title: server, it is recommended that you change the default password to a different password.
+
+.Procedure
+
+. In a browser window, enter the URL to the :product-title: server. When you enter the URL to the :product-title: server, the browser loads a web page that shows an administrative login dialog box.
+
+** If the browser window is running on the same system as the server and you used the default port of '+9443+' for the server, the URL is '+https://localhost:9433/admin+'.
+** If the browser window is running on a remote system, or if it is on the same system but you changed the default HTTPS port, enter the URL in the following format: '+https://ip_address:port/admin+'. For example, if the IP address for the server is '+192.0.2.0+' and the port is remapped to '+8443+', you would enter '+https://192.0.2.0:8443/admin+' in the browser window.
+
+. In the resulting web page that contains the :product-title: administrative login dialog box, enter the default user name '+admin+' and the default password '+pass+' to log in to the :product-title: server.
+
+. Click *Change password* to enter a new password for the :product-title: server. Record the new password in an enterprise password management solution or other password management tool, as determined by the best practices for your organization.
+
+[NOTE]
+====
+You can also enter the local or remote URL (as applicable) for the :product-title: server in a browser window to verify that the :product-title: server is responding.
+
+// Connecting to the server with the command line interface
+[id='con-connect-server-cli']
+
+If you chose to complete the step-by-step installation, you must configure a connection between the :product-title: server and the command line tool from each machine where you plan to use the command line interface. If you chose the scripted install, one connection to the server is configured for you on the same machine where the server is installed, but you must configure any additional connections, for example, on a machine that is remote from the server machine.
+
+After you configure the connection between the server and the command line tool, you can use the command line interface to connect to the :product_title: server. After you are logged in, you can begin using :product-title: to set up and run scans on your IT infrastructure.
+
+For example, if you are configuring the command line tool on the same system as the server and the server uses the default exposed server port, you would enter the following command to configure the :product-title_cmd: command line tool:
+
+----
+# :product-title_cmd: server config --host 127.0.0.1
+----
+
+However, if you are configuring the command line tool on a system that is remote from the server, the :product-title: server is running on the IP address 192.0.2.0, and the port is remapped to 8443, you would enter the following command to configure the :product-title_cmd: command line tool:
+
+----
+# :product-title_cmd: server config --host 192.0.2.0 --port 8443
+----
+[id='con-cli-connection']
+
+== Configuring the :product-title_cmd: command line tool connection
+
+After the :product-title: server is running, you can configure the :product-title_cmd: command line tool to work with the server. When the command line tool is configured, you can log in to :product-title: with the command line interface and begin setting up and running scans on your IT infrastructure.
+
+The '+:product-title_cmd: server config+' command configures the connection between the :product-title_cmd: command line tool and the :product-title: server.
+
+The '+:product-title_cmd: server config+' command takes the following options:
+* The '+--host+' option is required. If you are using the :product-title_cmd: command line interface on the same system where the server is running, you can supply the loopback address '+127.0.0.1+' as the value. Otherwise, supply the IP address for your :product-title: server.
+* The '+--port+' option is optional. The default value for this option is '+9443+'. If you decided to remap the :product-title: default exposed server port to another port, the port option is required. You must supply the port option and the remapped value in the command, for example, '+--port 8443+'.
+[id='proc-logging-into-qpc']
+
+== Logging in to the :product-title_cmd: Server
+
+After the connection between the :product-title_cmd: command line tool and the :product-title_cmd: server is configured on the system where you want to use the command line interface, you can log into the server and begin using the command line interface to run the :product-title_cmd: commands that set up and run scans.
+
+.Procedure
+
+. To log in to the server, enter the following command:
++
+----
+# :product-title_cmd: server login
+----
+
+. Enter the server user name and password at the prompts. The default login is admin and the password is '+pass+'.
+
+The '+:product-title_cmd: server login+' command retrieves a token that is used for authentication with subsequent command line interface commands. That token is removed when you log out of the server, and expires daily.
+[id='proc-qpc-server-logout']
+
+== Logging out of the :product-title: server
+
+When you log in to the server, the command retrieves a token that is used for authentication with subsequent command line interface commands. That token expires daily. In addition, the token is removed when you log out of the server.
+
+.Procedure
+
+. To log out of the server, enter the following command:
++
+----
+# :product-title_cmd: server logout
+----
+
+// Quick Start: A network scan example
+[id='con-quick-start-network']
+
+== Quick Start: A Network Scan Example
+
+This Quick Start information describes how you use the :product-title_cmd: command line interface to complete a simple :product-title: task of scanning a network and viewing a report. Use this information to become more familiar with :product-title: terminology, commands, and processes.
+
+For more information about how to work with :product-title:, see Using :product-title: from the Command Line Interface. For the complete list of options for each :product-title_cmd: command and subcommand, see the :product-title_cmd: man page.
+[id='con-qpc-scan-works']
+
+== How a :product-title: Scan Works
+
+You use the capabilities of :product-title: to inspect and gather information on your IT infrastructure. :product-title: requires the configuration of two basic structures to manage the inspection process. A credential contains the access credentials, such as the user name and password or SSH key of the user, with sufficient authority to run the inspection process on a particular source. For more information about this authority, see Requirements. A source defines the entity or entities to be inspected, such as a host, subnet, network, or systems management solution such as vCenter Server or Satellite. When you create a source, you also include one or more of the configured credentials to use to access the individual entities in the source during the inspection process.
+
+You can save multiple credentials and sources to use with :product-title: in various combinations as you run inspection processes, or scans. A scan can be run multiple times, and each instance is saved as a scan job. When you have completed a scan, you can access the collection of facts in the scan job output as a report to review the results.
+[id='assembly-before-you-begin']
+
+== Before You Begin: Checking the Setup and Connection for :product-title:
+[id='con-checkin-to-qpc-server']
+
+== Configure and set up your :product-title: server.
+
+include::modules/con-install-qpc.adoc
+[id='assembly-checking-con-qpc']
+
+== Checking the Connection to the :product-title: Server
+
+In some organizations, a single person might be responsible for scanning IT resources. However, in others, multiple people using different machines might hold this responsibility, so multiple instances of the command line tool might be needed. Any additional :product-title: users who did not install the :product-title: server and command line tool must ensure that the command line tool instance is configured to connect to the server and that the user name can log in to the command line interface.
+
+For more information, see the following sections:
+
+include::modules/con-config-start-qpc.adoc
+include::modules/proc-logging-into-qpc.adoc
+[id='proc-create-creds']
+
+= Creating Credentials and Sources for a Network
+
+A network source is composed of one or more host names, one or more IP addresses, IP ranges, or a combination of these network resources. In addition, the source creation command references one or more credentials. Typically, a network source might include multiple credentials because it is expected that many credentials would be needed to access a broad IP range.
+
+[IMPORTANT]
+
+==
+For a network scan, :product-title: must use the credentials to run some commands with elevated privileges. This access is provided by the use of sudo or similar commands. For more information about this requirement, see https://:product-title:.readthedocs.io/en/latest/commands.html[Commands Used in Scans of Remote Network Assets]
+
+The following scenario provides examples of how you would create a network source and credential.
+
+To create a network source, use the following steps:
+
+.Procedure
+
+. Create a network credential with root-level access:
++
+----
+# :product-title_cmd: cred add --type network --name cred_name --username root_name [--sshkeyfile key_file] [--password]
+----
+** If you did not use the '+sshkeyfile+' option to provide an SSH key for the user name value, enter the password of the user with root-level access at the connection password prompt. For more information, see https://:product-title:.readthedocs.io/en/latest/working_with_sources.html[Working with Credentials and Sources].
+** For example, for a network credential where the credential name is '+sudouser1+', the user with root-level access is '+sysadmin+', and the access is obtained through the password option, you would enter the following command:
++
+----
+# :product-title_cmd: cred add --type network --name sudouser1 --username sysadmin --password --become-password
+----
+
+. After you enter this command, you are prompted to enter two passwords. First, you would enter the connection password for the '+username+' user, and then you would enter the '+password+' for the become-method, which is the '+sudo+' command by default.
+
+. Create a network source that specifies one or more network identifiers, such as a host name or host names, an IP address, a list of IP addresses, or an IP range, and one or more network credentials to be used for the scan.
++
+----
+# :product-title_cmd: source add --type network --name source_name --hosts host_name_or_file --cred cred_name
+----
+
+** For example, for a network source where the source name is '+mynetwork+', the network to be scanned is the '+192.0.2.0/24+' subnet, and the network credential that is used to run the scan is '+sudouser1+', you would enter the following command:
++
+----
+# :product-title_cmd: source add --type network --name mynetwork --hosts 192.0.2.[1:254] --cred sudouser1
+----
+
+For more information about creating credentials and sources, including credentials and sources for Satellite or vCenter Server scans, see Working with Credentials and Sources.
+
+[NOTE]
+====
+You can provide IP range values in CIDR or Ansible notation.
+[id='proc-create-scan']
+
+== Creating a scan
+
+After you set up your credentials and sources, you can run a :product-title: scan to inspect your IT environment. You can create a scan on a single source or combine sources, even sources of different types.
+
+.Procedure
+
+Create the scan by using the scan add command, specifying a name for the name option and one or more sources for the sources option:
++
+----
+# :product-title_cmd: scan add --name scan1 --sources source_name1 source_name2
+----
+
+For example, if you want to create a scan called myscan with the network source mynetwork, you would enter the following command:
++
+----
+# :product-title_cmd: scan add --name myscan --sources mynetwork
+----
+
+For more information, see Working with Scans.
+[id='proc-qpc-run-scan']
+
+== Running a scan
+
+.Procedure
+
+. Run the scan by using the '+scan+' start command, specifying the name of a scan for the '+name+' option:
++
+----
+# :product-title_cmd: scan start --name scan_name1
+----
+
+.Example
+
+If you want to run the scan '+ myscan+', you would enter the following command:
++
+----
+# :product-title_cmd: scan start --name myscan
+----
+
+When you run the '+scan start+' command, the output provides an identifier for that instance of the scan, or scan job. You can show the scan job results to follow the status of the scan job. For more information, see Working with Scan Jobs.
+[id='proc-viewing-scan-report']
+
+== Viewing the scan report
+
+When the scan job completes, you have the capability to produce a report for that scan job. You can request a report with all the details, or facts, of the scan, or request a deployments report. The deployments report process runs steps to merge the facts found during the inspection of the various hosts that are contacted during the scan. When possible, the report process also runs steps to deduplicate redundant systems. For both types of reports, you can produce the report in JavaScript Object Notation (JSON) format or comma-separated values (CSV) format.
+
+To generate a deployments report, enter the '+:product-title_cmd: report deployments+'  command and specify the identifier for the scan job and the format for the output file.
+
+.Example 1
+
+If you want to create the deployments report for a scan with the scan job identifier of 1 and you want to generate that report in CSV format in the '+~/scan_result.csv+' file, you would enter the following command:
+
+----
+# :product-title_cmd: report deployments --scan-job 1 --csv --output-file=~/scan_result.csv
+----
+
+.Example 2
+
+If you want to create the detailed report, you would use the '+:product-title_cmd: report details+' command. This command takes the same options as the'+:product-title_cmd: report deployments+' command. The output is not deduplicated and merged, so it contains all facts from each source. For example, to create the detailed report for a scan with the scan job identifier '+1+' with CSV output in the '+~/scan_result.csv+' file, you would enter the following command:
+
+----
+# :product-title_cmd: report details --scan-job 1 --csv --output-file=~/scan_result.csv
+----
+
+// Using Quipucords from the Command Line Interface
+[id='con-qpc-cli']
+
+== Using Quipucords from the Command Line Interface
+
+After you use the command line interface to log in to the Quipucords server, you can begin using Quipucords.
+
+You use the capabilities of Quipucords to inspect and gather information on your IT infrastructure. Quipucords requires the configuration of two basic structures to manage the inspection process. A credential contains the access credentials, such as the user name and password or SSH key of the user, with sufficient authority to run the inspection process on a particular source. For more information about this authority, see Requirements. A source defines the entity or entities to be inspected, such as a host, subnet, network, or systems management solution such as vCenter Server or Satellite. When you create a source, you also include one or more of the configured credentials to use to access the individual entities in the source during the inspection process.
+
+You can save multiple credentials and sources to use with Quipucords in various combinations as you run inspection processes, or scans. A scan can be run multiple times, and each instance is saved as a scan job. When you have completed a scan, you can access the collection of facts in the scan job output as a report to review the results.
+[id='con-creds-sources']
+
+== Working with Credentials and Sources
+
+The type of source that you are going to inspect determines the type of data that is required for credential and source configuration. Quipucords currently supports the following source types in the source creation command:
+
+* network
+
+* vcenter
+
+* satellite
+
+A network source is composed of one or more host names, one or more IP addresses, IP ranges, or a combination of these network resources. A vcenter, for vCenter Server, or satellite, for Satellite, source is created with the IP address or host name of that system management solution server.
+
+In addition, the source creation command references one or more credentials. Typically, a network source might include multiple credentials because it is expected that many credentials would be needed to access a broad IP range. Conversely, a vcenter or satellite source would typically use a single credential to access a particular system management solution server.
+
+The following scenarios provide examples of how you would create a network, vcenter, or satellite source and create the credentials required for each.
+[id='proc-create-net-source']
+
+[IMPORTANT]
+====
+For a network scan, Quipucords must use the credentials to run some commands with elevated privileges. This access is provided by the use of sudo or similar commands. For more information about this requirement, see Commands Used in Scans of Remote Network Assets
+
+.Procedure
+
+1. Create at least one network credential with root-level access.
++
+----
+# qpc cred add --type network --name cred_name --username root_name [--sshkeyfile key_file] [--password]
+----
+
+[NOTE]
+====
+If you did not use the '+sshkeyfile+' option to provide an SSH key for the user name value, enter the password of the user with root-level access at the connection password prompt.
+
+If you want to use SSH keyfiles in the credential, you must copy the keys into the directory that you mapped to '+/sshkeys+' during Quipucords server configuration. In the example information for that procedure, that directory is'+~/quipucords/sshkeys+'. The server references these files locally, so refer to the keys as if they are in the '+/sshkeys+' directory from the qpc command.
+
+For example, for a network credential where the '+/sshkeys+' directory for the server is mapped to '+~/quipucords/sshkeys+', the credential name is '+roothost1+', the user with root-level access is '+root+', and the SSH key for the user is in the '+~/.ssh/id_rsa+' file, you would enter the following commands:
+
+----
+# cp ~/.ssh/id_rsa ~/quipucords/sshkeys
+# qpc cred add --type network --name roothost1 --username root --sshkeyfile /sshkeys/id_rsa
+----
+
+Privilege elevation with the '+become-method+', '+become-user+', and '+become-password+' options is also supported to create a network credential for a user to obtain root-level access. You can use the '+become-*+' options with either the '+sshkeyfile+' or the '+password+' option.
+
+For example, for a network credential where the credential name is '+sudouser1+', the user with root-level access is '+sysadmin+', and the access is obtained through the password option, you would enter the following command:
+
+----
+# qpc cred add --type network --name sudouser1 --username sysadmin --password --become-password
+----
+
+After you enter this command, you are prompted to enter two passwords. First, you would enter the connection password for the '+username+' user, and then you would enter the password for the '+become-method+', which is the '+sudo+' command by default.
+
+2. Create at least one network source that specifies one or more network identifiers, such as a host name or host names, an IP address, a list of IP addresses, or an IP range, and one or more network credentials to be used for the scan.
++
+----
+# qpc source add --type network --name source_name --hosts host_name_or_file --cred cred_name
+----
+
+[NOTE]
+====
+You can provide IP range values in CIDR or Ansible notation.
+
+For example, for a network source where the source name is '+mynetwork+', the network to be scanned is the '+192.0.2.0/24+' subnet, and the network credentials that are used to run the scan are '+roothost1+' and '+roothost2+', you would enter the following command:
+
+----
+# qpc source add --type network --name mynetwork --hosts 192.0.2.[1:254] --cred roothost1 roothost2
+----
+
+You can also use a file to pass in the network identifiers. If you use a file to enter multiple network identifiers, such as multiple individual IP addresses, enter each on a single line. For example, for a network profile where the path to this file is '+/home/user1/hosts_file+', you would enter the following command:
+
+----
+# qpc source add --type network --name mynetwork --hosts /home/user1/hosts_file --cred roothost1 roothost2
+----
+
+[NOTE]
+====
+For network sources, you can optionally supply an exclude-hosts field that will omit hosts from a scan. :: # qpc source add �type network �name mynetwork �hosts 192.0.2.[1:255] �exclude-hosts 192.0.2.255 �cred cred_name
+
+The '+exclude-hosts+' option supports all of the formatting methods supported by the hosts option.
+[id='proc-vcenter-source']
+
+== Creating a vCenter Source
+
+.Procedure
+
+. Create at least one vcenter credential by entering the password of the user with access to the vCenter Server at the connection password prompt.
++
+----
+# qpc cred add --type vcenter --name cred_name --username vcenter_user --password
+----
+
+. Create at least one vcenter source that specifies the host name or IP address of the server for vCenter Server and one vcenter credential to be used for the scan:
++
+----
+# qpc source add --type vcenter --name source_name --hosts host_name --cred cred_name
+----
+
+For example, for a vcenter source where the source name is '+myvcenter', the server for the vCenter Server is located at the '+192.0.2.10' IP address, and the vcenter credential for that server is '+vcenter_admin+', you would enter the following command:
+
+# qpc source add --type vcenter --name myvcenter --hosts 192.0.2.10 --cred vcenter_admin
+
+[IMPORTANT]
+====
+By default, sources are scanned with full SSL validation, but you might need to adjust the level of SSL validation to connect properly to the server for vCenter Server. The '+source add+' command supports options that are commonly used to downgrade the SSL validation. The '+--ssl-cert-verify+' option can take a value of '+False+' to disable SSL certificate validation; this option would be used for any server with a self-signed certificate. The '+--disable-ssl+' option can take a value of '+True+' to connect to the server over standard HTTP.
+[id='proc-create-sat-source']
+
+== Creating a Satellite Source
+
+.Procedure
+. Create at least one satellite credential. Enter the password of the user with access to the Satellite server at the connection password prompt.
++
+----
+# qpc cred add --type satellite --name cred_name --username satellite_user --password
+----
+
+. Create at least one satellite source that specifies the host name or IP address of the Satellite server, one satellite credential to be used for the scan:
++
+----
+# qpc source add --type satellite --name source_name --hosts host_name --cred cred_name
+----
+
+For example, for a satellite source where the source name is '+mysatellite6+', the Satellite server is located at the '+192.0.2.15+' IP address, and the satellite credential for that server is '+satellite_admin+', you would enter the following command:
+
+# qpc source add --type satellite --name mysatellite6 --hosts 192.0.2.15 --cred satellite_admin
+
+IMPORTANT]
+====
+By default, sources are scanned with full SSL validation, but you might need to adjust the level of SSL validation to connect properly to the Satellite server. The '+source add+' command supports options that are commonly used to downgrade the SSL validation. The '+--ssl-cert-verify+' option can take a value of '+False+' to disable SSL certificate validation; this option would be used for any server with a self-signed certificate. The Satellite server does not support disabling SSL, so the '+--disable-ssl+' option has no effect.
+[id='con-editing-listing-clearing']
+
+== Editing, Listing, and Clearing Credentials
+
+In addition to creating credentials for use with sources, you can perform several other operations on credentials. You can edit a credential for situations where passwords or passphrases need to be updated. You can list and filter credentials, and you can remove credentials that are no longer needed. These operations are described in the Credentials section of the Command Line Usage.
+[id='con-working-with-scans']
+
+== Working with Scans
+
+A scan is an object that groups one or more sources into a unit that can be scanned in a reproducible way. The following information describes how to create scans and how to start scans.
+[id='proc-creating-scan-cli']
+
+== Creating a scan
+
+After you set up your credentials and sources, you can run a Quipucords scan to inspect your IT environment. You can create a scan that uses a single source or combines sources, even sources of different types.
+
+.Procedure
+
+. Create the scan by using the '+scan add+' command, specifying a name for the '+name+' option and one or more sources for the '+sources+' option:
++
+----
+# qpc scan add --name scan1 --sources source_name1 source_name2
+----
+
+. For example, if you want to create a scan called '+myscan+' with the network source '+mynetwork+' and the Satellite source '+mysatellite6+', you would enter the following command:
++
+----
+# qpc scan add --name myscan --sources mynetwork mysatellite6
+----
+[id='proc-running-scan-cli']
+
+== Running a Scan
+
+After a scan is created, you can run it. You can run a scan multiple times. Each instance of a scan is assigned a unique identifier, and is known as a scan job.
+
+[IMPORTANT]
+====
+Scans run consecutively on the Quipucords server, in the order in which the '+qpc scan+' start command for each scan is entered.
+
+.Procedure
+Run the scan by using the '+scan start+' command, specifying the name of a scan for the '+name+' option:
++
+----
+# qpc scan start --name scan_name1
+----
+
+. For example, if you want to run the scan '+myscan+', you would enter the following command:
++
+----
+# qpc scan start --name myscan
+----
+[id='con-working-scan-jobs']
+
+== Working with Scan Jobs
+
+After a scan starts, that instance of the scan is assigned a unique identifier and is known as a scan job. You can view information about the created scan job to determine its state or to pause or cancel the scan operation.
+[id='proc-show-scan-job-status']
+
+== Showing Scan Job Status
+
+When you run the '+scan+' start command, the output provides an identifier for that scan job. You can show the status of the '+scan job+' by using the scan job command and specifying the provided identifier.
+
+[IMPORTANT]
+====
+The '+scan job+' command can show results only after the scan job starts running. You can also use this command on a scan job that is completed.
+
+.Procedure
+
+. For example, you could run the following scan as the first scan in your environment:
++
+----
+# qpc scan start --name myscan
+----
+
+. The output for the command shows the following information, with '+1+' listed as the identifier:
++
+----
+Scan "1" started
+----
+
+. To show the scan status, you would enter the following command:
++
+----
+# qpc scan job --id 1
+----
+
+The output of this command includes the status of the scan job, the start time of the scan job, and (if applicable) the end time of the scan job.
+Unresolved directive in master.adoc - include::modules/proc-listing-scan-jobs.adoc[level=+3]
+[id='proc-pausing-restart-scan']
+
+== Pausing and Restarting a Scan
+
+As you use Quipucords, you might need to stop a currently running scan. There might be various business reasons that require you to do this, for example, the need to do an emergency fix due to an alert from your IT health monitoring system or the need to run a higher priority scan if a lower priority scan is currently running.
+
+When you stop a scan by using the '+scan pause+' command, you can restart that same scan by using the '+scan restart+' command. To pause and restart a scan, use the following steps:
+
+.Procedure
+
+. Make sure that you have the scan job identifier for the currently running scan. For more information about obtaining the scan job identifier, see Showing Scan Job Status.
+
+. Enter the command to pause the scan job. For example, if the scan job identifier is '+1+', you would enter the following command:
++
+----
+# qpc scan pause --id 1
+----
+
+. When you are ready to start the scan job again, enter the command to restart the scan. For example, to restart scan '+1+' you would enter the following command:
++
+----
+# qpc scan restart --id 1
+----
+[id='con-working-reports']
+
+== Working with Reports
+
+When a scan job completes, it provides information that can then be viewed as a report. Data from a single scan job can be viewed in a report, but you can also merge the results of multiple scan jobs and then create a report from the merged results.
+[id='proc-viewing-scan-report']
+
+== Viewing the scan report
+
+When the scan job completes, you have the capability to produce a report for that scan job. You can request a report with all the details, or facts, of the scan, or request a deployments report. The deployments report process runs steps to merge the facts found during the inspection of the various hosts that are contacted during the scan. When possible, the report process also runs steps to deduplicate redundant systems. For both types of reports, you can produce the report in JavaScript Object Notation (JSON) format or comma-separated values (CSV) format.
+
+To generate a deployments report, enter the '+:product-title_cmd: report deployments+'  command and specify the identifier for the scan job and the format for the output file.
+
+.Example 1
+
+If you want to create the deployments report for a scan with the scan job identifier of 1 and you want to generate that report in CSV format in the '+~/scan_result.csv+' file, you would enter the following command:
+
+----
+# :product-title_cmd: report deployments --scan-job 1 --csv --output-file=~/scan_result.csv
+----
+
+.Example 2
+
+If you want to create the detailed report, you would use the '+:product-title_cmd: report details+' command. This command takes the same options as the'+:product-title_cmd: report deployments+' command. The output is not deduplicated and merged, so it contains all facts from each source. For example, to create the detailed report for a scan with the scan job identifier '+1+' with CSV output in the '+~/scan_result.csv+' file, you would enter the following command:
+
+----
+# :product-title_cmd: report details --scan-job 1 --csv --output-file=~/scan_result.csv
+----
+[id='proc-merging-scan-results']
+
+== Merging Scan Results
+
+You can combine results from two or more scan jobs, reports, or JSON details report files and use that merged data to create a single report. You can start this process by using the '+qpc report merge+' command.
+
+.Procedure
+
+For example, if you want to merge the results from the scan jobs with identifiers of '+11+', '+15+', and '+22+', you would enter the following command:
+
+----
+# qpc report merge --job-ids 11 15 22
+----
+
+If you want to merge the results from reports with identifiers of '+1+', '+2+', and '+3+', you would enter the following command:
+
+----
+# qpc report merge --report-ids 1 2 3
+----
+
+Additionally, if you would like to create a merged report from JSON details report files, you would enter the following command:
+
+----
+# qpc report merge --json-files /path/to/file1.JSON /path/to/file2.JSON
+----
+
+You may also specify a directory with many JSON details reports with the following command:
+
+----
+# qpc report merge --json-directory /path/to/directory_with_json
+----
+
+The above command run an asynchronous job. The output of the above commands provides a job id that can be used to check the status of the merge job. To check the status of a merge job, run the following command:
+
+----
+# qpc report merge-status --job 1
+----
+
+The output of the above command provides a report identifier that can be used to access the merged data. You can use this identifier and the '+qpc report+' command with the '+details+' or '+deployments+' subcommands to generate a report from the merged results.
+
+// Quipucords Concepts
+[id='con-qpc-concepts']
+
+== Quipucords Concepts
+
+The Quipucords Concepts guide provides additional information about specific functions within Quipucords. By reviewing the information in this guide, you can gain a deeper understanding of Quipucords and how it works.
+[id='con-about-qpc']
+
+== About Quipucords
+
+Quipucords, accessed through the '+qpc'+ command, is an inspection and reporting tool. It is designed to identify and report environment data, or _facts_ , such as the number of physical and virtual systems on a network, their operating systems, and other configuration data. In addition, it is designed to identify and report more detailed facts for some versions of key Red Hat packages and products for the Linux based IT resources in that network.
+
+The ability to inspect the software and systems that are running on your network improves your ability to understand and report on your entitlement usage. Ultimately, this inspection and reporting process is part of the larger system administration task of managing your inventories.
+
+Quipucords requires the configuration of two basic structures to access IT resources and run the inspection process. A credential defines user access data such as the user name and password or SSH key of a user with sufficient authority to run the inspection process on a particular source or some of the entities on that source. A source defines the entity or entities to be inspected, such as a host, subnet, network, or systems management solution such as vCenter Server or Red Hat Satellite, plus includes one or more credentials to use to access that source during the inspection process. You can save multiple credentials and sources to use with Quipucords in various combinations as you run inspection processes, or scans. When you have completed a scan, you can access the collection of facts in the output as a report to review the results.
+
+By default, the credentials and sources that are created when using Quipucords are encrypted in a database. The values are encrypted with AES-256 encryption. They are decrypted when the Quipucords server runs a scan, by using a vault password to access the encrypted values that are stored in the database.
+
+Quipucords is an _agentless_ inspection tool, so there is no need to install the tool on the sources to be inspected.
+[id='con-auth']
+
+== Authentication
+
+Quipucords uses several different types of authentication models. These include authentication for the interaction between the Quipucords command line interface and the Quipucords server in addition to authentication for the interaction with remote systems during network, vcenter, and satellite scans.
+[id='con-qpc-auth']
+
+== Quipucords Authentication
+
+Communication with the Quipucords server uses an authentication token. When you enter the '+qpc server login+' command, you are prompted for the server user name and password. The login command exchanges the user name and password, which are encrypted and transmitted to the server over HTTPS, for the authentication token. The authentication token is then used for all subsequent commands in that session. An authentication token expires when you log out of that session. It also expires on a daily basis.
+[id='con-network-auth']
+
+== Network Authentication
+
+The Quipucords server inspects the remote systems in a network scan by using the SSH remote connection capabilities of Ansible. The SSH connection can be obtained by using either a user name and password pair or a user name and SSH keyfile pair. If remote systems are accessed with an SSH keyfile, you can also supply a passphrase. Additionally, you can use Quipucords options to elevate privilege to obtain data that requires different privilege levels on the remote system. For more information about authentication that is related to network scans, see Working with Sources.
+[id='ref-cmds-network-assets']
+
+== Commands Used in Scans of Remote Network Assets
+
+When you run a network scan, Quipucords must use the credentials that you provide to run certain commands on the remote systems in your network. Some of those commands must run with elevated privileges. This access is typically acquired through the use of the sudo command or similar commands. The elevated privileges are required to gather the types of facts that Quipucords uses to build the report about your installed products and consumed entitlements.
+
+Although it is possible to run a scan for a network source without elevated privileges, the results of that scan will be incomplete. The incomplete results from the network scan will affect the quality of the generated report for the scan.
+
+The following information lists the commands that Quipucords runs on remote hosts during a network scan. The information includes the basic commands that can run without elevated privileges and the commands that must run with elevated privileges to gather the most accurate and complete information for the report.
+
+[NOTE]
+====
+In addition to the following commands, Quipucords also depends on standard shell facilities, such as those provided by the Bash shell.
+
+[id='ref-cmds-basic-qpc']
+
+== Basic Commands in QPC
+
+.Basic commands in QPC
+|===
+
+|cat
+|egrep
+|sort
+|uname
+
+|ctime
+|grep
+|rpm
+|virsh
+
+|date
+|id
+|test
+|whereis
+
+|echo
+|sed
+|tune2fs
+|xargs
+|===
+[id='ref-cmds-elevated-qpc']
+
+== Commands that Need Elevated Privileges
+
+The following commands require elevated privileges to gather facts. Each command includes a list of individual facts or categories of facts that cannot be included in reports if elevated privileges are not available for that command.
+
+* *chkconfig*
+** EAP
+** Fuse on Karaf
+* *command*
+** see dmicode
+** see subscription-manager
+* *dmidecode*
+** cpu_socket_count
+** dmi_bios_vendor
+** dmi_bios_version
+** dmi_system_manufacturer
+** dmi_processor_family
+** dmi_system_uuid
+** virt_type
+* *find*
+** BRMS
+** EAP
+** Fuse
+** Fuse on Karaf
+* *ifconfig*
+** IP address
+** MAC address
+* *java*
+** EAP info
+* *locate*
+** BRMS
+** EAP
+** Fuse on Karaf
+* *ls*
+** date_machine_id
+** EAP
+** Fuse on Karaf
+** BRMS
+** redhat_packages_certs
+** subman_consumed
+* *ps*
+** EAP
+** Fuse on Karaf
+** virt type
+* *subscription-manager*
+** subman_consumed
+* *systemctl*
+** EAP
+** Fuse on Karaf
+* *unzip*
+**EAP detection
+* *virt-what*
+** virt_what_type
+* *yum*
+** date_yum_history
+** yum_enabled_repolist
+[id='con-vcenter-server-auth']
+
+== vCenter Server Authentication
+
+For a vcenter scan, the connectivity and access to the server for vCenter Server derives from basic authentication (user name and password) that is encrypted over HTTPS. If the vCenter Server system that is being accessed does not have a verified SSL certificate from a certificate authority, you can supply the '+ssl-cert-verify False+' option when creating the source. This option disregards the SSL certificate verification during authentication. For more information about authentication that is related to vcenter scans, see Working with Sources.
+[id='con-satellite-auth']
+
+== Satellite Authentication
+
+For a satellite scan, the connectivity and access to the Satellite server derives from basic authentication (user name and password) that is encrypted over HTTPS. If the Satellite server that is being accessed does not have a verified SSL certificate from a certificate authority, you can supply the ssl-cert-verify False option when creating the source. This option disregards the SSL certificate verification during authentication. For more information about authentication that is related to satellite scans, see Working with Sources.
+[id='con-encyrption']
+
+== Encryption
+
+Quipucords stores authentication passwords and SSH key passphrases within its database. This sensitive data is encrypted upon creation by using the vault feature of Ansible. For more information, see Ansible Vault.
+[id='con-encryption-mechanism']
+
+== Encryption Mechanism
+
+The encryption uses the secret key for the Quipucords server. The secret key for the server is generated during the initial server start process and resides in the directory that is mapped to '+/var/data/+'. If you chose the default configuration options for the Quipucords server, the secret key is in the following location: '+~/quipucords/data/secret.txt+'.
+[id='con-data-secu']
+
+== Data Security
+
+Due to the sensitive nature of encryption keys, authentication passwords, and SSH key passphrases, access must be limited for the directory that contains the secret key. Use the security standards for your organization to limit access to this directory.
+
+If you want to choose your own secret key, you can replace the contents of the '+secret.txt+' file. However, you must do this step before storing any data that will be encrypted.
+[id='con-scans-and-jobs']
+
+== Scans and Scan Jobs
+
+Quipucords can scan several types of sources. These include network systems, vCenter Server servers, and Satellite servers.
+
+You create a scan by providing a name for the scan and the sources to be scanned. You then start the scan, either immediately or at a later time by referencing the saved scan. For more information about these steps, see Working with Scans.
+[id='con-scan-job-lifecycle']
+
+== Scan Job Life Cycle
+
+An individual instance of a scan, or _scan job_, moves through several states during its lifecycle.
+
+When you start a scan, a scan job is created and the scan job is in the _created_ The scan job is then queued for processing and the scan job transitions to the _pending_ state. Due to the lightweight nature of the Quipucords server, scan jobs run serially.
+
+As the Quipucords server reaches a specific scan job in the queue, that scan job transitions from the _pending_ state to the _running_ state as the processing of that scan job begins. If the scan process completes successfully, the scan job transitions to the _completed_ state and the scan job produces results that can be viewed in a report. If the scan process results in a fatal error that prevents successful completion of the scan, the scan job halts and the scan job transitions to the _failed_ state. An additional status message for the failed scan contains information to help determine the cause of the failure.
+
+Other states for a scan job result from user action that is taken on the scan job. You can pause or cancel a scan job while it is pending or running. A scan job in the paused state can be restarted. A scan job in the _canceled_ state cannot be restarted.
+[id='con-scan-job-tasks']
+
+== Scan Job Tasks
+
+A scan job moves through two phases, or tasks. The first task is a _connection task_ that determines the ability to connect to the source and finds the number of systems that can be inspected for the defined source. The second task is an _inspection task that gathers data from each of the systems in the defined source to output the scan results.
+
+If the scan is configured so that it contains several sources, then when the scan job runs, these two tasks are created for each source. First, all of the connection tasks for all of the sources run to establish connections to the sources and find the systems that can be inspected. Then all of the inspection tasks for all of the sources run to inspect the contents of the systems that are contained in the sources.
+[id='con-scan-job-processing']
+
+== Scan Job Processing
+
+When the scan job runs the connection task for a source, it attempts to connect to the network, server for vCenter Server, or server for Satellite. If the connection to vCenter Server or Satellite fails, then the connection task fails. For a network scan, if the network is not reachable or the credentials are invalid, the connection task reports zero (0) successful systems. If only some of the systems for a network scan are reachable, the connection task reports success on the systems that are reachable, and the connection task does not fail.
+
+When the scan job runs the inspection task for a source, it checks the state of the connection task. If the connection task shows a failed state or if there are zero (0) successful connections, the scan job transitions to the failed state. However, if the connection task reports at least one successful connection, the inspection task continues. The results for the scan job then show success and failure data for each individual system. If the inspection task is not able to gather results from the successful systems, or if another unexpected error occurs during the inspection task, then the scan job transitions to the failed state.
+
+If a scan contains multiple sources, each source has its own connection and inspection tasks. These tasks are processed independently from the tasks for the other sources. If any task for any of the sources fails, the scan job transitions to the failed state. The scan job transitions to the completed state only if all scan job tasks for all sources complete successfully.
+[id='con-fingerprints-process']
+
+== Fingerprints and the Fingerprinting Process
+
+The Quipucords scan process is used to discover the systems in your IT infrastructure and to inspect and gather information about the nature and contents of those systems. A system is any entity that can be interrogated by the Quipucords inspection tasks through an SSH connection, vCenter Server data, or the Satellite API. Therefore, a system can be a machine, such as a physical or virtual machine, and it can also be a different type of entity, such as a container.
+
+During a scan, information, or a collection of facts, about a system is gathered from a single source (such as a network source only) or multiple sources (such as a network source and satellite source). A fact is a single piece of data about a system. Facts are processed to create a summarized set of data for that system that is called a fingerprint. A fingerprint is a set of facts that identifies a unique system and the features on that system, such as the operating system, CPU architecture, number of CPUs and cores, the different products that are installed on that system, the entitlements that are in use on that system, and so on.
+
+Fingerprinting data is generated when you run a scan job. The results are held in the database until you request a deployments report for a scan. If you request a detailed report, you receive the raw facts for that scan without any fingerprinting. When you request a deployments report, you receive the fingerprinting data that includes the results from the deduplication, merging, and post-processing processes. These processes include identifying installed products and versions from the raw facts, finding consumed entitlements, finding and merging duplicate instances of products from different sources, and finding products installed in nondefault locations, among other steps.
+
+The following sections show example fingerprint data, describe the components of a fingerprint, and describe in more detail the process that is used to create the fingerprint.
+[id='con-fingerprints']
+
+== Fingerprints
+
+A fingerprint is composed of a set of facts about the system in addition to facts about products, entitlements, sources, and metadata. The following example shows fingerprint data. A fingerprint for a single system, even with very few Red Hat products installed on it, can be many lines. Therefore, only a partial fingerprint is used in this example.
+
+.Example
+
+----
+{
+    "os_release": "Red Hat Enterprise Linux Atomic Host 7.4",
+    "cpu_count": 4,
+    "products": [
+        {
+            "name": "JBoss EAP",
+            "version": null,
+            "presence": "absent",
+            "metadata": {
+                "source_id": 5,
+                "source_name": "S62Source",
+                "source_type": "satellite",
+                "raw_fact_key": null
+            }
+        }
+    ],
+    "entitlements": [
+        {
+            "name": "Satellite Tools 6.3",
+            "entitlement_id": 54,
+            "metadata": {
+                "source_id": 5,
+                "source_name": "S62Source",
+                "source_type": "satellite",
+                "raw_fact_key": "entitlements"
+            }
+        }
+    ],
+    "metadata": {
+        "os_release": {
+            "source_id": 5,
+            "source_name": "S62Source",
+            "source_type": "satellite",
+            "raw_fact_key": "os_release"
+        },
+        "cpu_count": {
+            "source_id": 4,
+            "source_name": "NetworkSource",
+            "source_type": "network",
+            "raw_fact_key": "os_release"
+        }
+    },
+    "sources": [
+        {
+            "id": 4,
+            "source_type": "network",
+            "name": "NetworkSource"
+        },
+        {
+            "id": 5,
+            "source_type": "satellite",
+            "name": "S62Source"
+        }
+    ]
+}
+----
+
+The first several lines of a fingerprint show facts about the system. For example, the '+os_release+' fact describes the installed operating system and release. For each system fact, there is a corresponding entry in the '+metadata+' section of the fingerprint that identifies the original source of that system fact.
+
+The fingerprint also lists the consumed entitlements for that system in the '+entitlements+' section. Each entitlement in the list has a name, ID, and metadata that describes the original source of that fact. In the example fingerprint, the system has the '+Satellite Tools 6.3+' entitlement.
+
+Next, the fingerprint lists the installed products in the '+products+' section. A product has a name, version, presence, and metadata field. Because the presence field shows '+absent+' as the value for JBoss EAP, the system in this example does not have JBoss EAP installed.
+
+Lastly, the fingerprint lists the sources that contain this system in the '+sources+' section. A system can be contained in more than one source. For example, for a scan that includes both a network source and a satellite source, a single system can be found in both parts of the scan.
+[id='con-sys-duplication']
+
+== System Deduplication and Merging
+
+You can gather system information by using one or more of the following types of sources for a scan:
+
+* Network
+* vCenter
+* Satellite
+
+A single system can be found in multiple sources during a scan. For example, a virtual machine on vCenter Server could be running a Red Hat Enterprise Linux operating system installation that is also managed by Satellite. If you construct a scan that contains a vcenter, satellite, and network source, then that single system is reported by all three vcenter, satellite, and network sources during the scan.
+
+To resolve this issue and build an accurate fingerprint, Quipucords feeds unprocessed system facts from the scan into a fingerprint engine. The fingerprint engine matches and merges data for systems that are found in more than one source by using the deduplication and merge processes.
+[id='con-deduplication-sys']
+
+== Dedupplication of Systems
+
+Quipucords uses specific facts about a system to identify duplicate systems. The following phases use these specific facts to remove duplicate systems during the deduplication process:
+
+* All systems from Network sources are combined into a single network system set. Systems are considered to be duplicates if they have the same value for the '+subscription_manager_id+' or '+bios_uuid+' facts.
+
+* All systems from vCenter sources are combined into a single vcenter system set. Systems are considered to be duplicates if they have the same value for the '+vm_uuid+' fact.
+
+* All systems from Satellite sources are combined into a single satellite system set. Systems are considered to be duplicates if they have the same value for the '+subscription_manager_id+' fact.
+
+* The Network system set is merged with the Satellite system set to form a single network-satellite system set. Systems are considered to be duplicates if they have the same value for the '+subscription_manager+' fact or matching MAC address values in the '+mac_addresses+' fact.
+
+* The Network-Satellite system set is merged with the vCenter system set to form the complete system set. Systems are considered to be duplicates if they have matching MAC address values in the '+mac_addresses+' fact or if the vcenter value for the '+vm_uuid+' fact matches the network value for the '+bios_uuid+' fact.
+[id='con-merging-sys']
+
+== Merging Systems
+
+After Quipucords determines that two systems are duplicates, it performs a merge. The merged system has a union of system facts from each source. When Quipucords merges a fact that appears in both systems, it uses the following order of precedence to merge the fact, from highest to lowest:
+
+. Network
+. Satellite
+. vCenter
+
+
+A system fingerprint contains a '+metadata+' dictionary that captures the original source of each fact for that system.
+[id='con-post-processing']
+
+== Post Processing
+
+After deduplication and merging are complete, there is a post-processing phase that creates derived system facts. A derived system fact is a fact that generated from the evaluation of more than one system fact. The majority of derived system facts are related to product identification data, such as the presence of a specific product and its version. The following information shows how the derived system fact '+system_creation_date+' is created.
+[id='con-sys-creation-date']
+
+== System Creation Date
+
+The '+system_creation_date+' fact is a derived system fact that contains the real system creation time. The value for this fact is determined by the evaluation of the following facts. The value for each fact is examined in the following order of precedence, with the order of precedence determined by the accuracy of the match to the real system creation time. The highest non-empty value is used to determine the value of the '+system_creation_date+' fact.
+
+. date_machine_id
+. registration_time
+. date_anaconda_log
+. date_filesystem_create
+. date_yum_history
+
+// Command line reference
+Unresolved directive in master.adoc - include::ref-qpc-man.adoc[level=+1]
+
+// Troubleshooting
+[id='con-troubleshooting']
+
+== Troubleshooting
+
+The following sections provide a reference for viewing logging information from the command line and server to enable troubleshooting of various activities being performed with Quipucords.
+[id='con-troubleshooting-cli']
+
+== Troubleshooting the Command Line
+
+Logs for the command line can be found in the '+~/.local/share/qpc+' directory with the name *qpc.log*. Logging information is captured for each command with the input arguments and request endpoint and response information to enable situational debugging. The command line supports a global flag '+-v+' to increase verbosity of the logs.
+[id='con-troubleshooting-server']
+
+== Troubleshooting the Server
+
+Logs from the server are mapped from the running container into a users specified directory. If you used the defaults found in the Selecting the Quipucords Server Configuration Options section, the directory would be '+~/quipucords/log+'. You will find three log files within this directory:
+
+* *supervisord.log* - Logs for the supervisor service that keeps the server running in case of unexpected issues
+* *quipucords.log* - Logs for server workers
+* *app.log* - Server logs for main application
+
+Default logging levels for the server can be altered by setting logging environment variables to *DEBUG*:
+
+* QUIPUCORDS_LOGGING_LEVEL - Application logging
+* DJANGO_LOGGING_LEVEL - Infrastructure logging
+
+If your system does not have SELinux enabled, you can start the Quipucords server with the following Docker command with increased logging:
+
+----
+# sudo docker run --name quipucords -d -p 9443:443 -e QUIPUCORDS_LOGGING_LEVEL=DEBUG -e DJANGO_LOGGING_LEVEL=DEBUG -v ~/quipucords/sshkeys:/sshkeys -v ~/quipucords/data:/var/data -v ~/quipucords/log:/var/log -i quipucords:0.0.46
+----
+
+If your system does have SELinux enabled, you must append '+:z+' to each volume as follows:
+
+----
+# sudo docker run --name quipucords -d -p 9443:443 -e QUIPUCORDS_LOGGING_LEVEL=DEBUG -e DJANGO_LOGGING_LEVEL=DEBUG -v ~/quipucords/sshkeys:/sshkeys:z -v ~/quipucords/data:/var/data:z -v ~/quipucords/log:/var/log:z -i quipucords:0.0.46
+----
+
+These commands start the server on port 9443 and map the sshkeys, data, and log directories to the ~/quipucords home directory for the server with increased logging information.
+
+[id='proc-cleaning-the-db']
+
+== Cleaning out the Database
+
+Our command to run a postgres container does implement docker volumes. Volumes allow our postgres data to be persistent, which means that the data will remain even if the postgres container is removed and recreated. If for any reason you would like to delete your postgres database, you will need to remove the docker volume.
+
+Removing the volume for RHEL 6 or Centos 6
+
+# rm -rf /var/lib/docker/volumes/qpc-data
+
+Removing the volume for RHEL 7, Centos 7, Fedora 27, or Fedora 28
+
+# docker volume rm qpc-data
+
+[id='proc-adding-cli-backslash']
+
+== Adding CLI Inputs with Backslashes
+
+A single backslash is used as an escape character in both Shell and Python, which can cause undesired values if only one backslash is present. Therefore, CLI inputs containing a backslash will need to be escaped with another backslash \\. For example if you wanted to add a credential with the username '+Domain\Username+', the value would have to be escaped:
+
+----
+# qpc cred add --type vcenter --name ActiveDirectory --username Domain\\Username --password
+----
+[id='proc-cli-backslash']
+
+Adding CLI Inputs with Backslashes
+A single backslash is used as an escape character in both Shell and Python, which can cause undesired values if only one backslash is present. Therefore, CLI inputs containing a backslash will need to be escaped with another backslash \\. For example if you wanted to add a credential with the username '+Domain\Username+', the value would have to be escaped:
+
+----
+# qpc cred add --type vcenter --name ActiveDirectory --username Domain\\Username --password
+----</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2019-06-04 16:02:49 -0400
+</div>
+</div>
+</body>
+</html>
