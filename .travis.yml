@@ -8,4 +8,4 @@ jobs:
       env:
         - NAME=yarn
       node_js: "10"
-      script: yarn test
+      script: yarn build && yarn test

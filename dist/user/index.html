@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.9">
-<title>:product-title: requirements</title>
+<title>Credentials</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -440,220 +440,264 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#ref-qpc-requirements">1. :product-title: requirements</a></li>
-<li><a href="#_hardware_requirements">2. Hardware Requirements</a></li>
-<li><a href="#con-install-qpc">3. Installing and configuring :product-title:</a></li>
-<li><a href="#con-scripted-installation">4. Scripted installation for :product-title:</a></li>
-<li><a href="#proc-obtain-installer">5. Obtaining the installer</a></li>
-<li><a href="#_running_the_installer">6. Running the installer</a></li>
-<li><a href="#_installing_with_internet_connectivity">7. Installing with Internet connectivity</a></li>
-<li><a href="#proc-install-:product-title_cmd:-no-connectivity">8. Installing without Internet connectivity</a></li>
-<li><a href="#_offline_dependencies">9. Offline dependencies</a></li>
-<li><a href="#ref-installation-options">10. Installation options</a></li>
-<li><a href="#con-step-by-step">11. Step-by-step installation</a></li>
-<li><a href="#con-install-qpc-cli">12. Install the :product-title: command line tool</a></li>
-<li><a href="#proc-download-epel">13. Download and configure EPEL</a></li>
-<li><a href="#_install_the_z_package">14. Install the z Package</a></li>
-<li><a href="#_installing_docker_and_the_product_title_server_container_image">15. Installing Docker and the :product-title: Server Container Image</a></li>
-<li><a href="#proc-install-docker-from-rhel7-repo">16. Installing from the repository on Red Hat Enterprise Linux 7</a></li>
-<li><a href="#con-install-docker-from-centos7-repo">17. Installing from the repository on CentOS 7</a></li>
-<li><a href="#proc-install-docker-from-centos7-repo">18. Installing from the repository on CentOS7</a></li>
-<li><a href="#_sudo_systemctl_start_docker">sudo systemctl start docker</a></li>
-<li><a href="#_sudo_docker_run_hello_world">sudo docker run hello-world</a></li>
+<li><a href="#credentials">1. Credentials</a>
+<ul class="sectlevel2">
+<li><a href="#proc-adding-net-creds-gui-{context}">1.1. Adding network credentials</a></li>
+<li><a href="#proc-adding-sat-creds-gui-{context}">1.2. Adding satellite credentials</a></li>
+<li><a href="#proc-adding-vcent-creds-gui-{context}">1.3. Adding vcenter credentials</a></li>
+</ul>
+</li>
+<li><a href="#sources">2. Sources</a>
+<ul class="sectlevel2">
+<li><a href="#proc-adding-net-sources-gui-{context}">2.1. Adding network sources</a></li>
+<li><a href="#proc-adding-sat-sources-gui-{context}">2.2. Adding satellite sources</a></li>
+<li><a href="#proc-adding-vcent-sources-gui-{context}">2.3. Adding vcenter sources</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
+<div class="sect1">
+<h2 id="credentials">1. Credentials</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="proc-adding-net-creds-gui-{context}">1.1. Adding network credentials</h3>
 <div class="paragraph">
-<p>include::shared/attributes_dsc.adoc</p>
+<p>You can add credentials from the Credentials view or from the Add Source wizard during the creation of a source.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="ref-qpc-requirements">1. :product-title: requirements</h2>
-<div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Before installing :product-title: in your environment, review the following guidelines about installing and running :product-title</dt>
-<dd>
 <div class="ulist">
+<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You must install :product-title: on a system that is running Red Hat Enterprise Linux 6 or 7, CentOS 7, or Fedora 27 or 28.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>For an installation on Fedora, the scripted installation of :product-title: might not work correctly on all systems. Therefore, the best practice for a Fedora installation is to use the step-by-step installation instructions.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>The system that :product-title: is installed on must have access to the systems to be discovered and inspected.</p>
-</li>
-<li>
-<p>Any network sources that are targeted for the inspection process must be running SSH.</p>
-</li>
-<li>
-<p>For a scan of network systems, the user account (credential) that :product-title: uses for the SSH connection into the target systems must have adequate permissions to run commands and read certain files on those systems. For example, some of the commands require privilege elevation to gather the complete set of facts for the scan. For more information about these commands, see Commands Used in Scans of Remote Network Assets</p>
-</li>
-<li>
-<p>The credential user account requires a 'bash' shell. For example, the shell cannot be the '/sbin/nologin' or '/bin/false' shell.</p>
-</li>
-<li>
-<p>:product-title: server requires a Postgres 9.6.10 database (this will be installed for scripted installations).</p>
-</li>
-<li>
-<p>The command line interface requires python 3.4+.</p>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_hardware_requirements">2. Hardware Requirements</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><strong>CPU:</strong> 2 core minimum with a recommended 4 cores.</p>
-</li>
-<li>
-<p><strong>Disk:</strong> Storage: 30 GB</p>
-</li>
-<li>
-<p><strong>RAM:</strong> 1 GB minimum with a recommended 2 GB.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="con-install-qpc">3. Installing and configuring :product-title:</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="con-scripted-installation">4. Scripted installation for :product-title:</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The scripted installation runs an installer that uses Ansible to install the command line tool, :product-title: server image, and the database image. When you run the scripted installation, the server is installed and started as described in Configuring and Starting :product-title:. However, you can change some of the defaults used by the scripted installation with the Installation Options.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="proc-obtain-installer">5. Obtaining the installer</h2>
-<div class="sectionbody">
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Download the installer:</p>
-<div class="listingblock">
+<p>If you want to use the SSH key authentication type for network credentials, that SSH key must be copied into the directory that was mapped to <code class="filename">/sshkeys</code> during Quipucords server installation. The default path for this directory is <code class="filename">~/dsc/sshkeys</code>.</p>
+<div class="literalblock">
 <div class="content">
-<pre># curl -k -O -sSL https://github.com/quipucords/quipucords/releases/download/0.0.46/quipucords.install.0.0.46.tar.gz</pre>
+<pre>For more information about the SSH keys that are available for use in the [filename]`/sshkeys` directory, or to request the addition of a key to that directory, contact the administrator who manages the Quipucords server.</pre>
 </div>
 </div>
-</li>
-<li>
-<p>Extract the installer:</p>
-<div class="listingblock">
-<div class="content">
-<pre># tar -xvzf quipucords.install.tar.gz</pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_running_the_installer">6. Running the installer</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can run the installer in different ways, depending on your needs:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Online:</strong> You can run with internet connectivity to install any associated dependencies, download required packages, and pull for needed repositories. This choice is the recommended approach because it simplifies the installation.</p>
-</li>
-<li>
-<p><strong>Offline:</strong> You can run the installer offline by manually installing dependencies, downloading RPM packages and container images and placing them into a specified directory. This choice is useful when you are installing on systems with limited or no access to the internet.</p>
 </li>
 </ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_installing_with_internet_connectivity">7. Installing with Internet connectivity</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>If you choose the internet connectivity option, use the following steps to run the installer.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Change to the installer directory:</p>
-<div class="listingblock">
-<div class="content">
-<pre># cd install/</pre>
-</div>
+<p>Click the option to add a new credential based on your location:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>From the Credentials view, click menu:[Add&gt;Network Credential].</p>
+</li>
+<li>
+<p>From the Add Source wizard, click the <b class="button">Add a credential</b> icon for the <b class="button">Credentials</b> field.</p>
+</li>
+</ul>
 </div>
 </li>
 <li>
-<p>Start the installation by entering the following command. Alternatively, enter the following command with options as described in Installation Options:</p>
-<div class="listingblock">
-<div class="content">
-<pre># ./install.sh</pre>
+<p>In the <b class="button">Credential Name</b> field, enter a descriptive name.</p>
+</li>
+<li>
+<p>In the <b class="button">Authentication Type</b> field, select the type of authentication that you want to use. You can select either <b class="button">Username and Password</b> or <b class="button">SSH Key</b>.</p>
+</li>
+<li>
+<p>Enter the authentication data in the appropriate fields, based on the authentication type.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For username and password authentication, enter a username and password for a user. This user must have root-level access to your network or to the subset of your network that you want to scan. Alternatively, this user must be able to obtain root-level access with the selected become method.</p>
+</li>
+<li>
+<p>For SSH key authentication, enter a username and an SSH key file, where the path to the key file is a path that is local to the Quipucords server. For example, if the key file is in the <code class="filename">~/quipucords/sshkeys</code> path on the server, enter that path in the <b class="button">SSH Key File</b> field. Entering a passphrase is optional.</p>
+</li>
+</ul>
 </div>
-</div>
+</li>
+<li>
+<p>Enter the become method for privilege elevation. Privilege elevation is required to run some commands during a network scan. Entering a username and password for the become method is optional.</p>
+</li>
+<li>
+<p>Click <b class="button">Save</b> to save the credential and close the Add Credential wizard.</p>
 </li>
 </ol>
 </div>
+</div>
+<div class="sect2">
+<h3 id="proc-adding-sat-creds-gui-{context}">1.2. Adding satellite credentials</h3>
 <div class="paragraph">
-<p>The output appears similar to the following example:</p>
-</div>
-<div class="paragraph">
-<p>+</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>Installation complete.</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="proc-install-:product-title_cmd:-no-connectivity">8. Installing without Internet connectivity</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>If you choose the offline option to run the installer, you will need to obtain the following packages on a machine with internet connectivity.</p>
+<p>You can add credentials from the Credentials view or from the Add Source wizard during the creation of a source.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p><strong>:product-title: Server Package:</strong> <a href="https://github.com/:product-title:/:product-title:/releases/download/0.0.46/:product-title:.0.0.46.tar.gz">:product-title: Server Package installed</a></p>
+<p>Click the option to add a new credential based on your location:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>From the Credentials view, click menu:[Add&gt;Satellite Credential].</p>
 </li>
 <li>
-<p><strong>Build the Postgres Docker Image:</strong> The :product-title: server requires a Postgres Docker image. You must build the Docker image on a machine with internet connectivity. Follow the steps documented below to create a Postgres Docker image:</p>
-<div class="listingblock">
-<div class="content">
-<pre># docker pull postgres:9.6.10
-# docker save -o postgres.9.6.10.tar postgres:9.6.10</pre>
+<p>From the Add Source wizard, click the <b class="button">Add a credential</b> icon for the <b class="button">Credentials</b> field.</p>
+</li>
+</ul>
 </div>
-</div>
+</li>
+<li>
+<p>In the <b class="button">Credential Name</b> field, enter a descriptive name.</p>
+</li>
+<li>
+<p>Enter the username and password for a Satellite Server administrator.</p>
+</li>
+<li>
+<p>Click <b class="button">Save</b> to save the credential and close the Add Credential wizard.</p>
 </li>
 </ol>
 </div>
+</div>
+<div class="sect2">
+<h3 id="proc-adding-vcent-creds-gui-{context}">1.3. Adding vcenter credentials</h3>
+<div class="paragraph">
+<p>You can add credentials from the Credentials view or from the Add Source wizard during the creation of a source.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Click the option to add a new credential based on your location:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>From the Credentials view, click menu:[Add&gt;VCenter Credential].</p>
+</li>
+<li>
+<p>From the Add Source wizard, click the <b class="button">Add a credential</b> icon for the <b class="button">Credentials</b> field.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>In the <b class="button">Credential Name</b> field, enter a descriptive name.</p>
+</li>
+<li>
+<p>Enter the username and password for a vCenter Server administrator.</p>
+</li>
+<li>
+<p>Click <b class="button">Save</b> to save the credential and close the Add Credential wizard.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sources">2. Sources</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="proc-adding-net-sources-gui-{context}">2.1. Adding network sources</h3>
+<div class="paragraph">
+<p>You can add sources from the initial Welcome page or from the Sources view.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Click the option to add a new credential based on your location:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>From the Welcome page, click <b class="button">Add Source</b>.</p>
+</li>
+<li>
+<p>From the Sources view, click <b class="button">Add</b>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>On the Type page, select <b class="button">Network Range</b> as the source type and click <b class="button">Next</b>.</p>
+</li>
+<li>
+<p>On the Credentials page, enter the following information.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>In the <b class="button">Name</b> field, enter a descriptive name.</p>
+</li>
+<li>
+<p>In the <b class="button">Search Addresses</b> field, enter one or more network identifiers separated by commas. You can enter host names, IP addresses, and IP ranges.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enter host names as DNS host names.</p>
+</li>
+<li>
+<p>Enter IP ranges in CIDR or Ansible notation.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Optional: In the <b class="button">Port</b> field, enter a different port if you do not want a scan for this source to run on the default port 22.</p>
+</li>
+<li>
+<p>In the <b class="button">Credentials</b> list, select the credentials that are required to access the network resources for this source. If a required credential does not exist, click the <b class="button">Add a credential</b> icon to open the Add Credential wizard.</p>
+</li>
+<li>
+<p>If your network resources require the Ansible connection method to be the Python SSH implementation, Paramiko, instead of the default OpenSSH implementation, select the <b class="button">Connect using Paramiko instead of OpenSSH</b> check box.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Click <b class="button">Save</b> to save the source and then click <b class="button">Close</b> to close the Add Source wizard.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proc-adding-sat-sources-gui-{context}">2.2. Adding satellite sources</h3>
+<div class="paragraph">
+<p>You can add sources from the initial Welcome page or from the Sources view.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Click the option to add a new credential based on your location:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>From the Welcome page, click <b class="button">Add Source</b>.</p>
+</li>
+<li>
+<p>From the Sources view, click <b class="button">Add</b>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>On the Type page, select <b class="button">Satellite</b> as the source type and click <b class="button">Next</b>.</p>
+</li>
+<li>
+<p>On the Credentials page, enter the following information.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>In the <b class="button">Name</b> field, enter a descriptive name.</p>
+</li>
+<li>
+<p>In the <b class="button">IP Address or Hostname</b> field, enter the IP address or host name of the Satellite Server for this source. Enter a different port if you do not want a scan for this source to run on the default port 443. For example, if the IP address of the Satellite Server is 192.0.2.15 and you want to change the port to 80, you would enter <code>192.0.2.15:80</code>.</p>
+</li>
+<li>
+<p>In the <b class="button">Credentials</b> list, select the credential that is required to access the Satellite Server for this source. If a required credential does not exist, click the <b class="button">Add a credential</b> icon to open the Add Credential wizard.</p>
+</li>
+<li>
+<p>In the <b class="button">Connection</b> list, select the SSL protocol to be used for a secure connection during a scan of this source. Select <b class="button">Disable SSL</b> to disable secure communication during a scan of this source.</p>
+</li>
+<li>
+<p>If you need to downgrade the SSL validation for the Satellite Server for this source, clear the <b class="button">Verify SSL Certificate</b> check box.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -662,528 +706,76 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The offline installation script requires the postgres tar to be named 'postgres.9.6.10.tar'.</p>
+<p>By default, sources are scanned with full SSL validation, but you might need to adjust the level of SSL validation to connect properly to Satellite Server. For example, you would downgrade SSL validation if Satellite Server uses self-signed certificates.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Install the correct command line tool RPM package using one of the links under Additional Resources.</p>
-</li>
-<li>
-<p>Transfer packages by changing to the installer, creating a new packages directory, and move the packages there.</p>
-<div class="listingblock">
-<div class="content">
-<pre># cd install/
-# mkdir packages
-# mv /path/to/package ./packages/</pre>
-</div>
-</div>
 </li>
 </ol>
 </div>
-<div class="olist arabic">
-<div class="title">Additional Resources</div>
-<ol class="arabic">
-<li>
-<p><a href="https://docs.docker.com/install/">Install Docker</a></p>
 </li>
 <li>
-<p><a href="https://github.com/:product-title:/:product-title_cmd:/releases/download/0.0.46/:product-title_cmd:-0.0.46-1.git.31.2c63673.el6.noarch.rpm">RPM package for RHEL 6 and CentOS 6</a></p>
-</li>
-<li>
-<p><a href="https://github.com/:product-title:/:product-title_cmd:/releases/download/0.0.46/:product-title_cmd:-0.0.46-1.git.31.2c63673.el7.noarch.rpm">RPM package for RHEL 7 and CentOS 7</a></p>
-</li>
-<li>
-<p><a href="https://github.com/:product-title:/:product-title_cmd:/releases/download/0.0.46/:product-title_cmd:-0.0.46-1.git.31.2c63673.fc27.noarch.rpm">RPM package for Fedora 27</a></p>
-</li>
-<li>
-<p><a href="https://github.com/:product-title:/:product-title_cmd:/releases/download/0.0.46/:product-title_cmd:-0.0.46-1.git.31.2c63673.fc28.noarch.rpm">RPM package for Fedora 28</a></p>
+<p>Click <b class="button">Save</b> to save the source and then click <b class="button">Close</b> to close the Add Source wizard.</p>
 </li>
 </ol>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_offline_dependencies">9. Offline dependencies</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="proc-adding-vcent-sources-gui-{context}">2.3. Adding vcenter sources</h3>
 <div class="paragraph">
-<p>The following associated dependencies must be installed onto the offline machine before the installation script can be executed.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Offline dependencies</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">CLI Tool Dependencies</th>
-<th class="tableblock halign-left valign-top">Server Dependencies</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Download and configure EPEL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ansible</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Python 3.4</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Docker</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Python 3.4-requests</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="ref-installation-options">10. Installation options</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The installer has various options, each of which has a default value. You can either run the installer with no options to use all the default values, or provide values for one or more of these options. You can pass values for these options by using the -e flag when you run the command to start the installer:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre># ./install.sh -e option1=value1 -e option2=value2 ...</pre>
-</div>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. Table Title</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Command</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">install_offline</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">usesupervisord</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">install_server</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">install_cli</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">pkg_install_dir</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">server_install_dir</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">server_port</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">server_name</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">:product-title_cmd:_SERVER_TIMEOUT</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">:product-title_cmd:_DBMS_USER</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">:product-title_cmd:_DBMS_PASSWORD</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Contains a 'true' or 'false' value. Defaults to 'false'. Supply 'true' to start an offline installation.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Contains a ''true' or 'false' value. Defaults to 'true'. Supply 'false' to start server without supervisord.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Contains a 'true' or 'false' value. Defaults to 'true'. Supply 'false' to skip the installation of the server.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Contains a 'true' or 'false' value. Defaults to 'true'. Supply 'false' to skip the installation of the command line tool.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the fully qualified path to the downloaded packages for the installer. Defaults to '&lt;installer&gt;/packages/'.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the fully qualified path to the installation directory for the :product-title: server. Defaults to '~/quipucords/'.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the port number for the :product-title: server. Defaults to '9443'.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the name for the :product-title: server. Defaults to 'quipucords'.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the HTTP timeout length for the :product-title: server. Defaults to '120'.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(Optional) Specifies the database user for postgres. Defaults to 'postgres'.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(Optional) Specifies the database password for postgres. Defaults to 'password'.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="con-step-by-step">11. Step-by-step installation</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can install the command line and server components by using the following instructions.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="con-install-qpc-cli">12. Install the :product-title: command line tool</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>':product-title_cmd:', the command line tool that is installed by RPM, is available for download from the Fedora COPR build and repository system. Use the following steps to install the command line tool.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="proc-download-epel">13. Download and configure EPEL</h2>
-<div class="sectionbody">
-<div class="olist arabic">
-<div class="title">Prerequisite</div>
-<ol class="arabic">
-<li>
-<p>Install Ansible.</p>
-</li>
-</ol>
+<p>You can add sources from the initial Welcome page or from the Sources view.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Enable the EPEL repo for the server. You can find the appropriate architecture and version on the <a href="https://fedoraproject.org/wiki/EPEL">EPEL wiki</a>.</p>
+<p>Click the option to add a new credential based on your location:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>For Red Hat Enterprise Linux 7or CentOS 7, enter:</p>
-<div class="listingblock">
-<div class="content">
-<pre># rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</pre>
-</div>
-</div>
+<p>From the Welcome page, click <b class="button">Add Source</b>.</p>
 </li>
 <li>
-<p>For Red Hat Enterprise Linux 6 or CentOS 6, enter:</p>
-<div class="listingblock">
-<div class="content">
-<pre># rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm</pre>
-</div>
-</div>
+<p>From the Sources view, click <b class="button">Add</b>.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Add the COPR to your server. You can find the appropriate architecture and version on the <a href="https://copr.fedorainfracloud.org/coprs/g/quipucords/:product-title_cmd:/">COPR :product-title_cmd: page</a>.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>For Red Hat Enterprise Linux 7 or CentOS 7, enter:</p>
-<div class="listingblock">
-<div class="content">
-<pre># wget -O /etc/yum.repos.d/group_quipucords-:product-title_cmd:-epel-7.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/:product-title_cmd:/repo/epel-7/group_quipucords-:product-title_cmd:-epel-7.repo</pre>
-</div>
-</div>
+<p>On the Type page, select <b class="button">vCenter Server</b> as the source type and click <b class="button">Next</b>.</p>
 </li>
 <li>
-<p>For Red Hat Enterprise Linux 6 or CentSO 6, enter:</p>
-<div class="listingblock">
-<div class="content">
-<pre># wget -O /etc/yum.repos.d/group_quipucords-:product-title_cmd:-epel-6.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/:product-title_cmd:/repo/epel-6/group_quipucords-:product-title_cmd:-epel-6.repo</pre>
-</div>
-</div>
+<p>On the Credentials page, enter the following information.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>In the <b class="button">Name</b> field, enter a descriptive name.</p>
 </li>
 <li>
-<p>For Fedora 27, enter:</p>
-<div class="listingblock">
-<div class="content">
-<pre># wget -O /etc/yum.repos.d/group_quipucords-:product-title_cmd:-fedora-27.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/:product-title_cmd:/repo/fedora-27/group_quipucords-:product-title_cmd:-fedora-27.repo</pre>
-</div>
-</div>
+<p>In the <b class="button">IP Address or Hostname</b> field, enter the IP address or host name of the vCenter Server for this source. Enter a different port if you do not want a scan for this source to run on the default port 443. For example, if the IP address of the vCenter Server is 192.0.2.15 and you want to change the port to 80, you would enter <code>192.0.2.15:80</code>.</p>
 </li>
 <li>
-<p>For Fedora 28, enter:</p>
-<div class="listingblock">
-<div class="content">
-<pre># wget -O /etc/yum.repos.d/group_quipucords-:product-title_cmd:-fedora-28.repo https://copr.fedorainfracloud.org/coprs/g/quipucords/:product-title_cmd:/repo/fedora-28/group_quipucords-:product-title_cmd:-fedora-28.repo</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_install_the_z_package">14. Install the z Package</h2>
-<div class="sectionbody">
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Install the QPC package using yum</p>
-<div class="ulist">
-<ul>
-<li>
-<p>For Red Hat Enterprise Linux 7 or CentOS 7, enter:</p>
-<div class="listingblock">
-<div class="content">
-<pre># yum -y install qpc-0.0.46-1.git.31.2c63673.el7</pre>
-</div>
-</div>
+<p>In the <b class="button">Credentials</b> list, select the credential that is required to access the vCenter Server for this source. If a required credential does not exist, click the <b class="button">Add a credential</b> icon to open the Add Credential wizard.</p>
 </li>
 <li>
-<p>For Red Hat Enterprise Linux 6 or CentOS 6, enter:</p>
-<div class="listingblock">
-<div class="content">
-<pre># yum -y install qpc-0.0.46-1.git.31.2c63673.el6</pre>
-</div>
-</div>
+<p>In the <b class="button">Connection</b> list, select the SSL protocol to be used for a secure connection during a scan of this source. Select <b class="button">Disable SSL</b> to disable secure communication during a scan of this source.</p>
 </li>
 <li>
-<p>For Fedora 27, enter:</p>
-<div class="listingblock">
-<div class="content">
-<pre># yum -y install qpc-0.0.46-1.git.31.2c63673.fc27</pre>
-</div>
-</div>
-</li>
-<li>
-<p>For Fedora 28, enter:</p>
-<div class="listingblock">
-<div class="content">
-<pre># yum -y install qpc-0.0.46-1.git.31.2c63673.fc28</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_installing_docker_and_the_product_title_server_container_image">15. Installing Docker and the :product-title: Server Container Image</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The :product-title: server is delivered as a container image that runs on your server. First you must install and start the necessary prerequisite, Docker, to run the container. Then you can obtain and install the :product-title: server container image.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="proc-install-docker-from-rhel7-repo">16. Installing from the repository on Red Hat Enterprise Linux 7</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can install Docker from the RHEL extras repository.</p>
-</div>
-<div class="paragraph">
-<p>You can set up the the Extras ('rhel-7-server-extras-rpms') and Optional ('rhel-7-server-optional-rpms') repositories and then install Docker from them. This is the recommended approach because it simplifies the installation and upgrade tasks. For more information about installing Docker with Red Hat Enterprise Linux 7, see Getting Docker in RHEL 7.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Make sure that you are logged in as a user with 'sudo' or 'root' privileges.</p>
-</li>
-<li>
-<p>Enable the required repositories:</p>
-<div class="listingblock">
-<div class="content">
-<pre># sudo subscription-manager repos --enable=rhel-7-server-rpms --enable=rhel-7-server-extras-rpms</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Install Docker from the repository:</p>
-<div class="listingblock">
-<div class="content">
-<pre># sudo yum install docker device-mapper-libs device-mapper-event-libs</pre>
-</div>
-</div>
-</li>
-<li>
-<p>After you install Docker, you must start it and verify that it is running. Start Docker:</p>
-<div class="listingblock">
-<div class="content">
-<pre># sudo systemctl start docker</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Verify that Docker is installed correctly. To do this step, run the hello-world image:</p>
-<div class="listingblock">
-<div class="content">
-<pre># sudo docker run hello-world</pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>After you complete the steps to install Docker for Red Hat Enterprise Linux 7, continue with the :product-title: server installation steps in Installing the :product-title: Server Container Image.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="con-install-docker-from-centos7-repo">17. Installing from the repository on CentOS 7</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can install Docker in different ways, depending on your needs:
-* You can set up the Docker repositories and then install from them. This choice is the recommended approach because it simplifies the installation and upgrade tasks.
-* You can download the RPM package, install it manually, and manage upgrades manually. This choice is useful when Docker is installed on systems with limited or no access to the internet.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="proc-install-docker-from-centos7-repo">18. Installing from the repository on CentOS7</h2>
-<div class="sectionbody">
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Make sure that you are logged in as a user with 'sudo' or 'root' privileges.</p>
-</li>
-<li>
-<p>Install the required packages:</p>
-<div class="listingblock">
-<div class="content">
-<pre># sudo yum install -y yum-utils device-mapper-persistent-data lvm2</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Add the repository:</p>
-<div class="listingblock">
-<div class="content">
-<pre># sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Install Docker from the repository:</p>
-<div class="listingblock">
-<div class="content">
-<pre># sudo yum install docker-ce</pre>
-</div>
-</div>
-</li>
-<li>
-<p>After you install Docker, you must start it and verify that it is running. Start Docker:</p>
-<div class="listingblock">
-<div class="content">
-<pre># sudo systemctl start docker</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Verify that Docker is installed correctly. To do this step, run the hello-world image:</p>
-<div class="listingblock">
-<div class="content">
-<pre># sudo docker run hello-world
------
-
-After you complete the steps to install Docker for CentOS 7, continue with the :product-title: server installation steps in Installing the :product-title: Server Container Image.
-[id='proc-install-docker-from-pkg-centos7']
-
-== Installing from a package on CentOS7
-
-.Procedure
-
-. Go to https://download.docker.com/linux/centos/7/x86_64/stable/Packages/[CentOS 7 Packages]. For the Docker version that you want to install, download the RPM package to the intended installation system.
-
-. Make sure that you are logged in as a user with '+sudo+' or '+root+' privileges.
-
-. Install Docker, changing the path in the following example to the path where you downloaded the Docker package:
-+</pre>
-</div>
-</div>
-<div class="paragraph">
-<p># sudo yum install /path/to/package.rpm</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>. After you install Docker, you must start it and verify that it is running. Start Docker:
-+</pre>
-</div>
-</div>
-</div>
-</div>
-<h1 id="_sudo_systemctl_start_docker" class="sect0">sudo systemctl start docker</h1>
-<div class="openblock partintro">
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre>. Verify that Docker is installed correctly. To do this step, run the hello-world image:
-+</pre>
-</div>
-</div>
-</div>
-</div>
-<h1 id="_sudo_docker_run_hello_world" class="sect0">sudo docker run hello-world</h1>
-<div class="openblock partintro">
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre>After you complete the steps to install Docker for CentOS 7, continue with the :product-title: server installation steps in Installing the :product-title: Server Container Image.
-[id='con-install-docker-centos6-rhel6']
-
-== Installing Docker on Red Hat Enterprise Linux and CentOS 6.6 or later
-
-To install Docker on Red Hat Enterprise Linux or CentOS 6.6 or later, you must have kernel 2.6.32-431 or later installed.
-
-To check the current kernel release, open a terminal session and use the uname command to display the kernel release information, as shown in the following example:
-
-----
-# uname -r
-----
-
-The output of this command is similar to the following example:
-
-----
-2.6.32-573.el6.x86_64
-----
-
+<p>If you need to downgrade the SSL validation for the vCenter Server for this source, clear the <b class="button">Verify SSL Certificate</b> check box.
 [NOTE]
 ====
-After you confirm that you have at least the minimum required kernel release, it is recommended that you fully update your system. Having a fully patched system can help you avoid kernel bugs that have already been fixed on the latest kernel packages.
-[id='proc-install-qpc']
-
-== Installing the :product-title: Server Container Image
-
-After Docker is installed, you can obtain and install the container image that enables the use of the :product-title: server.
-
-.Procedure
-
-. Download the server container image by entering the following command:
-+
-----
-# curl -k -O -sSL https://github.com/:product-title:/:product-title:/releases/download/0.0.46/:product-title:.0.0.46.tar.gz
-----
-
-. Load the container image into the local Docker registry with the following command:
-+
-----
-# sudo docker load -i :product-title:.0.0.46.tar.gz
-----
-
-. The output appears similar to the following example:
-+
-----
-Loaded image: :product-title::0.0.46
-----
-
-. Verify the image within the local Docker registry by entering the following command:
-+
-----
-# sudo docker images
-----
-
-. The output appears similar to the following example:
-+
-----
-REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
-:product-title_cmd:             0.0.46               fdadcc4b326f        3 days ago          969MB
-----</pre>
+By default, sources are scanned with full SSL validation, but you might need to adjust the level of SSL validation to connect properly to vCenter Server. For example, you would downgrade SSL validation if vCenter Server uses self-signed certificates.
+====</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Click <b class="button">Save</b> to save the source and then click <b class="button">Close</b> to close the Add Source wizard.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -1191,7 +783,7 @@ REPOSITORY              TAG                 IMAGE ID            CREATED         
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-06-05 12:38:45 -0400
+Last updated 2019-06-05 12:37:23 -0400
 </div>
 </div>
 </body>

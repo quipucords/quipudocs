@@ -38,11 +38,11 @@ Object.keys(moduleLocales).forEach(locale => {
 
   fs.writeFileSync(
     path.join(outputDir, `${locale}.json`),
-    JSON.stringify(moduleLocales[locale], null, 2)
+    `${JSON.stringify(moduleLocales[locale], null, 2)}\n`
   );
 });
 
 /**
  * From available locales/language codes, output to JSON
  */
-fs.writeFileSync(path.join(outputDir, `locales.json`), JSON.stringify(locales, null, 2));
+fs.writeFileSync(path.join(outputDir, `locales.json`), `${JSON.stringify(locales, null, 2)}\n`);
