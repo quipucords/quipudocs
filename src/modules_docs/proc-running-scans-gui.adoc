@@ -6,7 +6,7 @@
 
 = Running scans
 
-ZONKS You can run a new scan from the Sources view. You can run a scan for a single source or select multiple sources to combine into a single scan.
+You can run a new scan from the Sources view. You can run a scan for a single source or select multiple sources to combine into a single scan.
 
 After you run a scan for the first time, the scan is saved to the Scans view. From that view,you can run the scan again to update its data.
 
