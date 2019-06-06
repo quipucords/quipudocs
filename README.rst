@@ -32,10 +32,11 @@ To work with the quipudocs code, begin by cloning the repository::
 Asciidoc
 ^^^^^^^^
 The requirements for working with Asciidoc
+
 - Your system needs to be running `NodeJS version 10+ <https://nodejs.org/>`_
 - `Docker <https://docs.docker.com/engine/installation/>`_
 
-To work with the Asciidoc EA and Help guides, begin by cloning the repository::
+To work with the Asciidoc Help guides, begin by cloning the repository::
 
     git clone git@github.com:quipucords/quipudocs.git
     cd ./quipudocs
@@ -50,9 +51,11 @@ To build the Asciidoc EA and Help guides::
 
 Test Asciidoc
 ^^^^^^^^^^^^^^
-To test the Asciidoc EA and Help guides::
+To run basic linting checks on HTML, JSON, and JS files for the Asciidoc EA and Help guides::
 
     npm test
+
+Asciidoctor contains a compiler check that processes when the build is run. We leverage this compiler check during our CI process as an additional "test".
 
 Authors
 -------
