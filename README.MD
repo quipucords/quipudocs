@@ -21,38 +21,64 @@ quipudocs is `sphinx` based information documentation.
 
 ### Read the Docs
 To work with the quipudocs code, begin by cloning the repository:
-```
-git clone git@github.com:quipucords/quipudocs.git
-cd ./quipudocs
-pipenv shell
-pip install -r requirements.txt
-make html
-```
+  ```
+  $ git clone git@github.com:quipucords/quipudocs.git
+  $ cd ./quipudocs
+  $ pipenv shell
+  $ pip install -r requirements.txt
+  $ make html
+  ```
 
 ### Asciidoc
 The requirements for working with Asciidoc
-- Your system needs to be running [NodeJS version 10+](https://nodejs.org/)
-- [Docker](https://docs.docker.com/engine/installation/)
+  - Your system needs to be running [NodeJS version 10+](https://nodejs.org/)
+  - [Yarn 1.13+](https://yarnpkg.com) for dependency and script management
+  - and [Docker](https://docs.docker.com/engine/installation/)
+
+To work with Yarn you can use NPM, or if you're on a Mac, use [Homebrew](https://brew.sh/) to do the installation
+  - NPM
+    ```
+    $ npm install -g yarn
+    ```
+  - Homebrew
+    ```
+    $ brew update
+    $ brew install yarn
+    ```
+    
 
 To work with the Asciidoc Help guides, begin by cloning the repository:
-```
-git clone git@github.com:quipucords/quipudocs.git
-cd ./quipudocs
-npm install
-npm start
-```
+  ```
+  $ git clone git@github.com:quipucords/quipudocs.git
+  $ cd ./quipudocs
+  $ yarn
+  $ yarn start
+  ```
 
 ### Build Asciidoc
-To build the Asciidoc EA and Help guides::
-```
-npm run build
-```
+To build everything, the EA and the Asciidoc Help guides:
+  ```
+  $ yarn build
+  ```
+  
+But you can also run each Help guide build separately:
+  ```
+  $ yarn build:discovery-install
+  $ yarn build:qpc-install
+  $ yarn build:discovery-user
+  $ yarn build:qpc-user
+  ```
+  
+And run the EA build separately:
+   ```
+   $ yarn build:locale
+   ```
 
 ### Test Asciidoc
-To run basic linting checks on HTML, JSON, and JS files for the Asciidoc EA and Help guides::
-```
-npm test
-```
+To run basic linting checks on HTML, JSON, and JS files for the EA and Asciidoc Help guides:
+  ```
+  $ yarn test
+  ```
 
 Asciidoctor contains a compiler check that processes when the build is run. We leverage this compiler check during our CI process as an additional "test".
 
