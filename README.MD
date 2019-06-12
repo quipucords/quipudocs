@@ -1,7 +1,7 @@
 [![GitHub license](https://img.shields.io/github/license/quipucords/quipudocs.svg)](https://github.com/quipucords/quipudocs/blob/master/LICENSE)
 [![Updates](https://pyup.io/repos/github/quipucords/quipudocs/shield.svg)](https://pyup.io/repos/github/quipucords/quipudocs/)
 [![Python 3](https://pyup.io/repos/github/quipucords/quipudocs/python-3-shield.svg)](https://pyup.io/repos/github/quipucords/quipudocs/)
-[![Documentation Status](https://readthedocs.org/projects/quipucords/badge/?version=0.0.46)](https://quipucords.readthedocs.io/en/0.0.46/?badge=0.0.46)
+[![Documentation Status](https://readthedocs.org/projects/quipucords/badge/)](https://quipucords.readthedocs.io/en/latest/)
 [![Build Status](https://travis-ci.org/quipucords/quipudocs.svg?branch=master)](https://travis-ci.org/quipucords/quipudocs)
 
 # quipudocs - Documentation for Quipucords
@@ -46,7 +46,7 @@ To work with Yarn you can use NPM, or if you're on a Mac, use [Homebrew](https:/
     $ brew update
     $ brew install yarn
     ```
-    
+
 
 To work with the Asciidoc Help guides, begin by cloning the repository:
   ```
@@ -61,7 +61,7 @@ To build everything, the EA and the Asciidoc Help guides:
   ```
   $ yarn build
   ```
-  
+
 But you can also run each Help guide build separately:
   ```
   $ yarn build:discovery-install
@@ -69,7 +69,7 @@ But you can also run each Help guide build separately:
   $ yarn build:discovery-user
   $ yarn build:qpc-user
   ```
-  
+
 And run the EA build separately:
    ```
    $ yarn build:locale
