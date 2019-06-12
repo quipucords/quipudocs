@@ -1,0 +1,5 @@
+[id='con-working-reports']
+
+== Working with Reports
+
+When a scan job completes, it provides information that can then be viewed as a report. Data from a single scan job can be viewed in a report, but you can also merge the results of multiple scan jobs and then create a report from the merged results.

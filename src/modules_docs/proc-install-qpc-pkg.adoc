@@ -1,0 +1,31 @@
+[id='proc-install-qpc-pkg']
+
+== Install the z Package
+
+.Procedure
+
+. Install the QPC package using yum
+
+** For Red Hat Enterprise Linux 7 or CentOS 7, enter:
++
+----
+# yum -y install qpc-0.0.46-1.git.31.2c63673.el7
+----
+
+** For Red Hat Enterprise Linux 6 or CentOS 6, enter:
++
+----
+# yum -y install qpc-0.0.46-1.git.31.2c63673.el6
+----
+
+** For Fedora 27, enter:
++
+----
+# yum -y install qpc-0.0.46-1.git.31.2c63673.fc27
+----
+
+** For Fedora 28, enter:
++
+----
+# yum -y install qpc-0.0.46-1.git.31.2c63673.fc28
+----

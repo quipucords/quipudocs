@@ -1,0 +1,19 @@
+[id='proc-creating-scan-cli']
+
+== Creating a scan
+
+After you set up your credentials and sources, you can run a Quipucords scan to inspect your IT environment. You can create a scan that uses a single source or combines sources, even sources of different types.
+
+.Procedure
+
+. Create the scan by using the '+scan add+' command, specifying a name for the '+name+' option and one or more sources for the '+sources+' option:
++
+----
+# qpc scan add --name scan1 --sources source_name1 source_name2
+----
+
+. For example, if you want to create a scan called '+myscan+' with the network source '+mynetwork+' and the Satellite source '+mysatellite6+', you would enter the following command:
++
+----
+# qpc scan add --name myscan --sources mynetwork mysatellite6
+----

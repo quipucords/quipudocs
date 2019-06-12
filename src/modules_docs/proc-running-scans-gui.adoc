@@ -1,0 +1,45 @@
+// Module included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+[id="proc-running-scans-gui-{context}"]
+
+= Running scans
+
+You can run a new scan from the Sources view. You can run a scan for a single source or select multiple sources to combine into a single scan.
+
+After you run a scan for the first time, the scan is saved to the Scans view. From that view,you can run the scan again to update its data.
+
+.Prerequisites
+
+* To run a scan, you must first add the sources that you want to scan and the credentials to access those sources.
+
+.Procedure
+
+. From the Sources view, select one or more sources. You can select sources of different types to combine them into a single scan.
+
+. Click the btn:[Scan] button that is appropriate for the selected sources:
+  * For a single source, click btn:[Scan] on the row for that source. Selecting the check box for the source is optional.
+  * If you selected multiple sources, click btn:[Scan] in the toolbar.
+  The Scan wizard opens.
+// Too many opportunities to scan what you don't intend to scan with a random click.
+// Selected two sources, but because everything is active, clicking Scan on a third runs scan on source #3.
+// Can the scan button at the top of the screen be "Scan selected" instead?
+// Can the row's Scan button be enabled only when that source is selected? CHECK BOX, NOT RANDOM CLICKY-SCAN
+// If only one source is selected, can the Scan selected button at the top of the screen be disabled? SCRATCH THAT, NONSENSICAL.
+// If multiple sources are selected, can the Scan button on the rows be disabled, and the Scan Selected button be enabled?
+
+. In the btn:[Name] field, enter a descriptive name for the scan.
+
+. If you want to change the default number of maximum concurrent scans, set a new value in the btn:[Maximum concurrent scans] field. This value is the maximum number of machines or virtual machines that are scanned in parallel during a scan.
+
+. To use the default scanning process, allow the btn:[Deep scan for these products] check boxes to remain in the default, cleared state.
+
+. To begin the scan process, click btn:[Scan].
+
+.Verification steps
+When the scan process begins, a notification displays in the Sources view. The running scan also displays in the Scans view, with a message about the progress of the scan.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.

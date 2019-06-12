@@ -1,0 +1,3 @@
+:product-title: Red Hat discovery tool
+:product-title_short: discovery
+:product-title_cmd: dsc

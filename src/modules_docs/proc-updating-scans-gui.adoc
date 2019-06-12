@@ -1,0 +1,32 @@
+// Module included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+[id="proc-updating-scans-gui-{context}"]
+
+= Updating scans
+
+After you name a scan and run it for the first time, it is added to the Scans view. You can then run a new instance of that scan, or _scan job_, to update the data that is gathered for that scan.
+
+.Prerequisites
+
+// no prereqs? To update a scan, you must run it at least once--seems pretty no duh. is this needed?
+
+.Procedure
+
+. From the Scans view, click the btn:[Run Scan] icon in the scan details.
+
+  [NOTE]
+  ====
+  In the scan details, if the first or most recent scan job did not complete successfully, this icon is labeled btn:[Retry Scan].
+  ====
+
+.Verification steps
+
+When the scan process begins, a notification displays with a message about the progress of the scan.
+
+. In the scan details, expand btn:[Previous] to view all previous scan jobs.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.

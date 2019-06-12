@@ -1,0 +1,46 @@
+{
+  "name": "quipudocs",
+  "version": "0.0.0",
+  "description": "Locale and documentation for Quipucords.",
+  "author": "Red Hat",
+  "license": "GPL-3.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quipucords/quipudocs.git"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "build": "run-s -l build:locale build:discovery* build:qpc*",
+    "build:discovery-install": "asciidoctor -v --failure-level error -S safe -d book -B ./src/docs_install/discovery -o ./dist/install/index-brand.html ./src/docs_install/discovery/master.adoc",
+    "build:qpc-install": "asciidoctor -v --failure-level error -S safe -d book -B ./src/docs_install/qpc -o ./dist/install/index.html ./src/docs_install/qpc/master.adoc",
+    "build:discovery-user": "asciidoctor -v --failure-level error -S safe -d book -B ./src/docs_user/discovery -o ./dist/user/index-brand.html ./src/docs_user/discovery/master.adoc",
+    "build:qpc-user": "asciidoctor -v --failure-level error -S safe -d book -B ./src/docs_user/qpc -o ./dist/user/index.html ./src/docs_user/qpc/master.adoc",
+    "build:locale": "./scripts/build.locale.js",
+    "start": "./scripts/dev.docs.sh -s ./src/docs_user/qpc/master.adoc -o user_qpc.html -s ./src/docs_user/discovery/master.adoc -o user_discovery.html -s ./src/docs_install/qpc/master.adoc -o install_qpc.html -s ./src/docs_install/discovery/master.adoc -o install_discovery.html",
+    "test": "run-s -l test:*",
+    "test:ea": "eslint --ext=json ./src/modules_ea",
+    "test:dist": "eslint --ext=json --ext=js ./dist; htmlhint ./dist",
+    "test:scripts": "eslint --ext=js ./scripts"
+  },
+  "devDependencies": {
+    "@asciidoctor/cli": "^3.0.1",
+    "@asciidoctor/core": "2.0.3",
+    "eslint": "^5.16.0",
+    "eslint-config-node": "^4.0.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-json": "^1.4.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "htmlhint": "^0.11.0",
+    "iso-639-1": "^2.0.5",
+    "npm-run-all":"^4.1.5",
+    "prettier": "^1.17.1"
+  }
+}

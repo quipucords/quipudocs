@@ -1,0 +1,27 @@
+[id='ref-cmds-basic-qpc']
+
+== Basic Commands in QPC
+
+.Basic commands in QPC
+|=== 
+
+|cat
+|egrep
+|sort
+|uname
+
+|ctime
+|grep
+|rpm
+|virsh
+
+|date
+|id
+|test
+|whereis
+
+|echo
+|sed
+|tune2fs
+|xargs
+|===

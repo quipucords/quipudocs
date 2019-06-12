@@ -7,11 +7,12 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+node_modules
+.asciidoctor
 .Python
 env/
 build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
