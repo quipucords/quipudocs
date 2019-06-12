@@ -1,5 +1,0 @@
-[id='con-editing-listing-clearing']
-
-== Editing, Listing, and Clearing Credentials
-
-In addition to creating credentials for use with sources, you can perform several other operations on credentials. You can edit a credential for situations where passwords or passphrases need to be updated. You can list and filter credentials, and you can remove credentials that are no longer needed. These operations are described in the Credentials section of the Command Line Usage.

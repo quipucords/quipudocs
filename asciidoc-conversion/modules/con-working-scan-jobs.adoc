@@ -1,5 +1,0 @@
-[id='con-working-scan-jobs']
-
-== Working with Scan Jobs
-
-After a scan starts, that instance of the scan is assigned a unique identifier and is known as a scan job. You can view information about the created scan job to determine its state or to pause or cancel the scan operation.

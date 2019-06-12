@@ -1,7 +1,0 @@
-[id='con-install-docker-centos7']
-
-== Installing from the repository on CentOS 7
-
-You can install Docker in different ways, depending on your needs:
-* You can set up the Docker repositories and then install from them. This choice is the recommended approach because it simplifies the installation and upgrade tasks.
-* You can download the RPM package, install it manually, and manage upgrades manually. This choice is useful when Docker is installed on systems with limited or no access to the internet.

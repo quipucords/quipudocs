@@ -1,9 +1,0 @@
-[id='con-running-installer']
-
-== Running the installer
-
-You can run the installer in different ways, depending on your needs:
-
-* *Online:* You can run with internet connectivity to install any associated dependencies, download required packages, and pull for needed repositories. This choice is the recommended approach because it simplifies the installation.
-
-* *Offline:* You can run the installer offline by manually installing dependencies, downloading RPM packages and container images and placing them into a specified directory. This choice is useful when you are installing on systems with limited or no access to the internet.

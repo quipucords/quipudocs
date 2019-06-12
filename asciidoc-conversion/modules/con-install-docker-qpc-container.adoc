@@ -1,5 +1,0 @@
-[id='con-install-docker-qpc-container']
-
-== Installing Docker and the :product-title: Server Container Image
-
-The :product-title: server is delivered as a container image that runs on your server. First you must install and start the necessary prerequisite, Docker, to run the container. Then you can obtain and install the :product-title: server container image.

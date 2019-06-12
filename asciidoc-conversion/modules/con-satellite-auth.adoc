@@ -1,5 +1,0 @@
-[id='con-satellite-auth']
-
-== Satellite Authentication
-
-For a satellite scan, the connectivity and access to the Satellite server derives from basic authentication (user name and password) that is encrypted over HTTPS. If the Satellite server that is being accessed does not have a verified SSL certificate from a certificate authority, you can supply the ssl-cert-verify False option when creating the source. This option disregards the SSL certificate verification during authentication. For more information about authentication that is related to satellite scans, see Working with Sources.

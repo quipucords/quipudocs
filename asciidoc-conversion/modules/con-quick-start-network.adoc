@@ -1,7 +1,0 @@
-[id='con-quick-start-network']
-
-== Quick Start: A Network Scan Example
-
-This Quick Start information describes how you use the :product-title_cmd: command line interface to complete a simple :product-title: task of scanning a network and viewing a report. Use this information to become more familiar with :product-title: terminology, commands, and processes.
-
-For more information about how to work with :product-title:, see Using :product-title: from the Command Line Interface. For the complete list of options for each :product-title_cmd: command and subcommand, see the :product-title_cmd: man page.
