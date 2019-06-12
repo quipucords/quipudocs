@@ -1,5 +1,0 @@
-[id='con-checkin-to-qpc-server']
-
-== Configure and set up your :product-title: server.
-
-include::modules/con-install-qpc.adoc

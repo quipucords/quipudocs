@@ -1,5 +1,0 @@
-[id='con-step-by-step']
-
-== Step-by-step installation
-
-You can install the command line and server components by using the following instructions.

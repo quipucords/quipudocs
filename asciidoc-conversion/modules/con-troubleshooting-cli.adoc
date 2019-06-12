@@ -1,5 +1,0 @@
-[id='con-troubleshooting-cli']
-
-== Troubleshooting the Command Line
-
-Logs for the command line can be found in the '+~/.local/share/qpc+' directory with the name *qpc.log*. Logging information is captured for each command with the input arguments and request endpoint and response information to enable situational debugging. The command line supports a global flag '+-v+' to increase verbosity of the logs.

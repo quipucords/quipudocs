@@ -1,5 +1,0 @@
-[id='con-auth']
-
-== Authentication
-
-Quipucords uses several different types of authentication models. These include authentication for the interaction between the Quipucords command line interface and the Quipucords server in addition to authentication for the interaction with remote systems during network, vcenter, and satellite scans.
