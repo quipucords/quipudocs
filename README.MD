@@ -2,6 +2,7 @@
 [![Updates](https://pyup.io/repos/github/quipucords/quipudocs/shield.svg)](https://pyup.io/repos/github/quipucords/quipudocs/)
 [![Python 3](https://pyup.io/repos/github/quipucords/quipudocs/python-3-shield.svg)](https://pyup.io/repos/github/quipucords/quipudocs/)
 [![Documentation Status](https://readthedocs.org/projects/quipucords/badge/?version=0.0.46)](https://quipucords.readthedocs.io/en/0.0.46/?badge=0.0.46)
+[![Build Status](https://travis-ci.org/quipucords/quipudocs.svg?branch=master)](https://travis-ci.org/quipucords/quipudocs)
 
 # quipudocs - Documentation for Quipucords
 
