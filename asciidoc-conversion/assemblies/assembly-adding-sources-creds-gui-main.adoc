@@ -1,0 +1,37 @@
+// This assembly is included in the following assemblies:
+//
+
+ifdef::context[:parent-context: {context}]
+
+[id="assembly-adding-sources-creds-gui-main-{context}"]
+
+= Adding sources and credentials
+
+To prepare Quipucords to run scans, you must add the parts of your IT infrastructure that you want to scan as one or more sources. You must also add the authentication information, such as username and password or SSH key, that is required to access those sources as one or more credentials. You add sources and credentials according to the type of source that you are going to scan.
+
+.Prerequisites
+* (keeping here temporarily, but probably not using this section in this topic)
+// * Sentence or a bulleted list of pre-requisites that must be in place or done before the user starts this task.
+// * Delete section title and bullets if the task has no required pre-requisites.
+// * Text can be a link to a pre-requisite task that the user must do before starting this task.
+
+.Procedure
+
+PHILOSOPHICAL QUESTION: Is the procedure section going to be used to introduce the main steps, or comment out and just use includes?
+
+// do you need level offset in each assembly? at master doc level only? confused about this one.
+
+include::assembly-adding-net-sources-creds-gui.adoc[leveloffset=+1]
+
+include::assembly-adding-sat-sources-creds-gui.adoc[leveloffset=+1]
+
+include::assembly-adding-vcent-sources-creds-gui.adoc[leveloffset=+1]
+
+// .Related Information
+// * Bulleted list of links to concepts, reference, or other tasks closely related to this user story.
+// * Include only the most relevant items as links, not every possible related item.
+// * Delete section title and bullets if no related information is needed.
+
+// Restore the context to what it was before this assembly.
+ifdef::parent-context[:context: {parent-context}]
+ifndef::parent-context[:!context:]

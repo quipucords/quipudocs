@@ -1,0 +1,11 @@
+// Attributes for the downstream product discovery tool (RH component)
+
+// Product attributes
+:ProductName: product discovery tool
+:ProductShortName: discovery
+:ProductNameStartSentence: The product discovery tool
+:ProductInCommands: dsc
+
+// Red Hat product attributes
+
+// External product attributes

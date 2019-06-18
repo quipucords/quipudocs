@@ -1,0 +1,34 @@
+// Module included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+[id="proc-downloading-reports-gui-{context}"]
+
+= Downloading reports
+
+From the Scans view, you can select one or more reports and download them to view the report data.
+
+// rest of this needs to be changed to download-specific
+
+.Prerequisites
+
+If you want to download a report for a scan, the most recent scan job for that scan must have completed successfully.
+
+.Procedure
+
+. From the Scans view, navigate to the row of the scan for which you want to download the report.
+. Click btn:[Download] for that scan.
+
+.Verification steps
+
+// the report_id____ID___DATE_TIME_.tar.gz string renders correctly in preview
+// do not change underscore coding
+The downloaded report is saved to the downloads location for your browser as a [filename]`.tar.gz` file, for example, [filename]`report_id_224_20190702_173309.tar.gz`. The file name format is [filename]`report_id____ID___DATE_TIME_.tar.gz`, where `_ID_` is the unique report ID assigned by the server, `_DATE_` is the date in _yyyymmdd_ format, and `_TIME_` is the time in the _hhmmss_ format, based on the 24-hour system. The date and time data is determined by the interaction of the browser that is running the client with the server APIs.
+
+// the report_id______ID_ string renders correctly in preview
+// do not change underscore coding
+To view the report, uncompress the [filename]`.tar.gz` file into a [filename]`report_id______ID_` directory. The uncompressed report bundle includes four report files, two details reports in CSV and JSON formats, and two deployments reports in CSV and JSON formats.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.

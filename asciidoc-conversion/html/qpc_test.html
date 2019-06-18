@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
-<title>Test jlp doc</title>
+<title>Quipucords User Guide</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -425,166 +425,78 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .show-for-print{display:inherit!important}}
 </style>
 </head>
-<body id="Test-jlp-doc" class="book">
+<body id="quipucords_user_guide" class="book">
 <div id="header">
-<h1>Test jlp doc</h1>
+<h1>Quipucords User Guide</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
+<ul class="sectlevel0">
+<li><a href="#assembly-adding-sources-creds-gui-main-{context}">Adding sources and credentials</a>
 <ul class="sectlevel1">
-<li><a href="#credentials">Credentials</a>
-<ul class="sectlevel2">
-<li><a href="#proc-adding-net-creds-gui-{context}">Adding network credentials</a></li>
-<li><a href="#proc-adding-sat-creds-gui-{context}">Adding satellite credentials</a></li>
-<li><a href="#proc-adding-vcent-creds-gui-{context}">Adding vcenter credentials</a></li>
-</ul>
-</li>
-<li><a href="#sources">Sources</a>
+<li><a href="#assembly-adding-net-sources-creds-gui-{context}">Adding network sources and credentials</a>
 <ul class="sectlevel2">
 <li><a href="#proc-adding-net-sources-gui-{context}">Adding network sources</a></li>
+<li><a href="#proc-adding-net-creds-gui-{context}">Adding network credentials</a></li>
+<li><a href="#con-about-sources-creds-gui-assembly-adding-net-sources-creds-gui-context">About sources and credentials</a></li>
+<li><a href="#con-net-auth-gui-assembly-adding-net-sources-creds-gui-context">Network authentication</a>
+<ul class="sectlevel3">
+<li><a href="#ref-commands-used-net-scans-gui-assembly-adding-net-sources-creds-gui-context">Commands that are used in scans of remote network assets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#assembly-adding-sat-sources-creds-gui-{context}">Adding satellite sources and credentials</a>
+<ul class="sectlevel2">
 <li><a href="#proc-adding-sat-sources-gui-{context}">Adding satellite sources</a></li>
+<li><a href="#proc-adding-sat-creds-gui-{context}">Adding satellite credentials</a></li>
+<li><a href="#con-about-sources-creds-gui-assembly-adding-sat-sources-creds-gui-context">About sources and credentials</a></li>
+<li><a href="#con-sat-auth-gui-assembly-adding-sat-sources-creds-gui-context">Satellite Server authentication</a></li>
+</ul>
+</li>
+<li><a href="#assembly-adding-vcent-sources-creds-gui-{context}">Adding vcenter sources and credentials</a>
+<ul class="sectlevel2">
 <li><a href="#proc-adding-vcent-sources-gui-{context}">Adding vcenter sources</a></li>
+<li><a href="#proc-adding-vcent-creds-gui-{context}">Adding vcenter credentials</a></li>
+<li><a href="#con-about-sources-creds-gui-assembly-adding-vcent-sources-creds-gui-context">About sources and credentials</a></li>
+<li><a href="#con-vcent-auth-gui-assembly-adding-vcent-sources-creds-gui-context">vCenter Server authentication</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="credentials">Credentials</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="proc-adding-net-creds-gui-{context}">Adding network credentials</h3>
+<h1 id="assembly-adding-sources-creds-gui-main-{context}" class="sect0">Adding sources and credentials</h1>
+<div class="openblock partintro">
+<div class="content">
 <div class="paragraph">
-<p>You can add credentials from the Credentials view or from the Add Source wizard during the creation of a source.</p>
+<p>To prepare Quipucords to run scans, you must add the parts of your IT infrastructure that you want to scan as one or more sources. You must also add the authentication information, such as username and password or SSH key, that is required to access those sources as one or more credentials. You add sources and credentials according to the type of source that you are going to scan.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>If you want to use the SSH key authentication type for network credentials, that SSH key must be copied into the directory that was mapped to <code class="filename">/sshkeys</code> during Quipucords server installation. The default path for this directory is <code class="filename">~/dsc/sshkeys</code>.</p>
-<div class="literalblock">
-<div class="content">
-<pre>For more information about the SSH keys that are available for use in the [filename]`/sshkeys` directory, or to request the addition of a key to that directory, contact the administrator who manages the Quipucords server.</pre>
-</div>
-</div>
+<p>(keeping here temporarily, but probably not using this section in this topic)</p>
 </li>
 </ul>
 </div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Click the option to add a new credential based on your location:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>From the Credentials view, click menu:[Add&gt;Network Credential].</p>
-</li>
-<li>
-<p>From the Add Source wizard, click the <b class="button">Add a credential</b> icon for the <b class="button">Credentials</b> field.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>In the <b class="button">Credential Name</b> field, enter a descriptive name.</p>
-</li>
-<li>
-<p>In the <b class="button">Authentication Type</b> field, select the type of authentication that you want to use. You can select either <b class="button">Username and Password</b> or <b class="button">SSH Key</b>.</p>
-</li>
-<li>
-<p>Enter the authentication data in the appropriate fields, based on the authentication type.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>For username and password authentication, enter a username and password for a user. This user must have root-level access to your network or to the subset of your network that you want to scan. Alternatively, this user must be able to obtain root-level access with the selected become method.</p>
-</li>
-<li>
-<p>For SSH key authentication, enter a username and an SSH key file, where the path to the key file is a path that is local to the Quipucords server. For example, if the key file is in the <code class="filename">~/quipucords/sshkeys</code> path on the server, enter that path in the <b class="button">SSH Key File</b> field. Entering a passphrase is optional.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Enter the become method for privilege elevation. Privilege elevation is required to run some commands during a network scan. Entering a username and password for the become method is optional.</p>
-</li>
-<li>
-<p>Click <b class="button">Save</b> to save the credential and close the Add Credential wizard.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="proc-adding-sat-creds-gui-{context}">Adding satellite credentials</h3>
 <div class="paragraph">
-<p>You can add credentials from the Credentials view or from the Add Source wizard during the creation of a source.</p>
-</div>
-<div class="olist arabic">
 <div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Click the option to add a new credential based on your location:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>From the Credentials view, click menu:[Add&gt;Satellite Credential].</p>
-</li>
-<li>
-<p>From the Add Source wizard, click the <b class="button">Add a credential</b> icon for the <b class="button">Credentials</b> field.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>In the <b class="button">Credential Name</b> field, enter a descriptive name.</p>
-</li>
-<li>
-<p>Enter the username and password for a Satellite Server administrator.</p>
-</li>
-<li>
-<p>Click <b class="button">Save</b> to save the credential and close the Add Credential wizard.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="proc-adding-vcent-creds-gui-{context}">Adding vcenter credentials</h3>
-<div class="paragraph">
-<p>You can add credentials from the Credentials view or from the Add Source wizard during the creation of a source.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Click the option to add a new credential based on your location:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>From the Credentials view, click menu:[Add&gt;VCenter Credential].</p>
-</li>
-<li>
-<p>From the Add Source wizard, click the <b class="button">Add a credential</b> icon for the <b class="button">Credentials</b> field.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>In the <b class="button">Credential Name</b> field, enter a descriptive name.</p>
-</li>
-<li>
-<p>Enter the username and password for a vCenter Server administrator.</p>
-</li>
-<li>
-<p>Click <b class="button">Save</b> to save the credential and close the Add Credential wizard.</p>
-</li>
-</ol>
-</div>
+<p>PHILOSOPHICAL QUESTION: Is the procedure section going to be used to introduce the main steps, or comment out and just use includes?</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="sources">Sources</h2>
+<h2 id="assembly-adding-net-sources-creds-gui-{context}">Adding network sources and credentials</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>To run a scan on one or more of the physical machines, virtual machines, or containers on your network, you must add a source that  identifies each of the assets to scan. Then you must add credentials that contain the authentication data to access each asset.</p>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>TEXT To add network sources and credentials&#8230;&#8203;</p>
+</div>
 <div class="sect2">
 <h3 id="proc-adding-net-sources-gui-{context}">Adding network sources</h3>
 <div class="paragraph">
@@ -604,6 +516,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>From the Sources view, click <b class="button">Add</b>.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>The Add Source wizard opens.</p>
 </div>
 </li>
 <li>
@@ -648,6 +563,434 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
+<h3 id="proc-adding-net-creds-gui-{context}">Adding network credentials</h3>
+<div class="paragraph">
+<p>You can add credentials from the Credentials view or from the Add Source wizard during the creation of a source.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>If you want to use the SSH key authentication type for network credentials, that SSH key must be copied into the directory that was mapped to <code class="filename">/sshkeys</code> during Quipucords server installation. The default path for this directory is <code class="filename">~/dsc/sshkeys</code>.</p>
+<div class="paragraph">
+<p>For more information about the SSH keys that are available for use in the <code class="filename">/sshkeys</code> directory, or to request the addition of a key to that directory, contact the administrator who manages the Quipucords server.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Click the option to add a new credential based on your location:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>From the Credentials view, click <span class="menuseq"><b class="menu">Add</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">Network Credential</b></span>.</p>
+</li>
+<li>
+<p>From the Add Source wizard, click the <b class="button">Add a credential</b> icon for the <b class="button">Credentials</b> field.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Add Credential wizard opens.</p>
+</div>
+</li>
+<li>
+<p>In the <b class="button">Credential Name</b> field, enter a descriptive name.</p>
+</li>
+<li>
+<p>In the <b class="button">Authentication Type</b> field, select the type of authentication that you want to use. You can select either <b class="button">Username and Password</b> or <b class="button">SSH Key</b>.</p>
+</li>
+<li>
+<p>Enter the authentication data in the appropriate fields, based on the authentication type.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For username and password authentication, enter a username and password for a user. This user must have root-level access to your network or to the subset of your network that you want to scan. Alternatively, this user must be able to obtain root-level access with the selected become method.</p>
+</li>
+<li>
+<p>For SSH key authentication, enter a username and an SSH key file, where the path to the key file is a path that is local to the Quipucords server. For example, if the key file is in the <code class="filename">~/quipucords/sshkeys</code> path on the server, enter that path in the <b class="button">SSH Key File</b> field. Entering a passphrase is optional.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Enter the become method for privilege elevation. Privilege elevation is required to run some commands during a network scan. Entering a username and password for the become method is optional.</p>
+</li>
+<li>
+<p>Click <b class="button">Save</b> to save the credential and close the Add Credential wizard.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="con-about-sources-creds-gui-assembly-adding-net-sources-creds-gui-context">About sources and credentials</h3>
+<div class="paragraph">
+<p>To run a scan, you must configure data for two basic structures, sources and credentials. The type of source that you are going to inspect during the scan determines the type of data that is required for both source and credential configuration.</p>
+</div>
+<div class="paragraph">
+<p>A <em>source</em> contains a single asset or a set of multiple assets that are to be inspected during the scan. You can configure three types of sources:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A network source: One or more physical machines, virtual machines, or containers. These assets can be expressed as host names, IP addresses, IP ranges, or subnets.</p>
+</li>
+<li>
+<p>A vcenter source: A vCenter Server systems management solution that is managing all or part of your IT infrastructure.</p>
+</li>
+<li>
+<p>A satellite source: A Satellite systems management solution that is managing all or part of your IT infrastructure.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When you are working with network sources, you determine how many individual assets you should group within a single source. The following list contains some of the factors that you should consider when you are adding sources:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Whether assets are part of a development, testing, or production environment, and if demands on computing power and similar concerns are a consideration for those assets</p>
+</li>
+<li>
+<p>Whether you want to scan a particular entity or group of entities more often because of internal business practices such as frequent changes to the installed software</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A <em>credential</em> contains data such as the user name and password or SSH key of a user with sufficient authority to run the scan on all or part of the entities that are contained in that source. As with sources, credentials are configured as the network, vcenter, or satellite type. Typically, a network source might require multiple network credentials because it is expected that many credentials would be needed to access all of the assets in a broad IP range. Conversely, a vcenter or satellite source would typically use a single vcenter or satellite credential, as applicable, to access a particular system management solution server.</p>
+</div>
+<div class="paragraph">
+<p>You can add new sources from the Sources view and you can add new credentials from the Credentials view. You can also add new or select previously existing credentials during source creation. It is during source creation that you associate a credential directly with a source. Because sources and credentials must have matching types, any credential that you add during source creation shares the same type as the source. In addition, if you want to use an existing credential during source creation, the list of available credentials contains only credentials of the same type. For example, during network source creation, only network credentials are available for selection.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="con-net-auth-gui-assembly-adding-net-sources-creds-gui-context">Network authentication</h3>
+<div class="paragraph">
+<p>The Quipucords server inspects the remote systems in a network scan by using the SSH remote connection capabilities of Ansible. When you add a network credential, you configure the SSH connection by using either a user name and password or a user name and SSH keyfile pair. If remote systems are accessed with SSH key authentication, you can also supply a passphrase.</p>
+</div>
+<div class="paragraph">
+<p>Also during network credential configuration, you can enable a become method. The become method is used during a scan to elevate privileges. These privileges are needed to run commands and obtain data on the systems that you are scanning. For more information about the commands that do and do not require elevated privileges during a scan, see <a href="#ref-commands-used-net-scans-gui_assembly-adding-net-sources-creds-gui-context">Commands that are used in scans of remote network assets</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="ref-commands-used-net-scans-gui-assembly-adding-net-sources-creds-gui-context">Commands that are used in scans of remote network assets</h4>
+<div class="paragraph">
+<p>When you run a network scan, Quipucords must use the credentials that you provide to run certain commands on the remote systems in your network. Some of those commands must run with elevated privileges. This access is typically acquired through the use of the <code class="command">sudo</code> command or similar commands. The elevated privileges are required to gather the types of facts that Quipucords uses to build the report about your installed products and consumed entitlements.</p>
+</div>
+<div class="paragraph">
+<p>Although it is possible to run a scan for a network source without elevated privileges, the results of that scan will be incomplete. The incomplete results from the network scan will affect the quality of the generated report for the scan.</p>
+</div>
+<div class="paragraph">
+<p>The following information lists the commands that Quipucords runs on remote hosts during a network scan. The information includes the basic commands that can run without elevated privileges and the commands that must run with elevated privileges to gather the most accurate and complete information for the report.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In addition to the following commands, Quipucords also depends on standard shell facilities, such as those provided by the Bash shell.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_basic_commands_that_do_not_need_elevated_privileges">Basic commands that do not need elevated privileges</h5>
+<div class="paragraph">
+<p>The following commands do not require elevated privileges to gather facts during a scan:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>cat</p>
+</li>
+<li>
+<p>egrep</p>
+</li>
+<li>
+<p>sort</p>
+</li>
+<li>
+<p>uname</p>
+</li>
+<li>
+<p>ctime</p>
+</li>
+<li>
+<p>grep</p>
+</li>
+<li>
+<p>rpm</p>
+</li>
+<li>
+<p>virsh</p>
+</li>
+<li>
+<p>date</p>
+</li>
+<li>
+<p>id</p>
+</li>
+<li>
+<p>test</p>
+</li>
+<li>
+<p>whereis</p>
+</li>
+<li>
+<p>echo</p>
+</li>
+<li>
+<p>sed</p>
+</li>
+<li>
+<p>tune2fs</p>
+</li>
+<li>
+<p>xargs</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_commands_that_need_elevated_privileges">Commands that need elevated privileges</h5>
+<div class="paragraph">
+<p>The following commands require elevated privileges to gather facts during a scan. Each command includes a list of individual facts or categories of facts that cannot be included in reports if elevated privileges are not available for that command.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>chkconfig</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>EAP</p>
+</li>
+<li>
+<p>Fuse on Karaf</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>command</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>see dmicode</p>
+</li>
+<li>
+<p>see subscription-manager</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>dmidecode</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>cpu_socket_count</p>
+</li>
+<li>
+<p>dmi_bios_vendor</p>
+</li>
+<li>
+<p>dmi_bios_version</p>
+</li>
+<li>
+<p>dmi_system_manufacturer</p>
+</li>
+<li>
+<p>dmi_processor_family</p>
+</li>
+<li>
+<p>dmi_system_uuid</p>
+</li>
+<li>
+<p>virt_type</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>find</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>BRMS</p>
+</li>
+<li>
+<p>EAP</p>
+</li>
+<li>
+<p>Fuse</p>
+</li>
+<li>
+<p>Fuse on Karaf</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>ifconfig</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>IP address</p>
+</li>
+<li>
+<p>MAC address</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>java</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>EAP info</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>locate</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>BRMS</p>
+</li>
+<li>
+<p>EAP</p>
+</li>
+<li>
+<p>Fuse on Karaf</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>ls</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>date_machine_id</p>
+</li>
+<li>
+<p>EAP</p>
+</li>
+<li>
+<p>Fuse on Karaf</p>
+</li>
+<li>
+<p>BRMS</p>
+</li>
+<li>
+<p>redhat_packages_certs</p>
+</li>
+<li>
+<p>subman_consumed</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>ps</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>EAP</p>
+</li>
+<li>
+<p>Fuse on Karaf</p>
+</li>
+<li>
+<p>virt type</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>subscription-manager</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>subman_consumed</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>systemctl</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>EAP</p>
+</li>
+<li>
+<p>Fuse on Karaf</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>unzip</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>EAP detection</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>virt-what</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>virt_what_type</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>yum</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>date_yum_history</p>
+</li>
+<li>
+<p>yum_enabled_repolist</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="assembly-adding-sat-sources-creds-gui-{context}">Adding satellite sources and credentials</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TEXT Here&#8217;s an intro about adding satellite sources and credentials&#8230;&#8203;.</p>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>TEXT To add satellite sources and credentials&#8230;&#8203;</p>
+</div>
+<div class="sect2">
 <h3 id="proc-adding-sat-sources-gui-{context}">Adding satellite sources</h3>
 <div class="paragraph">
 <p>You can add sources from the initial Welcome page or from the Sources view.</p>
@@ -667,6 +1010,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>The Add Source wizard opens.</p>
+</div>
 </li>
 <li>
 <p>On the Type page, select <b class="button">Satellite</b> as the source type and click <b class="button">Next</b>.</p>
@@ -679,30 +1025,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>In the <b class="button">Name</b> field, enter a descriptive name.</p>
 </li>
 <li>
-<p>In the <b class="button">IP Address or Hostname</b> field, enter the IP address or host name of the Satellite Server for this source. Enter a different port if you do not want a scan for this source to run on the default port 443. For example, if the IP address of the Satellite Server is 192.0.2.15 and you want to change the port to 80, you would enter <code>192.0.2.15:80</code>.</p>
+<p>In the <b class="button">IP Address or Hostname</b> field, enter the IP address or host name of the Satellite server for this source. Enter a different port if you do not want a scan for this source to run on the default port 443. For example, if the IP address of the Satellite server is 192.0.2.15 and you want to change the port to 80, you would enter <code>192.0.2.15:80</code>.</p>
 </li>
 <li>
-<p>In the <b class="button">Credentials</b> list, select the credential that is required to access the Satellite Server for this source. If a required credential does not exist, click the <b class="button">Add a credential</b> icon to open the Add Credential wizard.</p>
+<p>In the <b class="button">Credentials</b> list, select the credential that is required to access the Satellite server for this source. If a required credential does not exist, click the <b class="button">Add a credential</b> icon to open the Add Credential wizard.</p>
 </li>
 <li>
 <p>In the <b class="button">Connection</b> list, select the SSL protocol to be used for a secure connection during a scan of this source. Select <b class="button">Disable SSL</b> to disable secure communication during a scan of this source.</p>
 </li>
 <li>
-<p>If you need to downgrade the SSL validation for the Satellite Server for this source, clear the <b class="button">Verify SSL Certificate</b> check box.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>By default, sources are scanned with full SSL validation, but you might need to adjust the level of SSL validation to connect properly to Satellite Server. For example, you would downgrade SSL validation if Satellite Server uses self-signed certificates.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
+<p>If you need to upgrade the SSL validation for the Satellite server to check for a verified SSL certificate from a certificate authority, select the <b class="button">Verify SSL Certificate</b> check box.</p>
 </li>
 </ol>
 </div>
@@ -712,6 +1044,107 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ol>
 </div>
+</div>
+<div class="sect2">
+<h3 id="proc-adding-sat-creds-gui-{context}">Adding satellite credentials</h3>
+<div class="paragraph">
+<p>You can add credentials from the Credentials view or from the Add Source wizard during the creation of a source.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Click the option to add a new credential based on your location:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>From the Credentials view, click menu:[Add&gt;Satellite Credential].</p>
+</li>
+<li>
+<p>From the Add Source wizard, click the <b class="button">Add a credential</b> icon for the <b class="button">Credentials</b> field.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Add Credential wizard opens.</p>
+</div>
+</li>
+<li>
+<p>In the <b class="button">Credential Name</b> field, enter a descriptive name.</p>
+</li>
+<li>
+<p>Enter the username and password for a Satellite Server administrator.</p>
+</li>
+<li>
+<p>Click <b class="button">Save</b> to save the credential and close the Add Credential wizard.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="con-about-sources-creds-gui-assembly-adding-sat-sources-creds-gui-context">About sources and credentials</h3>
+<div class="paragraph">
+<p>To run a scan, you must configure data for two basic structures, sources and credentials. The type of source that you are going to inspect during the scan determines the type of data that is required for both source and credential configuration.</p>
+</div>
+<div class="paragraph">
+<p>A <em>source</em> contains a single asset or a set of multiple assets that are to be inspected during the scan. You can configure three types of sources:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A network source: One or more physical machines, virtual machines, or containers. These assets can be expressed as host names, IP addresses, IP ranges, or subnets.</p>
+</li>
+<li>
+<p>A vcenter source: A vCenter Server systems management solution that is managing all or part of your IT infrastructure.</p>
+</li>
+<li>
+<p>A satellite source: A Satellite systems management solution that is managing all or part of your IT infrastructure.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When you are working with network sources, you determine how many individual assets you should group within a single source. The following list contains some of the factors that you should consider when you are adding sources:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Whether assets are part of a development, testing, or production environment, and if demands on computing power and similar concerns are a consideration for those assets</p>
+</li>
+<li>
+<p>Whether you want to scan a particular entity or group of entities more often because of internal business practices such as frequent changes to the installed software</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A <em>credential</em> contains data such as the user name and password or SSH key of a user with sufficient authority to run the scan on all or part of the entities that are contained in that source. As with sources, credentials are configured as the network, vcenter, or satellite type. Typically, a network source might require multiple network credentials because it is expected that many credentials would be needed to access all of the assets in a broad IP range. Conversely, a vcenter or satellite source would typically use a single vcenter or satellite credential, as applicable, to access a particular system management solution server.</p>
+</div>
+<div class="paragraph">
+<p>You can add new sources from the Sources view and you can add new credentials from the Credentials view. You can also add new or select previously existing credentials during source creation. It is during source creation that you associate a credential directly with a source. Because sources and credentials must have matching types, any credential that you add during source creation shares the same type as the source. In addition, if you want to use an existing credential during source creation, the list of available credentials contains only credentials of the same type. For example, during network source creation, only network credentials are available for selection.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="con-sat-auth-gui-assembly-adding-sat-sources-creds-gui-context">Satellite Server authentication</h3>
+<div class="paragraph">
+<p>For a satellite scan, the connectivity and access to Satellite Server derives from basic authentication (user name and password) that is encrypted over HTTPS. By default, the satellite scan runs with certificate validation and secure communication through the SSL (Secure Sockets Layer) protocol. During source creation, you can select from several different SSL and TLS (Transport Layer Security) protocols to use for the certificate validation and secure communication.</p>
+</div>
+<div class="paragraph">
+<p>You might need to adjust the level of certificate validation to connect properly to the Satellite server during a scan. For example, your Satellite server might use a verified SSL certificate from a certificate authority. During source creation, you can upgrade SSL certificate validation to check for that certificate during the a scan of that source. Conversely, your Satellite server might use self-signed certificates. During source creation, you can leave the SSL validation at the default so that scan of that source does not check for a certificate, possibly resulting in scan errors.</p>
+</div>
+<div class="paragraph">
+<p>You might also need to disable SSL as the method of secure communication during the scan if the Satellite server is not configured to use SSL communication for web applications. For example, your Satellite server might be configured to communicate with web applications by using HTTP with port 80. If so, then during source creation you can disable SSL communication for scans of that source.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="assembly-adding-vcent-sources-creds-gui-{context}">Adding vcenter sources and credentials</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TEXT Here&#8217;s an intro about adding vcenter sources and credentials&#8230;&#8203;.</p>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>TEXT To add vcenter sources and credentials&#8230;&#8203;</p>
 </div>
 <div class="sect2">
 <h3 id="proc-adding-vcent-sources-gui-{context}">Adding vcenter sources</h3>
@@ -732,6 +1165,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>From the Sources view, click <b class="button">Add</b>.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>The Add Source wizard opens.</p>
 </div>
 </li>
 <li>
@@ -754,11 +1190,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>In the <b class="button">Connection</b> list, select the SSL protocol to be used for a secure connection during a scan of this source. Select <b class="button">Disable SSL</b> to disable secure communication during a scan of this source.</p>
 </li>
 <li>
-<p>If you need to downgrade the SSL validation for the vCenter Server for this source, clear the <b class="button">Verify SSL Certificate</b> check box.
-[NOTE]
-====
-By default, sources are scanned with full SSL validation, but you might need to adjust the level of SSL validation to connect properly to vCenter Server. For example, you would downgrade SSL validation if vCenter Server uses self-signed certificates.
-====</p>
+<p>If you need to upgrade the SSL validation for the vCenter Server to check for a verified SSL certificate from a certificate authority, select the <b class="button">Verify SSL Certificate</b> check box.</p>
 </li>
 </ol>
 </div>
@@ -769,12 +1201,101 @@ By default, sources are scanned with full SSL validation, but you might need to 
 </ol>
 </div>
 </div>
+<div class="sect2">
+<h3 id="proc-adding-vcent-creds-gui-{context}">Adding vcenter credentials</h3>
+<div class="paragraph">
+<p>You can add credentials from the Credentials view or from the Add Source wizard during the creation of a source.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Click the option to add a new credential based on your location:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>From the Credentials view, click menu:[Add&gt;VCenter Credential].</p>
+</li>
+<li>
+<p>From the Add Source wizard, click the <b class="button">Add a credential</b> icon for the <b class="button">Credentials</b> field.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Add Credential wizard opens.</p>
+</div>
+</li>
+<li>
+<p>In the <b class="button">Credential Name</b> field, enter a descriptive name.</p>
+</li>
+<li>
+<p>Enter the username and password for a vCenter Server administrator.</p>
+</li>
+<li>
+<p>Click <b class="button">Save</b> to save the credential and close the Add Credential wizard.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="con-about-sources-creds-gui-assembly-adding-vcent-sources-creds-gui-context">About sources and credentials</h3>
+<div class="paragraph">
+<p>To run a scan, you must configure data for two basic structures, sources and credentials. The type of source that you are going to inspect during the scan determines the type of data that is required for both source and credential configuration.</p>
+</div>
+<div class="paragraph">
+<p>A <em>source</em> contains a single asset or a set of multiple assets that are to be inspected during the scan. You can configure three types of sources:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A network source: One or more physical machines, virtual machines, or containers. These assets can be expressed as host names, IP addresses, IP ranges, or subnets.</p>
+</li>
+<li>
+<p>A vcenter source: A vCenter Server systems management solution that is managing all or part of your IT infrastructure.</p>
+</li>
+<li>
+<p>A satellite source: A Satellite systems management solution that is managing all or part of your IT infrastructure.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When you are working with network sources, you determine how many individual assets you should group within a single source. The following list contains some of the factors that you should consider when you are adding sources:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Whether assets are part of a development, testing, or production environment, and if demands on computing power and similar concerns are a consideration for those assets</p>
+</li>
+<li>
+<p>Whether you want to scan a particular entity or group of entities more often because of internal business practices such as frequent changes to the installed software</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A <em>credential</em> contains data such as the user name and password or SSH key of a user with sufficient authority to run the scan on all or part of the entities that are contained in that source. As with sources, credentials are configured as the network, vcenter, or satellite type. Typically, a network source might require multiple network credentials because it is expected that many credentials would be needed to access all of the assets in a broad IP range. Conversely, a vcenter or satellite source would typically use a single vcenter or satellite credential, as applicable, to access a particular system management solution server.</p>
+</div>
+<div class="paragraph">
+<p>You can add new sources from the Sources view and you can add new credentials from the Credentials view. You can also add new or select previously existing credentials during source creation. It is during source creation that you associate a credential directly with a source. Because sources and credentials must have matching types, any credential that you add during source creation shares the same type as the source. In addition, if you want to use an existing credential during source creation, the list of available credentials contains only credentials of the same type. For example, during network source creation, only network credentials are available for selection.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="con-vcent-auth-gui-assembly-adding-vcent-sources-creds-gui-context">vCenter Server authentication</h3>
+<div class="paragraph">
+<p>For a vcenter scan, the connectivity and access to vCenter Server derives from basic authentication (user name and password) that is encrypted over HTTPS. By default, the vcenter scan runs with certificate validation and secure communication through the SSL (Secure Sockets Layer) protocol. During source creation, you can select from several different SSL and TLS (Transport Layer Security) protocols to use for the certificate validation and secure communication.</p>
+</div>
+<div class="paragraph">
+<p>You might need to adjust the level of certificate validation to connect properly to the vCenter server during a scan. For example, your vCenter server might use a verified SSL certificate from a certificate authority. During source creation, you can upgrade SSL certificate validation to check for that certificate during the a scan of that source. Conversely, your vCenter server might use self-signed certificates. During source creation, you can leave the SSL validation at the default so that scan of that source does not check for a certificate, possibly resulting in scan errors.</p>
+</div>
+<div class="paragraph">
+<p>You might also need to disable SSL as the method of secure communication during the scan if the vCenter server is not configured to use SSL communication for web applications. For example, your vCenter server might be configured to communicate with web applications by using HTTP with port 80. If so, then during source creation you can disable SSL communication for scans of that source.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-05-21 17:54:36 EDT
+Last updated 2019-06-17 12:36:56 EDT
 </div>
 </div>
 </body>

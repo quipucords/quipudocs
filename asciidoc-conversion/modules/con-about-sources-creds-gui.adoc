@@ -1,0 +1,40 @@
+// Module included in the following assemblies:
+// assembly-adding-net-creds-sources-gui.adoc
+// assembly-adding-sat-sources-creds-gui.adoc
+// assembly-adding-vcent-sources-creds-gui.adoc
+
+[id="con-about-sources-creds-gui-{context}"]
+
+= About sources and credentials
+
+To run a scan, you must configure data for two basic structures, sources and credentials. The type of source that you are going to inspect during the scan determines the type of data that is required for both source and credential configuration.
+
+A _source_ contains a single asset or a set of multiple assets that are to be inspected during the scan. You can configure three types of sources:
+
+* A network source: One or more physical machines, virtual machines, or containers. These assets can be expressed as host names, IP addresses, IP ranges, or subnets.
+
+* A vcenter source: A vCenter Server systems management solution that is managing all or part of your IT infrastructure.
+
+* A satellite source: A Satellite systems management solution that is managing all or part of your IT infrastructure.
+
+When you are working with network sources, you determine how many individual assets you should group within a single source. The following list contains some of the factors that you should consider when you are adding sources:
+
+* Whether assets are part of a development, testing, or production environment, and if demands on computing power and similar concerns are a consideration for those assets
+* Whether you want to scan a particular entity or group of entities more often because of internal business practices such as frequent changes to the installed software
+
+A _credential_ contains data such as the user name and password or SSH key of a user with sufficient authority to run the scan on all or part of the entities that are contained in that source. As with sources, credentials are configured as the network, vcenter, or satellite type. Typically, a network source might require multiple network credentials because it is expected that many credentials would be needed to access all of the assets in a broad IP range. Conversely, a vcenter or satellite source would typically use a single vcenter or satellite credential, as applicable, to access a particular system management solution server.
+
+You can add new sources from the Sources view and you can add new credentials from the Credentials view. You can also add new or select previously existing credentials during source creation. It is during source creation that you associate a credential directly with a source. Because sources and credentials must have matching types, any credential that you add during source creation shares the same type as the source. In addition, if you want to use an existing credential during source creation, the list of available credentials contains only credentials of the same type. For example, during network source creation, only network credentials are available for selection.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.
+
+
+// Topics from AsciiDoc conversion that were used as source for this topic:
+// con-about-qpc.adoc
+// con-creds-sources.adoc
+// proc-create-creds.adoc
+// proc-create-net-source.adoc
+// proc-create-sat-source.adoc
+// proc-create-vcent-source.adoc (proc-vcent-source.adoc)

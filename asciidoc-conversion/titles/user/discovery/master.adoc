@@ -1,0 +1,9 @@
+:experimental:
+:toclevels: 3
+include::attributes/attributes-discovery.adoc
+
+[[discovery_user_guide]]
+= {ProductShortName} User Guide
+
+// Contents
+include::assemblies/assembly-adding-sources-creds-gui-main.adoc[]

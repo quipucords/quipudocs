@@ -1,6 +1,5 @@
 // Module included in the following assemblies:
-//
-// <List assemblies here, each on a new line>
+// assembly-adding-net-creds-sources-gui.adoc
 
 [id="proc-adding-net-creds-gui-{context}"]
 
@@ -11,14 +10,17 @@ You can add credentials from the Credentials view or from the Add Source wizard 
 .Prerequisites
 
 * If you want to use the SSH key authentication type for network credentials, that SSH key must be copied into the directory that was mapped to [filename]`/sshkeys` during Quipucords server installation. The default path for this directory is [filename]`~/dsc/sshkeys`.
-
-  For more information about the SSH keys that are available for use in the [filename]`/sshkeys` directory, or to request the addition of a key to that directory, contact the administrator who manages the Quipucords server.
++
+For more information about the SSH keys that are available for use in the [filename]`/sshkeys` directory, or to request the addition of a key to that directory, contact the administrator who manages the Quipucords server.
 
 .Procedure
 
 . Click the option to add a new credential based on your location:
-  * From the Credentials view, click menu:[Add>Network Credential].
+  * From the Credentials view, click menu:Add[Network Credential].
   * From the Add Source wizard, click the btn:[Add a credential] icon for the btn:[Credentials] field.
+
++
+The Add Credential wizard opens.
 
 . In the btn:[Credential Name] field, enter a descriptive name.
 

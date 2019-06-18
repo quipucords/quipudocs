@@ -1,21 +1,21 @@
 :experimental:
+:toclevels: 3
 
-[[Test-jlp-doc]]
-= Test jlp doc
+[[quipucords_user_guide]]
+= {ProductShortName} User Guide
 
-[[credentials]]
-== Credentials
-include::modules/proc-adding-net-creds-gui.adoc[leveloffset=+2]
+// include attributes file
+include::attributes/attributes-qpc.adoc[]
 
-include::modules/proc-adding-sat-creds-gui.adoc[leveloffset=+2]
 
-include::modules/proc-adding-vcent-creds-gui.adoc[leveloffset=+2]
+// [[assembly_net_sources_creds]]
+// == Assembly for net sources and creds
+// include::assemblies/assembly-adding-net-sources-creds-gui.adoc[leveloffset=+2]
+// [[assembly_sat_sources_creds]]
+// == Assembly for sat sources and creds
+// include::assemblies/assembly-adding-sat-sources-creds-gui.adoc[leveloffset=+2]
+// [[assembly_vcent_sources_creds]]
+// == Assembly for vcent sources and creds
+// include::assemblies/assembly-adding-vcent-sources-creds-gui.adoc[leveloffset=+2]
 
-[[sources]]
-== Sources
-
-include::modules/proc-adding-net-sources-gui.adoc[leveloffset=+2]
-
-include::modules/proc-adding-sat-sources-gui.adoc[leveloffset=+2]
-
-include::modules/proc-adding-vcent-sources-gui.adoc[leveloffset=+2]
+include::assemblies/assembly-adding-sources-creds-gui-main.adoc[]

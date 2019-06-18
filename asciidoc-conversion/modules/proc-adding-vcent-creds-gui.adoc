@@ -1,6 +1,5 @@
 // Module included in the following assemblies:
-//
-// <List assemblies here, each on a new line>
+// assembly-adding-vcent-sources-creds-gui.adoc
 
 [id="proc-adding-vcent-creds-gui-{context}"]
 
@@ -13,6 +12,9 @@ You can add credentials from the Credentials view or from the Add Source wizard 
 . Click the option to add a new credential based on your location:
   * From the Credentials view, click menu:[Add>VCenter Credential].
   * From the Add Source wizard, click the btn:[Add a credential] icon for the btn:[Credentials] field.
+
++
+The Add Credential wizard opens.
 
 . In the btn:[Credential Name] field, enter a descriptive name.
 

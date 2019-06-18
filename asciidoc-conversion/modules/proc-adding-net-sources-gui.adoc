@@ -1,6 +1,5 @@
 // Module included in the following assemblies:
-//
-// <List assemblies here, each on a new line>
+// assembly-adding-net-creds-sources-gui.adoc
 
 [id="proc-adding-net-sources-gui-{context}"]
 
@@ -17,6 +16,9 @@ You can add sources from the initial Welcome page or from the Sources view.
 . Click the option to add a new credential based on your location:
   * From the Welcome page, click btn:[Add Source].
   * From the Sources view, click btn:[Add].
+
++
+The Add Source wizard opens.
 
 . On the Type page, select btn:[Network Range] as the source type and click btn:[Next].
 
