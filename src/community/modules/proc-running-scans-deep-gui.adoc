@@ -14,7 +14,7 @@ By default, discovery searches for and fingerprints products by using known meta
 
 The deep scanning process uses the `find` command, so the search process could be CPU resource intensive for the systems that are being scanned. Therefore, you should use discretion when selecting a deep scan for systems that require continuous availability, such as production systems.
 
-After you run a scan for the first time, the scan is saved to the Scans view. From that view,you can run the scan again to update its data.
+After you run a scan for the first time, the scan is saved to the Scans view. From that view, you can run the scan again to update its data.
 
 .Prerequisites
 

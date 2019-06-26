@@ -1,10 +1,9 @@
 // Module included in the following assemblies:
-//
-// <List assemblies here, each on a new line>
+// assembly-adding-sat-sources-creds-gui.adoc
 
-[id="proc-adding-vcent-sources-gui-{context}"]
+[id="proc-adding-sat-sources-gui-{context}"]
 
-= Adding vcenter sources
+= Adding satellite sources
 
 You can add sources from the initial Welcome page or from the Sources view.
 
@@ -18,19 +17,18 @@ You can add sources from the initial Welcome page or from the Sources view.
   * From the Welcome page, click btn:[Add Source].
   * From the Sources view, click btn:[Add].
 
-. On the Type page, select btn:[vCenter Server] as the source type and click btn:[Next].
++
+The Add Source wizard opens.
+
+. On the Type page, select btn:[Satellite] as the source type and click btn:[Next].
 
 . On the Credentials page, enter the following information.
 .. In the btn:[Name] field, enter a descriptive name.
-.. In the btn:[IP Address or Hostname] field, enter the IP address or host name of the vCenter Server for this source. Enter a different port if you do not want a scan for this source to run on the default port 443. For example, if the IP address of the vCenter Server is 192.0.2.15 and you want to change the port to 80, you would enter `192.0.2.15:80`.
+.. In the btn:[IP Address or Hostname] field, enter the IP address or host name of the Satellite server for this source. Enter a different port if you do not want a scan for this source to run on the default port 443. For example, if the IP address of the Satellite server is 192.0.2.15 and you want to change the port to 80, you would enter `192.0.2.15:80`.
 // NOTE: 80 is just a guess...
-.. In the btn:[Credentials] list, select the credential that is required to access the vCenter Server for this source. If a required credential does not exist, click the btn:[Add a credential] icon to open the Add Credential wizard.
+.. In the btn:[Credentials] list, select the credential that is required to access the Satellite server for this source. If a required credential does not exist, click the btn:[Add a credential] icon to open the Add Credential wizard.
 .. In the btn:[Connection] list, select the SSL protocol to be used for a secure connection during a scan of this source. Select btn:[Disable SSL] to disable secure communication during a scan of this source.
-.. If you need to downgrade the SSL validation for the vCenter Server for this source, clear the btn:[Verify SSL Certificate] check box.
-   [NOTE]
-   ====
-   By default, sources are scanned with full SSL validation, but you might need to adjust the level of SSL validation to connect properly to vCenter Server. For example, you would downgrade SSL validation if vCenter Server uses self-signed certificates.
-   ====
+.. If you need to upgrade the SSL validation for the Satellite server to check for a verified SSL certificate from a certificate authority, select the btn:[Verify SSL Certificate] check box.
 . Click btn:[Save] to save the source and then click btn:[Close] to close the Add Source wizard.
 
 // .Verification steps
