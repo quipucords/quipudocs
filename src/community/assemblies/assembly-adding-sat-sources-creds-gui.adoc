@@ -1,0 +1,39 @@
+// This assembly is included in the following assemblies:
+// assembly-adding-sources-creds-gui-main.adoc
+
+ifdef::context[:parent-context: {context}]
+
+[id="assembly-adding-sat-sources-creds-gui-{context}"]
+
+= Adding satellite sources and credentials
+
+TEXT Here's an intro about adding satellite sources and credentials....
+
+.Prerequisites
+// * Sentence or a bulleted list of pre-requisites that must be in place or done before the user starts this task.
+// * Delete section title and bullets if the task has no required pre-requisites.
+// * Text can be a link to a pre-requisite task that the user must do before starting this task.
+
+.Procedure
+
+TEXT To add satellite sources and credentials...
+
+// do you need level offset in each assembly? at master doc level only? confused about this one.
+
+include::modules/proc-adding-sat-sources-gui.adoc[leveloffset=+1]
+
+include::modules/proc-adding-sat-creds-gui.adoc[leveloffset=+1]
+
+:context: assembly-adding-sat-sources-creds-gui-context
+include::modules/con-about-sources-creds-gui.adoc[leveloffset=+1]
+
+include::modules/con-sat-auth-gui.adoc[leveloffset=+1]
+
+// .Related Information
+// * Bulleted list of links to concepts, reference, or other tasks closely related to this user story.
+// * Include only the most relevant items as links, not every possible related item.
+// * Delete section title and bullets if no related information is needed.
+
+// Restore the context to what it was before this assembly.
+ifdef::parent-context[:context: {parent-context}]
+ifndef::parent-context[:!context:]
