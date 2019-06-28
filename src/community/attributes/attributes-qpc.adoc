@@ -1,0 +1,11 @@
+// Attributes for the upstream Quipucords tool
+
+// Product attributes
+:ProductName: Quipucords
+:ProductShortName: Quipucords
+:ProductNameStartSentence: The Quipucords tool
+:ProductInCommands: qpc
+
+// Red Hat product attributes
+
+// External product attributes

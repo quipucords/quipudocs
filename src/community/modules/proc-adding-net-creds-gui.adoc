@@ -1,0 +1,42 @@
+// Module included in the following assemblies:
+// assembly-adding-net-creds-sources-gui.adoc
+
+[id="proc-adding-net-creds-gui-{context}"]
+
+= Adding network credentials
+
+You can add credentials from the Credentials view or from the Add Source wizard during the creation of a source.
+
+.Prerequisites
+
+* If you want to use the SSH key authentication type for network credentials, that SSH key must be copied into the directory that was mapped to [filename]`/sshkeys` during Quipucords server installation. The default path for this directory is [filename]`~/dsc/sshkeys`.
++
+For more information about the SSH keys that are available for use in the [filename]`/sshkeys` directory, or to request the addition of a key to that directory, contact the administrator who manages the Quipucords server.
+
+.Procedure
+
+. Click the option to add a new credential based on your location:
+  * From the Credentials view, click menu:Add[Network Credential].
+  * From the Add Source wizard, click the btn:[Add a credential] icon for the btn:[Credentials] field.
+
++
+The Add Credential wizard opens.
+
+. In the btn:[Credential Name] field, enter a descriptive name.
+
+. In the btn:[Authentication Type] field, select the type of authentication that you want to use. You can select either btn:[Username and Password] or btn:[SSH Key].
+
+. Enter the authentication data in the appropriate fields, based on the authentication type.
+  * For username and password authentication, enter a username and password for a user. This user must have root-level access to your network or to the subset of your network that you want to scan. Alternatively, this user must be able to obtain root-level access with the selected become method.
+  * For SSH key authentication, enter a username and an SSH key file, where the path to the key file is a path that is local to the Quipucords server. For example, if the key file is in the [filename]`~/quipucords/sshkeys` path on the server, enter that path in the btn:[SSH Key File] field. Entering a passphrase is optional.
+
+. Enter the become method for privilege elevation. Privilege elevation is required to run some commands during a network scan. Entering a username and password for the become method is optional.
+
+. Click btn:[Save] to save the credential and close the Add Credential wizard.
+
+// .Verification steps
+// (Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.

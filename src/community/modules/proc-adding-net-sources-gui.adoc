@@ -1,0 +1,40 @@
+// Module included in the following assemblies:
+// assembly-adding-net-creds-sources-gui.adoc
+
+[id="proc-adding-net-sources-gui-{context}"]
+
+= Adding network sources
+
+You can add sources from the initial Welcome page or from the Sources view.
+
+.Prerequisites
+
+// Any prereqs?
+
+.Procedure
+
+. Click the option to add a new credential based on your location:
+  * From the Welcome page, click btn:[Add Source].
+  * From the Sources view, click btn:[Add].
+
++
+The Add Source wizard opens.
+
+. On the Type page, select btn:[Network Range] as the source type and click btn:[Next].
+
+. On the Credentials page, enter the following information.
+.. In the btn:[Name] field, enter a descriptive name.
+.. In the btn:[Search Addresses] field, enter one or more network identifiers separated by commas. You can enter host names, IP addresses, and IP ranges.
+   * Enter host names as DNS host names.
+   * Enter IP ranges in CIDR or Ansible notation.
+.. Optional: In the btn:[Port] field, enter a different port if you do not want a scan for this source to run on the default port 22.
+.. In the btn:[Credentials] list, select the credentials that are required to access the network resources for this source. If a required credential does not exist, click the btn:[Add a credential] icon to open the Add Credential wizard.
+.. If your network resources require the Ansible connection method to be the Python SSH implementation, Paramiko, instead of the default OpenSSH implementation, select the btn:[Connect using Paramiko instead of OpenSSH] check box.
+. Click btn:[Save] to save the source and then click btn:[Close] to close the Add Source wizard.
+
+// .Verification steps
+// (Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.

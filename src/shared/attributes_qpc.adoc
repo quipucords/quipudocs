@@ -1,3 +1,0 @@
-:product-title: Quipucords
-:product-title_short: QPC
-:product-title_cmd: qpc

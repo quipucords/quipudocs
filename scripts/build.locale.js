@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 const languageCodes = require('iso-639-1');
-const inputDir = path.join(__dirname, '../src/modules_ea');
+const inputDir = path.join(__dirname, '../src/ea');
 const outputDir = path.join(__dirname, '../dist/locales');
 
 const moduleLocales = {};
