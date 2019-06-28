@@ -1,6 +1,6 @@
 :experimental:
 :toclevels: 3
-include::attributes/attributes-discovery.adoc
+include::attributes/attributes-discovery.adoc[]
 
 [[discovery_user_guide]]
 = {ProductShortName} User Guide
