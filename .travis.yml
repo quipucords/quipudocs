@@ -1,11 +1,19 @@
-language: node_js
+os:
+  - osx
+  language: node_js
+  node_js:
+    - "10"
+  cache: yarn
+  - linux
+  language: node_js
+  node_js:
+    - "10"
+  cache: yarn
 
-cache: yarn
+matrix:
+  fast_finish: true
 
 jobs:
   include:
     - stage: test
-      env:
-        - NAME=yarn
-      node_js: "10"
       script: yarn build && yarn test
