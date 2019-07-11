@@ -30,15 +30,13 @@ const setupUser = () =>
     }
   });
 
-let exportLocales = {};
+let exportLocales = [];
 const exportLocaleStrings = {};
 
 const setupEa = () =>
   fs.readdirSync(ea).forEach(file => {
     if (/locales.json/i.test(file)) {
-      exportLocales = {
-        ...require(path.join(ea, file))
-      };
+      exportLocales = [...require(path.join(ea, file))];
     } else {
       const locale = file.split('.')[0].split('-')[0];
 
