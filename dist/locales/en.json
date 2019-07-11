@@ -3,6 +3,7 @@
     "browser-version": "Browser Version",
     "browser-os": "Browser OS",
     "server-version": "Server Version",
-    "ui-version": "UI Version"
+    "ui-version": "UI Version",
+    "username": "Username"
   }
 }
