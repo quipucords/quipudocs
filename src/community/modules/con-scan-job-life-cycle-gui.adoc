@@ -1,0 +1,22 @@
+// Module included in the following assemblies:
+// assembly-running-managing-scans-standard-gui.adoc
+// assembly-running-managing-scans-deep-gui.adoc
+
+[id="con-scan-job-life-cycle-gui-{context}"]
+
+= Scan job life cycle
+
+An individual instance of a scan, or _scan job_, moves through several states during its life cycle.
+
+When you start a scan, a scan job is created and the scan job is in the _created_ state. The scan job is then queued for processing and the scan job transitions to the _pending_ state. Scan jobs run serially, in the order that they are started.
+
+As the {ProductNameShort} server reaches a specific scan job in the queue, that scan job transitions from the _pending_ state to the _running_ state as the processing of that scan job begins. If the scan process completes successfully, the scan job transitions to the _completed_ state and the scan job produces results that can be viewed in a report. If the scan process results in an error that prevents successful completion of the scan, the scan job halts and the scan job transitions to the _failed_ state. An additional status message for the failed scan contains information to help determine the cause of the failure.
+
+Other states for a scan job result from user action that is taken on the scan job. You can pause or cancel a scan job while it is pending or running. A scan job in the _paused_ state can be resumed. A scan job in the _canceled_ state cannot be resumed.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.
+
+// Topics from AsciiDoc conversion that were used as source for this topic:
+// con-scan-job-lifecycle.adoc

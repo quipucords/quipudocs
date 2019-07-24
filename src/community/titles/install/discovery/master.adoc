@@ -1,9 +1,9 @@
 :experimental:
-:toclevels: 3
+:toclevels: 4
 include::attributes/attributes-discovery.adoc[]
 
-[[discovery_user_guide]]
-= Installing and Configuring {ProductShortName}
+[[discovery_install_guide]]
+= Installing and Configuring {ProductMediumName}
 
 // Contents
 include::assemblies/assembly-install-scripted-online-discovery.adoc[]
