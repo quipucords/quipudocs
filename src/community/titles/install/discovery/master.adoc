@@ -3,7 +3,7 @@
 include::attributes/attributes-discovery.adoc[]
 
 [[discovery_install_guide]]
-= Installing and Configuring {ProductMediumName}
+= Installing and Configuring {ProductNameMedium}
 
 // Contents
 include::assemblies/assembly-install-scripted-online-discovery.adoc[]

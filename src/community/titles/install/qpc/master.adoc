@@ -3,7 +3,7 @@
 include::attributes/attributes-qpc.adoc[]
 
 [[qpc_install_guide]]
-= Installing and Configuring {ProductMediumName}
+= Installing and Configuring {ProductNameMedium}
 
 // Contents
 include::assemblies/assembly-install-scripted-online-qpc.adoc[]
