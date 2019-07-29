@@ -28,7 +28,7 @@ The Add Credential wizard opens.
 
 . Enter the authentication data in the appropriate fields, based on the authentication type.
   * For username and password authentication, enter a username and password for a user. This user must have root-level access to your network or to the subset of your network that you want to scan. Alternatively, this user must be able to obtain root-level access with the selected become method.
-  * For SSH key authentication, enter a username and an SSH key file, where the path to the key file is a path that is local to the {ProductNameShort} server. For example, if the key file is in the [filename]`~/{ProductInCode}/sshkeys` path on the server, enter that path in the btn:[SSH Key File] field. Entering a passphrase is optional.
+  * For SSH key authentication, enter a username and an SSH key file, where the path to the key file is a path that is local to the {ProductNameShort} server. For example, if the key file is in the [filename]`~/{ProductInCommands}/sshkeys` path on the server, enter that path in the btn:[SSH Key File] field. Entering a passphrase is optional.
 
 . Enter the become method for privilege elevation. Privilege elevation is required to run some commands during a network scan. Entering a username and password for the become method is optional.
 
