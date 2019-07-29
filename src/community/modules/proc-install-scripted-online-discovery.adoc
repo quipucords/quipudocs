@@ -3,13 +3,13 @@
 
 [id="install-scripted-online-qpc-{context}"]
 
-= Installing {ProductShortName} with the automated installer and internet connectivity
+= Installing {ProductNameShort} with the automated installer and internet connectivity
 
 The simplest installation method is.....
 
 .Procedure
 
-. Review and install the prerequisites for {ProductShortName}. For more information about the prerequisites, see (...link to Prereqs topic...).
+. Review and install the prerequisites for {ProductNameShort}. For more information about the prerequisites, see (...link to Prereqs topic...).
 
 . Download the installer by entering the following command:
 +
