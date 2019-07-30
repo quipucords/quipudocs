@@ -79,7 +79,7 @@ dev()
       EXEC_CMD="${EXEC_CMD} &&"
     fi
 
-    EXEC_CMD="${EXEC_CMD} asciidoctor -t -d book -a toc -v ${OUTPUT_FILENAME_LIST[$i]} ${SRC_LIST[$i]}"
+    EXEC_CMD="${EXEC_CMD} asciidoctor -t -d book -a toc=left -v ${OUTPUT_FILENAME_LIST[$i]} ${SRC_LIST[$i]}"
   done
 
   # run exec string against docker cli tool

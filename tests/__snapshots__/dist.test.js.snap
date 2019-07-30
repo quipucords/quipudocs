@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Distribution should have specific defined properties for JS consumption: exported output 1`] = `
+Array [
+  "ea",
+  "install",
+  "locales",
+  "user",
+]
+`;
+
+exports[`Distribution should match a specific dist file output 1`] = `
+Array [
+  "",
+  "./dist/index.js",
+  "./dist/install/index-brand.html",
+  "./dist/install/index.html",
+  "./dist/locales/en.json",
+  "./dist/locales/locales.json",
+  "./dist/user/index-brand.html",
+  "./dist/user/index.html",
+]
+`;
+
+exports[`Distribution should match a specific docs file output 1`] = `
+Array [
+  "",
+  "./docs/index.html",
+  "./docs/install.html",
+  "./docs/user.html",
+]
+`;
