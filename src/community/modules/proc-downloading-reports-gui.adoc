@@ -29,6 +29,8 @@ The downloaded report is saved to the downloads location for your browser as a [
 // do not change underscore coding
 To view the report, uncompress the [filename]`.tar.gz` file into a [filename]`report_id______ID_` directory. The uncompressed report bundle includes four report files, two details reports in CSV and JSON formats, and two deployments reports in CSV and JSON formats.
 
+While you can view and use the output of these reports for your own internal processes, their format is designed for use by the {CompanyName} Subscription Education and Awareness Program (SEAP) team during customer engagements and for other {CompanyName} internal processes.
+
 // .Additional resources
 // * A bulleted list of links to other material closely related to the contents of the procedure module.
 // * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.

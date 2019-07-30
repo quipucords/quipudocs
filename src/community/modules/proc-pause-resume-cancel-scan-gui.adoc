@@ -1,0 +1,38 @@
+// Module included in the following assemblies:
+// assembly-running-managing-scans-standard-gui.adoc
+// assembly-running-managing-scans-deep-gui.adoc
+
+[id="proc-pause-resume-cancel-scans-gui-{context}"]
+
+= Pausing, resuming, and canceling scans
+
+As you begin running scans, you might need to stop a scan job that is currently running. There might be various business reasons that require you to do this, for example, the need to do an emergency fix due to an alert from your IT health monitoring system or the need to run a higher priority scan that consumes more CPU resources if a lower priority scan is currently running.
+
+You can stop a scan job by either pausing it or canceling it. You can resume a paused scan job, but you cannot resume a canceled scan job.
+
+.Procedure
+
+To pause a scan job that is running:
+. From the Scans view, find the scan that contains the scan job that you want to pause.
+. Click btn:[Pause Scan].
++
+[NOTE]
+====
+If you have multiple scans running at the same time, it might take several moments after starting a scan for the btn:[Pause Scan] icon to appear.
+====
+
+To resume a scan job that is paused:
+. From the Scans view, find the scan that contains the scan job that you want to resume.
+. Click btn:[Resume Scan].
+
+To cancel a scan job that is running:
+. From the Scans view, find the scan that contains the scan job that you want to cancel.
+. Click btn:[Cancel Scan].
+
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.
+
+// Topics from AsciiDoc conversion that were used as source for this topic:
+// proc-pausing-restart-scan.adoc

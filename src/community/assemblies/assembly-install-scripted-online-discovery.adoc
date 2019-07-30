@@ -13,7 +13,7 @@ The automated installation runs an installer that uses Ansible to install the co
 
 .Prerequisites
 
-For more information about {ProductShortName} prerequisites, see (...link to prereqs topic....).
+For more information about {ProductNameShort} prerequisites, see (...link to prereqs topic....).
 
 .Procedure
 

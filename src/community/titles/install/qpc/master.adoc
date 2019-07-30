@@ -1,9 +1,9 @@
 :experimental:
-:toclevels: 3
+:toclevels: 4
 include::attributes/attributes-qpc.adoc[]
 
-[[discovery_user_guide]]
-= Installing and Configuring {ProductShortName}
+[[qpc_install_guide]]
+= Installing and Configuring {ProductNameMedium}
 
 // Contents
 include::assemblies/assembly-install-scripted-online-qpc.adoc[]

@@ -1,9 +1,13 @@
 :experimental:
-:toclevels: 3
+:toclevels: 4
 include::attributes/attributes-qpc.adoc[]
 
 [[quipucords_user_guide]]
-= {ProductShortName} User Guide
+= Using {ProductNameMedium}
 
 // Contents
 include::assemblies/assembly-adding-sources-creds-gui-main.adoc[]
+
+include::assemblies/assembly-running-managing-scans-gui-main.adoc[]
+
+include::assemblies/assembly-merging-downloading-reports-gui-main.adoc[]

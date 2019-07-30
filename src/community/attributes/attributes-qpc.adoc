@@ -2,10 +2,33 @@
 
 // Product attributes
 :ProductName: Quipucords
-:ProductShortName: Quipucords
+:ProductNameMedium: Quipucords
+:ProductNameShort: Quipucords
 :ProductNameStartSentence: The Quipucords tool
-:ProductInCommands: qpc
+:ProductInCommands: quipucords
+:ProductInCommandsShort: qpc
 
 // Red Hat product attributes
+:CompanyName: Red Hat
+
+:RHELName: Red Hat Enterprise Linux
+:RHELNameShort: RHEL
+
+:AMQName: Red Hat AMQ
+:AMQNameShort: RHAMQ
+:DecisionManagerName: Red Hat Decision Manager
+:DecisionManagerNameShort: Decision Manager
+:DecisionManagerOld: Red Hat JBoss BRMS
+:EAPName: Red Hat JBoss Enterprise Application Platform
+:EAPNameShort: JBoss EAP
+:FuseName: Red Hat Fuse
+:FuseNameShort: Red Hat Fuse
+:FuseNameOld: Red Hat JBoss Fuse
+
+:SatelliteServerName: Red Hat Satellite Server
+:SatelliteServerNameShort: Satellite Server
+:SatelliteNameBrandedShort: Red Hat Satellite
+:SatelliteNameVeryShort: Satellite
 
 // External product attributes
+:vCenterServerName: vCenter Server

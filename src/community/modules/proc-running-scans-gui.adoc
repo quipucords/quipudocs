@@ -1,14 +1,14 @@
 // Module included in the following assemblies:
-//
-// <List assemblies here, each on a new line>
+// assembly-running-managing-scans-standard-gui.adoc
+// assembly-running-managing-scans-deep-gui.adoc
 
 [id="proc-running-scans-gui-{context}"]
 
 = Running scans
 
-You can run a new scan from the Sources view. You can run a scan for a single source or select multiple sources to combine into a single scan.
+You can run a new scan from the Sources view. You can run a scan for a single source or select multiple sources to combine into a single scan. Each time that you use the Sources view to run a scan, you are prompted to save it as a new scan.
 
-After you run a scan for the first time, the scan is saved to the Scans view. From that view,you can run the scan again to update its data.
+After you run a scan for the first time, the scan is saved to the Scans view. From that view, you can run that scan again to update its data. Each time that you run a scan from the Scans view, it is saved as a new scan job for that scan.
 
 .Prerequisites
 

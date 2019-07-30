@@ -1,6 +1,6 @@
 // Module included in the following assemblies:
-//
-// <List assemblies here, each on a new line>
+// assembly-running-managing-scans-standard-gui.adoc
+// assembly-running-managing-scans-deep-gui.adoc
 
 [id="proc-running-scans-deep-gui-{context}"]
 
@@ -10,7 +10,7 @@
 You can run a new scan from the Sources view. You can run a scan for a single source or select multiple sources to combine into a single scan. As part of scan configuration, you might choose to use the deep scanning process to search for products.
 
 // This is probably really the assembly intro, if this topic gets used for a full "deep scanning" assembly.
-By default, discovery searches for and fingerprints products by using known metadata that relates to those products. However, it is possible that you have installed these products with a process or in an installation location that makes the search and fingerprinting algorithms less effective. In that case, you need to use deep scanning to find those products.
+By default, {ProductNameShort} searches for and fingerprints products by using known metadata that relates to those products. However, it is possible that you have installed these products with a process or in an installation location that makes the search and fingerprinting algorithms less effective. In that case, you need to use deep scanning to find those products.
 
 The deep scanning process uses the `find` command, so the search process could be CPU resource intensive for the systems that are being scanned. Therefore, you should use discretion when selecting a deep scan for systems that require continuous availability, such as production systems.
 
@@ -35,7 +35,7 @@ After you run a scan for the first time, the scan is saved to the Scans view. Fr
 
 . To use the deep scanning process on one or more products, supply the following information:
   * Select the applicable btn:[Deep scan for these products] check boxes.
-  * Optionally, enter the directories that you want discovery to scan. The default directories that are used in a deep scan are the `/`, `/opt`, `/app`, `/home`, and `/usr` directories.
+  * Optionally, enter the directories that you want {ProductNameShort} to scan. The default directories that are used in a deep scan are the `/`, `/opt`, `/app`, `/home`, and `/usr` directories.
 
 . To begin the scan process, click btn:[Scan].
 

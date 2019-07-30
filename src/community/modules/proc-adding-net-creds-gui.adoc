@@ -9,9 +9,9 @@ You can add credentials from the Credentials view or from the Add Source wizard 
 
 .Prerequisites
 
-* If you want to use the SSH key authentication type for network credentials, that SSH key must be copied into the directory that was mapped to [filename]`/sshkeys` during Quipucords server installation. The default path for this directory is [filename]`~/dsc/sshkeys`.
+* If you want to use the SSH key authentication type for network credentials, that SSH key must be copied into the directory that was mapped to [filename]`/sshkeys` during {ProductNameShort} server installation. The default path for this directory is [filename]`~/dsc/sshkeys`.
 +
-For more information about the SSH keys that are available for use in the [filename]`/sshkeys` directory, or to request the addition of a key to that directory, contact the administrator who manages the Quipucords server.
+For more information about the SSH keys that are available for use in the [filename]`/sshkeys` directory, or to request the addition of a key to that directory, contact the administrator who manages the {ProductNameShort} server.
 
 .Procedure
 
@@ -28,7 +28,7 @@ The Add Credential wizard opens.
 
 . Enter the authentication data in the appropriate fields, based on the authentication type.
   * For username and password authentication, enter a username and password for a user. This user must have root-level access to your network or to the subset of your network that you want to scan. Alternatively, this user must be able to obtain root-level access with the selected become method.
-  * For SSH key authentication, enter a username and an SSH key file, where the path to the key file is a path that is local to the Quipucords server. For example, if the key file is in the [filename]`~/quipucords/sshkeys` path on the server, enter that path in the btn:[SSH Key File] field. Entering a passphrase is optional.
+  * For SSH key authentication, enter a username and an SSH key file, where the path to the key file is a path that is local to the {ProductNameShort} server. For example, if the key file is in the [filename]`~/{ProductInCommands}/sshkeys` path on the server, enter that path in the btn:[SSH Key File] field. Entering a passphrase is optional.
 
 . Enter the become method for privilege elevation. Privilege elevation is required to run some commands during a network scan. Entering a username and password for the become method is optional.
 

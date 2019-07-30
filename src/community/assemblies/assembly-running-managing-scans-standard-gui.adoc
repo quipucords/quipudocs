@@ -1,13 +1,13 @@
 // This assembly is included in the following assemblies:
-// assembly-adding-sources-creds-gui-main.adoc
+// assembly-running-managing-scans-gui-main.adoc
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-adding-net-sources-creds-gui-{context}"]
+[id="assembly-running-managing-scans-standard-gui-{context}"]
 
-= Adding network sources and credentials
+= Running and managing standard scans
 
-To run a scan on one or more of the physical machines, virtual machines, or containers on your network, you must add a source that  identifies each of the assets to scan. Then you must add credentials that contain the authentication data to access each asset.
+TEXT intro....about how most scans are standard....
 
 .Prerequisites
 // * Sentence or a bulleted list of pre-requisites that must be in place or done before the user starts this task.
@@ -16,20 +16,27 @@ To run a scan on one or more of the physical machines, virtual machines, or cont
 
 .Procedure
 
-TEXT To add network sources and credentials...
+TEXT To run and manage scans...
 
 // do you need level offset in each assembly? at master doc level only? confused about this one.
 
-include::modules/proc-adding-net-sources-gui.adoc[leveloffset=+1]
+include::modules/proc-running-scans-gui.adoc[leveloffset=+1]
 
-include::modules/proc-adding-net-creds-gui.adoc[leveloffset=+1]
+:context: assembly-running-managing-scans-standard-gui-context
+include::modules/proc-running-new-scan-job-gui.adoc[leveloffset=+1]
 
-:context: assembly-adding-net-sources-creds-gui-context
-include::modules/con-about-sources-creds-gui.adoc[leveloffset=+1]
+:context: assembly-running-managing-scans-standard-gui-context
+include::modules/proc-pause-resume-cancel-scan-gui.adoc[leveloffset=+1]
 
-include::modules/con-net-auth-gui.adoc[leveloffset=+1]
+:context: assembly-running-managing-scans-standard-gui-context
+include::modules/con-about-scans-scan-jobs-gui.adoc[leveloffset=+1]
 
-include::modules/ref-commands-used-net-scans-gui.adoc[leveloffset=+2]
+:context: assembly-running-managing-scans-standard-gui-context
+include::modules/con-scan-job-processing-gui.adoc[leveloffset=+1]
+
+:context: assembly-running-managing-scans-standard-gui-context
+include::modules/con-scan-job-life-cycle-gui.adoc[leveloffset=+1]
+
 
 // .Related Information
 // * Bulleted list of links to concepts, reference, or other tasks closely related to this user story.
