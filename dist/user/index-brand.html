@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.9">
-<title>discovery User Guide</title>
+<title>Using product discovery</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -437,7 +437,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body id="discovery_user_guide" class="book">
 <div id="header">
-<h1>discovery User Guide</h1>
+<h1>Using product discovery</h1>
 </div>
 <div id="content">
 <h1 id="assembly-adding-sources-creds-gui-main-{context}" class="sect0">Adding sources and credentials</h1>
@@ -544,9 +544,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>If you want to use the SSH key authentication type for network credentials, that SSH key must be copied into the directory that was mapped to <code class="filename">/sshkeys</code> during Quipucords server installation. The default path for this directory is <code class="filename">~/dsc/sshkeys</code>.</p>
+<p>If you want to use the SSH key authentication type for network credentials, that SSH key must be copied into the directory that was mapped to <code class="filename">/sshkeys</code> during discovery server installation. The default path for this directory is <code class="filename">~/dsc/sshkeys</code>.</p>
 <div class="paragraph">
-<p>For more information about the SSH keys that are available for use in the <code class="filename">/sshkeys</code> directory, or to request the addition of a key to that directory, contact the administrator who manages the Quipucords server.</p>
+<p>For more information about the SSH keys that are available for use in the <code class="filename">/sshkeys</code> directory, or to request the addition of a key to that directory, contact the administrator who manages the discovery server.</p>
 </div>
 </li>
 </ul>
@@ -584,7 +584,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>For username and password authentication, enter a username and password for a user. This user must have root-level access to your network or to the subset of your network that you want to scan. Alternatively, this user must be able to obtain root-level access with the selected become method.</p>
 </li>
 <li>
-<p>For SSH key authentication, enter a username and an SSH key file, where the path to the key file is a path that is local to the Quipucords server. For example, if the key file is in the <code class="filename">~/quipucords/sshkeys</code> path on the server, enter that path in the <b class="button">SSH Key File</b> field. Entering a passphrase is optional.</p>
+<p>For SSH key authentication, enter a username and an SSH key file, where the path to the key file is a path that is local to the discovery server. For example, if the key file is in the <code class="filename">~/discovery/sshkeys</code> path on the server, enter that path in the <b class="button">SSH Key File</b> field. Entering a passphrase is optional.</p>
 </li>
 </ul>
 </div>
@@ -642,7 +642,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="con-net-auth-gui-assembly-adding-net-sources-creds-gui-context">Network authentication</h3>
 <div class="paragraph">
-<p>The Quipucords server inspects the remote systems in a network scan by using the SSH remote connection capabilities of Ansible. When you add a network credential, you configure the SSH connection by using either a user name and password or a user name and SSH keyfile pair. If remote systems are accessed with SSH key authentication, you can also supply a passphrase.</p>
+<p>The discovery server inspects the remote systems in a network scan by using the SSH remote connection capabilities of Ansible. When you add a network credential, you configure the SSH connection by using either a user name and password or a user name and SSH keyfile pair. If remote systems are accessed with SSH key authentication, you can also supply a passphrase.</p>
 </div>
 <div class="paragraph">
 <p>Also during network credential configuration, you can enable a become method. The become method is used during a scan to elevate privileges. These privileges are needed to run commands and obtain data on the systems that you are scanning. For more information about the commands that do and do not require elevated privileges during a scan, see <a href="#ref-commands-used-net-scans-gui_assembly-adding-net-sources-creds-gui-context">Commands that are used in scans of remote network assets</a>.</p>
@@ -650,13 +650,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="ref-commands-used-net-scans-gui-assembly-adding-net-sources-creds-gui-context">Commands that are used in scans of remote network assets</h4>
 <div class="paragraph">
-<p>When you run a network scan, Quipucords must use the credentials that you provide to run certain commands on the remote systems in your network. Some of those commands must run with elevated privileges. This access is typically acquired through the use of the <code class="command">sudo</code> command or similar commands. The elevated privileges are required to gather the types of facts that Quipucords uses to build the report about your installed products and consumed entitlements.</p>
+<p>When you run a network scan, discovery must use the credentials that you provide to run certain commands on the remote systems in your network. Some of those commands must run with elevated privileges. This access is typically acquired through the use of the <code class="command">sudo</code> command or similar commands. The elevated privileges are required to gather the types of facts that discovery uses to build the report about your installed products and consumed entitlements.</p>
 </div>
 <div class="paragraph">
 <p>Although it is possible to run a scan for a network source without elevated privileges, the results of that scan will be incomplete. The incomplete results from the network scan will affect the quality of the generated report for the scan.</p>
 </div>
 <div class="paragraph">
-<p>The following information lists the commands that Quipucords runs on remote hosts during a network scan. The information includes the basic commands that can run without elevated privileges and the commands that must run with elevated privileges to gather the most accurate and complete information for the report.</p>
+<p>The following information lists the commands that discovery runs on remote hosts during a network scan. The information includes the basic commands that can run without elevated privileges and the commands that must run with elevated privileges to gather the most accurate and complete information for the report.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -666,7 +666,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>In addition to the following commands, Quipucords also depends on standard shell facilities, such as those provided by the Bash shell.</p>
+<p>In addition to the following commands, discovery also depends on standard shell facilities, such as those provided by the Bash shell.</p>
 </div>
 </td>
 </tr>
@@ -1265,10 +1265,959 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+<h1 id="assembly-running-managing-scans-gui-main-{context}" class="sect0">Running and managing scans</h1>
+<div class="openblock partintro">
+<div class="content">
+<div class="paragraph">
+<p>TEXT intro&#8230;&#8203;&#8230;&#8203;about standard scans vs. deep scans, etc&#8230;&#8203;&#8230;&#8203;</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>(keeping here temporarily, but probably not using this section in this topic)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>TEXT here too&#8230;&#8203;.?</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="assembly-running-managing-scans-standard-gui-{context}">Running and managing standard scans</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TEXT intro&#8230;&#8203;.about how most scans are standard&#8230;&#8203;.</p>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>TEXT To run and manage scans&#8230;&#8203;</p>
+</div>
+<div class="sect2">
+<h3 id="proc-running-scans-gui-{context}">Running scans</h3>
+<div class="paragraph">
+<p>You can run a new scan from the Sources view. You can run a scan for a single source or select multiple sources to combine into a single scan. Each time that you use the Sources view to run a scan, you are prompted to save it as a new scan.</p>
+</div>
+<div class="paragraph">
+<p>After you run a scan for the first time, the scan is saved to the Scans view. From that view, you can run that scan again to update its data. Each time that you run a scan from the Scans view, it is saved as a new scan job for that scan.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>To run a scan, you must first add the sources that you want to scan and the credentials to access those sources.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>From the Sources view, select one or more sources. You can select sources of different types to combine them into a single scan.</p>
+</li>
+<li>
+<p>Click the <b class="button">Scan</b> button that is appropriate for the selected sources:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For a single source, click <b class="button">Scan</b> on the row for that source. Selecting the check box for the source is optional.</p>
+</li>
+<li>
+<p>If you selected multiple sources, click <b class="button">Scan</b> in the toolbar.
+The Scan wizard opens.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>In the <b class="button">Name</b> field, enter a descriptive name for the scan.</p>
+</li>
+<li>
+<p>If you want to change the default number of maximum concurrent scans, set a new value in the <b class="button">Maximum concurrent scans</b> field. This value is the maximum number of machines or virtual machines that are scanned in parallel during a scan.</p>
+</li>
+<li>
+<p>To use the default scanning process, allow the <b class="button">Deep scan for these products</b> check boxes to remain in the default, cleared state.</p>
+</li>
+<li>
+<p>To begin the scan process, click <b class="button">Scan</b>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Verification steps</div>
+<p>When the scan process begins, a notification displays in the Sources view. The running scan also displays in the Scans view, with a message about the progress of the scan.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proc-running-new-scan-job-gui-assembly-running-managing-scans-standard-gui-context">Running a new scan job</h3>
+<div class="paragraph">
+<p>After you name a scan and run it for the first time, it is added to the Scans view. You can then run a new instance of that scan, or scan job, to update the data that is gathered for that scan.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>From the Scans view, click the <b class="button">Run Scan</b> icon in the scan details.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In the scan details, if the first or most recent scan job did not complete successfully, this icon is labeled <b class="button">Retry Scan</b>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Verification steps</div>
+<p>When the scan process begins, a notification displays with a message about the progress of the scan.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the scan details, expand <b class="button">Previous</b> to view all previous scan jobs.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proc-pause-resume-cancel-scans-gui-assembly-running-managing-scans-standard-gui-context">Pausing, resuming, and canceling scans</h3>
+<div class="paragraph">
+<p>As you begin running scans, you might need to stop a scan job that is currently running. There might be various business reasons that require you to do this, for example, the need to do an emergency fix due to an alert from your IT health monitoring system or the need to run a higher priority scan that consumes more CPU resources if a lower priority scan is currently running.</p>
+</div>
+<div class="paragraph">
+<p>You can stop a scan job by either pausing it or canceling it. You can resume a paused scan job, but you cannot resume a canceled scan job.</p>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>To pause a scan job that is running:
+. From the Scans view, find the scan that contains the scan job that you want to pause.
+. Click <b class="button">Pause Scan</b>.</p>
+</div>
+<div class="paragraph">
+<p>+</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you have multiple scans running at the same time, it might take several moments after starting a scan for the <b class="button">Pause Scan</b> icon to appear.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To resume a scan job that is paused:
+. From the Scans view, find the scan that contains the scan job that you want to resume.
+. Click <b class="button">Resume Scan</b>.</p>
+</div>
+<div class="paragraph">
+<p>To cancel a scan job that is running:
+. From the Scans view, find the scan that contains the scan job that you want to cancel.
+. Click <b class="button">Cancel Scan</b>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="con-about-scans-scan-jobs-gui-assembly-running-managing-scans-standard-gui-context">About scans and scan jobs</h3>
+<div class="paragraph">
+<p>After you create sources and credentials, you can create scans. A scan is an object that groups sources into a unit that can be inspected, or scanned, in a reproducible way. Each time that you run a saved scan, that instance is saved as a scan job. The output of a scan job is a report, the collection of facts gathered for all IT resources that are contained in that source.</p>
+</div>
+<div class="paragraph">
+<p>A scan includes at least one source and the credentials that were associated with that source at source creation time. When the scan job runs, it uses the provided credentials to contact the IT resources contained in the source and then it inspects the IT resources to gather facts about those resources for the report. You can add multiple sources to a single scan, including a combination of different types of sources into a single scan.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="con-scan-job-processing-gui-assembly-running-managing-scans-standard-gui-context">Scan job processing</h3>
+<div class="paragraph">
+<p>A scan job moves through two phases, or tasks, while it is being processed. These two tasks are the connection task and the inspection task.</p>
+</div>
+<div class="sect3">
+<h4 id="_scan_job_connection_and_inspection_tasks">Scan job connection and inspection tasks</h4>
+<div class="paragraph">
+<p>The first task that runs during a scan job is a connection task. The <em>connection task</em> determines the ability to connect to the source and finds the number of systems that can be inspected for the defined source. The second task that runs is an inspection task. The <em>inspection task</em> is the task that gathers data from each of the systems in the defined source to output the scan results into a report.</p>
+</div>
+<div class="paragraph">
+<p>If the scan is configured so that it contains several sources, then when the scan job runs, these two tasks are created for each source. First, all of the connection tasks for all of the sources run to establish connections to the sources and find the systems that can be inspected. Then all of the inspection tasks for all of the sources run to inspect the contents of the systems that are contained in the sources.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_how_these_tasks_are_processed">How these tasks are processed</h4>
+<div class="paragraph">
+<p>When the scan job runs the connection task for a source, it attempts to connect to the network, the server for vCenter Server, or the server for Satellite. If the connection to vCenter Server or Satellite fails, then the connection task fails. For a network scan, if the network is not reachable or the credentials are invalid, the connection task reports zero (0) successful systems. If only some of the systems for a network scan are reachable, the connection task reports success on the systems that are reachable, and the connection task does not fail.</p>
+</div>
+<div class="paragraph">
+<p>You can view information about the status of the connection task in the Scans view. The row for a scan displays the connection task results as the number of successful system connections for the most recent scan job. You can also can expand the previous scan jobs to see the connection task results for a previous scan job.</p>
+</div>
+<div class="paragraph">
+<p>When the scan job runs the inspection task for a source, it checks the state of the connection task. If the connection task shows a failed state or if there are zero (0) successful connections, the scan job transitions to the failed state. However, if the connection task reports at least one successful connection, the inspection task continues. The results for the scan job then show success and failure data for each individual system. If the inspection task is not able to gather results from the successful systems, or if another unexpected error occurs during the inspection task, then the scan job transitions to the failed state.</p>
+</div>
+<div class="paragraph">
+<p>If a scan contains multiple sources, each source has its own connection and inspection tasks. These tasks are processed independently from the tasks for the other sources. If any task for any of the sources fails, the scan job transitions to the failed state. The scan job transitions to the completed state only if all scan job tasks for all sources complete successfully.</p>
+</div>
+<div class="paragraph">
+<p>If a scan job completes successfully, the data for that scan job is generated as a report. In the Scans view, the report for each successful scan job is available from a <b class="button">Download</b> button.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="con-scan-job-life-cycle-gui-assembly-running-managing-scans-standard-gui-context">Scan job life cycle</h3>
+<div class="paragraph">
+<p>An individual instance of a scan, or <em>scan job</em>, moves through several states during its life cycle.</p>
+</div>
+<div class="paragraph">
+<p>When you start a scan, a scan job is created and the scan job is in the <em>created</em> state. The scan job is then queued for processing and the scan job transitions to the <em>pending</em> state. Scan jobs run serially, in the order that they are started.</p>
+</div>
+<div class="paragraph">
+<p>As the discovery server reaches a specific scan job in the queue, that scan job transitions from the <em>pending</em> state to the <em>running</em> state as the processing of that scan job begins. If the scan process completes successfully, the scan job transitions to the <em>completed</em> state and the scan job produces results that can be viewed in a report. If the scan process results in an error that prevents successful completion of the scan, the scan job halts and the scan job transitions to the <em>failed</em> state. An additional status message for the failed scan contains information to help determine the cause of the failure.</p>
+</div>
+<div class="paragraph">
+<p>Other states for a scan job result from user action that is taken on the scan job. You can pause or cancel a scan job while it is pending or running. A scan job in the <em>paused</em> state can be resumed. A scan job in the <em>canceled</em> state cannot be resumed.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="assembly-running-managing-scans-deep-gui-{context}">Running and managing deep scans</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TEXT intro&#8230;&#8203;.about deep scans and the consequences&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>TEXT To run and manage scans&#8230;&#8203;</p>
+</div>
+<div class="sect2">
+<h3 id="proc-running-scans-deep-gui-{context}">Running scans with deep scanning</h3>
+<div class="paragraph">
+<p>You can run a new scan from the Sources view. You can run a scan for a single source or select multiple sources to combine into a single scan. As part of scan configuration, you might choose to use the deep scanning process to search for products.</p>
+</div>
+<div class="paragraph">
+<p>By default, discovery searches for and fingerprints products by using known metadata that relates to those products. However, it is possible that you have installed these products with a process or in an installation location that makes the search and fingerprinting algorithms less effective. In that case, you need to use deep scanning to find those products.</p>
+</div>
+<div class="paragraph">
+<p>The deep scanning process uses the <code>find</code> command, so the search process could be CPU resource intensive for the systems that are being scanned. Therefore, you should use discretion when selecting a deep scan for systems that require continuous availability, such as production systems.</p>
+</div>
+<div class="paragraph">
+<p>After you run a scan for the first time, the scan is saved to the Scans view. From that view, you can run the scan again to update its data.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>To run a scan, you must first add the sources that you want to scan and the credentials to access those sources.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>From the Sources view, select one or more sources. You can select sources of different types to combine them into a single scan.</p>
+</li>
+<li>
+<p>Click the <b class="button">Scan</b> button that is appropriate for the selected sources:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For a single source, click <b class="button">Scan</b> on the row for that source. Selecting the check box for the source is optional.</p>
+</li>
+<li>
+<p>If you selected multiple sources, click <b class="button">Scan</b> in the toolbar.
+The Scan wizard opens.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>In the <b class="button">Name</b> field, enter a descriptive name for the scan.</p>
+</li>
+<li>
+<p>If you want to change the default number of maximum concurrent scans, set a new value in the <b class="button">Maximum concurrent scans</b> field. This value is the maximum number of machines or virtual machines that are scanned in parallel during a scan.</p>
+</li>
+<li>
+<p>To use the deep scanning process on one or more products, supply the following information:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Select the applicable <b class="button">Deep scan for these products</b> check boxes.</p>
+</li>
+<li>
+<p>Optionally, enter the directories that you want discovery to scan. The default directories that are used in a deep scan are the <code>/</code>, <code>/opt</code>, <code>/app</code>, <code>/home</code>, and <code>/usr</code> directories.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>To begin the scan process, click <b class="button">Scan</b>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Verification steps</div>
+<p>When the scan process begins, a notification displays in the Sources view. The running scan also displays in the Scans view, with a message about the progress of the scan.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proc-running-new-scan-job-gui-assembly-running-managing-scans-deep-gui-context">Running a new scan job</h3>
+<div class="paragraph">
+<p>After you name a scan and run it for the first time, it is added to the Scans view. You can then run a new instance of that scan, or scan job, to update the data that is gathered for that scan.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>From the Scans view, click the <b class="button">Run Scan</b> icon in the scan details.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In the scan details, if the first or most recent scan job did not complete successfully, this icon is labeled <b class="button">Retry Scan</b>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Verification steps</div>
+<p>When the scan process begins, a notification displays with a message about the progress of the scan.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the scan details, expand <b class="button">Previous</b> to view all previous scan jobs.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proc-pause-resume-cancel-scans-gui-assembly-running-managing-scans-deep-gui-context">Pausing, resuming, and canceling scans</h3>
+<div class="paragraph">
+<p>As you begin running scans, you might need to stop a scan job that is currently running. There might be various business reasons that require you to do this, for example, the need to do an emergency fix due to an alert from your IT health monitoring system or the need to run a higher priority scan that consumes more CPU resources if a lower priority scan is currently running.</p>
+</div>
+<div class="paragraph">
+<p>You can stop a scan job by either pausing it or canceling it. You can resume a paused scan job, but you cannot resume a canceled scan job.</p>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>To pause a scan job that is running:
+. From the Scans view, find the scan that contains the scan job that you want to pause.
+. Click <b class="button">Pause Scan</b>.</p>
+</div>
+<div class="paragraph">
+<p>+</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you have multiple scans running at the same time, it might take several moments after starting a scan for the <b class="button">Pause Scan</b> icon to appear.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To resume a scan job that is paused:
+. From the Scans view, find the scan that contains the scan job that you want to resume.
+. Click <b class="button">Resume Scan</b>.</p>
+</div>
+<div class="paragraph">
+<p>To cancel a scan job that is running:
+. From the Scans view, find the scan that contains the scan job that you want to cancel.
+. Click <b class="button">Cancel Scan</b>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="con-about-scans-scan-jobs-gui-assembly-running-managing-scans-deep-gui-context">About scans and scan jobs</h3>
+<div class="paragraph">
+<p>After you create sources and credentials, you can create scans. A scan is an object that groups sources into a unit that can be inspected, or scanned, in a reproducible way. Each time that you run a saved scan, that instance is saved as a scan job. The output of a scan job is a report, the collection of facts gathered for all IT resources that are contained in that source.</p>
+</div>
+<div class="paragraph">
+<p>A scan includes at least one source and the credentials that were associated with that source at source creation time. When the scan job runs, it uses the provided credentials to contact the IT resources contained in the source and then it inspects the IT resources to gather facts about those resources for the report. You can add multiple sources to a single scan, including a combination of different types of sources into a single scan.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="con-scan-job-processing-gui-assembly-running-managing-scans-deep-gui-context">Scan job processing</h3>
+<div class="paragraph">
+<p>A scan job moves through two phases, or tasks, while it is being processed. These two tasks are the connection task and the inspection task.</p>
+</div>
+<div class="sect3">
+<h4 id="_scan_job_connection_and_inspection_tasks_2">Scan job connection and inspection tasks</h4>
+<div class="paragraph">
+<p>The first task that runs during a scan job is a connection task. The <em>connection task</em> determines the ability to connect to the source and finds the number of systems that can be inspected for the defined source. The second task that runs is an inspection task. The <em>inspection task</em> is the task that gathers data from each of the systems in the defined source to output the scan results into a report.</p>
+</div>
+<div class="paragraph">
+<p>If the scan is configured so that it contains several sources, then when the scan job runs, these two tasks are created for each source. First, all of the connection tasks for all of the sources run to establish connections to the sources and find the systems that can be inspected. Then all of the inspection tasks for all of the sources run to inspect the contents of the systems that are contained in the sources.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_how_these_tasks_are_processed_2">How these tasks are processed</h4>
+<div class="paragraph">
+<p>When the scan job runs the connection task for a source, it attempts to connect to the network, the server for vCenter Server, or the server for Satellite. If the connection to vCenter Server or Satellite fails, then the connection task fails. For a network scan, if the network is not reachable or the credentials are invalid, the connection task reports zero (0) successful systems. If only some of the systems for a network scan are reachable, the connection task reports success on the systems that are reachable, and the connection task does not fail.</p>
+</div>
+<div class="paragraph">
+<p>You can view information about the status of the connection task in the Scans view. The row for a scan displays the connection task results as the number of successful system connections for the most recent scan job. You can also can expand the previous scan jobs to see the connection task results for a previous scan job.</p>
+</div>
+<div class="paragraph">
+<p>When the scan job runs the inspection task for a source, it checks the state of the connection task. If the connection task shows a failed state or if there are zero (0) successful connections, the scan job transitions to the failed state. However, if the connection task reports at least one successful connection, the inspection task continues. The results for the scan job then show success and failure data for each individual system. If the inspection task is not able to gather results from the successful systems, or if another unexpected error occurs during the inspection task, then the scan job transitions to the failed state.</p>
+</div>
+<div class="paragraph">
+<p>If a scan contains multiple sources, each source has its own connection and inspection tasks. These tasks are processed independently from the tasks for the other sources. If any task for any of the sources fails, the scan job transitions to the failed state. The scan job transitions to the completed state only if all scan job tasks for all sources complete successfully.</p>
+</div>
+<div class="paragraph">
+<p>If a scan job completes successfully, the data for that scan job is generated as a report. In the Scans view, the report for each successful scan job is available from a <b class="button">Download</b> button.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="con-scan-job-life-cycle-gui-assembly-running-managing-scans-deep-gui-context">Scan job life cycle</h3>
+<div class="paragraph">
+<p>An individual instance of a scan, or <em>scan job</em>, moves through several states during its life cycle.</p>
+</div>
+<div class="paragraph">
+<p>When you start a scan, a scan job is created and the scan job is in the <em>created</em> state. The scan job is then queued for processing and the scan job transitions to the <em>pending</em> state. Scan jobs run serially, in the order that they are started.</p>
+</div>
+<div class="paragraph">
+<p>As the discovery server reaches a specific scan job in the queue, that scan job transitions from the <em>pending</em> state to the <em>running</em> state as the processing of that scan job begins. If the scan process completes successfully, the scan job transitions to the <em>completed</em> state and the scan job produces results that can be viewed in a report. If the scan process results in an error that prevents successful completion of the scan, the scan job halts and the scan job transitions to the <em>failed</em> state. An additional status message for the failed scan contains information to help determine the cause of the failure.</p>
+</div>
+<div class="paragraph">
+<p>Other states for a scan job result from user action that is taken on the scan job. You can pause or cancel a scan job while it is pending or running. A scan job in the <em>paused</em> state can be resumed. A scan job in the <em>canceled</em> state cannot be resumed.</p>
+</div>
+</div>
+</div>
+</div>
+<h1 id="assembly-merging-downloading-reports-gui-main-{context}" class="sect0">Merging and downloading reports</h1>
+<div class="openblock partintro">
+<div class="content">
+<div class="paragraph">
+<p>TEXT&#8230;&#8203;&#8230;&#8203;.</p>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>TEXT To merge and download reports&#8230;&#8203;</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="assembly-merging-reports-gui-{context}">Merging reports</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TEXT&#8230;&#8203;&#8230;&#8203;.</p>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>TEXT To merge reports&#8230;&#8203;</p>
+</div>
+<div class="sect2">
+<h3 id="proc-merging-reports-gui-{context}">Merging reports</h3>
+<div class="paragraph">
+<p>From the Scans view, you can select two or more reports and merge them into a single report.</p>
+</div>
+<div class="paragraph">
+<p>There might be several reasons that you would chose to merge reports. For example, you might have a large IT infrastructure with many different administrators, each of whom can access and scan only a part of that infrastructure. Alternatively, you might run multiple separate scans to limit the demand on CPU resources of the machines that are being scanned, especially in situations where deep scanning is required. Lastly, you might want to run scans on a single type of source, isolating your network, satellite, and vcenter data into separate reports for your own internal purposes.</p>
+</div>
+<div class="paragraph">
+<p>For these and similar reasons, it is likely that you will run multiple scans to provide complete scan coverage of your entire IT infrastructure. Merging reports enables you to combine the data from multiple scans into a single report.</p>
+</div>
+<div class="paragraph">
+<div class="title">Prerequisites</div>
+<p>To merge reports, you must select at least two scans for which the most recent scan jobs have completed successfully.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>From the Scans view, select the check box for one or more scans.</p>
+</li>
+<li>
+<p>Click <b class="button">Merge reports</b>. A confirmation dialog box shows the selected scans.</p>
+</li>
+<li>
+<p>Click <b class="button">Merge</b> to merge the scans into a single report and download the merged reports.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Verification steps</div>
+<p>The merged report is saved to the downloads location for your browser as a <code class="filename">.tar.gz</code> file, for example, <code class="filename">report_id_110_20190529_095005.tar.gz</code>. The file name format is <code class="filename">report_id<em><em>_ID</em>_DATE_TIME</em>.tar.gz</code>, where <code><em>ID</em></code> is the unique report ID assigned by the server, <code><em>DATE</em></code> is the date in <em>yyyymmdd</em> format, and <code><em>TIME</em></code> is the time in the <em>hhmmss</em> format, based on the 24-hour system. The date and time data is determined by the interaction of the browser that is running the client with the server APIs.</p>
+</div>
+<div class="paragraph">
+<p>To view the reports, uncompress the <code class="filename">.tar.gz</code> file into a <code class="filename">report_id<em><em></em>_ID</em></code> directory. The uncompressed report bundle includes four report files, two details reports in CSV and JSON formats, and two deployments reports in CSV and JSON formats.</p>
+</div>
+<div class="paragraph">
+<p>While you can view and use the output of these reports for your own internal processes, their format is designed for use by the Red Hat Subscription Education and Awareness Program (SEAP) team during customer engagements and for other Red Hat internal processes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="con-how-reports-created-gui-assembly-merging-reports-gui-context">How reports are created</h3>
+<div class="paragraph">
+<p>The scan process is used to discover the systems in your IT infrastructure, to inspect and gather information about the nature and contents of those systems, and to create a report from the information that it gathers during the inspection of each system.</p>
+</div>
+<div class="paragraph">
+<p>A <em>system</em> is any entity that can be interrogated by the inspection tasks through an SSH connection, vCenter Server data, or the Satellite Server API. Therefore, a system can be a machine, such as a physical or virtual machine, and it can also be a different type of entity, such as a container.</p>
+</div>
+<div class="sect3">
+<h4 id="_facts_and_fingerprints">Facts and fingerprints</h4>
+<div class="paragraph">
+<p>During a scan, a collection of facts is gathered for each system that is contained in each source. A <em>fact</em> is a single piece of data about a system, such as the version of the operating system, the number of CPU cores, or a consumed entitlement for a Red Hat product.</p>
+</div>
+<div class="paragraph">
+<p>Facts are processed to create a summarized set of data for each system, data that is known as a fingerprint. A <em>fingerprint</em> is the set of facts that identifies a unique system and its characteristics, including the architecture, operating system, the different products that are installed on that system and their versions, the entitlements that are in use on that system, and so on.</p>
+</div>
+<div class="paragraph">
+<p>Fingerprinting data is generated when you run a scan job, but the data is used to create only one type of report. When you request a detailed report, you receive the raw facts for that scan without any fingerprinting. When you request a deployments report, you receive the fingerprinting data that includes the results from the deduplication, merging, and post-processing processes. These processes include identifying installed products and versions from the raw facts, finding consumed entitlements, finding and merging duplicate instances of products from different sources, and finding products installed in nondefault locations, among other steps.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_system_deduplication_and_merging">System deduplication and merging</h4>
+<div class="paragraph">
+<p>A single system can be found in multiple sources during a scan. For example, a virtual machine on vCenter Server could be running a Red Hat Enterprise Linux operating system installation that is also managed by Satellite. If you construct a scan that contains a vcenter, satellite, and network source, then that single system is reported by all three vcenter, satellite, and network sources during the scan.</p>
+</div>
+<div class="paragraph">
+<p>To resolve this issue and build an accurate fingerprint, product discovery tool feeds unprocessed system facts from the scan into a fingerprint engine. The fingerprint engine matches and merges data for systems that are found in more than one source by using the deduplication and merge processes.</p>
+</div>
+<div class="sect4">
+<h5 id="_system_deduplication">System deduplication</h5>
+<div class="paragraph">
+<p>The system deduplication process uses specific facts about a system to identify duplicate systems. The process moves through several phases, using these facts to combine duplicate systems in successively broader sets of data:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All systems from network sources are combined into a single network system set. Systems are considered to be duplicates if they have the same value for the 'subscription_manager_id' or 'bios_uuid' facts.</p>
+</li>
+<li>
+<p>All systems from vcenter sources are combined into a single vcenter system set. Systems are considered to be duplicates if they have the same value for the 'vm_uuid' fact.</p>
+</li>
+<li>
+<p>All systems from satellite sources are combined into a single satellite system set. Systems are considered to be duplicates if they have the same value for the 'subscription_manager_id' fact.</p>
+</li>
+<li>
+<p>The network system set is merged with the satellite system set to form a single network-satellite system set. Systems are considered to be duplicates if they have the same value for the 'subscription_manager' fact or matching MAC address values in the 'mac_addresses' fact.</p>
+</li>
+<li>
+<p>The network-satellite system set is merged with the vcenter system set to form the complete system set. Systems are considered to be duplicates if they have matching MAC address values in the 'mac_addresses' fact or if the vcenter value for the 'vm_uuid' fact matches the network value for the 'bios_uuid' fact.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_system_merging">System merging</h5>
+<div class="paragraph">
+<p>After the deduplication process determines that two systems are duplicates, it performs a merge. The merged system has a union of system facts from each source. When a fact that appears in two systems is merged, the merge process uses the following order of precedence to merge that fact, from highest to lowest:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>network source fact</p>
+</li>
+<li>
+<p>satellite source fact</p>
+</li>
+<li>
+<p>vcenter source fact</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>A system fingerprint contains a 'metadata' dictionary that captures the original source of each fact for that system.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_system_post_processing">System post-processing</h4>
+<div class="paragraph">
+<p>After deduplication and merging are complete, there is a post-processing phase that creates derived system facts. A derived system fact is a fact that is generated from the evaluation of more than one system fact. The majority of derived system facts are related to product identification data, such as the presence of a specific product and its version.</p>
+</div>
+<div class="paragraph">
+<p>The following example shows how the derived system fact 'system_creation_date' is created.</p>
+</div>
+<div class="paragraph">
+<p>The 'system_creation_date' fact is a derived system fact that contains the real system creation time. The value for this fact is determined by the evaluation of the following facts. The value for each fact is examined in the following order of precedence, with the order of precedence determined by the accuracy of the match to the real system creation time. The highest non-empty value is used to determine the value of the 'system_creation_date' fact.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>'date_machine_id'</p>
+</li>
+<li>
+<p>'registration_time'</p>
+</li>
+<li>
+<p>'date_anaconda_log'</p>
+</li>
+<li>
+<p>'date_filesystem_create'</p>
+</li>
+<li>
+<p>'date_yum_history'</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_report_creation">Report creation</h4>
+<div class="paragraph">
+<p>After the processing of the report data is complete, the report creation process builds two reports in two different formats, JavaScript Object Notation (JSON) and comma-separated variable (CSV). The <em>details</em> report for each format contains the raw facts with no processing, and <em>deployments</em> report for each format contains the output after the raw facts have passed through the fingerprinting, deduplication, merge, and post-processing processes.</p>
+</div>
+<div class="paragraph">
+<p>While you can view and use the output of these reports for your own internal processes, their format is designed for use by the Red Hat Subscription Education and Awareness Program (SEAP) team during customer engagements and for other Red Hat internal processes.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ref-fingerprint-example-gui-assembly-merging-reports-gui-context">A fingerprint example</h4>
+<div class="paragraph">
+<p>A fingerprint is composed of a set of facts about a single system in addition to facts about products, entitlements, sources, and metadata on that system. The following example shows fingerprint data. A fingerprint for a single system, even with very few Red Hat products installed on it, can be many lines. Therefore, only a partial fingerprint is used in this example.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre>{
+    "os_release": "Red Hat Enterprise Linux Atomic Host 7.4",
+    "cpu_count": 4,
+    "products": [
+        {
+            "name": "JBoss EAP",
+            "version": null,
+            "presence": "absent",
+            "metadata": {
+                "source_id": 5,
+                "source_name": "S62Source",
+                "source_type": "satellite",
+                "raw_fact_key": null
+            }
+        }
+    ],
+    "entitlements": [
+        {
+            "name": "Satellite Tools 6.3",
+            "entitlement_id": 54,
+            "metadata": {
+                "source_id": 5,
+                "source_name": "S62Source",
+                "source_type": "satellite",
+                "raw_fact_key": "entitlements"
+            }
+        }
+    ],
+    "metadata": {
+        "os_release": {
+            "source_id": 5,
+            "source_name": "S62Source",
+            "source_type": "satellite",
+            "raw_fact_key": "os_release"
+        },
+        "cpu_count": {
+            "source_id": 4,
+            "source_name": "NetworkSource",
+            "source_type": "network",
+            "raw_fact_key": "os_release"
+        }
+    },
+    "sources": [
+        {
+            "id": 4,
+            "source_type": "network",
+            "name": "NetworkSource"
+        },
+        {
+            "id": 5,
+            "source_type": "satellite",
+            "name": "S62Source"
+        }
+    ]
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The first several lines of a fingerprint show facts about the system, including facts about the operating system and CPUs. In this example, the <code>os_release</code> fact describes the installed operating system and release as <code>Red Hat Enterprise Linux Atomic Host 7.4</code>.</p>
+</div>
+<div class="paragraph">
+<p>Next, the fingerprint lists the installed products in the <code>products</code> section. A product has a name, version, presence, and metadata field. Because the presence field shows <code>absent</code> as the value for JBoss EAP, the system in this example does not have JBoss EAP installed.</p>
+</div>
+<div class="paragraph">
+<p>The fingerprint also lists the consumed entitlements for that system in the <code>entitlements</code> section. Each entitlement in the list has a name, ID, and metadata that describes the original source of that fact. In the example fingerprint, the system has the <code>Satellite Tools 6.3</code> entitlement.</p>
+</div>
+<div class="paragraph">
+<p>In addition to the metadata fields that are in the <code>products</code> and <code>entitlements</code> sections, the fingerprint contains a <code>metadata</code> section that is used for system fact metadata. For each system fact, there is a corresponding entry in the <code>metadata</code> section of the fingerprint that identifies the original source of that system fact. In the example, the <code>os_release</code> fact was found in Satellite Server, during the scan of the satellite source.</p>
+</div>
+<div class="paragraph">
+<p>Lastly, the fingerprint lists the sources that contain this system in the <code>sources</code> section. A system can be contained in more than one source. For example, for a scan that includes both a network source and a satellite source, a single system can be found in both parts of the scan.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="assembly-downloading-reports-gui-{context}">Downloading reports</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TEXT&#8230;&#8203;&#8230;&#8203;.</p>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>TEXT To download reports&#8230;&#8203;</p>
+</div>
+<div class="sect2">
+<h3 id="proc-downloading-reports-gui-{context}">Downloading reports</h3>
+<div class="paragraph">
+<p>From the Scans view, you can select one or more reports and download them to view the report data.</p>
+</div>
+<div class="paragraph">
+<div class="title">Prerequisites</div>
+<p>If you want to download a report for a scan, the most recent scan job for that scan must have completed successfully.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>From the Scans view, navigate to the row of the scan for which you want to download the report.</p>
+</li>
+<li>
+<p>Click <b class="button">Download</b> for that scan.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Verification steps</div>
+<p>The downloaded report is saved to the downloads location for your browser as a <code class="filename">.tar.gz</code> file, for example, <code class="filename">report_id_224_20190702_173309.tar.gz</code>. The file name format is <code class="filename">report_id<em><em>_ID</em>_DATE_TIME</em>.tar.gz</code>, where <code><em>ID</em></code> is the unique report ID assigned by the server, <code><em>DATE</em></code> is the date in <em>yyyymmdd</em> format, and <code><em>TIME</em></code> is the time in the <em>hhmmss</em> format, based on the 24-hour system. The date and time data is determined by the interaction of the browser that is running the client with the server APIs.</p>
+</div>
+<div class="paragraph">
+<p>To view the report, uncompress the <code class="filename">.tar.gz</code> file into a <code class="filename">report_id<em><em></em>_ID</em></code> directory. The uncompressed report bundle includes four report files, two details reports in CSV and JSON formats, and two deployments reports in CSV and JSON formats.</p>
+</div>
+<div class="paragraph">
+<p>While you can view and use the output of these reports for your own internal processes, their format is designed for use by the Red Hat Subscription Education and Awareness Program (SEAP) team during customer engagements and for other Red Hat internal processes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="con-how-reports-created-gui-assembly-downloading-reports-gui-context">How reports are created</h3>
+<div class="paragraph">
+<p>The scan process is used to discover the systems in your IT infrastructure, to inspect and gather information about the nature and contents of those systems, and to create a report from the information that it gathers during the inspection of each system.</p>
+</div>
+<div class="paragraph">
+<p>A <em>system</em> is any entity that can be interrogated by the inspection tasks through an SSH connection, vCenter Server data, or the Satellite Server API. Therefore, a system can be a machine, such as a physical or virtual machine, and it can also be a different type of entity, such as a container.</p>
+</div>
+<div class="sect3">
+<h4 id="_facts_and_fingerprints_2">Facts and fingerprints</h4>
+<div class="paragraph">
+<p>During a scan, a collection of facts is gathered for each system that is contained in each source. A <em>fact</em> is a single piece of data about a system, such as the version of the operating system, the number of CPU cores, or a consumed entitlement for a Red Hat product.</p>
+</div>
+<div class="paragraph">
+<p>Facts are processed to create a summarized set of data for each system, data that is known as a fingerprint. A <em>fingerprint</em> is the set of facts that identifies a unique system and its characteristics, including the architecture, operating system, the different products that are installed on that system and their versions, the entitlements that are in use on that system, and so on.</p>
+</div>
+<div class="paragraph">
+<p>Fingerprinting data is generated when you run a scan job, but the data is used to create only one type of report. When you request a detailed report, you receive the raw facts for that scan without any fingerprinting. When you request a deployments report, you receive the fingerprinting data that includes the results from the deduplication, merging, and post-processing processes. These processes include identifying installed products and versions from the raw facts, finding consumed entitlements, finding and merging duplicate instances of products from different sources, and finding products installed in nondefault locations, among other steps.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_system_deduplication_and_merging_2">System deduplication and merging</h4>
+<div class="paragraph">
+<p>A single system can be found in multiple sources during a scan. For example, a virtual machine on vCenter Server could be running a Red Hat Enterprise Linux operating system installation that is also managed by Satellite. If you construct a scan that contains a vcenter, satellite, and network source, then that single system is reported by all three vcenter, satellite, and network sources during the scan.</p>
+</div>
+<div class="paragraph">
+<p>To resolve this issue and build an accurate fingerprint, product discovery tool feeds unprocessed system facts from the scan into a fingerprint engine. The fingerprint engine matches and merges data for systems that are found in more than one source by using the deduplication and merge processes.</p>
+</div>
+<div class="sect4">
+<h5 id="_system_deduplication_2">System deduplication</h5>
+<div class="paragraph">
+<p>The system deduplication process uses specific facts about a system to identify duplicate systems. The process moves through several phases, using these facts to combine duplicate systems in successively broader sets of data:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All systems from network sources are combined into a single network system set. Systems are considered to be duplicates if they have the same value for the 'subscription_manager_id' or 'bios_uuid' facts.</p>
+</li>
+<li>
+<p>All systems from vcenter sources are combined into a single vcenter system set. Systems are considered to be duplicates if they have the same value for the 'vm_uuid' fact.</p>
+</li>
+<li>
+<p>All systems from satellite sources are combined into a single satellite system set. Systems are considered to be duplicates if they have the same value for the 'subscription_manager_id' fact.</p>
+</li>
+<li>
+<p>The network system set is merged with the satellite system set to form a single network-satellite system set. Systems are considered to be duplicates if they have the same value for the 'subscription_manager' fact or matching MAC address values in the 'mac_addresses' fact.</p>
+</li>
+<li>
+<p>The network-satellite system set is merged with the vcenter system set to form the complete system set. Systems are considered to be duplicates if they have matching MAC address values in the 'mac_addresses' fact or if the vcenter value for the 'vm_uuid' fact matches the network value for the 'bios_uuid' fact.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_system_merging_2">System merging</h5>
+<div class="paragraph">
+<p>After the deduplication process determines that two systems are duplicates, it performs a merge. The merged system has a union of system facts from each source. When a fact that appears in two systems is merged, the merge process uses the following order of precedence to merge that fact, from highest to lowest:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>network source fact</p>
+</li>
+<li>
+<p>satellite source fact</p>
+</li>
+<li>
+<p>vcenter source fact</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>A system fingerprint contains a 'metadata' dictionary that captures the original source of each fact for that system.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_system_post_processing_2">System post-processing</h4>
+<div class="paragraph">
+<p>After deduplication and merging are complete, there is a post-processing phase that creates derived system facts. A derived system fact is a fact that is generated from the evaluation of more than one system fact. The majority of derived system facts are related to product identification data, such as the presence of a specific product and its version.</p>
+</div>
+<div class="paragraph">
+<p>The following example shows how the derived system fact 'system_creation_date' is created.</p>
+</div>
+<div class="paragraph">
+<p>The 'system_creation_date' fact is a derived system fact that contains the real system creation time. The value for this fact is determined by the evaluation of the following facts. The value for each fact is examined in the following order of precedence, with the order of precedence determined by the accuracy of the match to the real system creation time. The highest non-empty value is used to determine the value of the 'system_creation_date' fact.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>'date_machine_id'</p>
+</li>
+<li>
+<p>'registration_time'</p>
+</li>
+<li>
+<p>'date_anaconda_log'</p>
+</li>
+<li>
+<p>'date_filesystem_create'</p>
+</li>
+<li>
+<p>'date_yum_history'</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_report_creation_2">Report creation</h4>
+<div class="paragraph">
+<p>After the processing of the report data is complete, the report creation process builds two reports in two different formats, JavaScript Object Notation (JSON) and comma-separated variable (CSV). The <em>details</em> report for each format contains the raw facts with no processing, and <em>deployments</em> report for each format contains the output after the raw facts have passed through the fingerprinting, deduplication, merge, and post-processing processes.</p>
+</div>
+<div class="paragraph">
+<p>While you can view and use the output of these reports for your own internal processes, their format is designed for use by the Red Hat Subscription Education and Awareness Program (SEAP) team during customer engagements and for other Red Hat internal processes.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ref-fingerprint-example-gui-assembly-downloading-reports-gui-context">A fingerprint example</h4>
+<div class="paragraph">
+<p>A fingerprint is composed of a set of facts about a single system in addition to facts about products, entitlements, sources, and metadata on that system. The following example shows fingerprint data. A fingerprint for a single system, even with very few Red Hat products installed on it, can be many lines. Therefore, only a partial fingerprint is used in this example.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre>{
+    "os_release": "Red Hat Enterprise Linux Atomic Host 7.4",
+    "cpu_count": 4,
+    "products": [
+        {
+            "name": "JBoss EAP",
+            "version": null,
+            "presence": "absent",
+            "metadata": {
+                "source_id": 5,
+                "source_name": "S62Source",
+                "source_type": "satellite",
+                "raw_fact_key": null
+            }
+        }
+    ],
+    "entitlements": [
+        {
+            "name": "Satellite Tools 6.3",
+            "entitlement_id": 54,
+            "metadata": {
+                "source_id": 5,
+                "source_name": "S62Source",
+                "source_type": "satellite",
+                "raw_fact_key": "entitlements"
+            }
+        }
+    ],
+    "metadata": {
+        "os_release": {
+            "source_id": 5,
+            "source_name": "S62Source",
+            "source_type": "satellite",
+            "raw_fact_key": "os_release"
+        },
+        "cpu_count": {
+            "source_id": 4,
+            "source_name": "NetworkSource",
+            "source_type": "network",
+            "raw_fact_key": "os_release"
+        }
+    },
+    "sources": [
+        {
+            "id": 4,
+            "source_type": "network",
+            "name": "NetworkSource"
+        },
+        {
+            "id": 5,
+            "source_type": "satellite",
+            "name": "S62Source"
+        }
+    ]
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The first several lines of a fingerprint show facts about the system, including facts about the operating system and CPUs. In this example, the <code>os_release</code> fact describes the installed operating system and release as <code>Red Hat Enterprise Linux Atomic Host 7.4</code>.</p>
+</div>
+<div class="paragraph">
+<p>Next, the fingerprint lists the installed products in the <code>products</code> section. A product has a name, version, presence, and metadata field. Because the presence field shows <code>absent</code> as the value for JBoss EAP, the system in this example does not have JBoss EAP installed.</p>
+</div>
+<div class="paragraph">
+<p>The fingerprint also lists the consumed entitlements for that system in the <code>entitlements</code> section. Each entitlement in the list has a name, ID, and metadata that describes the original source of that fact. In the example fingerprint, the system has the <code>Satellite Tools 6.3</code> entitlement.</p>
+</div>
+<div class="paragraph">
+<p>In addition to the metadata fields that are in the <code>products</code> and <code>entitlements</code> sections, the fingerprint contains a <code>metadata</code> section that is used for system fact metadata. For each system fact, there is a corresponding entry in the <code>metadata</code> section of the fingerprint that identifies the original source of that system fact. In the example, the <code>os_release</code> fact was found in Satellite Server, during the scan of the satellite source.</p>
+</div>
+<div class="paragraph">
+<p>Lastly, the fingerprint lists the sources that contain this system in the <code>sources</code> section. A system can be contained in more than one source. For example, for a scan that includes both a network source and a satellite source, a single system can be found in both parts of the scan.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-07-02 13:51:59 -0400
+Last updated 2019-07-29 16:17:10 -0400
 </div>
 </div>
 </body>
