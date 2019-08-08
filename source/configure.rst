@@ -94,7 +94,7 @@ To set these values, pass the the -e "NAME=VALUE argument for the docker run com
 
 Changing the Default Password for the Quipucords Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The Quipucords server has a default administrator user with a default user name of ``admin`` and a default password of ``pass``. To ensure the security of your Quipucords server, it is recommended that you change the default password to a different password.
+The Quipucords server has a default administrator user with a default user name of ``admin`` and a default password of ``qpcpassw0rd``. To ensure the security of your Quipucords server, it is recommended that you change the default password to a different password.
 
 To change the default password for the Quipucords server, use the following steps:
 
@@ -103,7 +103,7 @@ To change the default password for the Quipucords server, use the following step
    - If the browser window is running on the same system as the server and you used the default port of ``9443`` for the server, the URL is ``https://localhost:9433/admin``.
    - If the browser window is running on a remote system, or if it is on the same system but you changed the default HTTPS port, enter the URL in the following format: ``https://ip_address:port/admin``. For example, if the IP address for the server is 192.0.2.0 and the port is remapped to ``8443``, you would enter ``https://192.0.2.0:8443/admin`` in the browser window.
 
-2. In the resulting web page that contains the Quipucords administrative login dialog box, enter the default user name ``admin`` and the default password ``pass`` to log in to the Quipucords server.
+2. In the resulting web page that contains the Quipucords administrative login dialog box, enter the default user name ``admin`` and the default password ``qpcpassw0rd`` to log in to the Quipucords server.
 
 3. Click **Change password** to enter a new password for the Quipucords server. Record the new password in an enterprise password management solution or other password management tool, as determined by the best practices for your organization.
 

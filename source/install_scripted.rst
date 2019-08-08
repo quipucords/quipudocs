@@ -127,6 +127,12 @@ Options:
     - Contains the fully qualified path to the installation directory for the Quipucords server. Defaults to ``~/quipucords/``.
  - **server_port**
     - Contains the port number for the Quipucords server. Defaults to ``9443``.
+ - **server_username**
+   - Quipucords server username.  Defaults to admin.
+ - **server_password**
+   - Quipucords server password.  Defaults to qpcpassw0rd.
+ - **server_user_email**
+   - Quipucords server user email.  Defaults to admin@example.com.
  - **open_port**
     - Contains a ``true`` or ``false`` value. Defaults to ``true``. Supply ``false`` to install without opening the server port in the firewall. The installation script must run with elevated privileges to open the server port.
  - **server_name**

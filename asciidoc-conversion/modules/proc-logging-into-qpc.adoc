@@ -12,6 +12,6 @@ After the connection between the :product-title_cmd: command line tool and the :
 # :product-title_cmd: server login
 ----
 
-. Enter the server user name and password at the prompts. The default login is admin and the password is '+pass+'.
+. Enter the server user name and password at the prompts. The default login is admin and the password is '+qpcpassw0rd+'.
 
 The '+:product-title_cmd: server login+' command retrieves a token that is used for authentication with subsequent command line interface commands. That token is removed when you log out of the server, and expires daily.
