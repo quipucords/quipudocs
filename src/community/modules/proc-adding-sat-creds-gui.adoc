@@ -10,17 +10,17 @@ You can add credentials from the Credentials view or from the Add Source wizard 
 .Procedure
 
 . Click the option to add a new credential based on your location:
-  * From the Credentials view, click menu:[Add>Satellite Credential].
-  * From the Add Source wizard, click the btn:[Add a credential] icon for the btn:[Credentials] field.
+  * From the Credentials view, click menu:Add[Satellite Credential].
+  * From the Add Source wizard, click the *Add a credential* icon for the *Credentials* field.
 
 +
 The Add Credential wizard opens.
 
-. In the btn:[Credential Name] field, enter a descriptive name.
+. In the *Credential Name* field, enter a descriptive name.
 
 . Enter the username and password for a Satellite Server administrator.
 
-. Click btn:[Save] to save the credential and close the Add Credential wizard.
+. Click *Save* to save the credential and close the Add Credential wizard.
 
 // .Verification steps
 // (Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.

@@ -7,16 +7,27 @@ ifdef::context[:parent-context: {context}]
 
 = Adding vcenter sources and credentials
 
-TEXT Here's an intro about adding vcenter sources and credentials....
+To run a scan on a {vCenterServerName} deployment, you must add a source that identifies the {vCenterServerName} server to scan. Then you must add a credential that contains the authentication data to access that server.
 
-.Prerequisites
+// .Prerequisites
 // * Sentence or a bulleted list of pre-requisites that must be in place or done before the user starts this task.
 // * Delete section title and bullets if the task has no required pre-requisites.
 // * Text can be a link to a pre-requisite task that the user must do before starting this task.
 
 .Procedure
 
-TEXT To add vcenter sources and credentials...
+Add a vcenter source and credential to provide the information needed to scan {vCenterServerName}. To learn more, see the following information:
+
+* To add a vcenter source, see xref:proc-adding-vcent-sources-gui-{context}[Adding vcenter sources].
+* To add a vcenter credential, see xref:proc-adding-vcent-creds-gui-{context}[Adding vcenter credentials].
+
+To learn more about sources and credentials and how {ProductNameShort} uses them, see the following information:
+
+* xref:con-about-sources-creds-gui-{context}[About sources and credentials]
+
+To learn more about how {ProductNameShort} authenticates with your {vCenterServerName} server, see the following information. This information includes guidance about certificate validation and SSL communication choices that you might need to make during vcenter credential configuration:
+
+* xref:con-vcent-auth-gui-{context}[vCenter Server authentication]
 
 // do you need level offset in each assembly? at master doc level only? confused about this one.
 

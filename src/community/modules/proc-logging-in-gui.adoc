@@ -1,0 +1,20 @@
+// Module included in the following assemblies:
+// assembly-logging-in-gui.adoc
+
+[id="proc-logging-in-gui-{context}"]
+
+= Logging in to the {ProductNameShort} client
+
+TBD
+
+.Procedure
+
+. TBD
+
+
+// .Verification steps
+// (Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.

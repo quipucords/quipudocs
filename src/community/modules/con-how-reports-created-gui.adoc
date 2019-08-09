@@ -15,31 +15,31 @@ During a scan, a collection of facts is gathered for each system that is contain
 
 Facts are processed to create a summarized set of data for each system, data that is known as a fingerprint. A _fingerprint_ is the set of facts that identifies a unique system and its characteristics, including the architecture, operating system, the different products that are installed on that system and their versions, the entitlements that are in use on that system, and so on.
 
-Fingerprinting data is generated when you run a scan job, but the data is used to create only one type of report. When you request a detailed report, you receive the raw facts for that scan without any fingerprinting. When you request a deployments report, you receive the fingerprinting data that includes the results from the deduplication, merging, and post-processing processes. These processes include identifying installed products and versions from the raw facts, finding consumed entitlements, finding and merging duplicate instances of products from different sources, and finding products installed in nondefault locations, among other steps.
+Fingerprinting data is generated when you run a scan job, but the data is used to create only one type of report. When you request a details report, you receive the raw facts for that scan without any fingerprinting. When you request a deployments report, you receive the fingerprinting data that includes the results from the deduplication, merging, and post-processing processes. These processes include identifying installed products and versions from the raw facts, finding consumed entitlements, finding and merging duplicate instances of products from different sources, and finding products installed in nondefault locations, among other steps.
 
 == System deduplication and merging
 
-A single system can be found in multiple sources during a scan. For example, a virtual machine on {vCenterServerName} could be running a {RHELName} operating system installation that is also managed by {SatelliteNameVeryShort}. If you construct a scan that contains a vcenter, satellite, and network source, then that single system is reported by all three vcenter, satellite, and network sources during the scan.
+A single system can be found in multiple sources during a scan. For example, a virtual machine on {vCenterServerName} could be running a {RHELName} operating system installation that is also managed by {SatelliteNameVeryShort}. If you construct a scan that contains each type of source, vcenter, satellite, and network, that single system is reported by all three sources during the scan.
 
-To resolve this issue and build an accurate fingerprint, {ProductName} feeds unprocessed system facts from the scan into a fingerprint engine. The fingerprint engine matches and merges data for systems that are found in more than one source by using the deduplication and merge processes.
+To resolve this issue and build an accurate fingerprint, {ProductNameShort} feeds unprocessed system facts from the scan into a fingerprint engine. The fingerprint engine matches and merges data for systems that are found in more than one source by using the deduplication and merge processes.
 
 === System deduplication
 
 The system deduplication process uses specific facts about a system to identify duplicate systems. The process moves through several phases, using these facts to combine duplicate systems in successively broader sets of data:
 
-* All systems from network sources are combined into a single network system set. Systems are considered to be duplicates if they have the same value for the '+subscription_manager_id+' or '+bios_uuid+' facts.
+* All systems from network sources are combined into a single network system set. Systems are considered to be duplicates if they have the same value for the `subscription_manager_id` or `bios_uuid` facts.
 
-* All systems from vcenter sources are combined into a single vcenter system set. Systems are considered to be duplicates if they have the same value for the '+vm_uuid+' fact.
+* All systems from vcenter sources are combined into a single vcenter system set. Systems are considered to be duplicates if they have the same value for the `vm_uuid` fact.
 
-* All systems from satellite sources are combined into a single satellite system set. Systems are considered to be duplicates if they have the same value for the '+subscription_manager_id+' fact.
+* All systems from satellite sources are combined into a single satellite system set. Systems are considered to be duplicates if they have the same value for the `subscription_manager_id` fact.
 
-* The network system set is merged with the satellite system set to form a single network-satellite system set. Systems are considered to be duplicates if they have the same value for the '+subscription_manager+' fact or matching MAC address values in the '+mac_addresses+' fact.
+* The network system set is merged with the satellite system set to form a single network-satellite system set. Systems are considered to be duplicates if they have the same value for the `subscription_manager` fact or matching MAC address values in the `mac_addresses` fact.
 
-* The network-satellite system set is merged with the vcenter system set to form the complete system set. Systems are considered to be duplicates if they have matching MAC address values in the '+mac_addresses+' fact or if the vcenter value for the '+vm_uuid+' fact matches the network value for the '+bios_uuid+' fact.
+* The network-satellite system set is merged with the vcenter system set to form the complete system set. Systems are considered to be duplicates if they have matching MAC address values in the `mac_addresses` fact or if the vcenter value for the `vm_uuid` fact matches the network value for the `bios_uuid` fact.
 
 === System merging
 
-After the deduplication process determines that two systems are duplicates, it performs a merge. The merged system has a union of system facts from each source. When a fact that appears in two systems is merged, the merge process uses the following order of precedence to merge that fact, from highest to lowest:
+After the deduplication process determines that two systems are duplicates, the next step is to perform a merge of those two systems. The merged system has a union of system facts from each source. When a fact that appears in two systems is merged, the merge process uses the following order of precedence to merge that fact, from highest to lowest:
 
 . network source fact
 
@@ -47,25 +47,25 @@ After the deduplication process determines that two systems are duplicates, it p
 
 . vcenter source fact
 
-A system fingerprint contains a '+metadata+' dictionary that captures the original source of each fact for that system.
+A system fingerprint contains a `metadata` dictionary that captures the original source of each fact for that system.
 
 == System post-processing
 
-After deduplication and merging are complete, there is a post-processing phase that creates derived system facts. A derived system fact is a fact that is generated from the evaluation of more than one system fact. The majority of derived system facts are related to product identification data, such as the presence of a specific product and its version.
+After deduplication and merging are complete, there is a post-processing phase that creates derived system facts. A _derived system fact_ is a fact that is generated from the evaluation of more than one system fact. The majority of derived system facts are related to product identification data, such as the presence of a specific product and its version.
 
-The following example shows how the derived system fact '+system_creation_date+' is created.
+The following example shows how the derived system fact `system_creation_date` is created.
 
-The '+system_creation_date+' fact is a derived system fact that contains the real system creation time. The value for this fact is determined by the evaluation of the following facts. The value for each fact is examined in the following order of precedence, with the order of precedence determined by the accuracy of the match to the real system creation time. The highest non-empty value is used to determine the value of the '+system_creation_date+' fact.
+The `system_creation_date` fact is a derived system fact that contains the real system creation time. The value for this fact is determined by the evaluation of the following facts. The value for each fact is examined in the following order of precedence, with the order of precedence determined by the accuracy of the match to the real system creation time. The highest non-empty value is used to determine the value of the `system_creation_date` fact.
 
-. '+date_machine_id+'
-. '+registration_time+'
-. '+date_anaconda_log+'
-. '+date_filesystem_create+'
-. '+date_yum_history+'
+. `date_machine_id`
+. `registration_time`
+. `date_anaconda_log`
+. `date_filesystem_create`
+. `date_yum_history`
 
 == Report creation
 
-After the processing of the report data is complete, the report creation process builds two reports in two different formats, JavaScript Object Notation (JSON) and comma-separated variable (CSV). The _details_ report for each format contains the raw facts with no processing, and _deployments_ report for each format contains the output after the raw facts have passed through the fingerprinting, deduplication, merge, and post-processing processes.
+After the processing of the report data is complete, the report creation process builds two reports in two different formats, JavaScript Object Notation (JSON) and comma-separated variable (CSV). The _details_ report for each format contains the raw facts with no processing, and the _deployments_ report for each format contains the output after the raw facts have passed through the fingerprinting, deduplication, merge, and post-processing processes.
 
 While you can view and use the output of these reports for your own internal processes, their format is designed for use by the {CompanyName} Subscription Education and Awareness Program (SEAP) team during customer engagements and for other {CompanyName} internal processes.
 

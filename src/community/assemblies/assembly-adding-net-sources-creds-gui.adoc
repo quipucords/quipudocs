@@ -7,16 +7,43 @@ ifdef::context[:parent-context: {context}]
 
 = Adding network sources and credentials
 
-To run a scan on one or more of the physical machines, virtual machines, or containers on your network, you must add a source that  identifies each of the assets to scan. Then you must add credentials that contain the authentication data to access each asset.
+To run a scan on one or more of the physical machines, virtual machines, or containers on your network, you must add a source that identifies each of the assets to scan. Then you must add credentials that contain the authentication data to access each asset.
 
-.Prerequisites
+// .Prerequisites
 // * Sentence or a bulleted list of pre-requisites that must be in place or done before the user starts this task.
 // * Delete section title and bullets if the task has no required pre-requisites.
 // * Text can be a link to a pre-requisite task that the user must do before starting this task.
 
 .Procedure
 
-TEXT To add network sources and credentials...
+Add one or more network sources and credentials to provide the information needed to scan the assets in your network. To learn more, see the following information:
+
+* To add a network source, see xref:proc-adding-net-sources-gui-{context}[Adding network sources].
+* To add a network credential, see xref:proc-adding-net-creds-gui-{context}[Adding network credentials].
+
+To learn more about sources and credentials and how {ProductNameShort} uses them, see the following information:
+
+// original: * xref:con-about-sources-creds-gui-{context}[About sources and credentials]
+// tried several more combos, including "{context}" beside none and both
+// try one (second one below) with nested assembly IDs, including "context" removed from main ID
+// try one (third one below) with context substituted in first ref (nested assembly), but {context} for next ref (top assembly)
+// try one (fourth one below) with assembly ID plus {context}
+// last one removes dash before assembly ref in case that makes a difference
+// Anni sez: use ID and then use main assembly: xref:con-about-sources-creds-gui-_assembly-adding-sources-creds-gui-main[About sources and credentials]
+
+// * xref:con-about-sources-creds-gui-{context}[About sources and credentials]
+// * xref:con-about-sources-creds-gui-_assembly-adding-net-sources-creds-gui-_assembly-adding-sources-creds-gui-main[About sources and credentials]
+// * xref:con-about-sources-creds-gui-_assembly-adding-net-sources-creds-gui-{context}[About sources and credentials]
+// * xref:con-about-sources-creds-gui-{context}_assembly-adding-net-sources-creds-gui-{context}[About sources and credentials]
+// * xref:con-about-sources-creds-gui_assembly-adding-net-sources-creds-gui_assembly-adding-sources-creds-gui-main[About sources and credentials]
+// * xref:con-about-sources-creds-gui-_assembly-adding-sources-creds-gui-main[About sources and credentials]
+// * xref:con-about-sources-creds-gui-{context}[About sources and credentials]
+* xref:con-about-sources-creds-gui-{context}_assembly-adding-net-sources-creds-gui-{context}_assembly-adding-sources-creds-gui-main[About sources and credentials]
+
+To learn more about how {ProductNameShort} authenticates with assets on your network, see the following information. This information includes guidance about running commands with elevated privileges, a choice that you might need to make during network credential configuration:
+
+* xref:con-net-auth-gui-{context}[Network authentication]
+* xref:ref-commands-used-net-scans-gui-{context}[Commands that are used in scans of remote network assets]
 
 // do you need level offset in each assembly? at master doc level only? confused about this one.
 

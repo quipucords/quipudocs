@@ -7,16 +7,25 @@ ifdef::context[:parent-context: {context}]
 
 = Downloading reports
 
-TEXT.......
+After you run a scan, you can download the reports for that scan to view the data that was gathered and processed during that scan.
 
-.Prerequisites
+Reports for a scan are available in two formats, a comma-separated variable (CSV) format and a JavaScript Object Notation (JSON) format. They are also available in two content types, raw output from the scan as a details report and processed content as a deployments report.
+
+// .Prerequisites
 // * Sentence or a bulleted list of pre-requisites that must be in place or done before the user starts this task.
 // * Delete section title and bullets if the task has no required pre-requisites.
 // * Text can be a link to a pre-requisite task that the user must do before starting this task.
 
 .Procedure
 
-TEXT To download reports...
+To learn more about merging and downloading reports, see the following information:
+
+* xref:proc-downloading-reports-gui-{context}[Downloading reports]
+
+To learn more about how reports are created, see the following information. This information includes a chronology of the processes that change the raw facts of a details report into fingerprint data, and then change fingerprint data into the deduplicated and merged data of a deployments report. This information also includes a partial fingerprint example to show the types of data that are used to create a {ProductNameShort} report.
+
+* xref:con-how-reports-created-gui-{context}[How reports are created]
+* xref:ref-fingerprint-example-gui-{context}[A fingerprint example]
 
 // do you need level offset in each assembly? at master doc level only? confused about this one.
 

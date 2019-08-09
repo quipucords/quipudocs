@@ -14,18 +14,18 @@ After you name a scan and run it for the first time, it is added to the Scans vi
 
 .Procedure
 
-. From the Scans view, click the btn:[Run Scan] icon in the scan details.
+. From the Scans view, click the *Run Scan* icon in the scan details.
 +
 [NOTE]
 ====
-In the scan details, if the first or most recent scan job did not complete successfully, this icon is labeled btn:[Retry Scan].
+In the scan details, if the most recent scan job did not complete successfully, this icon is labeled *Retry Scan*.
 ====
 
 .Verification steps
 
 When the scan process begins, a notification displays with a message about the progress of the scan.
 
-. In the scan details, expand btn:[Previous] to view all previous scan jobs.
+. In the scan details, expand *Previous* to view all previous scan jobs.
 
 // .Additional resources
 // * A bulleted list of links to other material closely related to the contents of the procedure module.

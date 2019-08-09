@@ -14,6 +14,7 @@
 :RHELName: Red Hat Enterprise Linux
 :RHELNameShort: RHEL
 
+:RHMiddlewareName: Red Hat Middleware
 :AMQName: Red Hat AMQ
 :AMQNameShort: RHAMQ
 :DecisionManagerName: Red Hat Decision Manager
@@ -24,6 +25,9 @@
 :FuseName: Red Hat Fuse
 :FuseNameShort: Red Hat Fuse
 :FuseNameOld: Red Hat JBoss Fuse
+:WebServerName: Red Hat JBoss Web Server
+:WebServerNameShort: JBoss Web Server
+:WebServerNameOld: JBoss Enterprise Web Server
 
 :SatelliteServerName: Red Hat Satellite Server
 :SatelliteServerNameShort: Satellite Server

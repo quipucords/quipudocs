@@ -7,10 +7,7 @@
 = Running scans with deep scanning
 // If this topic gets used, should the majority of it become conditionalized text to reuse across both scanning topics?
 
-You can run a new scan from the Sources view. You can run a scan for a single source or select multiple sources to combine into a single scan. As part of scan configuration, you might choose to use the deep scanning process to search for products.
-
-// This is probably really the assembly intro, if this topic gets used for a full "deep scanning" assembly.
-By default, {ProductNameShort} searches for and fingerprints products by using known metadata that relates to those products. However, it is possible that you have installed these products with a process or in an installation location that makes the search and fingerprinting algorithms less effective. In that case, you need to use deep scanning to find those products.
+You can run a new scan from the Sources view. You can run a scan for a single source or select multiple sources to combine into a single scan. As part of scan configuration, you might choose to use the deep scanning process to search for products in nonstandard locations.
 
 The deep scanning process uses the `find` command, so the search process could be CPU resource intensive for the systems that are being scanned. Therefore, you should use discretion when selecting a deep scan for systems that require continuous availability, such as production systems.
 
@@ -24,20 +21,20 @@ After you run a scan for the first time, the scan is saved to the Scans view. Fr
 
 . From the Sources view, select one or more sources. You can select sources of different types to combine them into a single scan.
 
-. Click the btn:[Scan] button that is appropriate for the selected sources:
-  * For a single source, click btn:[Scan] on the row for that source. Selecting the check box for the source is optional.
-  * If you selected multiple sources, click btn:[Scan] in the toolbar.
+. Click the *Scan* button that is appropriate for the selected sources:
+  * For a single source, click *Scan* on the row for that source. Selecting the check box for the source is optional.
+  * If you selected multiple sources, click *Scan* in the toolbar.
   The Scan wizard opens.
 
-. In the btn:[Name] field, enter a descriptive name for the scan.
+. In the *Name* field, enter a descriptive name for the scan.
 
-. If you want to change the default number of maximum concurrent scans, set a new value in the btn:[Maximum concurrent scans] field. This value is the maximum number of machines or virtual machines that are scanned in parallel during a scan.
+. If you want to change the default number of maximum concurrent scans, set a new value in the *Maximum concurrent scans* field. This value is the maximum number of machines or virtual machines that are scanned in parallel during a scan.
 
 . To use the deep scanning process on one or more products, supply the following information:
-  * Select the applicable btn:[Deep scan for these products] check boxes.
+  * Select the applicable *Deep scan for these products* check boxes.
   * Optionally, enter the directories that you want {ProductNameShort} to scan. The default directories that are used in a deep scan are the `/`, `/opt`, `/app`, `/home`, and `/usr` directories.
 
-. To begin the scan process, click btn:[Scan].
+. To begin the scan process, click *Scan*.
 
 .Verification steps
 When the scan process begins, a notification displays in the Sources view. The running scan also displays in the Scans view, with a message about the progress of the scan.

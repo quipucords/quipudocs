@@ -1,6 +1,6 @@
 // Module included in the following assemblies:
+// assembly-downloading-reports-gui.adoc
 //
-// <List assemblies here, each on a new line>
 
 [id="proc-downloading-reports-gui-{context}"]
 
@@ -17,7 +17,7 @@ If you want to download a report for a scan, the most recent scan job for that s
 .Procedure
 
 . From the Scans view, navigate to the row of the scan for which you want to download the report.
-. Click btn:[Download] for that scan.
+. Click *Download* for that scan.
 
 .Verification steps
 

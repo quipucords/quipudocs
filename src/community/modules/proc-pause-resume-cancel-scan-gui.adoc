@@ -13,21 +13,24 @@ You can stop a scan job by either pausing it or canceling it. You can resume a p
 .Procedure
 
 To pause a scan job that is running:
+
 . From the Scans view, find the scan that contains the scan job that you want to pause.
-. Click btn:[Pause Scan].
+. Click *Pause Scan*.
 +
 [NOTE]
 ====
-If you have multiple scans running at the same time, it might take several moments after starting a scan for the btn:[Pause Scan] icon to appear.
+If you have multiple scans running at the same time, it might take several moments after starting a scan for the *Pause Scan* icon to appear.
 ====
 
 To resume a scan job that is paused:
+
 . From the Scans view, find the scan that contains the scan job that you want to resume.
-. Click btn:[Resume Scan].
+. Click *Resume Scan*.
 
 To cancel a scan job that is running:
+
 . From the Scans view, find the scan that contains the scan job that you want to cancel.
-. Click btn:[Cancel Scan].
+. Click *Cancel Scan*.
 
 
 // .Additional resources

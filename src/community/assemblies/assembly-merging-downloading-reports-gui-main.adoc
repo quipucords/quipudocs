@@ -7,22 +7,32 @@ ifdef::context[:parent-context: {context}]
 
 = Merging and downloading reports
 
-TEXT.......
+After you run a scan, you can download the reports for that scan to view the data that was gathered and processed during that scan.
 
-.Prerequisites
+If you choose to divide the scanning tasks for your IT infrastructure into several discrete scans, you can merge the output of those scans into a single report. Merged reports are also downloaded at the time of merging.
+
+// .Prerequisites
 // * Sentence or a bulleted list of pre-requisites that must be in place or done before the user starts this task.
 // * Delete section title and bullets if the task has no required pre-requisites.
 // * Text can be a link to a pre-requisite task that the user must do before starting this task.
 
 .Procedure
 
-TEXT To merge and download reports...
+To learn more about downloading reports, see the following information:
+
+* xref:assembly-downloading-reports-gui-{context}[Downloading reports]
+
+To learn more about merging two or more reports and downloading the result of the merge, see the following information:
+
+* xref:assembly-merging-reports-gui-{context}[Merging reports]
 
 // do you need level offset in each assembly? at master doc level only? confused about this one.
 
+include::assembly-downloading-reports-gui.adoc[leveloffset=+1]
+
 include::assembly-merging-reports-gui.adoc[leveloffset=+1]
 
-include::assembly-downloading-reports-gui.adoc[leveloffset=+1]
+
 
 
 // .Related Information
