@@ -2,7 +2,7 @@
 // assembly-running-managing-scans-standard-gui.adoc
 // assembly-running-managing-scans-deep-gui.adoc
 
-[id="proc-running-scans-deep-gui-{context}"]
+[id="proc-running-scans-deep-gui_{context}"]
 
 = Running scans with deep scanning
 // If this topic gets used, should the majority of it become conditionalized text to reuse across both scanning topics?

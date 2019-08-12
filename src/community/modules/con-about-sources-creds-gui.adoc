@@ -3,7 +3,7 @@
 // assembly-adding-sat-sources-creds-gui.adoc
 // assembly-adding-vcent-sources-creds-gui.adoc
 
-[id="con-about-sources-creds-gui-{context}"]
+[id="con-about-sources-creds-gui_{context}"]
 
 = About sources and credentials
 

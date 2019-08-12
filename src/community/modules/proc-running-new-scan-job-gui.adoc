@@ -2,7 +2,7 @@
 // assembly-running-managing-scans-standard-gui.adoc
 // assembly-running-managing-scans-deep-gui.adoc
 
-[id="proc-running-new-scan-job-gui-{context}"]
+[id="proc-running-new-scan-job-gui_{context}"]
 
 = Running a new scan job
 

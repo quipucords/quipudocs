@@ -2,7 +2,7 @@
 // assembly-downloading-reports-gui.adoc
 // assembly-merging-reports-gui.adoc
 
-[id="con-how-reports-created-gui-{context}"]
+[id="con-how-reports-created-gui_{context}"]
 
 = How reports are created
 

@@ -3,7 +3,9 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-running-managing-scans-gui-main-{context}"]
+[id="assembly-running-managing-scans-gui-main_{context}"]
+
+:context: assembly-running-managing-scans-gui-main-ctxt
 
 = Running and managing scans
 
@@ -19,11 +21,11 @@ After you add sources and credentials for the parts of your IT infrastructure th
 
 To learn more about running a standard scan that does not use deep scanning for products, see the following information:
 
-* xref:assembly-running-managing-scans-standard-gui-{context}[Running and managing standard scans]
+* xref:assembly-running-managing-scans-standard-gui_{context}[Running and managing standard scans]
 
 To learn more about running a deep scan, a scan that can find products that might have been installed with a nonstandard process or in a nonstandard location, see the following information:
 
-* xref:assembly-running-managing-scans-deep-gui-{context}[Running and managing deep scans]
+* xref:assembly-running-managing-scans-deep-gui_{context}[Running and managing deep scans]
 
 // do you need level offset in each assembly? at master doc level only? confused about this one.
 

@@ -3,7 +3,9 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-about-common-{context}"]
+[id="assembly-about-common_{context}"]
+
+:context: assembly-about-common-ctxt
 
 = About {ProductNameShort}
 
@@ -19,11 +21,11 @@ ifdef::context[:parent-context: {context}]
 
 To learn more about the purpose, benefits, and characteristics of {ProductNameShort}, see the following information:
 
-* xref:con-what-is-prod-common-{context}[What is {ProductNameShort}?]
+* xref:con-what-is-prod-common_{context}[What is {ProductNameShort}?]
 
 To learn more about the products and product versions that {ProductNameShort} can find and inspect, see the following information:
 
-* xref:ref-what-prods-find-common-{context}[What products can {ProductNameShort} find?]
+* xref:ref-what-prods-find-common_{context}[What products does {ProductNameShort} find?]
 
 // do you need level offset in each assembly? at master doc level only? confused about this one.
 

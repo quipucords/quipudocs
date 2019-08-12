@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 // assembly-adding-net-sources-creds-gui.adoc
 
-[id="ref-commands-used-net-scans-gui-{context}"]
+[id="ref-commands-used-net-scans-gui_{context}"]
 
 = Commands that are used in scans of remote network assets
 

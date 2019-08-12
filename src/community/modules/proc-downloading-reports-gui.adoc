@@ -2,7 +2,7 @@
 // assembly-downloading-reports-gui.adoc
 //
 
-[id="proc-downloading-reports-gui-{context}"]
+[id="proc-downloading-reports-gui_{context}"]
 
 = Downloading reports
 

@@ -2,7 +2,7 @@
 // assembly-running-managing-scans-standard-gui.adoc
 // assembly-running-managing-scans-deep-gui.adoc
 
-[id="con-about-scans-scan-jobs-gui-{context}"]
+[id="con-about-scans-scan-jobs-gui_{context}"]
 
 = About scans and scan jobs
 

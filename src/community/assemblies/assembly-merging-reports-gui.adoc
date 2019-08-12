@@ -3,7 +3,9 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-merging-reports-gui-{context}"]
+[id="assembly-merging-reports-gui_{context}"]
+
+:context: assembly-merging-reports-gui-ctxt
 
 = Merging reports
 
@@ -20,21 +22,21 @@ Merged reports are also downloaded at the time of merging so that you can view t
 
 To learn more about merging reports and downloading the merged reports, see the following information:
 
-* xref:proc-merging-reports-gui-{context}[Merging reports]
+* xref:proc-merging-reports-gui_{context}[Merging reports]
 
 To learn more about how reports are created, see the following information. This information includes a chronology of the processes that change the raw facts of a details report into fingerprint data, and then change fingerprint data into the deduplicated and merged data of a deployments report. This information also includes a partial fingerprint example to show the types of data that are used to create a {ProductNameShort} report.
 
-* xref:con-how-reports-created-gui-{context}[How reports are created]
-* xref:ref-fingerprint-example-gui-{context}[A fingerprint example]
+* xref:con-how-reports-created-gui_assembly-merging-reports-gui-ctxt[How reports are created]
+* xref:ref-fingerprint-example-gui_assembly-merging-reports-gui-ctxt[A fingerprint example]
 
 // do you need level offset in each assembly? at master doc level only? confused about this one.
 
 include::modules/proc-merging-reports-gui.adoc[leveloffset=+1]
 
-:context: assembly-merging-reports-gui-context
+:context: assembly-merging-reports-gui-ctxt
 include::modules/con-how-reports-created-gui.adoc[leveloffset=+1]
 
-:context: assembly-merging-reports-gui-context
+:context: assembly-merging-reports-gui-ctxt
 include::modules/ref-fingerprint-example-gui.adoc[leveloffset=+2]
 
 

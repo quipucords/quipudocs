@@ -2,7 +2,7 @@
 // assembly-about-common.adoc
 // ...
 
-[id="ref-what-prods-find-common-{context}"]
+[id="ref-what-prods-find-common_{context}"]
 
 = What products does {ProductNameShort} find?
 

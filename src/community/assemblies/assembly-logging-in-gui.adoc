@@ -3,7 +3,9 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-logging-in-gui-common-{context}"]
+[id="assembly-logging-in-gui_{context}"]
+
+:context: assembly-logging-in-gui-ctxt
 
 = Logging in to {ProductNameShort}
 

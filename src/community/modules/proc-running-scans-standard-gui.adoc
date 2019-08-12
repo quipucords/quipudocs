@@ -2,9 +2,9 @@
 // assembly-running-managing-scans-standard-gui.adoc
 // assembly-running-managing-scans-deep-gui.adoc
 
-[id="proc-running-scans-standard-gui-{context}"]
+[id="proc-running-scans-standard-gui_{context}"]
 
-= Running scans
+= Running standard scans
 
 You can run a new scan from the Sources view. You can run a scan for a single source or select multiple sources to combine into a single scan. Each time that you use the Sources view to run a scan, you are prompted to save it as a new scan.
 

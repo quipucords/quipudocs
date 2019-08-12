@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 // assembly-adding-net-creds-sources-gui.adoc
 
-[id="proc-adding-net-creds-gui-{context}"]
+[id="proc-adding-net-creds-gui_{context}"]
 
 = Adding network credentials
 

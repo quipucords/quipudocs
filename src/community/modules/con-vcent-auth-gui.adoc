@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 // assembly-adding-vcent-sources-creds-gui.adoc
 
-[id="con-vcent-auth-gui-{context}"]
+[id="con-vcent-auth-gui_{context}"]
 
 = vCenter Server authentication
 

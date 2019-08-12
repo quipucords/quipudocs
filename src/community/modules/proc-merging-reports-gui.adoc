@@ -2,7 +2,7 @@
 //
 // <List assemblies here, each on a new line>
 
-[id="proc-merging-reports-gui-{context}"]
+[id="proc-merging-reports-gui_{context}"]
 
 = Merging reports
 

@@ -2,7 +2,7 @@
 // assembly-running-managing-scans-standard-gui.adoc
 // assembly-running-managing-scans-deep-gui.adoc
 
-[id="proc-pause-resume-cancel-scans-gui-{context}"]
+[id="proc-pause-resume-cancel-scans-gui_{context}"]
 
 = Pausing, resuming, and canceling scans
 

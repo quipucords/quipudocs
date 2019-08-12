@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 // assembly-adding-vcent-sources-creds-gui.adoc
 
-[id="proc-adding-vcent-creds-gui-{context}"]
+[id="proc-adding-vcent-creds-gui_{context}"]
 
 = Adding vcenter credentials
 

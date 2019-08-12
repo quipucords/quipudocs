@@ -5,6 +5,8 @@ ifdef::context[:parent-context: {context}]
 
 [id="assembly-merging-downloading-reports-gui-main-{context}"]
 
+:context: assembly-merging-downloading-reports-gui-main-ctxt
+
 = Merging and downloading reports
 
 After you run a scan, you can download the reports for that scan to view the data that was gathered and processed during that scan.
@@ -20,11 +22,11 @@ If you choose to divide the scanning tasks for your IT infrastructure into sever
 
 To learn more about downloading reports, see the following information:
 
-* xref:assembly-downloading-reports-gui-{context}[Downloading reports]
+* xref:assembly-downloading-reports-gui_{context}[Downloading reports]
 
 To learn more about merging two or more reports and downloading the result of the merge, see the following information:
 
-* xref:assembly-merging-reports-gui-{context}[Merging reports]
+* xref:assembly-merging-reports-gui_{context}[Merging reports]
 
 // do you need level offset in each assembly? at master doc level only? confused about this one.
 

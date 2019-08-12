@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
-//
+// assembly-about-common.adoc
 
-[id="con-what-is-prod-common-{context}"]
+[id="con-what-is-prod-common_{context}"]
 
 = What is {ProductNameShort}?
 

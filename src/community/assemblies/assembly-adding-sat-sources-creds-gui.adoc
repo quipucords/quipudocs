@@ -3,7 +3,9 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-adding-sat-sources-creds-gui-{context}"]
+[id="assembly-adding-sat-sources-creds-gui_{context}"]
+
+:context: assembly-adding-sat-sources-creds-gui-ctxt
 
 = Adding satellite sources and credentials
 
@@ -18,16 +20,16 @@ To run a scan on a {SatelliteServerName} deployment, you must add a source that 
 
 Add a satellite source and credential to provide the information needed to scan {SatelliteServerNameShort}. To learn more, see the following information:
 
-* To add a satellite source, see xref:proc-adding-sat-sources-gui-{context}[Adding satellite sources].
-* To add a satellite credential, see xref:proc-adding-sat-creds-gui-{context}[Adding satellite credentials].
+* To add a satellite source, see xref:proc-adding-sat-sources-gui_{context}[Adding satellite sources].
+* To add a satellite credential, see xref:proc-adding-sat-creds-gui_{context}[Adding satellite credentials].
 
 To learn more about sources and credentials and how {ProductNameShort} uses them, see the following information:
 
-* xref:con-about-sources-creds-gui-{context}[About sources and credentials]
+* xref:con-about-sources-creds-gui_assembly-adding-sat-sources-creds-gui-ctxt[About sources and credentials]
 
 To learn more about how {ProductNameShort} authenticates with your {SatelliteServerNameShort} server, see the following information. This information includes guidance about  certificate validation and SSL communication choices that you might need to make during satellite credential configuration.
 
-* xref:con-sat-auth-gui-{context}[Satellite Server authentication]
+* xref:con-sat-auth-gui_{context}[Satellite Server authentication]
 
 // do you need level offset in each assembly? at master doc level only? confused about this one.
 
@@ -35,7 +37,7 @@ include::modules/proc-adding-sat-sources-gui.adoc[leveloffset=+1]
 
 include::modules/proc-adding-sat-creds-gui.adoc[leveloffset=+1]
 
-:context: assembly-adding-sat-sources-creds-gui-context
+:context: assembly-adding-sat-sources-creds-gui-ctxt
 include::modules/con-about-sources-creds-gui.adoc[leveloffset=+1]
 
 include::modules/con-sat-auth-gui.adoc[leveloffset=+1]

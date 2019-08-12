@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 // assembly-adding-sat-sources-creds-gui.adoc
 
-[id="proc-adding-sat-creds-gui-{context}"]
+[id="proc-adding-sat-creds-gui_{context}"]
 
 = Adding satellite credentials
 

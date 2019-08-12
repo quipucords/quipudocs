@@ -3,7 +3,9 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-downloading-reports-gui-{context}"]
+[id="assembly-downloading-reports-gui_{context}"]
+
+:context: assembly-downloading-reports-gui-ctxt
 
 = Downloading reports
 
@@ -20,21 +22,21 @@ Reports for a scan are available in two formats, a comma-separated variable (CSV
 
 To learn more about merging and downloading reports, see the following information:
 
-* xref:proc-downloading-reports-gui-{context}[Downloading reports]
+* xref:proc-downloading-reports-gui_{context}[Downloading reports]
 
 To learn more about how reports are created, see the following information. This information includes a chronology of the processes that change the raw facts of a details report into fingerprint data, and then change fingerprint data into the deduplicated and merged data of a deployments report. This information also includes a partial fingerprint example to show the types of data that are used to create a {ProductNameShort} report.
 
-* xref:con-how-reports-created-gui-{context}[How reports are created]
-* xref:ref-fingerprint-example-gui-{context}[A fingerprint example]
+* xref:con-how-reports-created-gui_assembly-downloading-reports-gui-ctxt[How reports are created]
+* xref:ref-fingerprint-example-gui_assembly-downloading-reports-gui-ctxt[A fingerprint example]
 
 // do you need level offset in each assembly? at master doc level only? confused about this one.
 
 include::modules/proc-downloading-reports-gui.adoc[leveloffset=+1]
 
-:context: assembly-downloading-reports-gui-context
+:context: assembly-downloading-reports-gui-ctxt
 include::modules/con-how-reports-created-gui.adoc[leveloffset=+1]
 
-:context: assembly-downloading-reports-gui-context
+:context: assembly-downloading-reports-gui-ctxt
 include::modules/ref-fingerprint-example-gui.adoc[leveloffset=+2]
 
 // .Related Information

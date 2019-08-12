@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 // assembly-logging-in-gui.adoc
 
-[id="proc-logging-in-gui-{context}"]
+[id="proc-logging-in-gui_{context}"]
 
 = Logging in to the {ProductNameShort} client
 
