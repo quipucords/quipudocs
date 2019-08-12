@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 // assembly-adding-net-sources-creds-gui.adoc
 
-[id="ref-commands-used-net-scans-gui-{context}"]
+[id="ref-commands-used-net-scans-gui_{context}"]
 
 = Commands that are used in scans of remote network assets
 
@@ -40,7 +40,7 @@ The following commands do not require elevated privileges to gather facts during
 
 == Commands that need elevated privileges
 
-The following commands require elevated privileges to gather facts during a scan. Each command includes a list of individual facts or categories of facts that cannot be included in reports if elevated privileges are not available for that command.
+The following commands require elevated privileges to gather facts during a scan. Each command includes a list of individual facts or categories of facts that {ProductNameShort} attempts to find during a scan. These facts cannot be included in reports if elevated privileges are not available for that command.
 
 * *chkconfig*
 ** EAP

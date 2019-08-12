@@ -3,7 +3,9 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-install-scripted-online-qpc-{context}"]
+[id="assembly-install-scripted-online-qpc_{context}"]
+
+:context: assembly-install-scripted-online-qpc-ctxt
 
 = Installing....scripted...online....qpc
 

@@ -2,7 +2,7 @@
 // assembly-running-managing-scans-standard-gui.adoc
 // assembly-running-managing-scans-deep-gui.adoc
 
-[id="con-scan-job-processing-gui-{context}"]
+[id="con-scan-job-processing-gui_{context}"]
 
 = Scan job processing
 
@@ -24,7 +24,7 @@ When the scan job runs the inspection task for a source, it checks the state of 
 
 If a scan contains multiple sources, each source has its own connection and inspection tasks. These tasks are processed independently from the tasks for the other sources. If any task for any of the sources fails, the scan job transitions to the failed state. The scan job transitions to the completed state only if all scan job tasks for all sources complete successfully.
 
-If a scan job completes successfully, the data for that scan job is generated as a report. In the Scans view, the report for each successful scan job is available from a btn:[Download] button.
+If a scan job completes successfully, the data for that scan job is generated as a report. In the Scans view, you can download the report for each successful scan job.
 
 // .Additional resources
 // * A bulleted list of links to other material closely related to the contents of the procedure module.
