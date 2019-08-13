@@ -4,13 +4,15 @@ The scripted installation runs an installer that uses Ansible to install the com
 
 Obtaining the Installer
 ^^^^^^^^^^^^^^^^^^^^^^^
-1. Download the installer by entering the following command::
+1. Download & Install the quipucords installer rpm.
 
-    # curl -k -O -sSL https://github.com/quipucords/quipucords-installer/releases/latest/download/quipucords_install.tar.gz
+For RHEL & Centos 6::
 
-2. Extract the installer by entering the following command::
+    # yum install -y https://github.com/quipucords/quipucords-installer/releases/latests/download/quipucords_installer.el6.noarch.rpm
 
-    # tar -xvzf quipucords_install.tar.gz
+For RHEL & Centos 7::
+
+    # yum install -y https://github.com/quipucords/quipucords-installer/releases/latests/download/quipucords_installer.el7.noarch.rpm
 
 Running the Installer
 ^^^^^^^^^^^^^^^^^^^^^
@@ -24,13 +26,9 @@ Installing with Internet Connectivity
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If you choose the internet connectivity option, use the following steps to run the installer.
 
-1. Change to the installer directory by entering the following command::
+1. Start the installation by entering the following command. Alternatively, enter the following command with options as described in `Installation Options <install.html#install-opts>`_::
 
-    # cd install/
-
-2. Start the installation by entering the following command. Alternatively, enter the following command with options as described in `Installation Options <install.html#install-opts>`_::
-
-    # ./install.sh
+    # quipucords-installer
 
 The output appears similar to the following example::
 
@@ -97,7 +95,7 @@ The following associated dependencies must be installed onto the offline machine
 
 Start the offline installation by entering the following command. Alternatively, enter the following command with options as described in `Installation Options`_::
 
-    # ./install.sh -e install_offline=true
+    # quipucords-installer -e install_offline=true
 
 The output appears similar to the following example::
 
@@ -110,7 +108,7 @@ Installation Options
 ~~~~~~~~~~~~~~~~~~~~
 The installer has various options, each of which has a default value. You can either run the installer with no options to use all the default values, or provide values for one or more of these options. You can pass values for these options by using the ``-e`` flag when you run the command to start the installer, as shown in the following example::
 
-    # ./install.sh -e option1=value1 -e option2=value2 ...
+    # quipucords-installer -e option1=value1 -e option2=value2 ...
 
 Options:
  - **install_offline**
