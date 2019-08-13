@@ -10,7 +10,7 @@ Obtaining the Installer
 
     # yum install -y https://github.com/quipucords/quipucords-installer/releases/latests/download/quipucords_installer.el6.noarch.rpm
 
-- RHEL & CentOS 7
+- RHEL & CentOS 7::
 
     # yum install -y https://github.com/quipucords/quipucords-installer/releases/latests/download/quipucords_installer.el7.noarch.rpm
 
