@@ -67,8 +67,8 @@ After the required packages have been collected, they will need to be transferre
 
     # mkdir -p /usr/{lib}/quipucords-installer-{x.y.z}/install/packages
 
-    - ``{lib}`` is your library version either lib or lib64
-    - ``{x.y.z`` is the version of the quipucords-installer rpm
+- ``{lib}`` is your library version either lib or lib64
+- ``{x.y.z`` is the version of the quipucords-installer rpm
 
 2. Move the downloaded packages into the ``packages`` directory by entering the following command::
 
