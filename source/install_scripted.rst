@@ -63,17 +63,16 @@ The Quipucords server requires a Postgres Docker image.  You must build the Dock
 
 After the required packages have been collected, they will need to be transferred to the machine where the Quipucords server will be installed.
 
-1. Change to the installer directory by entering following command::
+1. Create a ``packages`` directory to use to install the downloaded packages by entering the following command::
 
-    # cd install/
+    # mkdir -p /usr/{lib}/quipucords-installer-{x.y.z}/install/packages
 
-2. Create a ``packages`` directory to use to install the downloaded packages by entering the following command::
+    - ``{lib}`` is your library version either lib or lib64
+    - ``{x.y.z`` is the version of the quipucords-installer rpm
 
-    # mkdir packages
+2. Move the downloaded packages into the ``packages`` directory by entering the following command::
 
-3. Move the downloaded packages into the ``packages`` directory by entering the following command::
-
-    # mv /path/to/package ./packages/
+    # mv /path/to/package /usr/{lib}/quipucords-installer-{x.y.z}/install/packages
 
 Offline Dependencies:
 +++++++++++++++++++++
