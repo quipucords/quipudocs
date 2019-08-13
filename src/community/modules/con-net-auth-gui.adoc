@@ -1,13 +1,13 @@
 // Module included in the following assemblies:
 // assembly-adding-net-creds-sources-gui.adoc
 
-[id="con-net-auth-gui-{context}"]
+[id="con-net-auth-gui_{context}"]
 
 = Network authentication
 
 The {ProductNameShort} server inspects the remote systems in a network scan by using the SSH remote connection capabilities of Ansible. When you add a network credential, you configure the SSH connection by using either a user name and password or a user name and SSH keyfile pair. If remote systems are accessed with SSH key authentication, you can also supply a passphrase.
 
-Also during network credential configuration, you can enable a become method. The become method is used during a scan to elevate privileges. These privileges are needed to run commands and obtain data on the systems that you are scanning. For more information about the commands that do and do not require elevated privileges during a scan, see xref:ref-commands-used-net-scans-gui_assembly-adding-net-sources-creds-gui-context[Commands that are used in scans of remote network assets].
+Also during network credential configuration, you can enable a become method. The become method is used during a scan to elevate privileges. These privileges are needed to run commands and obtain data on the systems that you are scanning. For more information about the commands that do and do not require elevated privileges during a scan, see xref:ref-commands-used-net-scans-gui_assembly-adding-net-sources-creds-gui-ctxt[Commands that are used in scans of remote network assets].
 
 // .Additional resources
 // * A bulleted list of links to other material closely related to the contents of the procedure module.

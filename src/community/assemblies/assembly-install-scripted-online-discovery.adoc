@@ -3,7 +3,9 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-install-scripted-online-discovery-{context}"]
+[id="assembly-install-scripted-online-discovery_{context}"]
+
+:context: assembly-install-scripted-online-discovery-ctxt
 
 = Installing....scripted...online....discovery
 

@@ -3,38 +3,55 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-running-managing-scans-deep-gui-{context}"]
+[id="assembly-running-managing-scans-deep-gui_{context}"]
+
+:context: assembly-running-managing-scans-deep-gui-ctxt
 
 = Running and managing deep scans
 
-TEXT intro....about deep scans and the consequences...
+After you add sources and credentials for the parts of your IT infrastructure that you want to scan, you can begin running scans. In a few situations, running standard scans is not sufficient to find the environment and product data that is required to report on your {CompanyName} products.
 
-.Prerequisites
+By default, {ProductNameShort} searches for and fingerprints products by using known metadata that relates to those products. However, it is possible that you have installed these products with a process or in an installation location that makes the search and fingerprinting algorithms less effective. In that case, you need to use deep scanning to find those products in more locations than the locations that are searched in a standard scan.
+
+// .Prerequisites
 // * Sentence or a bulleted list of pre-requisites that must be in place or done before the user starts this task.
 // * Delete section title and bullets if the task has no required pre-requisites.
 // * Text can be a link to a pre-requisite task that the user must do before starting this task.
 
 .Procedure
 
-TEXT To run and manage scans...
+Run a deep scan to find products in nonstandard locations. To learn more, see the following information:
+
+* xref:proc-running-scans-deep-gui_{context}[Running scans with deep scanning]
+
+When you begin running scans, there are several tasks that you can do to manage your scans. These tasks include updating the data for a scan by running a new scan job and managing active scans by pausing, resuming, and canceling them. To learn more, see the following information:
+
+* xref:proc-running-new-scan-job-gui_assembly-running-managing-scans-deep-gui-ctxt[Running a new scan job]
+* xref:proc-pause-resume-cancel-scans-gui_assembly-running-managing-scans-deep-gui-ctxt[Pausing, resuming, and canceling scans]
+
+To learn more about how scans and scan jobs work, including how a scan job is processed by {ProductNameShort} and the states a scan job moves through during its life cycle, see the following information:
+
+* xref:con-about-scans-scan-jobs-gui_assembly-running-managing-scans-deep-gui-ctxt[About scans and scan jobs]
+* xref:con-scan-job-processing-gui_assembly-running-managing-scans-deep-gui-ctxt[Scan job processing]
+* xref:con-scan-job-life-cycle-gui_assembly-running-managing-scans-deep-gui-ctxt[Scan job life cycle]
 
 // do you need level offset in each assembly? at master doc level only? confused about this one.
 
 include::modules/proc-running-scans-deep-gui.adoc[leveloffset=+1]
 
-:context: assembly-running-managing-scans-deep-gui-context
+:context: assembly-running-managing-scans-deep-gui-ctxt
 include::modules/proc-running-new-scan-job-gui.adoc[leveloffset=+1]
 
-:context: assembly-running-managing-scans-deep-gui-context
+:context: assembly-running-managing-scans-deep-gui-ctxt
 include::modules/proc-pause-resume-cancel-scan-gui.adoc[leveloffset=+1]
 
-:context: assembly-running-managing-scans-deep-gui-context
+:context: assembly-running-managing-scans-deep-gui-ctxt
 include::modules/con-about-scans-scan-jobs-gui.adoc[leveloffset=+1]
 
-:context: assembly-running-managing-scans-deep-gui-context
+:context: assembly-running-managing-scans-deep-gui-ctxt
 include::modules/con-scan-job-processing-gui.adoc[leveloffset=+1]
 
-:context: assembly-running-managing-scans-deep-gui-context
+:context: assembly-running-managing-scans-deep-gui-ctxt
 include::modules/con-scan-job-life-cycle-gui.adoc[leveloffset=+1]
 
 
