@@ -134,15 +134,15 @@ Options:
     - Contains a ``true`` or ``false`` value. Defaults to ``true``. Supply ``false`` to install without opening the server port in the firewall. The installation script must run with elevated privileges to open the server port.
  - **server_name**
     - Contains the name for the Quipucords server. Defaults to ``quipucords``.
+ - **dbms_user**
+    - Specifies the database user for postgres. Defaults to ``postgres``.
+ - **dbms_password**
+    - Specifies the database password for postgres. Defaults to ``password``.
  - **QPC_SERVER_TIMEOUT**
     - Contains the HTTP timeout length for the Quipucords server. Defaults to ``120``.
- - **QPC_DBMS_USER**
-    - (Optional) Specifies the database user for postgres. Defaults to ``postgres``.
- - **QPC_DBMS_PASSWORD**
-    - (Optional) Specifies the database password for postgres. Defaults to ``password``.
  - **NETWORK_INSPECT_JOB_TIMEOUT**
-    - (Optional) Specifies the network inspect scan timeout in seconds. Defaults to ``10800`` (3 hours).
+    - Specifies the network inspect scan timeout in seconds. Defaults to ``10800`` (3 hours).
  - **NETWORK_CONNECT_JOB_TIMEOUT**
-    - (Optional) Specifies the network connect scan timeout in seconds. Defaults to ``600`` (10 minutes).
+    - Specifies the network connect scan timeout in seconds. Defaults to ``600`` (10 minutes).
  - **ANSIBLE_LOG_LEVEL**
-    - (Optional) Specifiy the level of log output by ansible. Defaults to ``0`` which is no logs.
+    - Specifies the level of log output by ansible. Defaults to ``0`` which is no logs.
