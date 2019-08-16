@@ -138,11 +138,11 @@ Options:
     - Specifies the database user for postgres. Defaults to ``postgres``.
  - **dbms_password**
     - Specifies the database password for postgres. Defaults to ``password``.
- - **QPC_SERVER_TIMEOUT**
+ - **server_http_timeout**
     - Contains the HTTP timeout length for the Quipucords server. Defaults to ``120``.
- - **NETWORK_INSPECT_JOB_TIMEOUT**
+ - **inspect_job_timeout**
     - Specifies the network inspect scan timeout in seconds. Defaults to ``10800`` (3 hours).
- - **NETWORK_CONNECT_JOB_TIMEOUT**
+ - **connect_job_timeout**
     - Specifies the network connect scan timeout in seconds. Defaults to ``600`` (10 minutes).
- - **ANSIBLE_LOG_LEVEL**
+ - **ansible_log_level**
     - Specifies the level of log output by ansible. Defaults to ``0`` which is no logs.
