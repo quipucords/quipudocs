@@ -17,7 +17,7 @@ ifdef::context[:parent-context: {context}]
 // * Delete section title and bullets if the task has no required pre-requisites.
 // * Text can be a link to a pre-requisite task that the user must do before starting this task.
 
-.Procedure
+.Learn more
 
 To learn more about the purpose, benefits, and characteristics of {ProductNameShort}, see the following information:
 

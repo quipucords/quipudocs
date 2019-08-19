@@ -6,7 +6,7 @@
 
 = Running a new scan job
 
-After you name a scan and run it for the first time, it is added to the Scans view. You can then run a new instance of that scan, or scan job, to update the data that is gathered for that scan.
+After you name a scan and run it for the first time, it is added to the Scans view. You can then run a new instance of that scan, known as a scan job, to update the data that is gathered for that scan.
 
 .Prerequisites
 

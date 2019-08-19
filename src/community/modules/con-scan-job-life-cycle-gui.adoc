@@ -6,7 +6,7 @@
 
 = Scan job life cycle
 
-An individual instance of a scan, or _scan job_, moves through several states during its life cycle.
+A _scan job_, or individual instance of a scan, moves through several states during its life cycle.
 
 When you start a scan, a scan job is created and the scan job is in the _created_ state. The scan job is then queued for processing and the scan job transitions to the _pending_ state. Scan jobs run serially, in the order that they are started.
 

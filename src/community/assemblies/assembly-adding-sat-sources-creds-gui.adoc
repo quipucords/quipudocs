@@ -16,7 +16,7 @@ To run a scan on a {SatelliteServerName} deployment, you must add a source that 
 // * Delete section title and bullets if the task has no required pre-requisites.
 // * Text can be a link to a pre-requisite task that the user must do before starting this task.
 
-.Procedure
+.Learn more
 
 Add a satellite source and credential to provide the information needed to scan {SatelliteServerNameShort}. To learn more, see the following information:
 

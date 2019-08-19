@@ -10,15 +10,15 @@ A scan job moves through two phases, or tasks, while it is being processed. Thes
 
 == Scan job connection and inspection tasks
 
-The first task that runs during a scan job is a connection task. The _connection task_ determines the ability to connect to the source and finds the number of systems that can be inspected for the defined source. The second task that runs is an inspection task. The _inspection task_ is the task that gathers data from each of the systems in the defined source to output the scan results into a report.
+The first task that runs during a scan job is a connection task. The _connection task_ determines the ability to connect to the source and finds the number of systems that can be inspected for the defined source. The second task that runs is an inspection task. The _inspection task_ is the task that gathers data from each of the reachable systems in the defined source to output the scan results into a report.
 
-If the scan is configured so that it contains several sources, then when the scan job runs, these two tasks are created for each source. First, all of the connection tasks for all of the sources run to establish connections to the sources and find the systems that can be inspected. Then all of the inspection tasks for all of the sources run to inspect the contents of the systems that are contained in the sources.
+If the scan is configured so that it contains several sources, then when the scan job runs, these two tasks are created for each source. First, all of the connection tasks for all of the sources run to establish connections to the sources and find the systems that can be inspected. Then all of the inspection tasks for all of the sources run to inspect the contents of the reachable systems that are contained in the sources.
 
 == How these tasks are processed
 
 When the scan job runs the connection task for a source, it attempts to connect to the network, the server for vCenter Server, or the server for Satellite. If the connection to vCenter Server or Satellite fails, then the connection task fails. For a network scan, if the network is not reachable or the credentials are invalid, the connection task reports zero (0) successful systems. If only some of the systems for a network scan are reachable, the connection task reports success on the systems that are reachable, and the connection task does not fail.
 
-You can view information about the status of the connection task in the Scans view. The row for a scan displays the connection task results as the number of successful system connections for the most recent scan job. You can also can expand the previous scan jobs to see the connection task results for a previous scan job.
+You can view information about the status of the connection task in the Scans view. The row for a scan displays the connection task results as the number of successful system connections for the most recent scan job. You can also expand the previous scan jobs to see the connection task results for a previous scan job.
 
 When the scan job runs the inspection task for a source, it checks the state of the connection task. If the connection task shows a failed state or if there are zero (0) successful connections, the scan job transitions to the failed state. However, if the connection task reports at least one successful connection, the inspection task continues. The results for the scan job then show success and failure data for each individual system. If the inspection task is not able to gather results from the successful systems, or if another unexpected error occurs during the inspection task, then the scan job transitions to the failed state.
 

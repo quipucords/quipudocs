@@ -18,7 +18,7 @@ If you choose to divide the scanning tasks for your IT infrastructure into sever
 // * Delete section title and bullets if the task has no required pre-requisites.
 // * Text can be a link to a pre-requisite task that the user must do before starting this task.
 
-.Procedure
+.Learn more
 
 To learn more about downloading reports, see the following information:
 

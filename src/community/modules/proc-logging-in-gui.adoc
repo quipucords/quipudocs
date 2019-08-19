@@ -1,19 +1,38 @@
 // Module included in the following assemblies:
-// assembly-logging-in-gui.adoc
+// assembly-accessing-client-gui.adoc
 
 [id="proc-logging-in-gui_{context}"]
 
-= Logging in to the {ProductNameShort} client
+= Logging in to the {ProductNameShort} user interface
 
-TBD
+.Prerequisites
+
+To log in to the {ProductNameShort} user interface, you need the IP address of the system where the {ProductNameShort} server is installed, the port number for the connection if the default port was changed during server installation, and the user name and password to use when logging in. If you do not have this information, contact the administrator who installed the {ProductNameShort} server.
 
 .Procedure
 
-. TBD
+. In a browser, enter the URL for the {ProductNameShort} server in the following format: `https://__IPaddress__:__port__`, where `_IPaddress_` is the IP address of the {ProductNameShort} server and `_port_` is the exposed server port. Including the default port is optional. However, you must include the port in the address if the default port was changed during server installation.
++
+The following examples show two different ways to enter the URL, based on the system that you are logging in from and whether the default port is used:
 
+  * If you log in from the system where the server is installed and the default port is used, you can use the loopback address as the IP address, as shown in the following example:
++
+----
+https://127.0.0.1
+----
+  * If you log in from a system that is remote from the server, the server is running on the IP address `192.0.2.0`, and the default port was changed during installation to `8443`, you would log in as shown in the following example:
++
+----
+https:192.0.2.0:8443
+----
 
-// .Verification steps
-// (Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
++
+After you enter the URL for the server, the {ProductNameShort} login page displays.
+
+. On the login page, enter the user name and password  and then click *Log in* to log in to the server.
+
+.Verification steps
+If this is the first time that you have logged in to {ProductNameShort}, the Welcome page displays. You can begin by adding sources and credentials that can be used in scans. If you have previously logged in to {ProductNameShort}, the Welcome page is skipped and you can interact with your previously created sources, credentials, and scans.
 
 // .Additional resources
 // * A bulleted list of links to other material closely related to the contents of the procedure module.
