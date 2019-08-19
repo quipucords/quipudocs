@@ -3,38 +3,53 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-running-managing-scans-standard-gui-{context}"]
+[id="assembly-running-managing-scans-standard-gui_{context}"]
+
+:context: assembly-running-managing-scans-standard-gui-ctxt
 
 = Running and managing standard scans
 
-TEXT intro....about how most scans are standard....
+After you add sources and credentials for the parts of your IT infrastructure that you want to scan, you can begin running scans. In most situations, you can run a standard scan to find the environment and product data that is required to report on your {CompanyName} products.
 
-.Prerequisites
+// .Prerequisites
 // * Sentence or a bulleted list of pre-requisites that must be in place or done before the user starts this task.
 // * Delete section title and bullets if the task has no required pre-requisites.
 // * Text can be a link to a pre-requisite task that the user must do before starting this task.
 
 .Procedure
 
-TEXT To run and manage scans...
+Run a standard scan to find products in standard locations. To learn more, see the following information:
+
+* xref:proc-running-scans-standard-gui_{context}[Running standard scans]
+
+When you begin running scans, there are several tasks that you can do to manage your scans. These tasks include updating the data for a scan by running a new scan job and managing active scans by pausing, resuming, and canceling them. To learn more, see the following information:
+
+* xref:proc-running-new-scan-job-gui_assembly-running-managing-scans-standard-gui-ctxt[Running a new scan job]
+* xref:proc-pause-resume-cancel-scans-gui_assembly-running-managing-scans-standard-gui-ctxt[Pausing, resuming, and canceling scans]
+
+To learn more about how scans and scan jobs work, including how a scan job is processed by {ProductNameShort} and the states a scan job moves through during its life cycle, see the following information:
+
+* xref:con-about-scans-scan-jobs-gui_assembly-running-managing-scans-standard-gui-ctxt[About scans and scan jobs]
+* xref:con-scan-job-processing-gui_assembly-running-managing-scans-standard-gui-ctxt[Scan job processing]
+* xref:con-scan-job-life-cycle-gui_assembly-running-managing-scans-standard-gui-ctxt[Scan job life cycle]
 
 // do you need level offset in each assembly? at master doc level only? confused about this one.
 
-include::modules/proc-running-scans-gui.adoc[leveloffset=+1]
+include::modules/proc-running-scans-standard-gui.adoc[leveloffset=+1]
 
-:context: assembly-running-managing-scans-standard-gui-context
+:context: assembly-running-managing-scans-standard-gui-ctxt
 include::modules/proc-running-new-scan-job-gui.adoc[leveloffset=+1]
 
-:context: assembly-running-managing-scans-standard-gui-context
+:context: assembly-running-managing-scans-standard-gui-ctxt
 include::modules/proc-pause-resume-cancel-scan-gui.adoc[leveloffset=+1]
 
-:context: assembly-running-managing-scans-standard-gui-context
+:context: assembly-running-managing-scans-standard-gui-ctxt
 include::modules/con-about-scans-scan-jobs-gui.adoc[leveloffset=+1]
 
-:context: assembly-running-managing-scans-standard-gui-context
+:context: assembly-running-managing-scans-standard-gui-ctxt
 include::modules/con-scan-job-processing-gui.adoc[leveloffset=+1]
 
-:context: assembly-running-managing-scans-standard-gui-context
+:context: assembly-running-managing-scans-standard-gui-ctxt
 include::modules/con-scan-job-life-cycle-gui.adoc[leveloffset=+1]
 
 

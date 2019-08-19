@@ -2,7 +2,7 @@
 // assembly-running-managing-scans-standard-gui.adoc
 // assembly-running-managing-scans-deep-gui.adoc
 
-[id="con-scan-job-life-cycle-gui-{context}"]
+[id="con-scan-job-life-cycle-gui_{context}"]
 
 = Scan job life cycle
 

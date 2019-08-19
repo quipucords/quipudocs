@@ -2,16 +2,19 @@
 //
 // <List assemblies here, each on a new line>
 
-[id="proc-merging-reports-gui-{context}"]
+[id="proc-merging-reports-gui_{context}"]
 
 = Merging reports
 
 From the Scans view, you can select two or more reports and merge them into a single report.
 
-// move some of these ideas to an assembly topic...
-There might be several reasons that you would chose to merge reports. For example, you might have a large IT infrastructure with many different administrators, each of whom can access and scan only a part of that infrastructure. Alternatively, you might run multiple separate scans to limit the demand on CPU resources of the machines that are being scanned, especially in situations where deep scanning is required. Lastly, you might want to run scans on a single type of source, isolating your network, satellite, and vcenter data into separate reports for your own internal purposes.
+There might be several reasons that you would choose to merge reports, including the following examples:
 
-For these and similar reasons, it is likely that you will run multiple scans to provide complete scan coverage of your entire IT infrastructure. Merging reports enables you to combine the data from multiple scans into a single report.
+* You might have a large IT infrastructure with many different administrators, each of whom can access and scan only a part of that infrastructure.
+* You might run multiple separate scans to limit the demand on CPU resources of the machines that are being scanned, especially in situations where deep scanning is required.
+* You might want to run scans on a single type of source, isolating your network, satellite, and vcenter data into separate reports for your own internal purposes and then merge these reports later.
+
+For these and similar reasons, it is possible that you will run multiple scans to provide complete scan coverage of your entire IT infrastructure. Merging reports enables you to combine the data from multiple scans into a single report.
 
 .Prerequisites
 
@@ -20,8 +23,8 @@ To merge reports, you must select at least two scans for which the most recent s
 .Procedure
 
 . From the Scans view, select the check box for one or more scans.
-. Click btn:[Merge reports]. A confirmation dialog box shows the selected scans.
-. Click btn:[Merge] to merge the scans into a single report and download the merged reports.
+. Click *Merge reports*. A confirmation dialog box shows the selected scans.
+. Click *Merge* to merge the scans into a single report and download the merged reports.
 
 .Verification steps
 

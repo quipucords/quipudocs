@@ -1,0 +1,34 @@
+// This assembly is included in the following assemblies:
+//
+
+ifdef::context[:parent-context: {context}]
+
+[id="assembly-logging-in-gui_{context}"]
+
+:context: assembly-logging-in-gui-ctxt
+
+= Logging in to {ProductNameShort}
+
+To log in...contents TBD based on whether Tom Rico provides information about a workaround for multiple users, otherwise, can only use main admin ID/pw?
+
+// .Prerequisites
+// * (keeping here temporarily, but probably not using this section in this topic)
+// * Sentence or a bulleted list of pre-requisites that must be in place or done before the user starts this task.
+// * Delete section title and bullets if the task has no required pre-requisites.
+// * Text can be a link to a pre-requisite task that the user must do before starting this task.
+
+.Procedure
+
+TBD...
+
+include::modules/proc-logging-in-gui.adoc[leveloffset=+1]
+
+
+// .Related Information
+// * Bulleted list of links to concepts, reference, or other tasks closely related to this user story.
+// * Include only the most relevant items as links, not every possible related item.
+// * Delete section title and bullets if no related information is needed.
+
+// Restore the context to what it was before this assembly.
+ifdef::parent-context[:context: {parent-context}]
+ifndef::parent-context[:!context:]

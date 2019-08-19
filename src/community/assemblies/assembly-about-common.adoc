@@ -3,13 +3,13 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-running-managing-scans-gui-main_{context}"]
+[id="assembly-about-common_{context}"]
 
-:context: assembly-running-managing-scans-gui-main-ctxt
+:context: assembly-about-common-ctxt
 
-= Running and managing scans
+= About {ProductNameShort}
 
-After you add sources and credentials for the parts of your IT infrastructure that you want to scan, you can begin running scans.
+{ProductNameStartSentence} is designed to help users collect data about their usage of specific {CompanyName} software. By using {ProductNameShort}, users can reduce the amount of time and effort that is required to calculate and report usage of those {CompanyName} products.
 
 // .Prerequisites
 // * (keeping here temporarily, but probably not using this section in this topic)
@@ -19,19 +19,19 @@ After you add sources and credentials for the parts of your IT infrastructure th
 
 .Procedure
 
-To learn more about running a standard scan that does not use deep scanning for products, see the following information:
+To learn more about the purpose, benefits, and characteristics of {ProductNameShort}, see the following information:
 
-* xref:assembly-running-managing-scans-standard-gui_{context}[Running and managing standard scans]
+* xref:con-what-is-prod-common_{context}[What is {ProductNameShort}?]
 
-To learn more about running a deep scan, a scan that can find products that might have been installed with a nonstandard process or in a nonstandard location, see the following information:
+To learn more about the products and product versions that {ProductNameShort} can find and inspect, see the following information:
 
-* xref:assembly-running-managing-scans-deep-gui_{context}[Running and managing deep scans]
+* xref:ref-what-prods-find-common_{context}[What products does {ProductNameShort} find?]
 
 // do you need level offset in each assembly? at master doc level only? confused about this one.
 
-include::assembly-running-managing-scans-standard-gui.adoc[leveloffset=+1]
+include::modules/con-what-is-prod-common.adoc[leveloffset=+1]
 
-include::assembly-running-managing-scans-deep-gui.adoc[leveloffset=+1]
+include::modules/ref-what-prods-find-common.adoc[leveloffset=+1]
 
 
 // .Related Information

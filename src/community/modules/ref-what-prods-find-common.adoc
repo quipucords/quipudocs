@@ -1,0 +1,33 @@
+// Module included in the following assemblies:
+// assembly-about-common.adoc
+// ...
+
+[id="ref-what-prods-find-common_{context}"]
+
+= What products does {ProductNameShort} find?
+
+{ProductNameStartSentence} finds the following {CompanyName} products. For each version or release, the earliest version is listed, with later releases indicated as applicable.
+
+If a product has changed names recently so that you might be more familiar with the current name for that product, that name is provided as additional information. No later version is implied by the inclusion of a newer product name unless specific versions of that product are also listed.
+
+.{RHELName}
+
+* {RHELName} version 5 and later
+* {RHELName} version 6 and later
+* {RHELName} version 7 and later
+* {RHELName} version 8 and later
+
+.{RHMiddlewareName} products
+
+* {DecisionManagerOld} version 5.0.1 and later, version 6.0.0 and later (current product name is {DecisionManagerName})
+* {WebServerNameOld} version 1 and later, version 2.0 and later, version 2.1.0 and later; {WebServerName} 3.0.1 and later, 3.1 and later, version 5.0.0
+* {EAPName} version 4.2 and later, version 4.3 and later, version 5 and later, version 6 and later, version 7
+* {FuseName} version 6.0 and later, version 6.1 and later, version 6.2 and later, version 6.3.0
+
+
+
+
+
+
+// Topics from AsciiDoc conversion that were used as source for this topic:
+// ...

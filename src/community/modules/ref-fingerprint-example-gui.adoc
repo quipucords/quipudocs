@@ -2,7 +2,7 @@
 // assembly-downloading-reports-gui.adoc
 // assembly-merging-reports-gui.adoc
 
-[id="ref-fingerprint-example-gui-{context}"]
+[id="ref-fingerprint-example-gui_{context}"]
 
 = A fingerprint example
 

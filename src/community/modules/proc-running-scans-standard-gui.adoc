@@ -2,9 +2,9 @@
 // assembly-running-managing-scans-standard-gui.adoc
 // assembly-running-managing-scans-deep-gui.adoc
 
-[id="proc-running-scans-gui-{context}"]
+[id="proc-running-scans-standard-gui_{context}"]
 
-= Running scans
+= Running standard scans
 
 You can run a new scan from the Sources view. You can run a scan for a single source or select multiple sources to combine into a single scan. Each time that you use the Sources view to run a scan, you are prompted to save it as a new scan.
 
@@ -18,9 +18,9 @@ After you run a scan for the first time, the scan is saved to the Scans view. Fr
 
 . From the Sources view, select one or more sources. You can select sources of different types to combine them into a single scan.
 
-. Click the btn:[Scan] button that is appropriate for the selected sources:
-  * For a single source, click btn:[Scan] on the row for that source. Selecting the check box for the source is optional.
-  * If you selected multiple sources, click btn:[Scan] in the toolbar.
+. Click the *Scan* button that is appropriate for the selected sources:
+  * For a single source, click *Scan* on the row for that source. Selecting the check box for the source is optional.
+  * If you selected multiple sources, click *Scan* in the toolbar.
   The Scan wizard opens.
 // Too many opportunities to scan what you don't intend to scan with a random click.
 // Selected two sources, but because everything is active, clicking Scan on a third runs scan on source #3.
@@ -29,13 +29,13 @@ After you run a scan for the first time, the scan is saved to the Scans view. Fr
 // If only one source is selected, can the Scan selected button at the top of the screen be disabled? SCRATCH THAT, NONSENSICAL.
 // If multiple sources are selected, can the Scan button on the rows be disabled, and the Scan Selected button be enabled?
 
-. In the btn:[Name] field, enter a descriptive name for the scan.
+. In the *Name* field, enter a descriptive name for the scan.
 
-. If you want to change the default number of maximum concurrent scans, set a new value in the btn:[Maximum concurrent scans] field. This value is the maximum number of machines or virtual machines that are scanned in parallel during a scan.
+. If you want to change the default number of maximum concurrent scans, set a new value in the *Maximum concurrent scans* field. This value is the maximum number of machines or virtual machines that are scanned in parallel during a scan.
 
-. To use the default scanning process, allow the btn:[Deep scan for these products] check boxes to remain in the default, cleared state.
+. To use the default scanning process, allow the *Deep scan for these products* check boxes to remain in the default, cleared state.
 
-. To begin the scan process, click btn:[Scan].
+. To begin the scan process, click *Scan*.
 
 .Verification steps
 When the scan process begins, a notification displays in the Sources view. The running scan also displays in the Scans view, with a message about the progress of the scan.

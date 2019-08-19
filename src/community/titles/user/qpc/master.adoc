@@ -6,6 +6,10 @@ include::attributes/attributes-qpc.adoc[]
 = Using {ProductNameMedium}
 
 // Contents
+include::assemblies/assembly-about-common.adoc[]
+
+include::assemblies/assembly-logging-in-gui.adoc[]
+
 include::assemblies/assembly-adding-sources-creds-gui-main.adoc[]
 
 include::assemblies/assembly-running-managing-scans-gui-main.adoc[]

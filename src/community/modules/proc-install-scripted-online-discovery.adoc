@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
-// assembly-install-scripted-online-qpc.adoc
+// assembly-install-scripted-online-discovery.adoc
 
-[id="install-scripted-online-qpc-{context}"]
+[id="install-scripted-online-discovery_{context}"]
 
 = Installing {ProductNameShort} with the automated installer and internet connectivity
 

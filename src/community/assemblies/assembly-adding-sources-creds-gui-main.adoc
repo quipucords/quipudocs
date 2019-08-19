@@ -3,21 +3,35 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-adding-sources-creds-gui-main-{context}"]
+[id="assembly-adding-sources-creds-gui-main_{context}"]
+
+:context: assembly-adding-sources-creds-gui-main-ctxt
 
 = Adding sources and credentials
 
-To prepare Quipucords to run scans, you must add the parts of your IT infrastructure that you want to scan as one or more sources. You must also add the authentication information, such as username and password or SSH key, that is required to access those sources as one or more credentials. You add sources and credentials according to the type of source that you are going to scan.
+To prepare {ProductNameShort} to run scans, you must add the parts of your IT infrastructure that you want to scan as one or more sources. You must also add the authentication information, such as a username and password or SSH key, that is required to access those sources as one or more credentials. You add sources and credentials according to the type of source that you are going to scan.
 
-.Prerequisites
-* (keeping here temporarily, but probably not using this section in this topic)
+// .Prerequisites
+// * (keeping here temporarily, but probably not using this section in this topic)
 // * Sentence or a bulleted list of pre-requisites that must be in place or done before the user starts this task.
 // * Delete section title and bullets if the task has no required pre-requisites.
 // * Text can be a link to a pre-requisite task that the user must do before starting this task.
 
 .Procedure
 
-PHILOSOPHICAL QUESTION: Is the procedure section going to be used to introduce the main steps, or comment out and just use includes?
+As part of the general process of adding sources and credentials that encompass the different parts of your IT infrastructure, you might need to complete a number of tasks.
+
+Add network sources and credentials to scan assets such as physical machines, virtual machines, or containers in your network. To learn more, see the following information:
+
+* xref:assembly-adding-net-sources-creds-gui_{context}[Adding network sources and credentials]
+
+Add satellite sources and credentials to scan your deployment of {SatelliteServerName} to find the assets that it manages. To learn more, see the following information:
+
+* xref:assembly-adding-sat-sources-creds-gui_{context}[Adding satellite sources and credentials]
+
+Add vcenter sources and credentials to scan your deployment of {vCenterServerName} to find the assets that it manages. To learn more, see the following information:
+
+* xref:assembly-adding-vcent-sources-creds-gui_{context}[Adding vcenter sources and credentials]
 
 // do you need level offset in each assembly? at master doc level only? confused about this one.
 
