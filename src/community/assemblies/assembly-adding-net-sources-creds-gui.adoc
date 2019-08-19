@@ -16,7 +16,7 @@ To run a scan on one or more of the physical machines, virtual machines, or cont
 // * Delete section title and bullets if the task has no required pre-requisites.
 // * Text can be a link to a pre-requisite task that the user must do before starting this task.
 
-.Procedure
+.Learn more
 
 Add one or more network sources and credentials to provide the information needed to scan the assets in your network. To learn more, see the following information:
 

@@ -7,7 +7,7 @@
 = Running scans with deep scanning
 // If this topic gets used, should the majority of it become conditionalized text to reuse across both scanning topics?
 
-You can run a new scan from the Sources view. You can run a scan for a single source or select multiple sources to combine into a single scan. As part of scan configuration, you might choose to use the deep scanning process to search for products in nonstandard locations.
+You can run a new scan from the Sources view. You can run a scan for a single source or select multiple sources to combine into a single scan. As part of the scan configuration, you might choose to use the deep scanning process to search for products in nonstandard locations.
 
 The deep scanning process uses the `find` command, so the search process could be CPU resource intensive for the systems that are being scanned. Therefore, you should use discretion when selecting a deep scan for systems that require continuous availability, such as production systems.
 

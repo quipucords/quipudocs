@@ -447,7 +447,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The Quipucords tool is designed to help users collect data about their usage of specific Red Hat software. By using Quipucords, users can reduce the amount of time and effort that is required to calculate and report usage of those Red Hat products.</p>
 </div>
 <div class="paragraph">
-<div class="title">Procedure</div>
+<div class="title">Learn more</div>
 <p>To learn more about the purpose, benefits, and characteristics of Quipucords, see the following information:</p>
 </div>
 <div class="ulist">
@@ -479,10 +479,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The ability to inspect the software and systems that are running on your network improves your ability to understand and report on your entitlement usage. Ultimately, this inspection and reporting process is part of the larger system administration task of managing your inventories.</p>
 </div>
 <div class="paragraph">
-<p>The Quipucords tool requires the configuration of two basic structures to access IT resources and run the inspection process. A <em>credential</em> contains user access data, such as the user name and password or SSH key of a user with sufficient authority to run the inspection process on a particular source or some of the assets on that source. A <em>source</em> contains data about a single asset or multiple assets that are to be inspected. These assets can be physical machines, virtual machines, or containers, identified as host names, IP addresses, IP ranges, or subnets. These assets can also be a systems management solution such as vCenter Server or Red Hat Satellite Server. You can save multiple credentials and sources to use with Quipucords in various combinations as you run inspection processes, or <em>scans</em>. When you have completed a scan, you can access these facts in the output as a collection of formatted data, or <em>report</em>, to review the results.</p>
+<p>The Quipucords tool requires the configuration of two basic structures to access IT resources and run the inspection process. A <em>credential</em> contains user access data, such as the user name and password or SSH key of a user with sufficient authority to run the inspection process on a particular source or some of the assets on that source. A <em>source</em> contains data about a single asset or multiple assets that are to be inspected. These assets can be physical machines, virtual machines, or containers, identified as host names, IP addresses, IP ranges, or subnets. These assets can also be a systems management solution such as vCenter Server or Red Hat Satellite Server.</p>
 </div>
 <div class="paragraph">
-<p>By default, the credentials and sources that are created when using Quipucords are encrypted in a database. The values are encrypted with AES-256 encryption. They are decrypted when the Quipucords server runs a scan with the use of a vault password to access the encrypted values that are stored in the database.</p>
+<p>You can save multiple credentials and sources to use with Quipucords in various combinations as you run inspection processes, or <em>scans</em>. When you have completed a scan, you can access these facts in the output as a collection of formatted data, or <em>report</em>, to review the results.</p>
+</div>
+<div class="paragraph">
+<p>By default, the credentials and sources that are created during the use of Quipucords are encrypted in a database. The values are encrypted with AES-256 encryption. They are decrypted when the Quipucords server runs a scan with the use of a vault password to access the encrypted values that are stored in the database.</p>
 </div>
 <div class="paragraph">
 <p>The Quipucords tool is an agentless inspection tool, so there is no need to install the tool on every source that is to be inspected. However, the system that Quipucords is installed on must have access to the systems to be discovered and inspected.</p>
@@ -534,29 +537,96 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-<h1 id="assembly-logging-in-gui_{context}" class="sect0">Logging in to Quipucords</h1>
+<h1 id="assembly-accessing-client-gui_{context}" class="sect0">Accessing the Quipucords user interface</h1>
 <div class="openblock partintro">
 <div class="content">
 <div class="paragraph">
-<p>To log in&#8230;&#8203;contents TBD based on whether Tom Rico provides information about a workaround for multiple users, otherwise, can only use main admin ID/pw?</p>
+<p>You access the Quipucords user interface through a browser connection. To use the Quipucords user interface, the system on which you want to run the user interface must be able to communicate with the system on which the Quipucords server is installed.</p>
 </div>
 <div class="paragraph">
-<div class="title">Procedure</div>
-<p>TBD&#8230;&#8203;</p>
+<div class="title">Learn more</div>
+<p>To learn more about the Quipucords user interface login requirements and steps, see the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#proc-logging-in-gui_assembly-accessing-client-gui-ctxt">Logging in to the Quipucords user interface</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To learn more about logging out of the user interface, see the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#proc-logging-out-gui_assembly-accessing-client-gui-ctxt">Logging out of the Quipucords user interface</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="proc-logging-in-gui_assembly-logging-in-gui-ctxt">Logging in to the Quipucords client</h2>
+<h2 id="proc-logging-in-gui_assembly-accessing-client-gui-ctxt">Logging in to the Quipucords user interface</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>TBD</p>
+<div class="title">Prerequisites</div>
+<p>To log in to the Quipucords user interface, you need the IP address of the system where the Quipucords server is installed, the port number for the connection if the default port was changed during server installation, and the user name and password to use when logging in. If you do not have this information, contact the administrator who installed the Quipucords server.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>TBD</p>
+<p>In a browser, enter the URL for the Quipucords server in the following format: <code>https://<em>IPaddress</em>:<em>port</em></code>, where <code><em>IPaddress</em></code> is the IP address of the Quipucords server and <code><em>port</em></code> is the exposed server port. Including the default port is optional. However, you must include the port in the address if the default port was changed during server installation.</p>
+<div class="paragraph">
+<p>The following examples show two different ways to enter the URL, based on the system that you are logging in from and whether the default port is used:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If you log in from the system where the server is installed and the default port is used, you can use the loopback address as the IP address, as shown in the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre>https://127.0.0.1</pre>
+</div>
+</div>
+</li>
+<li>
+<p>If you log in from a system that is remote from the server, the server is running on the IP address <code>192.0.2.0</code>, and the default port was changed during installation to <code>8443</code>, you would log in as shown in the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre>https:192.0.2.0:8443</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>After you enter the URL for the server, the Quipucords login page displays.</p>
+</div>
+</li>
+<li>
+<p>On the login page, enter the user name and password  and then click <strong>Log in</strong> to log in to the server.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Verification steps</div>
+<p>If this is the first time that you have logged in to Quipucords, the Welcome page displays. You can begin by adding sources and credentials that can be used in scans. If you have previously logged in to Quipucords, the Welcome page is skipped and you can interact with your previously created sources, credentials, and scans.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-logging-out-gui_assembly-accessing-client-gui-ctxt">Logging out of the Quipucords user interface</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>In the application toolbar, click the person icon or your user name.</p>
+</li>
+<li>
+<p>Click <strong>Logout</strong>.</p>
 </li>
 </ol>
 </div>
@@ -566,10 +636,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="openblock partintro">
 <div class="content">
 <div class="paragraph">
-<p>To prepare Quipucords to run scans, you must add the parts of your IT infrastructure that you want to scan as one or more sources. You must also add the authentication information, such as a username and password or SSH key, that is required to access those sources as one or more credentials. You add sources and credentials according to the type of source that you are going to scan.</p>
+<p>To prepare Quipucords to run scans, you must add the parts of your IT infrastructure that you want to scan as one or more sources. You must also add the authentication information, such as a username and password or SSH key, that is required to access those sources as one or more credentials. Because of differing configuration requirements, you add sources and credentials according to the type of source that you are going to scan.</p>
 </div>
 <div class="paragraph">
-<div class="title">Procedure</div>
+<div class="title">Learn more</div>
 <p>As part of the general process of adding sources and credentials that encompass the different parts of your IT infrastructure, you might need to complete a number of tasks.</p>
 </div>
 <div class="paragraph">
@@ -611,7 +681,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>To run a scan on one or more of the physical machines, virtual machines, or containers on your network, you must add a source that identifies each of the assets to scan. Then you must add credentials that contain the authentication data to access each asset.</p>
 </div>
 <div class="paragraph">
-<div class="title">Procedure</div>
+<div class="title">Learn more</div>
 <p>Add one or more network sources and credentials to provide the information needed to scan the assets in your network. To learn more, see the following information:</p>
 </div>
 <div class="ulist">
@@ -721,7 +791,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>If you want to use the SSH key authentication type for network credentials, each SSH private key that you are going to use must be copied into the directory that was mapped to <code class="filename">/sshkeys</code> during Quipucords server installation. The default path for this directory is <code class="filename">~/qpc/sshkeys</code>.</p>
+<p>If you want to use the SSH key authentication type for network credentials, each SSH private key that you are going to use must be copied into the directory that was mapped to <code class="filename">/sshkeys</code> during Quipucords server installation. The default path for this directory is <code class="filename">~/quipucords/sshkeys</code>.</p>
 <div class="paragraph">
 <p>For more information about the SSH keys that are available for use in the <code class="filename">/sshkeys</code> directory, or to request the addition of a key to that directory, contact the administrator who manages your Quipucords server.</p>
 </div>
@@ -761,7 +831,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>For username and password authentication, enter a username and password for a user. This user must have root-level access to your network or to the subset of your network that you want to scan. Alternatively, this user must be able to obtain root-level access with the selected become method.</p>
 </li>
 <li>
-<p>For SSH key authentication, enter a username and an SSH key file, where the path to the key file is a path that is local to the Quipucords server. For example, if the key file is in the <code class="filename">~/quipucords/sshkeys</code> path on the server, enter that path in the <strong>SSH Key File</strong> field. Entering a passphrase is optional.</p>
+<p>For SSH key authentication, enter a user name and the path to an SSH key file, where the path to the key file is a path that is local to the Quipucords server. For example, if the key file is in the <code class="filename">~/quipucords/sshkeys</code> path on the server, enter that path in the <strong>SSH Key File</strong> field. Entering a passphrase is optional.</p>
 </li>
 </ul>
 </div>
@@ -822,7 +892,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The Quipucords server inspects the remote systems in a network scan by using the SSH remote connection capabilities of Ansible. When you add a network credential, you configure the SSH connection by using either a user name and password or a user name and SSH keyfile pair. If remote systems are accessed with SSH key authentication, you can also supply a passphrase.</p>
 </div>
 <div class="paragraph">
-<p>Also during network credential configuration, you can enable a become method. The become method is used during a scan to elevate privileges. These privileges are needed to run commands and obtain data on the systems that you are scanning. For more information about the commands that do and do not require elevated privileges during a scan, see <a href="#ref-commands-used-net-scans-gui_assembly-adding-net-sources-creds-gui-ctxt">Commands that are used in scans of remote network assets</a>.</p>
+<p>Also during network credential configuration, you can enable a become method. The become method is used during a scan to elevate privileges. These elevated privileges are needed to run commands and obtain data on the systems that you are scanning. For more information about the commands that do and do not require elevated privileges during a scan, see <a href="#ref-commands-used-net-scans-gui_assembly-adding-net-sources-creds-gui-ctxt">Commands that are used in scans of remote network assets</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="ref-commands-used-net-scans-gui_assembly-adding-net-sources-creds-gui-ctxt">Commands that are used in scans of remote network assets</h4>
@@ -1137,7 +1207,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>To run a scan on a Red Hat Satellite Server deployment, you must add a source that identifies the Satellite Server server to scan. Then you must add a credential that contains the authentication data to access that server.</p>
 </div>
 <div class="paragraph">
-<div class="title">Procedure</div>
+<div class="title">Learn more</div>
 <p>Add a satellite source and credential to provide the information needed to scan Satellite Server. To learn more, see the following information:</p>
 </div>
 <div class="ulist">
@@ -1211,7 +1281,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>In the <strong>Credentials</strong> list, select the credential that is required to access the Satellite server for this source. If a required credential does not exist, click the <strong>Add a credential</strong> icon to open the Add Credential wizard.</p>
 </li>
 <li>
-<p>In the <strong>Connection</strong> list, select the SSL protocol to be used for a secure connection during a scan of this source. Select <strong>Disable SSL</strong> to disable secure communication during a scan of this source.</p>
+<p>In the <strong>Connection</strong> list, select the SSL protocol to be used for a secure connection during a scan of this source.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Satellite Server does not support the disabling of SSL. If you select the <strong>Disable SSL</strong> option, this option is ignored.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </li>
 <li>
 <p>If you need to upgrade the SSL validation for the Satellite server to check for a verified SSL certificate from a certificate authority, select the <strong>Verify SSL Certificate</strong> check box.</p>
@@ -1308,10 +1392,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>For a satellite scan, the connectivity and access to Satellite Server derives from basic authentication (user name and password) that is encrypted over HTTPS. By default, the satellite scan runs with certificate validation and secure communication through the SSL (Secure Sockets Layer) protocol. During source creation, you can select from several different SSL and TLS (Transport Layer Security) protocols to use for the certificate validation and secure communication.</p>
 </div>
 <div class="paragraph">
-<p>You might need to adjust the level of certificate validation to connect properly to the Satellite server during a scan. For example, your Satellite server might use a verified SSL certificate from a certificate authority. During source creation, you can upgrade SSL certificate validation to check for that certificate during the a scan of that source. Conversely, your Satellite server might use self-signed certificates. During source creation, you can leave the SSL validation at the default so that scan of that source does not check for a certificate. This choice, to leave the option at the default for a self-signed certificate, could possibly avoid scan errors.</p>
+<p>You might need to adjust the level of certificate validation to connect properly to the Satellite server during a scan. For example, your Satellite server might use a verified SSL certificate from a certificate authority. During source creation, you can upgrade SSL certificate validation to check for that certificate during a scan of that source. Conversely, your Satellite server might use self-signed certificates. During source creation, you can leave the SSL validation at the default so that scan of that source does not check for a certificate. This choice, to leave the option at the default for a self-signed certificate, could possibly avoid scan errors.</p>
 </div>
 <div class="paragraph">
-<p>You might also need to disable SSL as the method of secure communication during the scan if the Satellite server is not configured to use SSL communication for web applications. For example, your Satellite server might be configured to communicate with web applications by using HTTP with port 80. If so, then during source creation you can disable SSL communication for scans of that source.</p>
+<p>Although the option to disable SSL is currently available in the interface, Satellite Server does not support the disabling of SSL. If you select the <strong>Disable SSL</strong> option when you create a satellite source, this option is ignored.</p>
 </div>
 </div>
 </div>
@@ -1323,7 +1407,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>To run a scan on a vCenter Server deployment, you must add a source that identifies the vCenter Server server to scan. Then you must add a credential that contains the authentication data to access that server.</p>
 </div>
 <div class="paragraph">
-<div class="title">Procedure</div>
+<div class="title">Learn more</div>
 <p>Add a vcenter source and credential to provide the information needed to scan vCenter Server. To learn more, see the following information:</p>
 </div>
 <div class="ulist">
@@ -1494,7 +1578,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>For a vcenter scan, the connectivity and access to vCenter Server derives from basic authentication (user name and password) that is encrypted over HTTPS. By default, the vcenter scan runs with certificate validation and secure communication through the SSL (Secure Sockets Layer) protocol. During source creation, you can select from several different SSL and TLS (Transport Layer Security) protocols to use for the certificate validation and secure communication.</p>
 </div>
 <div class="paragraph">
-<p>You might need to adjust the level of certificate validation to connect properly to the vCenter server during a scan. For example, your vCenter server might use a verified SSL certificate from a certificate authority. During source creation, you can upgrade SSL certificate validation to check for that certificate during the a scan of that source. Conversely, your vCenter server might use self-signed certificates. During source creation, you can leave the SSL validation at the default so that scan of that source does not check for a certificate. This choice, to leave the option at the default for a self-signed certificate, could possibly avoid scan errors.</p>
+<p>You might need to adjust the level of certificate validation to connect properly to the vCenter server during a scan. For example, your vCenter server might use a verified SSL certificate from a certificate authority. During source creation, you can upgrade SSL certificate validation to check for that certificate during a scan of that source. Conversely, your vCenter server might use self-signed certificates. During source creation, you can leave the SSL validation at the default so that scan of that source does not check for a certificate. This choice, to leave the option at the default for a self-signed certificate, could possibly avoid scan errors.</p>
 </div>
 <div class="paragraph">
 <p>You might also need to disable SSL as the method of secure communication during the scan if the vCenter server is not configured to use SSL communication for web applications. For example, your vCenter server might be configured to communicate with web applications by using HTTP with port 80. If so, then during source creation you can disable SSL communication for scans of that source.</p>
@@ -1506,10 +1590,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="openblock partintro">
 <div class="content">
 <div class="paragraph">
-<p>After you add sources and credentials for the parts of your IT infrastructure that you want to scan, you can begin running scans.</p>
+<p>After you add sources and credentials for the parts of your IT infrastructure that you want to scan, you can create and run scans. When you create a scan, you can choose to scan a single source or combine multiple sources of any type. You can also choose whether to run a standard scan for products that are installed with default installation processes and locations or to run a deep scan if products might be installed with nonstandard processes or locations.</p>
 </div>
 <div class="paragraph">
-<div class="title">Procedure</div>
+<p>After a scan is created, you can run that scan multiple times. Each instance of that scan is saved as a scan job.</p>
+</div>
+<div class="paragraph">
+<div class="title">Learn more</div>
 <p>To learn more about running a standard scan that does not use deep scanning for products, see the following information:</p>
 </div>
 <div class="ulist">
@@ -1538,7 +1625,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>After you add sources and credentials for the parts of your IT infrastructure that you want to scan, you can begin running scans. In most situations, you can run a standard scan to find the environment and product data that is required to report on your Red Hat products.</p>
 </div>
 <div class="paragraph">
-<div class="title">Procedure</div>
+<div class="title">Learn more</div>
 <p>Run a standard scan to find products in standard locations. To learn more, see the following information:</p>
 </div>
 <div class="ulist">
@@ -1635,7 +1722,7 @@ The Scan wizard opens.</p>
 <div class="sect2">
 <h3 id="proc-running-new-scan-job-gui_assembly-running-managing-scans-standard-gui-ctxt">Running a new scan job</h3>
 <div class="paragraph">
-<p>After you name a scan and run it for the first time, it is added to the Scans view. You can then run a new instance of that scan, or scan job, to update the data that is gathered for that scan.</p>
+<p>After you name a scan and run it for the first time, it is added to the Scans view. You can then run a new instance of that scan, known as a scan job, to update the data that is gathered for that scan.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
@@ -1740,7 +1827,7 @@ The Scan wizard opens.</p>
 <p>After you create sources and credentials, you can create scans. A <em>scan</em> is an object that groups sources into a unit that can be inspected, or scanned, in a reproducible way. Each time that you run a saved scan, that instance is saved as a <em>scan job</em>. The output of a scan job is a <em>report</em>, the collection of facts gathered for all IT resources that are contained in that source.</p>
 </div>
 <div class="paragraph">
-<p>A scan includes at least one source and the credentials that were associated with that source at source creation time. When the scan job runs, it uses the provided credentials to contact the IT resources contained in the source and then it inspects the IT resources to gather facts about those resources for the report. You can add multiple sources to a single scan, including a combination of different types of sources into a single scan.</p>
+<p>A scan includes at least one source and the credentials that were associated with that source at source creation time. When the scan job runs, it uses the provided credentials to contact the assets contained in the source and then it inspects the assets to gather facts about those assets for the report. You can add multiple sources to a single scan, including a combination of different types of sources into a single scan.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1751,10 +1838,10 @@ The Scan wizard opens.</p>
 <div class="sect3">
 <h4 id="_scan_job_connection_and_inspection_tasks">Scan job connection and inspection tasks</h4>
 <div class="paragraph">
-<p>The first task that runs during a scan job is a connection task. The <em>connection task</em> determines the ability to connect to the source and finds the number of systems that can be inspected for the defined source. The second task that runs is an inspection task. The <em>inspection task</em> is the task that gathers data from each of the systems in the defined source to output the scan results into a report.</p>
+<p>The first task that runs during a scan job is a connection task. The <em>connection task</em> determines the ability to connect to the source and finds the number of systems that can be inspected for the defined source. The second task that runs is an inspection task. The <em>inspection task</em> is the task that gathers data from each of the reachable systems in the defined source to output the scan results into a report.</p>
 </div>
 <div class="paragraph">
-<p>If the scan is configured so that it contains several sources, then when the scan job runs, these two tasks are created for each source. First, all of the connection tasks for all of the sources run to establish connections to the sources and find the systems that can be inspected. Then all of the inspection tasks for all of the sources run to inspect the contents of the systems that are contained in the sources.</p>
+<p>If the scan is configured so that it contains several sources, then when the scan job runs, these two tasks are created for each source. First, all of the connection tasks for all of the sources run to establish connections to the sources and find the systems that can be inspected. Then all of the inspection tasks for all of the sources run to inspect the contents of the reachable systems that are contained in the sources.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1763,7 +1850,7 @@ The Scan wizard opens.</p>
 <p>When the scan job runs the connection task for a source, it attempts to connect to the network, the server for vCenter Server, or the server for Satellite. If the connection to vCenter Server or Satellite fails, then the connection task fails. For a network scan, if the network is not reachable or the credentials are invalid, the connection task reports zero (0) successful systems. If only some of the systems for a network scan are reachable, the connection task reports success on the systems that are reachable, and the connection task does not fail.</p>
 </div>
 <div class="paragraph">
-<p>You can view information about the status of the connection task in the Scans view. The row for a scan displays the connection task results as the number of successful system connections for the most recent scan job. You can also can expand the previous scan jobs to see the connection task results for a previous scan job.</p>
+<p>You can view information about the status of the connection task in the Scans view. The row for a scan displays the connection task results as the number of successful system connections for the most recent scan job. You can also expand the previous scan jobs to see the connection task results for a previous scan job.</p>
 </div>
 <div class="paragraph">
 <p>When the scan job runs the inspection task for a source, it checks the state of the connection task. If the connection task shows a failed state or if there are zero (0) successful connections, the scan job transitions to the failed state. However, if the connection task reports at least one successful connection, the inspection task continues. The results for the scan job then show success and failure data for each individual system. If the inspection task is not able to gather results from the successful systems, or if another unexpected error occurs during the inspection task, then the scan job transitions to the failed state.</p>
@@ -1779,7 +1866,7 @@ The Scan wizard opens.</p>
 <div class="sect2">
 <h3 id="con-scan-job-life-cycle-gui_assembly-running-managing-scans-standard-gui-ctxt">Scan job life cycle</h3>
 <div class="paragraph">
-<p>An individual instance of a scan, or <em>scan job</em>, moves through several states during its life cycle.</p>
+<p>A <em>scan job</em>, or individual instance of a scan, moves through several states during its life cycle.</p>
 </div>
 <div class="paragraph">
 <p>When you start a scan, a scan job is created and the scan job is in the <em>created</em> state. The scan job is then queued for processing and the scan job transitions to the <em>pending</em> state. Scan jobs run serially, in the order that they are started.</p>
@@ -1800,10 +1887,10 @@ The Scan wizard opens.</p>
 <p>After you add sources and credentials for the parts of your IT infrastructure that you want to scan, you can begin running scans. In a few situations, running standard scans is not sufficient to find the environment and product data that is required to report on your Red Hat products.</p>
 </div>
 <div class="paragraph">
-<p>By default, Quipucords searches for and fingerprints products by using known metadata that relates to those products. However, it is possible that you have installed these products with a process or in an installation location that makes the search and fingerprinting algorithms less effective. In that case, you need to use deep scanning to find those products in more locations than the locations that are searched in a standard scan.</p>
+<p>By default, Quipucords searches for and fingerprints products by using known metadata that relates to those products. However, it is possible that you have installed these products with a process or in an installation location that makes the search and fingerprinting algorithms less effective. In that case, you need to use deep scanning to find those products.</p>
 </div>
 <div class="paragraph">
-<div class="title">Procedure</div>
+<div class="title">Learn more</div>
 <p>Run a deep scan to find products in nonstandard locations. To learn more, see the following information:</p>
 </div>
 <div class="ulist">
@@ -1845,7 +1932,7 @@ The Scan wizard opens.</p>
 <div class="sect2">
 <h3 id="proc-running-scans-deep-gui_assembly-running-managing-scans-deep-gui-ctxt">Running scans with deep scanning</h3>
 <div class="paragraph">
-<p>You can run a new scan from the Sources view. You can run a scan for a single source or select multiple sources to combine into a single scan. As part of scan configuration, you might choose to use the deep scanning process to search for products in nonstandard locations.</p>
+<p>You can run a new scan from the Sources view. You can run a scan for a single source or select multiple sources to combine into a single scan. As part of the scan configuration, you might choose to use the deep scanning process to search for products in nonstandard locations.</p>
 </div>
 <div class="paragraph">
 <p>The deep scanning process uses the <code>find</code> command, so the search process could be CPU resource intensive for the systems that are being scanned. Therefore, you should use discretion when selecting a deep scan for systems that require continuous availability, such as production systems.</p>
@@ -1913,7 +2000,7 @@ The Scan wizard opens.</p>
 <div class="sect2">
 <h3 id="proc-running-new-scan-job-gui_assembly-running-managing-scans-deep-gui-ctxt">Running a new scan job</h3>
 <div class="paragraph">
-<p>After you name a scan and run it for the first time, it is added to the Scans view. You can then run a new instance of that scan, or scan job, to update the data that is gathered for that scan.</p>
+<p>After you name a scan and run it for the first time, it is added to the Scans view. You can then run a new instance of that scan, known as a scan job, to update the data that is gathered for that scan.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
@@ -2018,7 +2105,7 @@ The Scan wizard opens.</p>
 <p>After you create sources and credentials, you can create scans. A <em>scan</em> is an object that groups sources into a unit that can be inspected, or scanned, in a reproducible way. Each time that you run a saved scan, that instance is saved as a <em>scan job</em>. The output of a scan job is a <em>report</em>, the collection of facts gathered for all IT resources that are contained in that source.</p>
 </div>
 <div class="paragraph">
-<p>A scan includes at least one source and the credentials that were associated with that source at source creation time. When the scan job runs, it uses the provided credentials to contact the IT resources contained in the source and then it inspects the IT resources to gather facts about those resources for the report. You can add multiple sources to a single scan, including a combination of different types of sources into a single scan.</p>
+<p>A scan includes at least one source and the credentials that were associated with that source at source creation time. When the scan job runs, it uses the provided credentials to contact the assets contained in the source and then it inspects the assets to gather facts about those assets for the report. You can add multiple sources to a single scan, including a combination of different types of sources into a single scan.</p>
 </div>
 </div>
 <div class="sect2">
@@ -2029,10 +2116,10 @@ The Scan wizard opens.</p>
 <div class="sect3">
 <h4 id="_scan_job_connection_and_inspection_tasks_2">Scan job connection and inspection tasks</h4>
 <div class="paragraph">
-<p>The first task that runs during a scan job is a connection task. The <em>connection task</em> determines the ability to connect to the source and finds the number of systems that can be inspected for the defined source. The second task that runs is an inspection task. The <em>inspection task</em> is the task that gathers data from each of the systems in the defined source to output the scan results into a report.</p>
+<p>The first task that runs during a scan job is a connection task. The <em>connection task</em> determines the ability to connect to the source and finds the number of systems that can be inspected for the defined source. The second task that runs is an inspection task. The <em>inspection task</em> is the task that gathers data from each of the reachable systems in the defined source to output the scan results into a report.</p>
 </div>
 <div class="paragraph">
-<p>If the scan is configured so that it contains several sources, then when the scan job runs, these two tasks are created for each source. First, all of the connection tasks for all of the sources run to establish connections to the sources and find the systems that can be inspected. Then all of the inspection tasks for all of the sources run to inspect the contents of the systems that are contained in the sources.</p>
+<p>If the scan is configured so that it contains several sources, then when the scan job runs, these two tasks are created for each source. First, all of the connection tasks for all of the sources run to establish connections to the sources and find the systems that can be inspected. Then all of the inspection tasks for all of the sources run to inspect the contents of the reachable systems that are contained in the sources.</p>
 </div>
 </div>
 <div class="sect3">
@@ -2041,7 +2128,7 @@ The Scan wizard opens.</p>
 <p>When the scan job runs the connection task for a source, it attempts to connect to the network, the server for vCenter Server, or the server for Satellite. If the connection to vCenter Server or Satellite fails, then the connection task fails. For a network scan, if the network is not reachable or the credentials are invalid, the connection task reports zero (0) successful systems. If only some of the systems for a network scan are reachable, the connection task reports success on the systems that are reachable, and the connection task does not fail.</p>
 </div>
 <div class="paragraph">
-<p>You can view information about the status of the connection task in the Scans view. The row for a scan displays the connection task results as the number of successful system connections for the most recent scan job. You can also can expand the previous scan jobs to see the connection task results for a previous scan job.</p>
+<p>You can view information about the status of the connection task in the Scans view. The row for a scan displays the connection task results as the number of successful system connections for the most recent scan job. You can also expand the previous scan jobs to see the connection task results for a previous scan job.</p>
 </div>
 <div class="paragraph">
 <p>When the scan job runs the inspection task for a source, it checks the state of the connection task. If the connection task shows a failed state or if there are zero (0) successful connections, the scan job transitions to the failed state. However, if the connection task reports at least one successful connection, the inspection task continues. The results for the scan job then show success and failure data for each individual system. If the inspection task is not able to gather results from the successful systems, or if another unexpected error occurs during the inspection task, then the scan job transitions to the failed state.</p>
@@ -2057,7 +2144,7 @@ The Scan wizard opens.</p>
 <div class="sect2">
 <h3 id="con-scan-job-life-cycle-gui_assembly-running-managing-scans-deep-gui-ctxt">Scan job life cycle</h3>
 <div class="paragraph">
-<p>An individual instance of a scan, or <em>scan job</em>, moves through several states during its life cycle.</p>
+<p>A <em>scan job</em>, or individual instance of a scan, moves through several states during its life cycle.</p>
 </div>
 <div class="paragraph">
 <p>When you start a scan, a scan job is created and the scan job is in the <em>created</em> state. The scan job is then queued for processing and the scan job transitions to the <em>pending</em> state. Scan jobs run serially, in the order that they are started.</p>
@@ -2081,7 +2168,7 @@ The Scan wizard opens.</p>
 <p>If you choose to divide the scanning tasks for your IT infrastructure into several discrete scans, you can merge the output of those scans into a single report. Merged reports are also downloaded at the time of merging.</p>
 </div>
 <div class="paragraph">
-<div class="title">Procedure</div>
+<div class="title">Learn more</div>
 <p>To learn more about downloading reports, see the following information:</p>
 </div>
 <div class="ulist">
@@ -2113,7 +2200,7 @@ The Scan wizard opens.</p>
 <p>Reports for a scan are available in two formats, a comma-separated variable (CSV) format and a JavaScript Object Notation (JSON) format. They are also available in two content types, raw output from the scan as a details report and processed content as a deployments report.</p>
 </div>
 <div class="paragraph">
-<div class="title">Procedure</div>
+<div class="title">Learn more</div>
 <p>To learn more about merging and downloading reports, see the following information:</p>
 </div>
 <div class="ulist">
@@ -2377,7 +2464,7 @@ The Scan wizard opens.</p>
 <p>Merged reports are also downloaded at the time of merging so that you can view the data that was gathered and processed during that scan. Reports for a scan are available in two formats, a comma-separated variable (CSV) format and a JavaScript Object Notation (JSON) format. They are also available in two content types, raw output from the scan as a details report and processed content as a deployments report.</p>
 </div>
 <div class="paragraph">
-<div class="title">Procedure</div>
+<div class="title">Learn more</div>
 <p>To learn more about merging reports and downloading the merged reports, see the following information:</p>
 </div>
 <div class="ulist">
@@ -2656,7 +2743,7 @@ The Scan wizard opens.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-08-12 10:11:46 -0400
+Last updated 2019-08-19 09:46:29 -0400
 </div>
 </div>
 </body>

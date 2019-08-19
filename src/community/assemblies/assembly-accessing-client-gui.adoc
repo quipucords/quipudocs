@@ -3,13 +3,13 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-logging-in-gui_{context}"]
+[id="assembly-accessing-client-gui_{context}"]
 
-:context: assembly-logging-in-gui-ctxt
+:context: assembly-accessing-client-gui-ctxt
 
-= Logging in to {ProductNameShort}
+= Accessing the {ProductNameShort} user interface
 
-To log in...contents TBD based on whether Tom Rico provides information about a workaround for multiple users, otherwise, can only use main admin ID/pw?
+You access the {ProductNameShort} user interface through a browser connection. To use the {ProductNameShort} user interface, the system on which you want to run the user interface must be able to communicate with the system on which the {ProductNameShort} server is installed.
 
 // .Prerequisites
 // * (keeping here temporarily, but probably not using this section in this topic)
@@ -17,11 +17,19 @@ To log in...contents TBD based on whether Tom Rico provides information about a 
 // * Delete section title and bullets if the task has no required pre-requisites.
 // * Text can be a link to a pre-requisite task that the user must do before starting this task.
 
-.Procedure
+.Learn more
 
-TBD...
+To learn more about the {ProductNameShort} user interface login requirements and steps, see the following information:
+
+* xref:proc-logging-in-gui_{context}[Logging in to the {ProductNameShort} user interface]
+
+To learn more about logging out of the user interface, see the following information:
+
+* xref:proc-logging-out-gui_{context}[Logging out of the {ProductNameShort} user interface]
 
 include::modules/proc-logging-in-gui.adoc[leveloffset=+1]
+
+include::modules/proc-logging-out-gui.adoc[leveloffset=+1]
 
 
 // .Related Information

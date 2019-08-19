@@ -9,7 +9,9 @@ ifdef::context[:parent-context: {context}]
 
 = Running and managing scans
 
-After you add sources and credentials for the parts of your IT infrastructure that you want to scan, you can begin running scans.
+After you add sources and credentials for the parts of your IT infrastructure that you want to scan, you can create and run scans. When you create a scan, you can choose to scan a single source or combine multiple sources of any type. You can also choose whether to run a standard scan for products that are installed with default installation processes and locations or to run a deep scan if products might be installed with nonstandard processes or locations.
+
+After a scan is created, you can run that scan multiple times. Each instance of that scan is saved as a scan job.
 
 // .Prerequisites
 // * (keeping here temporarily, but probably not using this section in this topic)
@@ -17,7 +19,7 @@ After you add sources and credentials for the parts of your IT infrastructure th
 // * Delete section title and bullets if the task has no required pre-requisites.
 // * Text can be a link to a pre-requisite task that the user must do before starting this task.
 
-.Procedure
+.Learn more
 
 To learn more about running a standard scan that does not use deep scanning for products, see the following information:
 

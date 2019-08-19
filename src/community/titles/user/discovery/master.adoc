@@ -8,7 +8,7 @@ include::attributes/attributes-discovery.adoc[]
 // Contents
 include::assemblies/assembly-about-common.adoc[]
 
-include::assemblies/assembly-logging-in-gui.adoc[]
+include::assemblies/assembly-accessing-client-gui.adoc[]
 
 include::assemblies/assembly-adding-sources-creds-gui-main.adoc[]
 

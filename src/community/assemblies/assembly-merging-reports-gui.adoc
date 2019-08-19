@@ -18,7 +18,7 @@ Merged reports are also downloaded at the time of merging so that you can view t
 // * Delete section title and bullets if the task has no required pre-requisites.
 // * Text can be a link to a pre-requisite task that the user must do before starting this task.
 
-.Procedure
+.Learn more
 
 To learn more about merging reports and downloading the merged reports, see the following information:
 

@@ -8,7 +8,7 @@
 
 After you create sources and credentials, you can create scans. A _scan_ is an object that groups sources into a unit that can be inspected, or scanned, in a reproducible way. Each time that you run a saved scan, that instance is saved as a _scan job_. The output of a scan job is a _report_, the collection of facts gathered for all IT resources that are contained in that source.
 
-A scan includes at least one source and the credentials that were associated with that source at source creation time. When the scan job runs, it uses the provided credentials to contact the IT resources contained in the source and then it inspects the IT resources to gather facts about those resources for the report. You can add multiple sources to a single scan, including a combination of different types of sources into a single scan.
+A scan includes at least one source and the credentials that were associated with that source at source creation time. When the scan job runs, it uses the provided credentials to contact the assets contained in the source and then it inspects the assets to gather facts about those assets for the report. You can add multiple sources to a single scan, including a combination of different types of sources into a single scan.
 
 // .Additional resources
 // * A bulleted list of links to other material closely related to the contents of the procedure module.
