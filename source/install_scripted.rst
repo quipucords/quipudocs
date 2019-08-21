@@ -4,13 +4,15 @@ The scripted installation runs an installer that uses Ansible to install the com
 
 Obtaining the Installer
 ^^^^^^^^^^^^^^^^^^^^^^^
-1. Download the installer by entering the following command::
+1. Download & Install the quipucords installer rpm.
 
-    # curl -k -O -sSL https://github.com/quipucords/quipucords-installer/releases/latest/download/quipucords_install.tar.gz
+- RHEL & CentOS 6::
 
-2. Extract the installer by entering the following command::
+    # yum install -y https://github.com/quipucords/quipucords-installer/releases/latests/download/quipucords_installer.el6.noarch.rpm
 
-    # tar -xvzf quipucords_install.tar.gz
+- RHEL & CentOS 7::
+
+    # yum install -y https://github.com/quipucords/quipucords-installer/releases/latests/download/quipucords_installer.el7.noarch.rpm
 
 Running the Installer
 ^^^^^^^^^^^^^^^^^^^^^
@@ -24,13 +26,9 @@ Installing with Internet Connectivity
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If you choose the internet connectivity option, use the following steps to run the installer.
 
-1. Change to the installer directory by entering the following command::
+1. Start the installation by entering the following command. Alternatively, enter the following command with options as described in `Installation Options <install.html#install-opts>`_::
 
-    # cd install/
-
-2. Start the installation by entering the following command. Alternatively, enter the following command with options as described in `Installation Options <install.html#install-opts>`_::
-
-    # ./install.sh
+    # quipucords-installer
 
 The output appears similar to the following example::
 
@@ -65,17 +63,16 @@ The Quipucords server requires a Postgres Docker image.  You must build the Dock
 
 After the required packages have been collected, they will need to be transferred to the machine where the Quipucords server will be installed.
 
-1. Change to the installer directory by entering following command::
+1. Create a ``packages`` directory to use to install the downloaded packages by entering the following command::
 
-    # cd install/
+    # mkdir -p /usr/{lib}/quipucords-installer-{x.y.z}/install/packages
 
-2. Create a ``packages`` directory to use to install the downloaded packages by entering the following command::
+- ``{lib}`` is your library version either lib or lib64
+- ``{x.y.z`` is the version of the quipucords-installer rpm
 
-    # mkdir packages
+2. Move the downloaded packages into the ``packages`` directory by entering the following command::
 
-3. Move the downloaded packages into the ``packages`` directory by entering the following command::
-
-    # mv /path/to/package ./packages/
+    # mv /path/to/package /usr/{lib}/quipucords-installer-{x.y.z}/install/packages
 
 Offline Dependencies:
 +++++++++++++++++++++
@@ -97,7 +94,7 @@ The following associated dependencies must be installed onto the offline machine
 
 Start the offline installation by entering the following command. Alternatively, enter the following command with options as described in `Installation Options`_::
 
-    # ./install.sh -e install_offline=true
+    # quipucords-installer -e install_offline=true
 
 The output appears similar to the following example::
 
@@ -110,7 +107,7 @@ Installation Options
 ~~~~~~~~~~~~~~~~~~~~
 The installer has various options, each of which has a default value. You can either run the installer with no options to use all the default values, or provide values for one or more of these options. You can pass values for these options by using the ``-e`` flag when you run the command to start the installer, as shown in the following example::
 
-    # ./install.sh -e option1=value1 -e option2=value2 ...
+    # quipucords-installer -e option1=value1 -e option2=value2 ...
 
 Options:
  - **install_offline**
@@ -137,15 +134,15 @@ Options:
     - Contains a ``true`` or ``false`` value. Defaults to ``true``. Supply ``false`` to install without opening the server port in the firewall. The installation script must run with elevated privileges to open the server port.
  - **server_name**
     - Contains the name for the Quipucords server. Defaults to ``quipucords``.
- - **QPC_SERVER_TIMEOUT**
+ - **dbms_user**
+    - Specifies the database user for postgres. Defaults to ``postgres``.
+ - **dbms_password**
+    - Specifies the database password for postgres. Defaults to ``password``.
+ - **server_http_timeout**
     - Contains the HTTP timeout length for the Quipucords server. Defaults to ``120``.
- - **QPC_DBMS_USER**
-    - (Optional) Specifies the database user for postgres. Defaults to ``postgres``.
- - **QPC_DBMS_PASSWORD**
-    - (Optional) Specifies the database password for postgres. Defaults to ``password``.
- - **NETWORK_INSPECT_JOB_TIMEOUT**
-    - (Optional) Specifies the network inspect scan timeout in seconds. Defaults to ``10800`` (3 hours).
- - **NETWORK_CONNECT_JOB_TIMEOUT**
-    - (Optional) Specifies the network connect scan timeout in seconds. Defaults to ``600`` (10 minutes).
- - **ANSIBLE_LOG_LEVEL**
-    - (Optional) Specifiy the level of log output by ansible. Defaults to ``0`` which is no logs.
+ - **inspect_job_timeout**
+    - Specifies the network inspect scan timeout in seconds. Defaults to ``10800`` (3 hours).
+ - **connect_job_timeout**
+    - Specifies the network connect scan timeout in seconds. Defaults to ``600`` (10 minutes).
+ - **ansible_log_level**
+    - Specifies the level of log output by ansible. Defaults to ``0`` which is no logs.
