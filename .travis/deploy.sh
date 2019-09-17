@@ -8,7 +8,7 @@
   YELLOW="\e[33m"
   NOCOLOR="\e[39m"
 
-  if [[ $REPO != *"$TRAVIS_REPO_SLUG"* ]]]; then
+  if [[ $REPO != *"$TRAVIS_REPO_SLUG"* ]]; then
     echo -e "${YELLOW}Exiting early, not master repository${NOCOLOR}"
     exit 0;
   fi

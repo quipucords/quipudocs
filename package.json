@@ -17,13 +17,13 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "build": "run-s -l build:* test",
+    "build": "run-s -l build:*; run-s test",
     "build:gui": "sh ./scripts/build.gui.sh",
     "build:gh": "sh ./scripts/build.gh.sh",
     "build:locale": "node ./scripts/build.locale.js",
-    "deploy": "sh ./.travis/deploy.sh",
+    "deploy": "bash ./.travis/deploy.sh",
     "start": "sh ./scripts/dev.localRun.sh -s ./src/community/titles/user/qpc/master.adoc -o user_qpc.html -s ./src/community/titles/user/discovery/master.adoc -o user_discovery.html -s ./src/community/titles/install/qpc/master.adoc -o install_qpc.html -s ./src/community/titles/install/discovery/master.adoc -o install_discovery.html",
-    "test": "run-s test:dist test:html test:integration",
+    "test": "run-s -l test:dist test:html test:integration",
     "test:lint": "eslint --ext=json --ext=js ./src/ea ./scripts;",
     "test:dist": "eslint --ext=json --ext=js ./dist",
     "test:html": "htmlhint ./dist ./docs",
