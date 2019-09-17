@@ -7,10 +7,9 @@ parseAsciidoc()
 {
   local DIR=$1
   local OUTPUT=$2
-  local OPTS=$3
-  local ADOC="${4:-master.adoc}"
+  local ADOC="${3:-master.adoc}"
 
-  asciidoctor -v --failure-level error -S safe -d book -B $DIR -o $OUTPUT "$DIR/$ADOC" $OPTS
+  asciidoctor -v --failure-level error -S safe -d book -B $DIR -o $OUTPUT "$DIR/$ADOC"
 }
 #
 #
