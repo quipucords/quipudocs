@@ -12,3 +12,6 @@ jobs:
 env:
   global:
     - REPO="git@github.com:quipucords/quipudocs"
+    - BRANCH="dev"
+    - EMAIL="quipucords@redhat.com"
+    - USER="Quipucords CI"
