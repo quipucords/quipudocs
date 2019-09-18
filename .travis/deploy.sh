@@ -42,7 +42,7 @@
 
     git add -f ./dist/*
     git add -f ./docs/*
-    git commit -m "chore(build): deploy"
+    git commit -m "chore(build): deploy" -m "[skip ci]"
     git push ssh-origin ${BRANCH} --quiet
 
     echo -e "${GREEN}COMPLETED Quipudocs build${NOCOLOR}"
