@@ -1,6 +1,6 @@
 Offline Scripted Installation (RHEL 7/8 and CentOS 7/8)
 -------------------------------------------------------
-The scripted installation runs a script that uses Ansible to install the command line tool, quipucords server image, and the database image. When you run the scripted installation, the server is installed and started as described in `Configuring and Starting Quipucords <install.html#config-and-start>`_. However, you can change some of the defaults used by the scripted installation with the `Installation Options <install.html#install-opts>`_.
+The scripted installation runs a script that uses Ansible to install the command line tool, quipucords server image, and the database image. When you run the scripted installation, the server is installed and started. However, you can change some of the defaults used by the scripted installation with the `Installation Options <install.html#install-opts>`_.
 
 Obtaining qpc-tools
 ^^^^^^^^^^^^^^^^^^^
