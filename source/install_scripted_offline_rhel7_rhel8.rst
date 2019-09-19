@@ -1,22 +1,22 @@
 Offline Scripted Installation (RHEL 7/8 and CentOS 7/8)
-----------------------
-The scripted installation runs an installer that uses Ansible to install the command line tool, quipucords server image, and the database image. When you run the scripted installation, the server is installed and started as described in `Configuring and Starting Quipucords <install.html#config-and-start>`_. However, you can change some of the defaults used by the scripted installation with the `Installation Options <install.html#install-opts>`_.
+-------------------------------------------------------
+The scripted installation runs a script that uses Ansible to install the command line tool, quipucords server image, and the database image. When you run the scripted installation, the server is installed and started as described in `Configuring and Starting Quipucords <install.html#config-and-start>`_. However, you can change some of the defaults used by the scripted installation with the `Installation Options <install.html#install-opts>`_.
 
-Obtaining the Installer
-^^^^^^^^^^^^^^^^^^^^^^^
-1. Download & Install the quipucords installer rpm.
+Obtaining qpc-tools
+^^^^^^^^^^^^^^^^^^^
+1. Download & Install the qpc-tools rpm.
 
 - RHEL & CentOS 7::
 
-    # yum install -y https://github.com/quipucords/qpc-tools/releases/latests/download/quipucords_installer.el7.noarch.rpm
+    # yum install -y https://github.com/quipucords/qpc-tools/releases/latests/download/qpc_tools.el7.noarch.rpm
 
 - RHEL & CentOS 8::
 
-    # yum install -y https://github.com/quipucords/qpc-tools/releases/latests/download/quipucords_installer.el8.noarch.rpm
+    # yum install -y https://github.com/quipucords/qpc-tools/releases/latests/download/qpc_tools.el8.noarch.rpm
 
 
 Offline Dependencies
-^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 The following associated dependencies must be installed onto the offline machine before the installation script can be executed.
 
@@ -34,7 +34,7 @@ The following associated dependencies must be installed onto the offline machine
 
 Installing
 ^^^^^^^^^^
-If you choose the offline option to run the installer, you will need to obtain the following packages on a machine with internet connectivity.
+If you choose to install offline, you will need to obtain the following packages on a machine with internet connectivity.
 
 **Quipucords Server Package:**
 
@@ -89,7 +89,7 @@ The output appears similar to the following example::
 
 Installation Options
 ~~~~~~~~~~~~~~~~~~~~
-The installer has various options, each of which has a default value. You can either run the installer with no options to use all the default values, or provide values for one or more of these options. You can pass values for these options by using the ``-e`` flag when you run the command to start the installer, as shown in the following example::
+The ``qpc-tools --install`` feature has various options, each of which has a default value. You can either install with no options to use all the default values, or provide values for one or more of these options. You can pass values for these options by using the ``-e`` flag when you run the command to start the script, as shown in the following example::
 
     # qpc-tools --install -e option1=value1 -e option2=value2 ...
 
@@ -103,7 +103,7 @@ Options:
  - **install_cli**
     - Contains a ``true`` or ``false`` value. Defaults to ``true``. Supply ``false`` to skip the installation of the command line tool.
  - **pkg_install_dir**
-    - Contains the fully qualified path to the downloaded packages for the installer. Defaults to ``<installer>/packages/``.
+    - Contains the fully qualified path to the downloaded packages for the qpc-tools install feature. Defaults to ``<installer>/packages/``.
  - **server_install_dir**
     - Contains the fully qualified path to the installation directory for the Quipucords server. Defaults to ``~/quipucords/``.
  - **server_port**
