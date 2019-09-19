@@ -26,9 +26,7 @@ If you choose the internet connectivity option, use the following steps to insta
 
     # qpc-tools --install
 
-The output appears similar to the following example::
-
-    Installation complete.
+.. _install-opts:
 
 Installation Options
 ~~~~~~~~~~~~~~~~~~~~

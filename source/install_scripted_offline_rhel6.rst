@@ -135,11 +135,6 @@ Start the offline installation by entering the following command. Alternatively,
 
     # qpc-tools --install -e install_offline=true
 
-The output appears similar to the following example::
-
-    Installation complete.
-
-
 .. _install-opts:
 
 Installation Options
