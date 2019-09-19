@@ -24,15 +24,15 @@ If you choose the internet connectivity option, use the following steps to insta
 
 1. Start the installation by entering the following command. Alternatively, enter the following command with options as described in `Installation Options <install.html#install-opts>`_::
 
-    # qpc-tools --install
+    # qpc-tools install
 
 .. _install-opts:
 
 Installation Options
 ~~~~~~~~~~~~~~~~~~~~
-The ``qpc-tools --install`` feature has various options, each of which has a default value. You can either install with no options to use all the default values, or provide values for one or more of these options. You can pass values for these options by using the ``-e`` flag when you run the command to start the script, as shown in the following example::
+The ``qpc-tools install`` feature has various options, each of which has a default value. You can either install with no options to use all the default values, or provide values for one or more of these options. You can pass values for these options by using the ``-e`` flag when you run the command to start the script, as shown in the following example::
 
-    # qpc-tools --install -e option1=value1 -e option2=value2 ...
+    # qpc-tools install -e option1=value1 -e option2=value2 ...
 
 Options:
  - **install_offline**
