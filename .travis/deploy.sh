@@ -21,7 +21,7 @@
     exit 0;
   fi
 
-  if [[ "[DEPLOY]" != *"$TRAVIS_COMMIT_MESSAGE"* ]]]; then
+  if [[ "[DEPLOY]" != *"$TRAVIS_COMMIT_MESSAGE"* ]]; then
     echo -e "${YELLOW}Exiting early, not a deployment${NOCOLOR}"
     exit 0;
   fi
