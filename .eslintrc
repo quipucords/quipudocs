@@ -5,12 +5,14 @@
     "node": true
   },
   "plugins": [
+    "jest",
     "json",
     "node",
     "prettier"
   ],
   "extends": [
     "eslint:recommended",
+    "plugin:jest/recommended",
     "plugin:node/recommended",
     "plugin:prettier/recommended"
   ],

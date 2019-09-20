@@ -1,0 +1,10 @@
+:experimental:
+:toclevels: 1
+include::attributes/attributes-gh_pages.adoc[]
+
+[[qpc_guide]]
+= {ProductNameMedium}
+
+// Contents
+include::assemblies/assembly-landing-page-gh_pages.adoc[]
+
