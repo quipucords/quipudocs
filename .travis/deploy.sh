@@ -49,6 +49,6 @@
     exit 0;
   fi
 
-  echo -e "${YELLOW}Exiting, not master branch or build stage${NOCOLOR}"
+  echo -e "${YELLOW}Exiting, not ${BRANCH} branch or build stage${NOCOLOR}"
   exit 0;
 }
