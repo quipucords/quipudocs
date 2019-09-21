@@ -33,7 +33,7 @@ To work with the quipudocs code, begin by cloning the repository:
 ### Asciidoc
 The requirements for working with Asciidoc
   - Your system needs to be running [NodeJS version 10+](https://nodejs.org/)
-  - [Yarn 1.13+](https://yarnpkg.com) for dependency and script management
+  - [Yarn 1.16+](https://yarnpkg.com) for dependency and script management
   - and [Docker](https://docs.docker.com/engine/installation/)
 
 To work with Yarn you can use NPM, or if you're on a Mac, use [Homebrew](https://brew.sh/) to do the installation
