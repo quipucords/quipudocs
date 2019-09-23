@@ -12,7 +12,7 @@ jobs:
 env:
   global:
     - REPO="git@github.com:quipucords/quipudocs"
-    - BRANCH="dev"
     - AUTO_DEPLOY=true
+    - BRANCH="dev"
     - EMAIL="quipucords@redhat.com"
     - USER="Quipucords CI"

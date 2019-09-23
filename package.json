@@ -23,6 +23,7 @@
     "build:locale": "node ./scripts/build.locale.js",
     "deploy": "bash ./.travis/deploy.sh",
     "start": "sh ./scripts/dev.localRun.sh -s ./src/community/titles/user/qpc/master.adoc -o user_qpc.html -s ./src/community/titles/user/discovery/master.adoc -o user_discovery.html -s ./src/community/titles/install/qpc/master.adoc -o install_qpc.html -s ./src/community/titles/install/discovery/master.adoc -o install_discovery.html",
+    "start:gh": "sh ./scripts/dev.localRun.sh -s ./src/community/titles/gh_pages/master.adoc -o gh_pages.html -s ./src/community/titles/user/qpc/master.adoc -o user.html -s ./src/community/titles/install/qpc/master.adoc -o install.html",
     "test": "run-s -l test:dist test:html test:integration",
     "test:lint": "eslint --ext=json --ext=js ./src/ea ./scripts;",
     "test:dist": "eslint --ext=json --ext=js ./dist",
