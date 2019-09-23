@@ -18,13 +18,13 @@ Releases in Quipudocs are focused on tagging. Tagging a Git commit for release i
 process controlled by the overarching Quipucords release process.
 
 ## Deploying, or building, compiled documentation
-On Quipudocs deploying, or building, compiled documentation, happens at the CI level in an effort
-to remove developer error. CI still depends on being informed of when said deployment needs to happen.
+On Quipudocs deploying, or building, compiled documentation happens at the CI level in an effort
+to remove developer error.
 
 To get CI to cycle its deployment, or build, process all that's needed is to merge a pull 
 request or push a commit towards master branch on Quipudocs. From there the CI process will pick
-up on the updated branch and cycle through its process where a "deployment" commit will appear
-stating `chore(build): deploy` within the Git commit history for the related branch.
+up and where a "deployment" commit will be added stating `chore(build): deploy` within the Git 
+commit history.
 
 ### Deployment Parameters
 To affect build/deployment behavior several CI build parameters have been provided, see the [.travis file](./.travis.yml) 
@@ -55,8 +55,8 @@ The 3 affected directories are
 
 ### Integration Testing
 For Quipudocs integration testing typically happens on the CI side after the build output, but
-before the deployment push back towards the repository. The integration tests are generic written
-in order to avoid constantly updating their baseline snapshots.
+before the deployment commit. The integration tests are generically written in order to avoid 
+constantly updating the baseline snapshots.
 
 #### Run Integration tests standalone
 To run the integration tests standalone run
@@ -71,9 +71,9 @@ from the terminal run
   $ yarn test:integration-dev
   ```
 You'll be asked a list of question, choose to "update snapshots" and the process will continue.
-Next, if the snapshots updated you'll need to 
+If you choose to update the snapshots you'll need to 
 - visually check the updates to confirm the expected output
-- and check the snapshots in so the next developer has a testing baseline.
+- and Git commit the snapshots so the next developer has access to the new testing baseline.
 
 ## Workflow
 ### Use an Asciidoctor workflow with Docker for GUI documentation
