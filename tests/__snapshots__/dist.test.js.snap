@@ -12,6 +12,7 @@ Array [
 exports[`Distribution should match a specific dist file output 1`] = `
 Array [
   "",
+  "./dist/README.md",
   "./dist/index.js",
   "./dist/install/index-brand.html",
   "./dist/install/index.html",
@@ -25,6 +26,7 @@ Array [
 exports[`Distribution should match a specific docs file output 1`] = `
 Array [
   "",
+  "./docs/README.md",
   "./docs/index.html",
   "./docs/install.html",
   "./docs/user.html",

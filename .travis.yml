@@ -13,6 +13,6 @@ env:
   global:
     - REPO="git@github.com:quipucords/quipudocs"
     - AUTO_DEPLOY=true
-    - BRANCH="dev"
+    - BRANCH="master"
     - EMAIL="quipucords@redhat.com"
     - USER="Quipucords CI"
