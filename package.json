@@ -1,6 +1,6 @@
 {
   "name": "quipudocs",
-  "version": "0.0.0",
+  "version": "0.9.1",
   "description": "Locale and documentation for Quipucords.",
   "author": "Red Hat",
   "license": "GPL-3.0",
@@ -17,30 +17,34 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "build": "run-s -l build:locale build:discovery* build:qpc*",
-    "build:discovery-install": "asciidoctor -v --failure-level error -S safe -d book -B ./src/community/titles/install/discovery -o ./dist/install/index-brand.html ./src/community/titles/install/discovery/master.adoc",
-    "build:qpc-install": "asciidoctor -v --failure-level error -S safe -d book -B ./src/community/titles/install/qpc -o ./dist/install/index.html ./src/community/titles/install/qpc/master.adoc",
-    "build:discovery-user": "asciidoctor -v --failure-level error -S safe -d book -B ./src/community/titles/user/discovery -o ./dist/user/index-brand.html ./src/community/titles/user/discovery/master.adoc",
-    "build:qpc-user": "asciidoctor -v --failure-level error -S safe -d book -B ./src/community/titles/user/qpc -o ./dist/user/index.html ./src/community/titles/user/qpc/master.adoc",
-    "build:locale": "./scripts/build.locale.js",
-    "start": "./scripts/dev.docs.sh -s ./src/community/titles/user/qpc/master.adoc -o user_qpc.html -s ./src/community/titles/user/discovery/master.adoc -o user_discovery.html -s ./src/community/titles/install/qpc/master.adoc -o install_qpc.html -s ./src/community/titles/install/discovery/master.adoc -o install_discovery.html",
-    "test": "run-s -l test:*",
-    "test:ea": "eslint --ext=json ./src/ea",
-    "test:dist": "eslint --ext=json --ext=js ./dist; htmlhint ./dist",
-    "test:scripts": "eslint --ext=js ./scripts"
+    "build": "run-s -l build:*; run-s test",
+    "build:gui": "sh ./scripts/build.gui.sh",
+    "build:gh": "sh ./scripts/build.gh.sh",
+    "build:locale": "node ./scripts/build.locale.js",
+    "deploy": "bash ./.travis/deploy.sh",
+    "start": "sh ./scripts/dev.localRun.sh -s ./src/community/titles/user/qpc/master.adoc -o user_qpc.html -s ./src/community/titles/user/discovery/master.adoc -o user_discovery.html -s ./src/community/titles/install/qpc/master.adoc -o install_qpc.html -s ./src/community/titles/install/discovery/master.adoc -o install_discovery.html",
+    "start:gh": "sh ./scripts/dev.localRun.sh -s ./src/community/titles/gh_pages/master.adoc -o gh_pages.html -s ./src/community/titles/user/qpc/master.adoc -o user.html -s ./src/community/titles/install/qpc/master.adoc -o install.html",
+    "test": "run-s -l test:dist test:html test:integration",
+    "test:lint": "eslint --ext=json --ext=js ./src/ea ./scripts;",
+    "test:dist": "eslint --ext=json --ext=js ./dist",
+    "test:html": "htmlhint ./dist ./docs",
+    "test:integration": "jest --roots=./tests",
+    "test:integration-dev": "run-s build; jest ./tests/* --watchAll"
   },
   "devDependencies": {
     "@asciidoctor/cli": "^3.0.1",
     "@asciidoctor/core": "2.0.3",
-    "eslint": "^5.16.0",
+    "eslint": "^6.3.0",
     "eslint-config-node": "^4.0.0",
-    "eslint-config-prettier": "^4.3.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-jest": "^22.17.0",
     "eslint-plugin-json": "^1.4.0",
-    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "htmlhint": "^0.11.0",
-    "iso-639-1": "^2.0.5",
+    "iso-639-1": "^2.1.0",
+    "jest": "^24.9.0",
     "npm-run-all":"^4.1.5",
-    "prettier": "^1.17.1"
+    "prettier": "^1.18.2"
   }
 }

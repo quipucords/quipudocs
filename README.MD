@@ -4,24 +4,11 @@
 [![Documentation Status](https://readthedocs.org/projects/quipucords/badge/)](https://quipucords.readthedocs.io/en/latest/)
 [![Build Status](https://travis-ci.org/quipucords/quipudocs.svg?branch=master)](https://travis-ci.org/quipucords/quipudocs)
 
-# quipudocs - Documentation for Quipucords
+# Quipudocs, Documentation for Quipucords
 
-This `README` file contains information about the installation and development of quipudocs.
-
-- [Introduction to quipudocs](#intro)
-- [Development](#development)
-- [Authors](#authors)
-- [Copyright and License](#copyright)
-
-
-## <a name="intro"></a> Introduction to quipudocs
-quipudocs is `sphinx` based information documentation.
-
-
-## <a name="development"></a> Development
-
-### Read the Docs
-To work with the quipudocs code, begin by cloning the repository:
+## Read the Docs Development
+Quipudocs paired with Read the Docs is `sphinx` based information documentation. To work with the Quipudocs Read the Docs code, 
+begin by cloning the repository:
   ```
   $ git clone git@github.com:quipucords/quipudocs.git
   $ cd ./quipudocs
@@ -30,12 +17,25 @@ To work with the quipudocs code, begin by cloning the repository:
   $ make html
   ```
 
-### Asciidoc
-The requirements for working with Asciidoc
+## Asciidoc Development
+Quipudocs paired with Asciidoc leverages GUI based development tools. The requirements for working with Asciidoc
   - Your system needs to be running [NodeJS version 10+](https://nodejs.org/)
-  - [Yarn 1.13+](https://yarnpkg.com) for dependency and script management
+  - [Yarn 1.16+](https://yarnpkg.com) for dependency and script management
   - and [Docker](https://docs.docker.com/engine/installation/)
 
+### Docker & Mac
+Setting Docker up on a Mac? Install the appropriate package and you should be good to go. To check if everything installed correctly you can try these steps.
+  * At a terminal prompt type
+
+    ```
+    $ docker run hello-world
+    ```
+
+### Docker & Linux
+Setting Docker up on a Linux machine can include an additional convenience step. If you're having to prefix "sudo" in front of your Docker commands you can try these steps.
+  * [Docker postinstall documentation](https://docs.docker.com/install/linux/linux-postinstall/)
+
+### Yarn
 To work with Yarn you can use NPM, or if you're on a Mac, use [Homebrew](https://brew.sh/) to do the installation
   - NPM
     ```
@@ -47,49 +47,46 @@ To work with Yarn you can use NPM, or if you're on a Mac, use [Homebrew](https:/
     $ brew install yarn
     ```
 
+## Asciidoc Quick Start
 
-To work with the Asciidoc Help guides, begin by cloning the repository:
+### Installing
+  1. Clone the repository
+     ```
+     $ git clone https://github.com/quipucords/quipudocs.git
+     ```
+
+  1. Within the repo context, install project dependencies
+     ```
+     $ cd quipudocs && yarn
+     ```
+     
+### Viewing Asciidoctor content as HTML
+These are the contexts for running local Asciidoctor against Asciidoc files.
   ```
-  $ git clone git@github.com:quipucords/quipudocs.git
-  $ cd ./quipudocs
-  $ yarn
   $ yarn start
   ```
-
-### Build Asciidoc
-To build everything, the EA and the Asciidoc Help guides:
+Or to see GitHub pages output run 
   ```
-  $ yarn build
+  $ yarn start:gh
   ```
 
-But you can also run each Help guide build separately:
-  ```
-  $ yarn build:discovery-install
-  $ yarn build:qpc-install
-  $ yarn build:discovery-user
-  $ yarn build:qpc-user
-  ```
+For a more in-depth local run breakdown review the [contribution guidelines for workflow](./CONTRIBUTING.md#Workflow)
 
-And run the EA build separately:
-   ```
-   $ yarn build:locale
-   ```
+### Testing
+Asciidoctor requires running through its build process in order to throw process errors, therefore
+running `$ yarn start` will start up the build and testing process accordingly. All other testing is
+a basic form of linting, typically on resource files and the Asciidoctor HTML output.
 
-### Test Asciidoc
-To run basic linting checks on HTML, JSON, and JS files for the EA and Asciidoc Help guides:
-  ```
-  $ yarn test
-  ```
+For in-depth testing guidance review the [contribution guidelines for testing](./CONTRIBUTING.md#Testing)
 
-Asciidoctor contains a compiler check that processes when the build is run. We leverage this compiler check during our CI process as an additional "test".
+## Contributing
+Contributing encompasses [repository specific requirements](./CONTRIBUTING.md) and the global 
+[Quipucords guidelines](https://github.com/quipucords/quipucords/blob/master/CONTRIBUTING.md).
 
-## <a name="authors"></a> Authors
+## Authors
 Authorship and current maintainer information can be found in [AUTHORS](AUTHORS.MD).
 
-
-## <a name="copyright"></a> Copyright and License
+## Copyright and License
 Copyright 2017-2019, Red Hat, Inc.
 
-
-quipudocs is released under the [GNU Public License version 3](LICENSE).
-
+Quipudocs is released under the [GNU Public License version 3](LICENSE).

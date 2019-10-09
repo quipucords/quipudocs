@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.9">
-<title>Installing and Configuring product discovery</title>
+<title>Quipucords</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -435,95 +435,38 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 </head>
-<body id="discovery_install_guide" class="book">
+<body id="qpc_guide" class="book">
 <div id="header">
-<h1>Installing and Configuring product discovery</h1>
+<h1>Quipucords</h1>
 </div>
 <div id="content">
-<h1 id="assembly-install-scripted-online-discovery_{context}" class="sect0">Installing&#8230;&#8203;.scripted&#8230;&#8203;online&#8230;&#8203;.discovery</h1>
-<div class="openblock partintro">
-<div class="content">
-<div class="paragraph">
-<p>The product discovery tool is delivered in two parts, a command line tool as an RPM package and a server as container images.</p>
-</div>
-<div class="paragraph">
-<p>The automated installation runs an installer that uses Ansible to install the command line tool, the server image, and the database image. When you run the automated installation, the server is installed and started as described in (&#8230;&#8203;.link to the default config description topic from Configuring and Starting Quipucords&#8230;&#8203;). However, you can change some of the defaults used by the automated installation with the (&#8230;&#8203;.link to Installation Options topic&#8230;&#8203;.).</p>
-</div>
-<div class="paragraph">
-<div class="title">Prerequisites</div>
-<p>For more information about discovery prerequisites, see (&#8230;&#8203;link to prereqs topic&#8230;&#8203;.).</p>
-</div>
-<div class="paragraph">
-<div class="title">Procedure</div>
-<p>TEXT To &#8230;&#8203;do install&#8230;&#8203;do these interesting things&#8230;&#8203;.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="install-scripted-online-qpc_assembly-install-scripted-online-discovery-ctxt">Installing discovery with the automated installer and internet connectivity</h2>
+<div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
-<p>The simplest installation method is&#8230;&#8203;..</p>
+<div id="assembly-landing-page-gh_pages_{context}" class="paragraph">
+<p>To learn more about the purpose, benefits, and characteristics of Quipucords, see the following information:</p>
 </div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
+<div class="ulist">
+<div class="title">Install</div>
+<ul>
 <li>
-<p>Review and install the prerequisites for discovery. For more information about the prerequisites, see (&#8230;&#8203;link to Prereqs topic&#8230;&#8203;).</p>
+<p><a href="install.html">Installing and Configuring Quipucords</a></p>
 </li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Using</div>
+<ul>
 <li>
-<p>Download the installer by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre># curl -k -O -sSL https://github.com/quipucords/quipucords-installer/releases/latest/download/quipucords_install.tar.gz</pre>
-</div>
-</div>
+<p><a href="user.html">Using Quipucords</a></p>
 </li>
-<li>
-<p>Extract the installer by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre># tar -xvzf quipucords_install.tar.gz</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Change to the installer directory by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre># cd install/</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Start the installation by entering the following command. Alternatively, enter the following command with options. For more information, see (&#8230;&#8203;link to Installation options topic&#8230;&#8203;):</p>
-<div class="listingblock">
-<div class="content">
-<pre># ./install.sh</pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<div class="title">Verification steps</div>
-<ol class="arabic">
-<li>
-<p>The output appears similar to the following example:</p>
-<div class="listingblock">
-<div class="content">
-<pre>Installation complete.</pre>
-</div>
-</div>
-</li>
-</ol>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-09-14 11:54:19 -0400
+Last updated 2019-09-20 17:24:36 -0400
 </div>
 </div>
 </body>

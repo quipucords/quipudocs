@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.9">
-<title>Using product discovery</title>
+<title>Using Quipucords</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -435,68 +435,198 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 </head>
-<body id="discovery_user_guide" class="book">
+<body id="quipucords_user_guide" class="book toc2 toc-left">
 <div id="header">
-<h1>Using product discovery</h1>
+<h1>Using Quipucords</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel0">
+<li><a href="#assembly-about-common_{context}">About Quipucords</a>
+<ul class="sectlevel1">
+<li><a href="#con-what-is-prod-common_assembly-about-common-ctxt">What is Quipucords?</a></li>
+<li><a href="#ref-what-prods-find-common_assembly-about-common-ctxt">What products does Quipucords find?</a></li>
+</ul>
+</li>
+<li><a href="#assembly-accessing-client-gui_{context}">Accessing the Quipucords user interface</a>
+<ul class="sectlevel1">
+<li><a href="#proc-logging-in-gui_assembly-accessing-client-gui-ctxt">Logging in to the Quipucords user interface</a></li>
+<li><a href="#proc-logging-out-gui_assembly-accessing-client-gui-ctxt">Logging out of the Quipucords user interface</a></li>
+</ul>
+</li>
+<li><a href="#assembly-adding-sources-creds-gui-main_{context}">Adding sources and credentials</a>
+<ul class="sectlevel1">
+<li><a href="#assembly-adding-net-sources-creds-gui_assembly-adding-sources-creds-gui-main-ctxt">Adding network sources and credentials</a>
+<ul class="sectlevel2">
+<li><a href="#proc-adding-net-sources-gui_assembly-adding-net-sources-creds-gui-ctxt">Adding network sources</a></li>
+<li><a href="#proc-adding-net-creds-gui_assembly-adding-net-sources-creds-gui-ctxt">Adding network credentials</a></li>
+<li><a href="#con-about-sources-creds-gui_assembly-adding-net-sources-creds-gui-ctxt">About sources and credentials</a></li>
+<li><a href="#con-net-auth-gui_assembly-adding-net-sources-creds-gui-ctxt">Network authentication</a>
+<ul class="sectlevel3">
+<li><a href="#ref-commands-used-net-scans-gui_assembly-adding-net-sources-creds-gui-ctxt">Commands that are used in scans of remote network assets</a>
+<ul class="sectlevel4">
+<li><a href="#_basic_commands_that_do_not_need_elevated_privileges">Basic commands that do not need elevated privileges</a></li>
+<li><a href="#_commands_that_need_elevated_privileges">Commands that need elevated privileges</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#assembly-adding-sat-sources-creds-gui_assembly-adding-sources-creds-gui-main-ctxt">Adding satellite sources and credentials</a>
+<ul class="sectlevel2">
+<li><a href="#proc-adding-sat-sources-gui_assembly-adding-sat-sources-creds-gui-ctxt">Adding satellite sources</a></li>
+<li><a href="#proc-adding-sat-creds-gui_assembly-adding-sat-sources-creds-gui-ctxt">Adding satellite credentials</a></li>
+<li><a href="#con-about-sources-creds-gui_assembly-adding-sat-sources-creds-gui-ctxt">About sources and credentials</a></li>
+<li><a href="#con-sat-auth-gui_assembly-adding-sat-sources-creds-gui-ctxt">Satellite Server authentication</a></li>
+</ul>
+</li>
+<li><a href="#assembly-adding-vcent-sources-creds-gui_assembly-adding-sources-creds-gui-main-ctxt">Adding vcenter sources and credentials</a>
+<ul class="sectlevel2">
+<li><a href="#proc-adding-vcent-sources-gui_assembly-adding-vcent-sources-creds-gui-ctxt">Adding vcenter sources</a></li>
+<li><a href="#proc-adding-vcent-creds-gui_assembly-adding-vcent-sources-creds-gui-ctxt">Adding vcenter credentials</a></li>
+<li><a href="#con-about-sources-creds-gui_assembly-adding-vcent-sources-creds-gui-ctxt">About sources and credentials</a></li>
+<li><a href="#con-vcent-auth-gui_assembly-adding-vcent-sources-creds-gui-ctxt">vCenter Server authentication</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#assembly-running-managing-scans-gui-main_assembly-adding-sources-creds-gui-main-ctxt">Running and managing scans</a>
+<ul class="sectlevel1">
+<li><a href="#assembly-running-managing-scans-standard-gui_assembly-running-managing-scans-gui-main-ctxt">Running and managing standard scans</a>
+<ul class="sectlevel2">
+<li><a href="#proc-running-scans-standard-gui_assembly-running-managing-scans-standard-gui-ctxt">Running standard scans</a></li>
+<li><a href="#proc-running-new-scan-job-gui_assembly-running-managing-scans-standard-gui-ctxt">Running a new scan job</a></li>
+<li><a href="#proc-pause-resume-cancel-scans-gui_assembly-running-managing-scans-standard-gui-ctxt">Pausing, resuming, and canceling scans</a></li>
+<li><a href="#con-about-scans-scan-jobs-gui_assembly-running-managing-scans-standard-gui-ctxt">About scans and scan jobs</a></li>
+<li><a href="#con-scan-job-processing-gui_assembly-running-managing-scans-standard-gui-ctxt">Scan job processing</a>
+<ul class="sectlevel3">
+<li><a href="#_scan_job_connection_and_inspection_tasks">Scan job connection and inspection tasks</a></li>
+<li><a href="#_how_these_tasks_are_processed">How these tasks are processed</a></li>
+</ul>
+</li>
+<li><a href="#con-scan-job-life-cycle-gui_assembly-running-managing-scans-standard-gui-ctxt">Scan job life cycle</a></li>
+</ul>
+</li>
+<li><a href="#assembly-running-managing-scans-deep-gui_assembly-running-managing-scans-gui-main-ctxt">Running and managing deep scans</a>
+<ul class="sectlevel2">
+<li><a href="#proc-running-scans-deep-gui_assembly-running-managing-scans-deep-gui-ctxt">Running scans with deep scanning</a></li>
+<li><a href="#proc-running-new-scan-job-gui_assembly-running-managing-scans-deep-gui-ctxt">Running a new scan job</a></li>
+<li><a href="#proc-pause-resume-cancel-scans-gui_assembly-running-managing-scans-deep-gui-ctxt">Pausing, resuming, and canceling scans</a></li>
+<li><a href="#con-about-scans-scan-jobs-gui_assembly-running-managing-scans-deep-gui-ctxt">About scans and scan jobs</a></li>
+<li><a href="#con-scan-job-processing-gui_assembly-running-managing-scans-deep-gui-ctxt">Scan job processing</a>
+<ul class="sectlevel3">
+<li><a href="#_scan_job_connection_and_inspection_tasks_2">Scan job connection and inspection tasks</a></li>
+<li><a href="#_how_these_tasks_are_processed_2">How these tasks are processed</a></li>
+</ul>
+</li>
+<li><a href="#con-scan-job-life-cycle-gui_assembly-running-managing-scans-deep-gui-ctxt">Scan job life cycle</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#assembly-merging-downloading-reports-gui-main-assembly-running-managing-scans-gui-main-ctxt">Merging and downloading reports</a>
+<ul class="sectlevel1">
+<li><a href="#assembly-downloading-reports-gui_assembly-merging-downloading-reports-gui-main-ctxt">Downloading reports</a>
+<ul class="sectlevel2">
+<li><a href="#proc-downloading-reports-gui_assembly-downloading-reports-gui-ctxt">Downloading reports</a></li>
+<li><a href="#con-how-reports-created-gui_assembly-downloading-reports-gui-ctxt">How reports are created</a>
+<ul class="sectlevel3">
+<li><a href="#_facts_and_fingerprints">Facts and fingerprints</a></li>
+<li><a href="#_system_deduplication_and_merging">System deduplication and merging</a>
+<ul class="sectlevel4">
+<li><a href="#_system_deduplication">System deduplication</a></li>
+<li><a href="#_system_merging">System merging</a></li>
+</ul>
+</li>
+<li><a href="#_system_post_processing">System post-processing</a></li>
+<li><a href="#_report_creation">Report creation</a></li>
+<li><a href="#ref-fingerprint-example-gui_assembly-downloading-reports-gui-ctxt">A fingerprint example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#assembly-merging-reports-gui_assembly-merging-downloading-reports-gui-main-ctxt">Merging reports</a>
+<ul class="sectlevel2">
+<li><a href="#proc-merging-reports-gui_assembly-merging-reports-gui-ctxt">Merging reports</a></li>
+<li><a href="#con-how-reports-created-gui_assembly-merging-reports-gui-ctxt">How reports are created</a>
+<ul class="sectlevel3">
+<li><a href="#_facts_and_fingerprints_2">Facts and fingerprints</a></li>
+<li><a href="#_system_deduplication_and_merging_2">System deduplication and merging</a>
+<ul class="sectlevel4">
+<li><a href="#_system_deduplication_2">System deduplication</a></li>
+<li><a href="#_system_merging_2">System merging</a></li>
+</ul>
+</li>
+<li><a href="#_system_post_processing_2">System post-processing</a></li>
+<li><a href="#_report_creation_2">Report creation</a></li>
+<li><a href="#ref-fingerprint-example-gui_assembly-merging-reports-gui-ctxt">A fingerprint example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 <div id="content">
-<h1 id="assembly-about-common_{context}" class="sect0">About discovery</h1>
+<h1 id="assembly-about-common_{context}" class="sect0">About Quipucords</h1>
 <div class="openblock partintro">
 <div class="content">
 <div class="paragraph">
-<p>The product discovery tool is designed to help users collect data about their usage of specific Red Hat software. By using discovery, users can reduce the amount of time and effort that is required to calculate and report usage of those Red Hat products.</p>
+<p>The Quipucords tool is designed to help users collect data about their usage of specific Red Hat software. By using Quipucords, users can reduce the amount of time and effort that is required to calculate and report usage of those Red Hat products.</p>
 </div>
 <div class="paragraph">
 <div class="title">Learn more</div>
-<p>To learn more about the purpose, benefits, and characteristics of discovery, see the following information:</p>
+<p>To learn more about the purpose, benefits, and characteristics of Quipucords, see the following information:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#con-what-is-prod-common_assembly-about-common-ctxt">What is discovery?</a></p>
+<p><a href="#con-what-is-prod-common_assembly-about-common-ctxt">What is Quipucords?</a></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>To learn more about the products and product versions that discovery can find and inspect, see the following information:</p>
+<p>To learn more about the products and product versions that Quipucords can find and inspect, see the following information:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#ref-what-prods-find-common_assembly-about-common-ctxt">What products does discovery find?</a></p>
+<p><a href="#ref-what-prods-find-common_assembly-about-common-ctxt">What products does Quipucords find?</a></p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="con-what-is-prod-common_assembly-about-common-ctxt">What is discovery?</h2>
+<h2 id="con-what-is-prod-common_assembly-about-common-ctxt">What is Quipucords?</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The product discovery tool, also known as discovery, is an inspection and reporting tool. It is designed to find, identify, and report environment data, or facts, such as the number of physical and virtual systems on a network, their operating systems, and other configuration data. In addition, it is designed to find, identify, and report more detailed facts for some versions of key Red Hat packages and products for the IT resources in that network.</p>
+<p>The Quipucords tool, also known as Quipucords, is an inspection and reporting tool. It is designed to find, identify, and report environment data, or facts, such as the number of physical and virtual systems on a network, their operating systems, and other configuration data. In addition, it is designed to find, identify, and report more detailed facts for some versions of key Red Hat packages and products for the IT resources in that network.</p>
 </div>
 <div class="paragraph">
 <p>The ability to inspect the software and systems that are running on your network improves your ability to understand and report on your entitlement usage. Ultimately, this inspection and reporting process is part of the larger system administration task of managing your inventories.</p>
 </div>
 <div class="paragraph">
-<p>The product discovery tool requires the configuration of two basic structures to access IT resources and run the inspection process. A <em>credential</em> contains user access data, such as the user name and password or SSH key of a user with sufficient authority to run the inspection process on a particular source or some of the assets on that source. A <em>source</em> contains data about a single asset or multiple assets that are to be inspected. These assets can be physical machines, virtual machines, or containers, identified as host names, IP addresses, IP ranges, or subnets. These assets can also be a systems management solution such as vCenter Server or Red Hat Satellite Server.</p>
+<p>The Quipucords tool requires the configuration of two basic structures to access IT resources and run the inspection process. A <em>credential</em> contains user access data, such as the user name and password or SSH key of a user with sufficient authority to run the inspection process on a particular source or some of the assets on that source. A <em>source</em> contains data about a single asset or multiple assets that are to be inspected. These assets can be physical machines, virtual machines, or containers, identified as host names, IP addresses, IP ranges, or subnets. These assets can also be a systems management solution such as vCenter Server or Red Hat Satellite Server.</p>
 </div>
 <div class="paragraph">
-<p>You can save multiple credentials and sources to use with discovery in various combinations as you run inspection processes, or <em>scans</em>. When you have completed a scan, you can access these facts in the output as a collection of formatted data, or <em>report</em>, to review the results.</p>
+<p>You can save multiple credentials and sources to use with Quipucords in various combinations as you run inspection processes, or <em>scans</em>. When you have completed a scan, you can access these facts in the output as a collection of formatted data, or <em>report</em>, to review the results.</p>
 </div>
 <div class="paragraph">
-<p>By default, the credentials and sources that are created during the use of discovery are encrypted in a database. The values are encrypted with AES-256 encryption. They are decrypted when the discovery server runs a scan with the use of a vault password to access the encrypted values that are stored in the database.</p>
+<p>By default, the credentials and sources that are created during the use of Quipucords are encrypted in a database. The values are encrypted with AES-256 encryption. They are decrypted when the Quipucords server runs a scan with the use of a vault password to access the encrypted values that are stored in the database.</p>
 </div>
 <div class="paragraph">
-<p>The product discovery tool is an agentless inspection tool, so there is no need to install the tool on every source that is to be inspected. However, the system that discovery is installed on must have access to the systems to be discovered and inspected.</p>
+<p>The Quipucords tool is an agentless inspection tool, so there is no need to install the tool on every source that is to be inspected. However, the system that Quipucords is installed on must have access to the systems to be discovered and inspected.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="ref-what-prods-find-common_assembly-about-common-ctxt">What products does discovery find?</h2>
+<h2 id="ref-what-prods-find-common_assembly-about-common-ctxt">What products does Quipucords find?</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The product discovery tool finds the following Red Hat products. For each version or release, the earliest version is listed, with later releases indicated as applicable.</p>
+<p>The Quipucords tool finds the following Red Hat products. For each version or release, the earliest version is listed, with later releases indicated as applicable.</p>
 </div>
 <div class="paragraph">
 <p>If a product has changed names recently so that you might be more familiar with the current name for that product, that name is provided as additional information. No later version is implied by the inclusion of a newer product name unless specific versions of that product are also listed.</p>
@@ -537,20 +667,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-<h1 id="assembly-accessing-client-gui_{context}" class="sect0">Accessing the discovery user interface</h1>
+<h1 id="assembly-accessing-client-gui_{context}" class="sect0">Accessing the Quipucords user interface</h1>
 <div class="openblock partintro">
 <div class="content">
 <div class="paragraph">
-<p>You access the discovery user interface through a browser connection. To use the discovery user interface, the system on which you want to run the user interface must be able to communicate with the system on which the discovery server is installed.</p>
+<p>You access the Quipucords user interface through a browser connection. To use the Quipucords user interface, the system on which you want to run the user interface must be able to communicate with the system on which the Quipucords server is installed.</p>
 </div>
 <div class="paragraph">
 <div class="title">Learn more</div>
-<p>To learn more about the discovery user interface login requirements and steps, see the following information:</p>
+<p>To learn more about the Quipucords user interface login requirements and steps, see the following information:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#proc-logging-in-gui_assembly-accessing-client-gui-ctxt">Logging in to the discovery user interface</a></p>
+<p><a href="#proc-logging-in-gui_assembly-accessing-client-gui-ctxt">Logging in to the Quipucords user interface</a></p>
 </li>
 </ul>
 </div>
@@ -560,24 +690,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#proc-logging-out-gui_assembly-accessing-client-gui-ctxt">Logging out of the discovery user interface</a></p>
+<p><a href="#proc-logging-out-gui_assembly-accessing-client-gui-ctxt">Logging out of the Quipucords user interface</a></p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="proc-logging-in-gui_assembly-accessing-client-gui-ctxt">Logging in to the discovery user interface</h2>
+<h2 id="proc-logging-in-gui_assembly-accessing-client-gui-ctxt">Logging in to the Quipucords user interface</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <div class="title">Prerequisites</div>
-<p>To log in to the discovery user interface, you need the IP address of the system where the discovery server is installed, the port number for the connection if the default port was changed during server installation, and the user name and password to use when logging in. If you do not have this information, contact the administrator who installed the discovery server.</p>
+<p>To log in to the Quipucords user interface, you need the IP address of the system where the Quipucords server is installed, the port number for the connection if the default port was changed during server installation, and the user name and password to use when logging in. If you do not have this information, contact the administrator who installed the Quipucords server.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>In a browser, enter the URL for the discovery server in the following format: <code>https://<em>IPaddress</em>:<em>port</em></code>, where <code><em>IPaddress</em></code> is the IP address of the discovery server and <code><em>port</em></code> is the exposed server port. Including the default port is optional. However, you must include the port in the address if the default port was changed during server installation.</p>
+<p>In a browser, enter the URL for the Quipucords server in the following format: <code>https://<em>IPaddress</em>:<em>port</em></code>, where <code><em>IPaddress</em></code> is the IP address of the Quipucords server and <code><em>port</em></code> is the exposed server port. Including the default port is optional. However, you must include the port in the address if the default port was changed during server installation.</p>
 <div class="paragraph">
 <p>The following examples show two different ways to enter the URL, based on the system that you are logging in from and whether the default port is used:</p>
 </div>
@@ -602,7 +732,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <div class="paragraph">
-<p>After you enter the URL for the server, the discovery login page displays.</p>
+<p>After you enter the URL for the server, the Quipucords login page displays.</p>
 </div>
 </li>
 <li>
@@ -612,12 +742,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="paragraph">
 <div class="title">Verification steps</div>
-<p>If this is the first time that you have logged in to discovery, the Welcome page displays. You can begin by adding sources and credentials that can be used in scans. If you have previously logged in to discovery, the Welcome page is skipped and you can interact with your previously created sources, credentials, and scans.</p>
+<p>If this is the first time that you have logged in to Quipucords, the Welcome page displays. You can begin by adding sources and credentials that can be used in scans. If you have previously logged in to Quipucords, the Welcome page is skipped and you can interact with your previously created sources, credentials, and scans.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="proc-logging-out-gui_assembly-accessing-client-gui-ctxt">Logging out of the discovery user interface</h2>
+<h2 id="proc-logging-out-gui_assembly-accessing-client-gui-ctxt">Logging out of the Quipucords user interface</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <div class="title">Procedure</div>
@@ -636,7 +766,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="openblock partintro">
 <div class="content">
 <div class="paragraph">
-<p>To prepare discovery to run scans, you must add the parts of your IT infrastructure that you want to scan as one or more sources. You must also add the authentication information, such as a username and password or SSH key, that is required to access those sources as one or more credentials. Because of differing configuration requirements, you add sources and credentials according to the type of source that you are going to scan.</p>
+<p>To prepare Quipucords to run scans, you must add the parts of your IT infrastructure that you want to scan as one or more sources. You must also add the authentication information, such as a username and password or SSH key, that is required to access those sources as one or more credentials. Because of differing configuration requirements, you add sources and credentials according to the type of source that you are going to scan.</p>
 </div>
 <div class="paragraph">
 <div class="title">Learn more</div>
@@ -695,7 +825,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <div class="paragraph">
-<p>To learn more about sources and credentials and how discovery uses them, see the following information:</p>
+<p>To learn more about sources and credentials and how Quipucords uses them, see the following information:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -705,7 +835,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <div class="paragraph">
-<p>To learn more about how discovery authenticates with assets on your network, see the following information. This information includes guidance about running commands with elevated privileges, a choice that you might need to make during network credential configuration:</p>
+<p>To learn more about how Quipucords authenticates with assets on your network, see the following information. This information includes guidance about running commands with elevated privileges, a choice that you might need to make during network credential configuration:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -791,9 +921,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>If you want to use the SSH key authentication type for network credentials, each SSH private key that you are going to use must be copied into the directory that was mapped to <code class="filename">/sshkeys</code> during discovery server installation. The default path for this directory is <code class="filename">~/discovery/sshkeys</code>.</p>
+<p>If you want to use the SSH key authentication type for network credentials, each SSH private key that you are going to use must be copied into the directory that was mapped to <code class="filename">/sshkeys</code> during Quipucords server installation. The default path for this directory is <code class="filename">~/quipucords/sshkeys</code>.</p>
 <div class="paragraph">
-<p>For more information about the SSH keys that are available for use in the <code class="filename">/sshkeys</code> directory, or to request the addition of a key to that directory, contact the administrator who manages your discovery server.</p>
+<p>For more information about the SSH keys that are available for use in the <code class="filename">/sshkeys</code> directory, or to request the addition of a key to that directory, contact the administrator who manages your Quipucords server.</p>
 </div>
 </li>
 </ul>
@@ -831,7 +961,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>For username and password authentication, enter a username and password for a user. This user must have root-level access to your network or to the subset of your network that you want to scan. Alternatively, this user must be able to obtain root-level access with the selected become method.</p>
 </li>
 <li>
-<p>For SSH key authentication, enter a user name and the path to an SSH key file, where the path to the key file is a path that is local to the discovery server. For example, if the key file is in the <code class="filename">~/discovery/sshkeys</code> path on the server, enter that path in the <strong>SSH Key File</strong> field. Entering a passphrase is optional.</p>
+<p>For SSH key authentication, enter a user name and the path to an SSH key file, where the path to the key file is a path that is local to the Quipucords server. For example, if the key file is in the <code class="filename">~/quipucords/sshkeys</code> path on the server, enter that path in the <strong>SSH Key File</strong> field. Entering a passphrase is optional.</p>
 </li>
 </ul>
 </div>
@@ -889,7 +1019,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="con-net-auth-gui_assembly-adding-net-sources-creds-gui-ctxt">Network authentication</h3>
 <div class="paragraph">
-<p>The discovery server inspects the remote systems in a network scan by using the SSH remote connection capabilities of Ansible. When you add a network credential, you configure the SSH connection by using either a user name and password or a user name and SSH keyfile pair. If remote systems are accessed with SSH key authentication, you can also supply a passphrase.</p>
+<p>The Quipucords server inspects the remote systems in a network scan by using the SSH remote connection capabilities of Ansible. When you add a network credential, you configure the SSH connection by using either a user name and password or a user name and SSH keyfile pair. If remote systems are accessed with SSH key authentication, you can also supply a passphrase.</p>
 </div>
 <div class="paragraph">
 <p>Also during network credential configuration, you can enable a become method. The become method is used during a scan to elevate privileges. These elevated privileges are needed to run commands and obtain data on the systems that you are scanning. For more information about the commands that do and do not require elevated privileges during a scan, see <a href="#ref-commands-used-net-scans-gui_assembly-adding-net-sources-creds-gui-ctxt">Commands that are used in scans of remote network assets</a>.</p>
@@ -897,13 +1027,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="ref-commands-used-net-scans-gui_assembly-adding-net-sources-creds-gui-ctxt">Commands that are used in scans of remote network assets</h4>
 <div class="paragraph">
-<p>When you run a network scan, discovery must use the credentials that you provide to run certain commands on the remote systems in your network. Some of those commands must run with elevated privileges. This access is typically acquired through the use of the <code class="command">sudo</code> command or similar commands. The elevated privileges are required to gather the types of facts that discovery uses to build the report about your installed products and consumed entitlements.</p>
+<p>When you run a network scan, Quipucords must use the credentials that you provide to run certain commands on the remote systems in your network. Some of those commands must run with elevated privileges. This access is typically acquired through the use of the <code class="command">sudo</code> command or similar commands. The elevated privileges are required to gather the types of facts that Quipucords uses to build the report about your installed products and consumed entitlements.</p>
 </div>
 <div class="paragraph">
 <p>Although it is possible to run a scan for a network source without elevated privileges, the results of that scan will be incomplete. The incomplete results from the network scan will affect the quality of the generated report for the scan.</p>
 </div>
 <div class="paragraph">
-<p>The following information lists the commands that discovery runs on remote hosts during a network scan. The information includes the basic commands that can run without elevated privileges and the commands that must run with elevated privileges to gather the most accurate and complete information for the report.</p>
+<p>The following information lists the commands that Quipucords runs on remote hosts during a network scan. The information includes the basic commands that can run without elevated privileges and the commands that must run with elevated privileges to gather the most accurate and complete information for the report.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -913,7 +1043,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>In addition to the following commands, discovery also depends on standard shell facilities, such as those provided by the Bash shell.</p>
+<p>In addition to the following commands, Quipucords also depends on standard shell facilities, such as those provided by the Bash shell.</p>
 </div>
 </td>
 </tr>
@@ -980,7 +1110,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect4">
 <h5 id="_commands_that_need_elevated_privileges">Commands that need elevated privileges</h5>
 <div class="paragraph">
-<p>The following commands require elevated privileges to gather facts during a scan. Each command includes a list of individual facts or categories of facts that discovery attempts to find during a scan. These facts cannot be included in reports if elevated privileges are not available for that command.</p>
+<p>The following commands require elevated privileges to gather facts during a scan. Each command includes a list of individual facts or categories of facts that Quipucords attempts to find during a scan. These facts cannot be included in reports if elevated privileges are not available for that command.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1221,7 +1351,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <div class="paragraph">
-<p>To learn more about sources and credentials and how discovery uses them, see the following information:</p>
+<p>To learn more about sources and credentials and how Quipucords uses them, see the following information:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1231,7 +1361,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <div class="paragraph">
-<p>To learn more about how discovery authenticates with your Satellite Server server, see the following information. This information includes guidance about  certificate validation and SSL communication choices that you might need to make during satellite credential configuration.</p>
+<p>To learn more about how Quipucords authenticates with your Satellite Server server, see the following information. This information includes guidance about  certificate validation and SSL communication choices that you might need to make during satellite credential configuration.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1421,7 +1551,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <div class="paragraph">
-<p>To learn more about sources and credentials and how discovery uses them, see the following information:</p>
+<p>To learn more about sources and credentials and how Quipucords uses them, see the following information:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1431,7 +1561,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <div class="paragraph">
-<p>To learn more about how discovery authenticates with your vCenter Server server, see the following information. This information includes guidance about certificate validation and SSL communication choices that you might need to make during vcenter credential configuration:</p>
+<p>To learn more about how Quipucords authenticates with your vCenter Server server, see the following information. This information includes guidance about certificate validation and SSL communication choices that you might need to make during vcenter credential configuration:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1649,7 +1779,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <div class="paragraph">
-<p>To learn more about how scans and scan jobs work, including how a scan job is processed by discovery and the states a scan job moves through during its life cycle, see the following information:</p>
+<p>To learn more about how scans and scan jobs work, including how a scan job is processed by Quipucords and the states a scan job moves through during its life cycle, see the following information:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1872,7 +2002,7 @@ The Scan wizard opens.</p>
 <p>When you start a scan, a scan job is created and the scan job is in the <em>created</em> state. The scan job is then queued for processing and the scan job transitions to the <em>pending</em> state. Scan jobs run serially, in the order that they are started.</p>
 </div>
 <div class="paragraph">
-<p>As the discovery server reaches a specific scan job in the queue, that scan job transitions from the <em>pending</em> state to the <em>running</em> state as the processing of that scan job begins. If the scan process completes successfully, the scan job transitions to the <em>completed</em> state and the scan job produces results that can be viewed in a report. If the scan process results in an error that prevents successful completion of the scan, the scan job halts and the scan job transitions to the <em>failed</em> state. An additional status message for the failed scan contains information to help determine the cause of the failure.</p>
+<p>As the Quipucords server reaches a specific scan job in the queue, that scan job transitions from the <em>pending</em> state to the <em>running</em> state as the processing of that scan job begins. If the scan process completes successfully, the scan job transitions to the <em>completed</em> state and the scan job produces results that can be viewed in a report. If the scan process results in an error that prevents successful completion of the scan, the scan job halts and the scan job transitions to the <em>failed</em> state. An additional status message for the failed scan contains information to help determine the cause of the failure.</p>
 </div>
 <div class="paragraph">
 <p>Other states for a scan job result from user action that is taken on the scan job. You can pause or cancel a scan job while it is pending or running. A scan job in the <em>paused</em> state can be resumed. A scan job in the <em>canceled</em> state cannot be resumed.</p>
@@ -1887,7 +2017,7 @@ The Scan wizard opens.</p>
 <p>After you add sources and credentials for the parts of your IT infrastructure that you want to scan, you can begin running scans. In a few situations, running standard scans is not sufficient to find the environment and product data that is required to report on your Red Hat products.</p>
 </div>
 <div class="paragraph">
-<p>By default, discovery searches for and fingerprints products by using known metadata that relates to those products. However, it is possible that you have installed these products with a process or in an installation location that makes the search and fingerprinting algorithms less effective. In that case, you need to use deep scanning to find those products.</p>
+<p>By default, Quipucords searches for and fingerprints products by using known metadata that relates to those products. However, it is possible that you have installed these products with a process or in an installation location that makes the search and fingerprinting algorithms less effective. In that case, you need to use deep scanning to find those products.</p>
 </div>
 <div class="paragraph">
 <div class="title">Learn more</div>
@@ -1914,7 +2044,7 @@ The Scan wizard opens.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>To learn more about how scans and scan jobs work, including how a scan job is processed by discovery and the states a scan job moves through during its life cycle, see the following information:</p>
+<p>To learn more about how scans and scan jobs work, including how a scan job is processed by Quipucords and the states a scan job moves through during its life cycle, see the following information:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1982,7 +2112,7 @@ The Scan wizard opens.</p>
 <p>Select the applicable <strong>Deep scan for these products</strong> check boxes.</p>
 </li>
 <li>
-<p>Optionally, enter the directories that you want discovery to scan. The default directories that are used in a deep scan are the <code>/</code>, <code>/opt</code>, <code>/app</code>, <code>/home</code>, and <code>/usr</code> directories.</p>
+<p>Optionally, enter the directories that you want Quipucords to scan. The default directories that are used in a deep scan are the <code>/</code>, <code>/opt</code>, <code>/app</code>, <code>/home</code>, and <code>/usr</code> directories.</p>
 </li>
 </ul>
 </div>
@@ -2150,7 +2280,7 @@ The Scan wizard opens.</p>
 <p>When you start a scan, a scan job is created and the scan job is in the <em>created</em> state. The scan job is then queued for processing and the scan job transitions to the <em>pending</em> state. Scan jobs run serially, in the order that they are started.</p>
 </div>
 <div class="paragraph">
-<p>As the discovery server reaches a specific scan job in the queue, that scan job transitions from the <em>pending</em> state to the <em>running</em> state as the processing of that scan job begins. If the scan process completes successfully, the scan job transitions to the <em>completed</em> state and the scan job produces results that can be viewed in a report. If the scan process results in an error that prevents successful completion of the scan, the scan job halts and the scan job transitions to the <em>failed</em> state. An additional status message for the failed scan contains information to help determine the cause of the failure.</p>
+<p>As the Quipucords server reaches a specific scan job in the queue, that scan job transitions from the <em>pending</em> state to the <em>running</em> state as the processing of that scan job begins. If the scan process completes successfully, the scan job transitions to the <em>completed</em> state and the scan job produces results that can be viewed in a report. If the scan process results in an error that prevents successful completion of the scan, the scan job halts and the scan job transitions to the <em>failed</em> state. An additional status message for the failed scan contains information to help determine the cause of the failure.</p>
 </div>
 <div class="paragraph">
 <p>Other states for a scan job result from user action that is taken on the scan job. You can pause or cancel a scan job while it is pending or running. A scan job in the <em>paused</em> state can be resumed. A scan job in the <em>canceled</em> state cannot be resumed.</p>
@@ -2211,7 +2341,7 @@ The Scan wizard opens.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>To learn more about how reports are created, see the following information. This information includes a chronology of the processes that change the raw facts of a details report into fingerprint data, and then change fingerprint data into the deduplicated and merged data of a deployments report. This information also includes a partial fingerprint example to show the types of data that are used to create a discovery report.</p>
+<p>To learn more about how reports are created, see the following information. This information includes a chronology of the processes that change the raw facts of a details report into fingerprint data, and then change fingerprint data into the deduplicated and merged data of a deployments report. This information also includes a partial fingerprint example to show the types of data that are used to create a Quipucords report.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2280,7 +2410,7 @@ The Scan wizard opens.</p>
 <p>A single system can be found in multiple sources during a scan. For example, a virtual machine on vCenter Server could be running a Red Hat Enterprise Linux operating system installation that is also managed by Satellite. If you construct a scan that contains each type of source, vcenter, satellite, and network, that single system is reported by all three sources during the scan.</p>
 </div>
 <div class="paragraph">
-<p>To resolve this issue and build an accurate fingerprint, discovery feeds unprocessed system facts from the scan into a fingerprint engine. The fingerprint engine matches and merges data for systems that are found in more than one source by using the deduplication and merge processes.</p>
+<p>To resolve this issue and build an accurate fingerprint, Quipucords feeds unprocessed system facts from the scan into a fingerprint engine. The fingerprint engine matches and merges data for systems that are found in more than one source by using the deduplication and merge processes.</p>
 </div>
 <div class="sect4">
 <h5 id="_system_deduplication">System deduplication</h5>
@@ -2475,7 +2605,7 @@ The Scan wizard opens.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>To learn more about how reports are created, see the following information. This information includes a chronology of the processes that change the raw facts of a details report into fingerprint data, and then change fingerprint data into the deduplicated and merged data of a deployments report. This information also includes a partial fingerprint example to show the types of data that are used to create a discovery report.</p>
+<p>To learn more about how reports are created, see the following information. This information includes a chronology of the processes that change the raw facts of a details report into fingerprint data, and then change fingerprint data into the deduplicated and merged data of a deployments report. This information also includes a partial fingerprint example to show the types of data that are used to create a Quipucords report.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2566,7 +2696,7 @@ The Scan wizard opens.</p>
 <p>A single system can be found in multiple sources during a scan. For example, a virtual machine on vCenter Server could be running a Red Hat Enterprise Linux operating system installation that is also managed by Satellite. If you construct a scan that contains each type of source, vcenter, satellite, and network, that single system is reported by all three sources during the scan.</p>
 </div>
 <div class="paragraph">
-<p>To resolve this issue and build an accurate fingerprint, discovery feeds unprocessed system facts from the scan into a fingerprint engine. The fingerprint engine matches and merges data for systems that are found in more than one source by using the deduplication and merge processes.</p>
+<p>To resolve this issue and build an accurate fingerprint, Quipucords feeds unprocessed system facts from the scan into a fingerprint engine. The fingerprint engine matches and merges data for systems that are found in more than one source by using the deduplication and merge processes.</p>
 </div>
 <div class="sect4">
 <h5 id="_system_deduplication_2">System deduplication</h5>
@@ -2743,7 +2873,7 @@ The Scan wizard opens.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-09-13 11:24:37 -0400
+Last updated 2019-09-13 11:24:43 -0400
 </div>
 </div>
 </body>
