@@ -33,9 +33,5 @@ The database is automatically installed for you if you use the online installati
 ** Python 3.4 or later
 
 
-
-
-
-
 // Topics from AsciiDoc conversion that were used as source for this topic:
 // ...

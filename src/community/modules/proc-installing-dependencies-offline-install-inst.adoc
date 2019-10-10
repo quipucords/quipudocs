@@ -14,7 +14,7 @@ endif::discovery_install_guide[]
 ifdef::qpc_install_guide[]
 You must install the dependencies on the disconnected machine where you are installing and using {ProductNameShort}.
 
-You must also install most of the dependencies, such as {AnsibleName}, the correct {PythonName} version, and the applicable container software, on the connected machine where you are downloading the packages prior to installation. The `yum install` command that you use to get the {ProductNameShort} qpc-tools package also does an RPM package check for certain runtime requirements. This package check checks for the {AnsibleName} and {PythonName} dependencies. In addition, the container software (either {PodmanName} or {DockerName}, depending on your {RHELNameShort} or {CentOSName} version) is required to be installed on the connected machine to build a container for the {PostgreSQLName} database.
+You must also install most of the dependencies, such as {AnsibleName}, the correct {PythonName} version, and the applicable container software, on the connected machine where you are downloading the packages before installation. For example, the `yum install` command that you use to get the {ProductNameShort} qpc-tools package also does an RPM package check for certain runtime requirements. This package check checks for the {AnsibleName} and {PythonName} dependencies. In addition, the container software (either {PodmanName} or {DockerName}, depending on your {RHELNameShort} or {CentOSName} version) is required to be installed on the connected machine to build a container for the {PostgreSQLName} database.
 endif::qpc_install_guide[]
 
 // .Prerequisites

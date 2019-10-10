@@ -9,7 +9,7 @@ ifdef::context[:parent-context: {context}]
 
 = Installing {ProductNameShort} with the online installation process
 
-The online, or automated, installation process runs an installer that uses Ansible to install the command line tool, the server image, and the database image.
+The online, or automated, installation process runs an installer that uses Ansible to install the command line interface tool, the server image, and the database image.
 
 When you run the online installation process, the server is installed and started as described in (....link to the default config description topic from Configuring and Starting Quipucords...). However, you can change some of the defaults used by the automated installation with the (....link to Installation Options topic....).
 
@@ -17,7 +17,7 @@ When you run the online installation process, the server is installed and starte
 
 * Ensure that all prerequisites are installed and configured.
 
-* To use the online installation process, the machine on which you are downloading the installer and installing {ProductNameShort} must be connected to the Internet.
+* To use the online installation process, the machine on which you are downloading the installer and installing {ProductNameShort} must be connected to the internet.
 
 .Procedure
 

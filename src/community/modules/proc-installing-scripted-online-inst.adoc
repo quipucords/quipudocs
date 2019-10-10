@@ -5,15 +5,18 @@
 
 = Installing with the online installation process
 
-The simplest method for installing {ProductNameShort} is to run the online installation with all of the default options. However, accepting all of the default options does not change the default administrator user name and password for {ProductNameShort}, which does not meet common recommended security practices. In addition, the default server administrator email address for {ProductNameShort} is set to an `example.com` email domain, which does not provide the proper contact information for your organization.
+****CHANGING with change to installer to prompt for passwords (BUT some of this text will still be needed if user NOT prompted for user ID or email)****
+The simplest method for installing {ProductNameShort} is to run the online installation with all of the default options. However, accepting all of the default options does not change the default administrator user name and password for {ProductNameShort}, a process that does not meet common recommended security practices. In addition, the default server administrator email address for {ProductNameShort} is set to an `example.com` email domain, a process that does not provide the proper contact information for your organization.
 
 Therefore, the recommended method is to run the online installation with the options that change the default administrator user name and password for {ProductNameShort} and change the email address for that primary administrator, or server user, to one that is appropriate for your organization. The following information describes this method.
 
 .Prerequisites
 
-. Download the {ProductNameShort} installer. For more information, see (...link to download inst topic...).
+* Download the {ProductNameShort} installer. For more information, see (...link to download inst topic...).
 
 .Procedure
+
+****Command syntax for options changing...****
 
 // do not change underscore coding for variables in commands
 ifdef::discovery_install_guide[]

@@ -5,13 +5,15 @@
 
 = Installing with the offline installation process
 
-...
+...intro text about running the command with options to change password ****changing soon, pw prompt****, user ID, email address (no prompt for these)....
 
 .Prerequisites
 
 . ...
 
 .Procedure
+
+****procedures need changes for new prompts during installer run****
 
 // do not change underscore coding for variables in commands
 ifdef::discovery_install_guide[]

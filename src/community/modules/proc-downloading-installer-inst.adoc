@@ -5,11 +5,11 @@
 
 = Downloading the installer
 
-Download.....
+Download.....intro text....
 
-.Prerequisites
+// .Prerequisites
 
-Before you begin, review the prerequisites for {ProductNameShort}.
+// Before you begin, review the prerequisites for {ProductNameShort}.
 
 .Procedure
 
@@ -29,7 +29,7 @@ ifdef::qpc_install_guide[]
 * For {RHELNameShort} 7 and {CentOSName} 7, use the following command:
 [source,options="nowrap",subs=attributes]
 {QPCcommandDownloadInstallerRHEL7}
-* For {RHELName} 6 and {CentOSName} 6, use the following command:
+* For {RHELNameShort} 6 and {CentOSName} 6, use the following command:
 [source,options="nowrap",subs=attributes]
 {QPCcommandDownloadInstallerRHEL6}
 endif::qpc_install_guide[]

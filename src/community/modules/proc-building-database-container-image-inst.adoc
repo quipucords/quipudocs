@@ -5,11 +5,11 @@
 
 = Building the database container image
 
-The {ProductNameShort} server requires a container image for the {PostgreSQLName} database. You must build the image on the online machine. The type of container image that you need to build depends on the version of your operating system.
+The {ProductNameShort} server requires a container image for the {PostgreSQLName} database. You must build the image on the connected machine. The type of container image that you need to build depends on the version of your operating system.
 
-// .Prerequisites
+.Prerequisites
 
-// Before you begin, review the prerequisites for {ProductNameShort}.
+Before you begin, the applicable container software must be installed...as described in (link to dependencies section....)
 
 .Procedure
 
@@ -19,10 +19,10 @@ Select one of the following procedures, as appropriate for your operating system
 
 To build the database container image for for {RHELNameshort} 7 and 8 and {CentOSName} 7 and 8, use the following steps:
 
-. Install {PodmanName}.
-.. From a browser window, go to https://podman.io/[^].
-.. In the navigation tree, click *Get started*.
-.. Click *Install Podman* and follow the installation instructions for your operating system.
+// . Install {PodmanName}.
+// .. From a browser window, go to https://podman.io/[^].
+// .. In the navigation tree, click *Get started*.
+// .. Click *Install Podman* and follow the installation instructions for your operating system.
 
 . Create the {PostgreSQLName} image TAR file with the following commands:
 +
@@ -41,10 +41,10 @@ IMPORTANT: The offline installation script requires the TAR file to be named `po
 
 To build the database container image for for {RHELNameshort} 6 and {CentOSName} 6, use the following steps:
 
-. Install {DockerName}.
-.. From a browser window, go to https://docs.docker.com/[^].
-.. In the navigation tree, navigate to the installation instructions. The instructions and links to code packages are currently in the "About Docker Engine - Community" topic.
-.. Review and follow the installation instructions for your operating system.
+// . Install {DockerName}.
+// .. From a browser window, go to https://docs.docker.com/[^].
+// .. In the navigation tree, navigate to the installation instructions. The instructions and links to code packages are currently in the "About Docker Engine - Community" topic.
+// .. Review and follow the installation instructions for your operating system.
 
 . Create the {PostgreSQLName} image TAR file with the following commands:
 +
