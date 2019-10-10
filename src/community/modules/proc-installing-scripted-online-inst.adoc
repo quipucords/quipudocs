@@ -1,0 +1,53 @@
+// Module included in the following assemblies:
+// assembly-installing-scripted-online-inst.adoc
+
+[id="proc-installing-scripted-online-inst_{context}"]
+
+= Installing with the online installation process
+
+The simplest method for installing {ProductNameShort} is to run the online installation with all of the default options. However, accepting all of the default options does not change the default administrator user name and password for {ProductNameShort}, which does not meet common recommended security practices. In addition, the default server administrator email address for {ProductNameShort} is set to an `example.com` email domain, which does not provide the proper contact information for your organization.
+
+Therefore, the recommended method is to run the online installation with the options that change the default administrator user name and password for {ProductNameShort} and change the email address for that primary administrator, or server user, to one that is appropriate for your organization. The following information describes this method.
+
+.Prerequisites
+
+. Download the {ProductNameShort} installer. For more information, see (...link to download inst topic...).
+
+.Procedure
+
+// do not change underscore coding for variables in commands
+ifdef::discovery_install_guide[]
+. Start the installation by entering the following command, where `_admin_` is the new administrator user name, `_qpcpassw0rd_` is the new password, and `_admin@example.com_` is the email address for the {ProductNameShort} server user:
++
+[source,options="nowrap",subs="+quotes"]
+----
+# ****command****
+----
+endif::discovery_install_guide[]
+
+ifdef::qpc_install_guide[]
+. Start the installation by entering the following command, where `_admin_` is the new administrator user name, `_qpcpassw0rd_` is the new password, and `_admin@example.com_` is the email address for the {ProductNameShort} server user:
++
+[source,options="nowrap",subs="+quotes"]
+----
+# qpc-tools install -e server_username=__admin__ -e server_password=__qpcpassw0rd__ -e server_user_email=__admin@example.com__
+----
+endif::qpc_install_guide[]
+
+
+.Verification steps
+
+. For a successful installation, the output appears similar to the following example:
++
+----
+Installation complete.
+----
+
+// ....link to a topic that contains the description about the default config when running this simple install?
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.
+
+// Topics from AsciiDoc conversion that were used as source for this topic:
+// ....

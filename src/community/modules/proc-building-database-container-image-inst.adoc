@@ -1,0 +1,66 @@
+// Module included in the following assemblies:
+// assembly-installing-scripted-offline-inst.adoc
+
+[id="proc-building-database-container-image-inst_{context}"]
+
+= Building the database container image
+
+The {ProductNameShort} server requires a container image for the {PostgreSQLName} database. You must build the image on the online machine. The type of container image that you need to build depends on the version of your operating system.
+
+// .Prerequisites
+
+// Before you begin, review the prerequisites for {ProductNameShort}.
+
+.Procedure
+
+Select one of the following procedures, as appropriate for your operating system:
+
+== Building the database container image for {RHELNameshort} 7 and 8 and {CentOSName} 7 and 8
+
+To build the database container image for for {RHELNameshort} 7 and 8 and {CentOSName} 7 and 8, use the following steps:
+
+. Install {PodmanName}.
+.. From a browser window, go to https://podman.io/[^].
+.. In the navigation tree, click *Get started*.
+.. Click *Install Podman* and follow the installation instructions for your operating system.
+
+. Create the {PostgreSQLName} image TAR file with the following commands:
++
+[source,options="nowrap"]
+----
+# podman pull postgres:9.6.10
+# podman save -o postgres.9.6.10.tar postgres:9.6.10
+----
+[NOTE]
+====
+IMPORTANT: The offline installation script requires the TAR file to be named `postgres.9.6.10.tar`.
+====
+
+
+== Building the database container image for {RHELNameshort} 6 and {CentOSName} 6
+
+To build the database container image for for {RHELNameshort} 6 and {CentOSName} 6, use the following steps:
+
+. Install {DockerName}.
+.. From a browser window, go to https://docs.docker.com/[^].
+.. In the navigation tree, navigate to the installation instructions. The instructions and links to code packages are currently in the "About Docker Engine - Community" topic.
+.. Review and follow the installation instructions for your operating system.
+
+. Create the {PostgreSQLName} image TAR file with the following commands:
++
+[source,options="nowrap"]
+----
+# docker pull postgres:9.6.10
+# docker save -o postgres.9.6.10.tar postgres:9.6.10
+----
+[NOTE]
+====
+IMPORTANT: The offline installation script requires the TAR file to be named `postgres.9.6.10.tar`.
+====
+
+// .Verification steps
+// (Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.

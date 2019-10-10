@@ -1,0 +1,36 @@
+// This assembly is included in the following assemblies:
+// ...
+
+ifdef::context[:parent-context: {context}]
+
+[id="assembly-installing-prerequisites-inst_{context}"]
+
+:context: assembly-installing-prerequisites-inst-ctxt
+
+= Installing prerequisites for {ProductNameShort}
+
+Before you begin the installation process, review the information about {ProductNameShort} prerequisites. Then complete any  installation or configuration tasks for the prerequisites.
+
+.Procedure
+
+Install the following requirements for hardware, software, and the environment in which you are going to install and use {ProductNameShort}.
+
+// do you need level offset in each assembly? at master doc level only? confused about this one.
+
+include::modules/ref-hw-prerequisites-inst.adoc[leveloffset=+1]
+
+include::modules/ref-sw-prerequisites-inst.adoc[leveloffset=+1]
+
+include::modules/ref-env-prerequisites-inst.adoc[leveloffset=+1]
+
+// .Related Information
+// * Bulleted list of links to concepts, reference, or other tasks closely related to this user story.
+// * Include only the most relevant items as links, not every possible related item.
+// * Delete section title and bullets if no related information is needed.
+
+// Topics from AsciiDoc conversion that were used as source for this topic:
+// ....
+
+// Restore the context to what it was before this assembly.
+ifdef::parent-context[:context: {parent-context}]
+ifndef::parent-context[:!context:]

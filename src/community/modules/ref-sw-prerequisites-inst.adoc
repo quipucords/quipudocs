@@ -1,0 +1,41 @@
+// Module included in the following assemblies:
+// assembly-installing-prerequisites-inst.adoc
+// ...
+
+[id="ref-sw-prerequsites-inst_{context}"]
+
+= Software prerequisites
+
+The system on which you are going to install {ProductNameShort} must have the following software requirements installed:
+
+* *Operating system:* The latest release of the following operating system versions:
+ifdef::discovery_install_guide[]
+** {RHELName} 8
+endif::discovery_install_guide[]
+ifdef::qpc_install_guide[]
+** {RHELName} 6, 7, or 8
+** {CentOSName} 6 or 7
++
+[NOTE]
+====
+{RHELNameShort} 7 or 8 or {CentOSName} 7 are the recommended operating system versions. For {RHELNameShort} 6 or {CentOSName} 6, the minimum required kernel is 2.6.32-431 or later.
+====
+endif::qpc_install_guide[]
+* *Database:*
+** PostgreSQL 9.6.10
++
+[NOTE]
+====
+The database is automatically installed for you if you use the online installation.
+// CHECK: remove this note for discovery, if handled by the Satellite offline install?
+====
+* *Programming language for the {ProductNameShort} command line interface (CLI):*
+** Python 3.4 or later
+
+
+
+
+
+
+// Topics from AsciiDoc conversion that were used as source for this topic:
+// ...

@@ -2,8 +2,18 @@
 :toclevels: 4
 include::attributes/attributes-qpc.adoc[]
 
+:qpc_install_guide:
+
 [[qpc_install_guide]]
 = Installing and Configuring {ProductNameMedium}
 
+// :toc: left
+
 // Contents
-include::assemblies/assembly-install-scripted-online-qpc.adoc[]
+include::assemblies/assembly-about-common.adoc[]
+
+include::assemblies/assembly-installing-prerequisites-inst.adoc[]
+
+include::assemblies/assembly-installing-scripted-online-inst.adoc[]
+
+include::assemblies/assembly-installing-scripted-offline-inst.adoc[]

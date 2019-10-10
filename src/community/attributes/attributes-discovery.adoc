@@ -7,6 +7,10 @@
 :ProductNameStartSentence: The product discovery tool
 :ProductInCommands: discovery
 :ProductInCommandsShort: dsc
+:ProductInstallerToolName: dsc-tools
+
+// Product discovery *SPECIFIC* attributes
+:discoverycommandDownloadInstallerRHEL8: ****NO INSTRUCTIONS YET****
 
 // Red Hat product attributes
 :CompanyName: Red Hat
@@ -29,11 +33,21 @@
 :WebServerNameShort: JBoss Web Server
 :WebServerNameOld: JBoss Enterprise Web Server
 
-
 :SatelliteServerName: Red Hat Satellite Server
 :SatelliteServerNameShort: Satellite Server
 :SatelliteNameBrandedShort: Red Hat Satellite
 :SatelliteNameVeryShort: Satellite
 
+:AnsibleName: Ansible
+
 // External product attributes
 :vCenterServerName: vCenter Server
+:CentOSName: CentOS
+:PostgreSQLName: PostgreSQL
+:PodmanName: Podman
+:DockerName: Docker
+:PythonName: Python
+
+// Book titles
+:InstallGuide: pass:quotes,attributes[Installing and Configuring {ProductNameMedium}]
+:UserGuide: pass:quotes,attributes[Using {ProductNameMedium}]
