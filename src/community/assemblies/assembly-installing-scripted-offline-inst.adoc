@@ -1,0 +1,86 @@
+// This assembly is included in the following assemblies:
+// ...
+
+ifdef::context[:parent-context: {context}]
+
+[id="assembly-installing-scripted-offline-inst_{context}"]
+
+:context: assembly-installing-scripted-offline-inst-ctxt
+
+= Installing {ProductNameShort} with the offline installation process
+
+The offline installation process is required when you install {ProductNameShort} in an offline environment, also commonly referred to as a disconnected or air-gapped environment. If you must install the server, command line interface (CLI) tool, or both on machines that do not have internet access, then you must use the offline installation process.
+
+ifdef::qpc_install_guide[]
+For the offline installation process, you must complete some steps from a _connected_ machine, one that has internet connectivity. These steps include downloading the installer, downloading the server and CLI packages, building a container image for the database, transferring packages to the disconnected machine, and others. You also complete steps on the _disconnected_ machine, including installing dependencies to enable the offline installation, receiving the prepared packages and images transferred from the connected machine, and running the installer itself. The dependencies that enable offline installation are in addition to the standard prerequisites.
+endif::qpc_install_guide[]
+
+When you run the offline installation process, the server is installed and started as described in (....link to the default config description topic from Configuring and Starting Quipucords...). However, you can change some of the defaults used by the automated installation with the (....link to Installation Options topic....).
+
+.Prerequisites
+
+* Ensure that all prerequisites are installed and configured.
+
+* Ensure that the connected machine where you download packages can connect to the disconnected machine or machines where you want to install the {ProductNameShort} server and CLI tool.
+
+.Procedure
+
+To install {ProductNameShort} with the offline installation process, you do the following tasks:
+
+ifdef::discovery_install_guide[]
+. Enable the YUM repositories. ****??? not sure of full instruction here****. For more information, see xref:proc-enabling-yum-repository-inst_assembly-installing-scripted-offline-inst-ctxt[Enabling the YUM repository].
+endif::discovery_install_guide[]
+
+ifdef::qpc_install_guide[]
+. Install dependencies. These dependencies are additional prerequisites that cannot be installed by the installer in an offline installation process. For more information, see xref:proc-installing-dependencies-offline-install-inst_{context}[Installing dependencies for the offline installation].
++
+[NOTE]
+====
+These dependencies are required on both the connected machine where you are obtaining the packages and the disconnected machine where you are installing {ProductNameShort}.
+====
+endif::qpc_install_guide[]
+
+. Download the installer. For more information, see xref:proc-downloading-installer-inst_assembly-installing-scripted-offline-inst-ctxt[Downloading the installer].
+
+ifdef::qpc_install_guide[]
+. ****Maybe new step with newest installer changes--create a dir on the connected machine?****
+. Download the server package to the connected machine. For more information, see xref:proc-downloading-server-package-inst_{context}[Downloading the server package].
+. Build the database container image. For more information, see xref:proc-building-database-container-image-inst_{context}[Building the database container image].
+. Download the CLI package. For more information, see xref:proc-downloading-cli-package-inst_{context}[Downloading the command line interface package].
+. Transfer the packages from the connected machine where they were downloaded to the disconnected machine where you are going to run the installation. For more information, see xref:proc-transferring-packages-offline-inst_{context}[Transferring packages to the offline machine].
+endif::qpc_install_guide[]
+
+. Run the installation. For more information, see xref:proc-installing-scripted-offline-qpc-inst_assembly-installing-scripted-offline-inst-ctxt[Installing with the offline installation process].
+
+// do you need level offset in each assembly? at master doc level only? confused about this one.
+
+// include lists for discovery and QPC, reminder to maintain the duplicate links
+
+ifdef::discovery_install_guide[]
+include::modules/proc-enabling-yum-repository-inst.adoc[leveloffset=+1]
+include::modules/proc-downloading-installer-inst.adoc[leveloffset=+1]
+include::modules/proc-installing-scripted-offline-inst.adoc[leveloffset=+1]
+endif::discovery_install_guide[]
+
+ifdef::qpc_install_guide[]
+include::modules/proc-installing-dependencies-offline-install-inst.adoc[leveloffset=+1]
+include::modules/proc-downloading-installer-inst.adoc[leveloffset=+1]
+include::modules/proc-downloading-server-package-inst.adoc[leveloffset=+1]
+include::modules/proc-building-database-container-image-inst.adoc[leveloffset=+1]
+include::modules/proc-downloading-cli-package-inst.adoc[leveloffset=+1]
+include::modules/proc-transferring-packages-offline-inst.adoc[leveloffset=+1]
+include::modules/proc-installing-scripted-offline-qpc-inst.adoc[leveloffset=+1]
+endif::qpc_install_guide[]
+
+
+// .Related Information
+// * Bulleted list of links to concepts, reference, or other tasks closely related to this user story.
+// * Include only the most relevant items as links, not every possible related item.
+// * Delete section title and bullets if no related information is needed.
+
+// Topics from AsciiDoc conversion that were used as source for this topic:
+// ....
+
+// Restore the context to what it was before this assembly.
+ifdef::parent-context[:context: {parent-context}]
+ifndef::parent-context[:!context:]

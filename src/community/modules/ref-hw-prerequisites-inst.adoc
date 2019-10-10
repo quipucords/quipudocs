@@ -1,0 +1,21 @@
+// Module included in the following assemblies:
+// assembly-installing-prerequisites-inst.adoc
+// ...
+
+[id="ref-hw-prerequsites-inst_{context}"]
+
+= Hardware prerequisites
+
+The system on which you are going to install {ProductNameShort} must meet or exceed the following hardware requirements:
+
+* *CPU:* 2 core minimum, with a recommended 4 cores
+* *Disk Storage:* 30 GB
+* *RAM:* 1 GB minimum, with a recommended 2 GB
+
+
+
+
+
+
+// Topics from AsciiDoc conversion that were used as source for this topic:
+// ...

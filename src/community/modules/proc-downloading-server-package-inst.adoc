@@ -1,0 +1,30 @@
+// Module included in the following assemblies:
+// assembly-installing-scripted-offline-inst.adoc
+
+[id="proc-downloading-server-package-inst_{context}"]
+
+= Downloading the server package
+
+The {ProductNameShort} server package contains the server, database, and graphical user interface (GUI) client.
+
+The server package is available as a container image. Download the server package to the connected machine.
+
+// .Prerequisites
+
+// Before you begin, review the prerequisites for {ProductNameShort}.
+
+.Procedure
+
+To download the server package, use the following steps:
+
+. From a browser session on the connected machine, go to the following link for information about the {ProductNameShort} server package and for the link to download the latest version: {QPCcommandOfflineDownloadServerPackageLanding}[{ProductNameShort} server package latest version^].
+
+. To download the server package, click {QPCcommandOfflineDownloadServerPackageName}.
+
+
+// .Verification steps
+// (Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.

@@ -1,0 +1,43 @@
+// Module included in the following assemblies:
+// assembly-installing-scripted-online-inst.adoc
+
+[id="proc-downloading-installer-inst_{context}"]
+
+= Downloading the installer
+
+Download.....intro text....
+
+// .Prerequisites
+
+// Before you begin, review the prerequisites for {ProductNameShort}.
+
+.Procedure
+
+// change steps to not auto-start installing from docs link
+
+ifdef::discovery_install_guide[]
+. Download the {ProductNameShort} installer by using the following command:
+[source,options="nowrap",subs=attributes]
+{discoverycommandDownloadInstallerRHEL8}
+endif::discovery_install_guide[]
+
+ifdef::qpc_install_guide[]
+. Download the {ProductNameShort} installer by using the following command, based on your operating system version:
+* For {RHELNameShort} 8, use the following command:
+[source,options="nowrap",subs=attributes]
+{QPCcommandDownloadInstallerRHEL8}
+* For {RHELNameShort} 7 and {CentOSName} 7, use the following command:
+[source,options="nowrap",subs=attributes]
+{QPCcommandDownloadInstallerRHEL7}
+* For {RHELNameShort} 6 and {CentOSName} 6, use the following command:
+[source,options="nowrap",subs=attributes]
+{QPCcommandDownloadInstallerRHEL6}
+endif::qpc_install_guide[]
+
+
+// .Verification steps
+// (Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.

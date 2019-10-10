@@ -2,8 +2,16 @@
 :toclevels: 4
 include::attributes/attributes-discovery.adoc[]
 
+:discovery_install_guide:
+
 [[discovery_install_guide]]
 = Installing and Configuring {ProductNameMedium}
 
 // Contents
-include::assemblies/assembly-install-scripted-online-discovery.adoc[]
+include::assemblies/assembly-about-common.adoc[]
+
+include::assemblies/assembly-installing-prerequisites-inst.adoc[]
+
+include::assemblies/assembly-installing-scripted-online-inst.adoc[]
+
+include::assemblies/assembly-installing-scripted-offline-inst.adoc[]

@@ -1,0 +1,28 @@
+// Module included in the following assemblies:
+// assembly-installing-scripted-online-inst.adoc
+
+[id="proc-downloading-cli-package-inst_{context}"]
+
+= Downloading the command line interface package
+
+The {ProductNameShort} command line interface (CLI) package contains a command line interface to interact with the server.
+
+// .Prerequisites
+
+// Before you begin, review the prerequisites for {ProductNameShort}.
+
+.Procedure
+
+. From a browser session on the connected machine, go to the following link for information about the {ProductNameShort} CLI package and for the link to download the latest version: {QPCcommandOfflineDownloadCLIPackageLandingGeneric}[{ProductNameShort} CLI package latest version^].
+
+. To download the server package, click the following CLI package download link that applies to your operating system:
+.. For {RHELNameShort} 8 and {CentOSName} 8, click *{QPCcommandOfflineDownloadCLIPackageNameRHEL8}*.
+.. For {RHELNameShort} 7 and {CentOSName} 7, click *{QPCcommandOfflineDownloadCLIPackageNameRHEL7}*.
+.. For {RHELNameShort} 6 and {CentOSName} 6, click *{QPCcommandOfflineDownloadCLIPackageNameRHEL6}*.
+
+// .Verification steps
+// (Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.

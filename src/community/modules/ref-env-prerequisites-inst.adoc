@@ -1,0 +1,31 @@
+// Module included in the following assemblies:
+// assembly-installing-prerequisites-inst.adoc
+// ...
+
+[id="ref-env-prerequsites-inst_{context}"]
+
+= Other environment prerequisites
+
+The environment in which you are going to use {ProductNameShort} must meet the following requirements. Some of these requirements affect the systems on which you are going to run {ProductNameShort}. Others affect the systems in your IT infrastructure that you are going to scan with {ProductNameShort}.
+
+On the machine where {ProductNameShort} is installed:
+
+* The machine that {ProductNameShort} is installed on must have access to the IT infrastructure assets that are to be scanned.
+* If you install the {ProductNameShort} server and command line interface (CLI) tool on different machines, the CLI machine must have must have access to the IT infrastructure assets that are to be scanned and must be able to connect to the server machine.
+// ifdef::discovery_install_guide[]
+// * If you plan to use {ProductNameShort} as part of the pilot of Unified Subscriptions Inventory and Reporting (USIR) in conjunction with Cloud Management Services for RHEL.... server machine must be able to connect to the Internet (must have internet connectivity?) to send reports to the upload service.
+// endif::discovery_install_guide[]
+
+
+On the systems where {ProductNameShort} runs scans:
+
+* Any network sources that are targeted for scanning must be running the Secure Shell (SSH) protocol.
+* A user account that is used as credential for a scan requires the `bash` shell. The shell cannot be the `/sbin/nologin` shell or the `/bin/false` shell.
+* A user account that is used as a credential for a network scan must have adequate permissions to run commands and read certain files on those systems. For example, some commands that run during a scan require privilege elevation to gather the complete set of facts for the scan. For more information about these commands, see "Commands that are used in scans of remote network assets" in {UserGuide}.
+
+
+
+
+
+// Topics from AsciiDoc conversion that were used as source for this topic:
+// ...

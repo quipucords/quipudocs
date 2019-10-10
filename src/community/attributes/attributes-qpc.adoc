@@ -7,6 +7,26 @@
 :ProductNameStartSentence: The Quipucords tool
 :ProductInCommands: quipucords
 :ProductInCommandsShort: qpc
+:ProductInstallerToolName: qpc-tools
+
+// Product QPC *SPECIFIC* attributes
+:QPCcommandDownloadInstallerRHEL8: # yum install -y https://github.com/quipucords/qpc-tools/releases/latest/download/qpc_tools.el8.noarch.rpm
+:QPCcommandDownloadInstallerRHEL7: # yum install -y https://github.com/quipucords/qpc-tools/releases/latest/download/qpc_tools.el7.noarch.rpm
+:QPCcommandDownloadInstallerRHEL6: # yum install -y https://github.com/quipucords/quipucords-installer/releases/latest/download/quipucords_installer.el6.noarch.rpm
+:QPCcommandOfflineDownloadServerPackageLanding: https://github.com/quipucords/quipucords/releases/latest/
+:QPCcommandOfflineDownloadServerPackageName: quipucords_server_image.tar.gz
+:QPCcommandOfflineDownloadServerPackageStartDownload: https://github.com/quipucords/quipucords/releases/latest/download/quipucords_server_image.tar.gz
+:QPCcommandOfflineDownloadCLIPackageLandingGeneric: https://github.com/quipucords/qpc/releases/latest/
+:QPCcommandOfflineDownloadCLIPackageLandingRHEL8: https://github.com/quipucords/qpc/releases/latest/
+:QPCcommandOfflineDownloadCLIPackageNameRHEL8: qpc.el8.noarch.rpm
+:QPCcommandOfflineDownloadCLIPackageStartDownloadRHEL8: https://github.com/quipucords/qpc/releases/latest/download/qpc.el8.noarch.rpm
+:QPCcommandOfflineDownloadCLIPackageLandingRHEL7: https://github.com/quipucords/qpc/releases/latest/
+:QPCcommandOfflineDownloadCLIPackageNameRHEL7: qpc.el7.noarch.rpm
+:QPCcommandOfflineDownloadCLIPackageStartDownloadRHEL7: https://github.com/quipucords/qpc/releases/latest/download/qpc.el7.noarch.rpm
+:QPCcommandOfflineDownloadCLIPackageLandingRHEL6: https://github.com/quipucords/qpc/releases/latest/
+:QPCcommandOfflineDownloadCLIPackageNameRHEL6: qpc.el6.noarch.rpm
+:QPCcommandOfflineDownloadCLIPackageStartDownloadRHEL6: https://github.com/quipucords/qpc/releases/latest/download/qpc.el6.noarch.rpm
+
 
 // Red Hat product attributes
 :CompanyName: Red Hat
@@ -34,5 +54,16 @@
 :SatelliteNameBrandedShort: Red Hat Satellite
 :SatelliteNameVeryShort: Satellite
 
+:AnsibleName: Ansible
+
 // External product attributes
 :vCenterServerName: vCenter Server
+:CentOSName: CentOS
+:PostgreSQLName: PostgreSQL
+:PodmanName: Podman
+:DockerName: Docker
+:PythonName: Python
+
+// Book titles
+:InstallGuide: pass:quotes,attributes[Installing and Configuring {ProductNameMedium}]
+:UserGuide: pass:quotes,attributes[Using {ProductNameMedium}]

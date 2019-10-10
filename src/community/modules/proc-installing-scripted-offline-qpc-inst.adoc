@@ -1,0 +1,53 @@
+// Module included in the following assemblies:
+// assembly-installing-scripted-offline-inst.adoc
+
+[id="proc-installing-scripted-offline-qpc-inst_{context}"]
+
+= Installing with the offline installation process
+
+...intro text about running the command with options to change password ****changing soon, pw prompt****, user ID, email address (no prompt for these)....
+
+.Prerequisites
+
+. ...
+
+.Procedure
+
+****procedures need changes for new prompts during installer run****
+
+// do not change underscore coding for variables in commands
+ifdef::discovery_install_guide[]
+. Start the installation by entering the following command, where `_admin_` is the new administrator user name, `_qpcpassw0rd_` is the new password, and `_admin@example.com_` is the email address for the {ProductNameShort} server user:
++
+[source,options="nowrap",subs="+quotes"]
+----
+# ****command****
+----
+endif::discovery_install_guide[]
+
+ifdef::qpc_install_guide[]
+. Start the installation by entering the following command, where `_admin_` is the new administrator user name, `_qpcpassw0rd_` is the new password, and `_admin@example.com_` is the email address for the {ProductNameShort} server user:
++
+[source,options="nowrap",subs="+quotes"]
+----
+# qpc-tools install -e server_username=__admin__ -e server_password=__qpcpassw0rd__ -e server_user_email=__admin@example.com__
+----
+endif::qpc_install_guide[]
+
+
+.Verification steps
+
+. For a successful installation, the output appears similar to the following example:
++
+----
+Installation complete.
+----
+
+// ....link to a topic that contains the description about the default config when running this simple install?
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.
+
+// Topics from AsciiDoc conversion that were used as source for this topic:
+// ....
