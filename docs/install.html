@@ -441,75 +441,409 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel0">
-<li><a href="#assembly-install-scripted-online-qpc_{context}">Installing&#8230;&#8203;.scripted&#8230;&#8203;online&#8230;&#8203;.qpc</a>
+<li><a href="#assembly-about-common_{context}">About Quipucords</a>
 <ul class="sectlevel1">
-<li><a href="#install-scripted-online-qpc_assembly-install-scripted-online-qpc-ctxt">Installing Quipucords with the automated installer and internet connectivity</a></li>
+<li><a href="#con-what-is-prod-common_assembly-about-common-ctxt">What is Quipucords?</a></li>
+<li><a href="#ref-what-prods-find-common_assembly-about-common-ctxt">What products does Quipucords find?</a></li>
+</ul>
+</li>
+<li><a href="#assembly-installing-prerequisites-inst_{context}">Installing prerequisites for Quipucords</a>
+<ul class="sectlevel1">
+<li><a href="#ref-hw-prerequsites-inst_assembly-installing-prerequisites-inst-ctxt">Hardware prerequisites</a></li>
+<li><a href="#ref-sw-prerequsites-inst_assembly-installing-prerequisites-inst-ctxt">Software prerequisites</a></li>
+<li><a href="#ref-env-prerequsites-inst_assembly-installing-prerequisites-inst-ctxt">Other environment prerequisites</a></li>
+</ul>
+</li>
+<li><a href="#assembly-installing-scripted-online-inst_{context}">Installing Quipucords with the online installation process</a>
+<ul class="sectlevel1">
+<li><a href="#proc-downloading-installer-inst_assembly-installing-scripted-online-inst-ctxt">Downloading the installer</a></li>
+<li><a href="#proc-installing-scripted-online-inst_assembly-installing-scripted-online-inst-ctxt">Installing with the online installation process</a></li>
+</ul>
+</li>
+<li><a href="#assembly-installing-scripted-offline-inst_{context}">Installing Quipucords with the offline installation process</a>
+<ul class="sectlevel1">
+<li><a href="#proc-installing-dependencies-offline-install-inst_assembly-installing-scripted-offline-inst-ctxt">Installing dependencies for the offline installation</a>
+<ul class="sectlevel2">
+<li><a href="#_installing_dependencies_for_rhel_7_and_8_or_centos_7_and_8">Installing dependencies for RHEL 7 and 8 or CentOS 7 and 8</a>
+<ul class="sectlevel3">
+<li><a href="#_dependencies_for_the_quipucords_server_package">Dependencies for the Quipucords server package</a></li>
+<li><a href="#_dependencies_for_the_quipucords_cli_package">Dependencies for the Quipucords CLI package</a></li>
+</ul>
+</li>
+<li><a href="#_installing_dependencies_for_rhel_6_and_centos_6">Installing dependencies for RHEL 6 and CentOS 6</a>
+<ul class="sectlevel3">
+<li><a href="#_dependencies_for_the_quipucords_server_package_2">Dependencies for the Quipucords server package</a></li>
+<li><a href="#_dependencies_for_the_quipucords_cli_package_2">Dependencies for the Quipucords CLI package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#proc-downloading-installer-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the installer</a></li>
+<li><a href="#proc-downloading-server-package-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the server package</a></li>
+<li><a href="#proc-building-database-container-image-inst_assembly-installing-scripted-offline-inst-ctxt">Building the database container image</a>
+<ul class="sectlevel2">
+<li><a href="#_building_the_database_container_image_for_rhel_7_and_8_and_centos_7_and_8">Building the database container image for RHEL 7 and 8 and CentOS 7 and 8</a></li>
+<li><a href="#_building_the_database_container_image_for_rhel_6_and_centos_6">Building the database container image for RHEL 6 and CentOS 6</a></li>
+</ul>
+</li>
+<li><a href="#proc-downloading-cli-package-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the command line interface package</a></li>
+<li><a href="#proc-transferring-packages-offline-inst_assembly-installing-scripted-offline-inst-ctxt">Transferring the packages to the offline machine</a></li>
+<li><a href="#proc-installing-scripted-offline-qpc-inst_assembly-installing-scripted-offline-inst-ctxt">Installing with the offline installation process</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div id="content">
-<h1 id="assembly-install-scripted-online-qpc_{context}" class="sect0">Installing&#8230;&#8203;.scripted&#8230;&#8203;online&#8230;&#8203;.qpc</h1>
+<h1 id="assembly-about-common_{context}" class="sect0">About Quipucords</h1>
 <div class="openblock partintro">
 <div class="content">
 <div class="paragraph">
-<p>The Quipucords tool is delivered in two parts, a command line tool as an RPM package and a server as container images.</p>
+<p>The Quipucords tool is designed to help users collect data about their usage of specific Red Hat software. By using Quipucords, users can reduce the amount of time and effort that is required to calculate and report usage of those Red Hat products.</p>
 </div>
 <div class="paragraph">
-<p>The automated installation runs an installer that uses Ansible to install the command line tool, the server image, and the database image. When you run the automated installation, the server is installed and started as described in (&#8230;&#8203;.link to the default config description topic from Configuring and Starting Quipucords&#8230;&#8203;). However, you can change some of the defaults used by the automated installation with the (&#8230;&#8203;.link to Installation Options topic&#8230;&#8203;.).</p>
+<div class="title">Learn more</div>
+<p>To learn more about the purpose, benefits, and characteristics of Quipucords, see the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#con-what-is-prod-common_assembly-about-common-ctxt">What is Quipucords?</a></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<div class="title">Prerequisites</div>
-<p>For more information about Quipucords prerequisites, see (&#8230;&#8203;link to prereqs topic&#8230;&#8203;.).</p>
+<p>To learn more about the products and product versions that Quipucords can find and inspect, see the following information:</p>
 </div>
-<div class="paragraph">
-<div class="title">Procedure</div>
-<p>TEXT To &#8230;&#8203;do install&#8230;&#8203;do these interesting things&#8230;&#8203;.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#ref-what-prods-find-common_assembly-about-common-ctxt">What products does Quipucords find?</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="install-scripted-online-qpc_assembly-install-scripted-online-qpc-ctxt">Installing Quipucords with the automated installer and internet connectivity</h2>
+<h2 id="con-what-is-prod-common_assembly-about-common-ctxt">What is Quipucords?</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The simplest installation method is&#8230;&#8203;..</p>
+<p>The Quipucords tool, also known as Quipucords, is an inspection and reporting tool. It is designed to find, identify, and report environment data, or facts, such as the number of physical and virtual systems on a network, their operating systems, and other configuration data. In addition, it is designed to find, identify, and report more detailed facts for some versions of key Red Hat packages and products for the IT resources in that network.</p>
+</div>
+<div class="paragraph">
+<p>The ability to inspect the software and systems that are running on your network improves your ability to understand and report on your entitlement usage. Ultimately, this inspection and reporting process is part of the larger system administration task of managing your inventories.</p>
+</div>
+<div class="paragraph">
+<p>The Quipucords tool requires the configuration of two basic structures to access IT resources and run the inspection process. A <em>credential</em> contains user access data, such as the user name and password or SSH key of a user with sufficient authority to run the inspection process on a particular source or some of the assets on that source. A <em>source</em> contains data about a single asset or multiple assets that are to be inspected. These assets can be physical machines, virtual machines, or containers, identified as host names, IP addresses, IP ranges, or subnets. These assets can also be a systems management solution such as vCenter Server or Red Hat Satellite Server.</p>
+</div>
+<div class="paragraph">
+<p>You can save multiple credentials and sources to use with Quipucords in various combinations as you run inspection processes, or <em>scans</em>. When you have completed a scan, you can access these facts in the output as a collection of formatted data, or <em>report</em>, to review the results.</p>
+</div>
+<div class="paragraph">
+<p>By default, the credentials and sources that are created during the use of Quipucords are encrypted in a database. The values are encrypted with AES-256 encryption. They are decrypted when the Quipucords server runs a scan with the use of a vault password to access the encrypted values that are stored in the database.</p>
+</div>
+<div class="paragraph">
+<p>The Quipucords tool is an agentless inspection tool, so there is no need to install the tool on every source that is to be inspected. However, the system that Quipucords is installed on must have access to the systems to be discovered and inspected.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ref-what-prods-find-common_assembly-about-common-ctxt">What products does Quipucords find?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Quipucords tool finds the following Red Hat products. For each version or release, the earliest version is listed, with later releases indicated as applicable.</p>
+</div>
+<div class="paragraph">
+<p>If a product has changed names recently so that you might be more familiar with the current name for that product, that name is provided as additional information. No later version is implied by the inclusion of a newer product name unless specific versions of that product are also listed.</p>
+</div>
+<div class="ulist">
+<div class="title">Red Hat Enterprise Linux</div>
+<ul>
+<li>
+<p>Red Hat Enterprise Linux version 5 and later</p>
+</li>
+<li>
+<p>Red Hat Enterprise Linux version 6 and later</p>
+</li>
+<li>
+<p>Red Hat Enterprise Linux version 7 and later</p>
+</li>
+<li>
+<p>Red Hat Enterprise Linux version 8 and later</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Red Hat Middleware products</div>
+<ul>
+<li>
+<p>Red Hat JBoss BRMS version 5.0.1 and later, version 6.0.0 and later (current product name is Red Hat Decision Manager)</p>
+</li>
+<li>
+<p>JBoss Enterprise Web Server version 1 and later, version 2.0 and later, version 2.1.0 and later; Red Hat JBoss Web Server 3.0.1 and later, 3.1 and later, version 5.0.0</p>
+</li>
+<li>
+<p>Red Hat JBoss Enterprise Application Platform version 4.2 and later, version 4.3 and later, version 5 and later, version 6 and later, version 7</p>
+</li>
+<li>
+<p>Red Hat Fuse version 6.0 and later, version 6.1 and later, version 6.2 and later, version 6.3.0</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<h1 id="assembly-installing-prerequisites-inst_{context}" class="sect0">Installing prerequisites for Quipucords</h1>
+<div class="openblock partintro">
+<div class="content">
+<div class="paragraph">
+<p>Before you begin the installation process, review the information about Quipucords prerequisites. Then complete any  installation or configuration tasks for the prerequisites.</p>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>Install the following requirements for hardware, software, and the environment in which you are going to install and use Quipucords.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ref-hw-prerequsites-inst_assembly-installing-prerequisites-inst-ctxt">Hardware prerequisites</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The system on which you are going to install Quipucords must meet or exceed the following hardware requirements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>CPU:</strong> 2 core minimum, with a recommended 4 cores</p>
+</li>
+<li>
+<p><strong>Disk Storage:</strong> 30 GB</p>
+</li>
+<li>
+<p><strong>RAM:</strong> 1 GB minimum, with a recommended 2 GB</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ref-sw-prerequsites-inst_assembly-installing-prerequisites-inst-ctxt">Software prerequisites</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The system on which you are going to install Quipucords must have the following software requirements installed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Operating system:</strong> The latest release of the following operating system versions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Red Hat Enterprise Linux 6, 7, or 8</p>
+</li>
+<li>
+<p>CentOS 6 or 7</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>RHEL 7 or 8 or CentOS 7 are the recommended operating system versions. For RHEL 6 or CentOS 6, the minimum required kernel is 2.6.32-431 or later.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Database:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>PostgreSQL 9.6.10</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The database is automatically installed for you if you use the online installation.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Programming language for the Quipucords command line interface (CLI):</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Python 3.4 or later</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ref-env-prerequsites-inst_assembly-installing-prerequisites-inst-ctxt">Other environment prerequisites</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The environment in which you are going to use Quipucords must meet the following requirements. Some of these requirements affect the systems on which you are going to run Quipucords. Others affect the systems in your IT infrastructure that you are going to scan with Quipucords.</p>
+</div>
+<div class="paragraph">
+<p>On the machine where Quipucords is installed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The machine that Quipucords is installed on must have access to the IT infrastructure assets that are to be scanned.</p>
+</li>
+<li>
+<p>If you install the Quipucords server and command line interface (CLI) tool on different machines, the CLI machine must have must have access to the IT infrastructure assets that are to be scanned and must be able to connect to the server machine.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>On the systems where Quipucords runs scans:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Any network sources that are targeted for scanning must be running the Secure Shell (SSH) protocol.</p>
+</li>
+<li>
+<p>A user account that is used as credential for a scan requires the <code>bash</code> shell. The shell cannot be the <code>/sbin/nologin</code> shell or the <code>/bin/false</code> shell.</p>
+</li>
+<li>
+<p>A user account that is used as a credential for a network scan must have adequate permissions to run commands and read certain files on those systems. For example, some commands that run during a scan require privilege elevation to gather the complete set of facts for the scan. For more information about these commands, see "Commands that are used in scans of remote network assets" in Using Quipucords.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<h1 id="assembly-installing-scripted-online-inst_{context}" class="sect0">Installing Quipucords with the online installation process</h1>
+<div class="openblock partintro">
+<div class="content">
+<div class="paragraph">
+<p>The online, or automated, installation process runs an installer that uses Ansible to install the command line interface tool, the server image, and the database image.</p>
+</div>
+<div class="paragraph">
+<p>When you run the online installation process, the server is installed and started as described in (&#8230;&#8203;.link to the default config description topic from Configuring and Starting Quipucords&#8230;&#8203;). However, you can change some of the defaults used by the automated installation with the (&#8230;&#8203;.link to Installation Options topic&#8230;&#8203;.).</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Ensure that all prerequisites are installed and configured.</p>
+</li>
+<li>
+<p>To use the online installation process, the machine on which you are downloading the installer and installing Quipucords must be connected to the internet.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>To install Quipucords with the online installation process, you do the following tasks:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Download the installer. For more information, see <a href="#proc-downloading-installer-inst_assembly-installing-scripted-online-inst-ctxt">Downloading the installer</a>.</p>
+</li>
+<li>
+<p>Run the installation. For more information, see <a href="#proc-installing-scripted-online-inst_assembly-installing-scripted-online-inst-ctxt">Installing with the online installation process</a>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-downloading-installer-inst_assembly-installing-scripted-online-inst-ctxt">Downloading the installer</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Download&#8230;&#8203;..intro text&#8230;&#8203;.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Review and install the prerequisites for Quipucords. For more information about the prerequisites, see (&#8230;&#8203;link to Prereqs topic&#8230;&#8203;).</p>
-</li>
+<p>Download the Quipucords installer by using the following command, based on your operating system version:</p>
+<div class="ulist">
+<ul>
 <li>
-<p>Download the installer by entering the following command:</p>
+<p>For RHEL 8, use the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre># curl -k -O -sSL https://github.com/quipucords/quipucords-installer/releases/latest/download/quipucords_install.tar.gz</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Extract the installer by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre># tar -xvzf quipucords_install.tar.gz</pre>
+<pre class="highlight nowrap"><code># yum install -y https://github.com/quipucords/qpc-tools/releases/latest/download/qpc_tools.el8.noarch.rpm</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Change to the installer directory by entering the following command:</p>
+<p>For RHEL 7 and CentOS 7, use the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre># cd install/</pre>
+<pre class="highlight nowrap"><code># yum install -y https://github.com/quipucords/qpc-tools/releases/latest/download/qpc_tools.el7.noarch.rpm</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Start the installation by entering the following command. Alternatively, enter the following command with options. For more information, see (&#8230;&#8203;link to Installation options topic&#8230;&#8203;):</p>
+<p>For RHEL 6 and CentOS 6, use the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre># ./install.sh</pre>
+<pre class="highlight nowrap"><code># yum install -y https://github.com/quipucords/quipucords-installer/releases/latest/download/quipucords_installer.el6.noarch.rpm</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-installing-scripted-online-inst_assembly-installing-scripted-online-inst-ctxt">Installing with the online installation process</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong><strong>*CHANGING with change to installer to prompt for passwords (BUT some of this text will still be needed if user NOT prompted for user ID or email)</strong></strong>*
+The simplest method for installing Quipucords is to run the online installation with all of the default options. However, accepting all of the default options does not change the default administrator user name and password for Quipucords, a process that does not meet common recommended security practices. In addition, the default server administrator email address for Quipucords is set to an <code>example.com</code> email domain, a process that does not provide the proper contact information for your organization.</p>
+</div>
+<div class="paragraph">
+<p>Therefore, the recommended method is to run the online installation with the options that change the default administrator user name and password for Quipucords and change the email address for that primary administrator, or server user, to one that is appropriate for your organization. The following information describes this method.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Download the Quipucords installer. For more information, see (&#8230;&#8203;link to download inst topic&#8230;&#8203;).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p><strong><strong>*Command syntax for options changing&#8230;&#8203;</strong></strong>*</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Start the installation by entering the following command, where <code><em>admin</em></code> is the new administrator user name, <code><em>qpcpassw0rd</em></code> is the new password, and <code><em>admin@example.com</em></code> is the email address for the Quipucords server user:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code># qpc-tools install -e server_username=<em>admin</em> -e server_password=<em>qpcpassw0rd</em> -e server_user_email=<em>admin@example.com</em></code></pre>
 </div>
 </div>
 </li>
@@ -519,7 +853,433 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Verification steps</div>
 <ol class="arabic">
 <li>
-<p>The output appears similar to the following example:</p>
+<p>For a successful installation, the output appears similar to the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre>Installation complete.</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h1 id="assembly-installing-scripted-offline-inst_{context}" class="sect0">Installing Quipucords with the offline installation process</h1>
+<div class="openblock partintro">
+<div class="content">
+<div class="paragraph">
+<p>The offline installation process is required when you install Quipucords in an offline environment, also commonly referred to as a disconnected or air-gapped environment. If you must install the server, command line interface (CLI) tool, or both on machines that do not have internet access, then you must use the offline installation process.</p>
+</div>
+<div class="paragraph">
+<p>For the offline installation process, you must complete some steps from a <em>connected</em> machine, one that has internet connectivity. These steps include downloading the installer, downloading the server and CLI packages, building a container image for the database, transferring packages to the disconnected machine, and others. You also complete steps on the <em>disconnected</em> machine, including installing dependencies to enable the offline installation, receiving the prepared packages and images transferred from the connected machine, and running the installer itself. The dependencies that enable offline installation are in addition to the standard prerequisites.</p>
+</div>
+<div class="paragraph">
+<p>When you run the offline installation process, the server is installed and started as described in (&#8230;&#8203;.link to the default config description topic from Configuring and Starting Quipucords&#8230;&#8203;). However, you can change some of the defaults used by the automated installation with the (&#8230;&#8203;.link to Installation Options topic&#8230;&#8203;.).</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Ensure that all prerequisites are installed and configured.</p>
+</li>
+<li>
+<p>Ensure that the connected machine where you download packages can connect to the disconnected machine or machines where you want to install the Quipucords server and CLI tool.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>To install Quipucords with the offline installation process, you do the following tasks:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Install dependencies. These dependencies are additional prerequisites that cannot be installed by the installer in an offline installation process. For more information, see <a href="#proc-installing-dependencies-offline-install-inst_assembly-installing-scripted-offline-inst-ctxt">Installing dependencies for the offline installation</a>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>These dependencies are required on both the connected machine where you are obtaining the packages and the disconnected machine where you are installing Quipucords.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Download the installer. For more information, see <a href="#proc-downloading-installer-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the installer</a>.</p>
+</li>
+<li>
+<p><strong><strong>*Maybe new step with newest installer changes&#8212;&#8203;create a dir on the connected machine?</strong></strong>*</p>
+</li>
+<li>
+<p>Download the server package to the connected machine. For more information, see <a href="#proc-downloading-server-package-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the server package</a>.</p>
+</li>
+<li>
+<p>Build the database container image. For more information, see <a href="#proc-building-database-container-image-inst_assembly-installing-scripted-offline-inst-ctxt">Building the database container image</a>.</p>
+</li>
+<li>
+<p>Download the CLI package. For more information, see <a href="#proc-downloading-cli-package-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the command line interface package</a>.</p>
+</li>
+<li>
+<p>Transfer the packages from the connected machine where they were downloaded to the disconnected machine where you are going to run the installation. For more information, see <a href="#proc-transferring-packages-offline-inst_assembly-installing-scripted-offline-inst-ctxt">Transferring packages to the offline machine</a>.</p>
+</li>
+<li>
+<p>Run the installation. For more information, see <a href="#proc-installing-scripted-offline-qpc-inst_assembly-installing-scripted-offline-inst-ctxt">Installing with the offline installation process</a>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-installing-dependencies-offline-install-inst_assembly-installing-scripted-offline-inst-ctxt">Installing dependencies for the offline installation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To use the offline installation process, you must install some dependencies manually. These dependencies are in addition to the prerequisites for Quipucords installation.</p>
+</div>
+<div class="paragraph">
+<p>You must install the dependencies on the disconnected machine where you are installing and using Quipucords.</p>
+</div>
+<div class="paragraph">
+<p>You must also install most of the dependencies, such as Ansible, the correct Python version, and the applicable container software, on the connected machine where you are downloading the packages before installation. For example, the <code>yum install</code> command that you use to get the Quipucords qpc-tools package also does an RPM package check for certain runtime requirements. This package check checks for the Ansible and Python dependencies. In addition, the container software (either Podman or Docker, depending on your RHEL or CentOS version) is required to be installed on the connected machine to build a container for the PostgreSQL database.</p>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>Use one of the following procedures, as appropriate for your operating system.</p>
+</div>
+<div class="sect2">
+<h3 id="_installing_dependencies_for_rhel_7_and_8_or_centos_7_and_8">Installing dependencies for RHEL 7 and 8 or CentOS 7 and 8</h3>
+<div class="paragraph">
+<p>To install the dependencies on RHEL 7 and 8 or CentOS 7 and 8, use the following steps:</p>
+</div>
+<div class="sect3">
+<h4 id="_dependencies_for_the_quipucords_server_package">Dependencies for the Quipucords server package</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><em>On both the connected and disconnected machine:</em> Install Ansible 2.4 or later, depending on the requirements of your operating system version. For more information, see the documentation about installing the control node (also known as the control manager in previous versions) in the Ansible <em>Installation Guide</em>. You can find a link to the <em>Installation Guide</em> for more current versions plus a link to previous documentation versions at <a href="https://docs.ansible.com/#coreversionselect" class="bare" target="_blank" rel="noopener">https://docs.ansible.com/#coreversionselect</a>.</p>
+</li>
+<li>
+<p><em>On both the connected and disconnected machine:</em> Install the latest version of Podman. For more information, see the documentation about installation located in the <em>Getting Started with Podman</em> guide, at <a href="https://podman.io/getting-started/" class="bare" target="_blank" rel="noopener">https://podman.io/getting-started/</a>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_dependencies_for_the_quipucords_cli_package">Dependencies for the Quipucords CLI package</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><em>On the disconnected machine only:</em> Install the Extra Packages for Enterprise Linux (EPEL) package. Select the package that is appropriate for your operating system from the options in the "Quickstart" section at the following link: <a href="https://fedoraproject.org/wiki/EPEL" class="bare" target="_blank" rel="noopener">https://fedoraproject.org/wiki/EPEL</a>.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><em>On both the connected and disconnected machine:</em> Make sure that you are running a minimum of Python 3.6. In addition, make sure that the Python 3.6-requests module is installed.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installing_dependencies_for_rhel_6_and_centos_6">Installing dependencies for RHEL 6 and CentOS 6</h3>
+<div class="paragraph">
+<p>To install the dependencies on RHEL 6 and CentOS 6, use the following steps:</p>
+</div>
+<div class="sect3">
+<h4 id="_dependencies_for_the_quipucords_server_package_2">Dependencies for the Quipucords server package</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><em>On both the connected and disconnected machine:</em> Install Ansible 2.4 or later, depending on the requirements of your operating system version. For more information, see the documentation about installing the control node (also known as the control manager in previous versions) in the Ansible <em>Installation Guide</em>. You can find a link to the <em>Installation Guide</em> for more current versions plus a link to previous documentation versions at <a href="https://docs.ansible.com/#coreversionselect" class="bare" target="_blank" rel="noopener">https://docs.ansible.com/#coreversionselect</a>.</p>
+</li>
+<li>
+<p><em>On both the connected and disconnected machine:</em> Install Docker. An older version of Docker that is compatible with RHEL 6 and CentOS 6 is required. This version of Docker is no longer formally supported. To download and install this version of Docker, select the <strong>/docker-engine-1.7.1-1.el6.x86_64.rpm</strong> package at the following link: <a href="https://yum.dockerproject.org/repo/main/centos/6/Packages/" class="bare" target="_blank" rel="noopener">https://yum.dockerproject.org/repo/main/centos/6/Packages/</a>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_dependencies_for_the_quipucords_cli_package_2">Dependencies for the Quipucords CLI package</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><em>On the disconnected machine only:</em> Install the Extra Packages for Enterprise Linux (EPEL) package. Select the package that is appropriate for your operating system from the options in the "Quickstart" section at the following link: <a href="https://fedoraproject.org/wiki/EPEL" class="bare" target="_blank" rel="noopener">https://fedoraproject.org/wiki/EPEL</a>.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><em>On both the connected and disconnected machine:</em> Make sure that you are running a minimum of Python 3.4. In addition, make sure that the Python 3.4-requests module is installed.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-downloading-installer-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the installer</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Download&#8230;&#8203;..intro text&#8230;&#8203;.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Download the Quipucords installer by using the following command, based on your operating system version:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For RHEL 8, use the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code># yum install -y https://github.com/quipucords/qpc-tools/releases/latest/download/qpc_tools.el8.noarch.rpm</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>For RHEL 7 and CentOS 7, use the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code># yum install -y https://github.com/quipucords/qpc-tools/releases/latest/download/qpc_tools.el7.noarch.rpm</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>For RHEL 6 and CentOS 6, use the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code># yum install -y https://github.com/quipucords/quipucords-installer/releases/latest/download/quipucords_installer.el6.noarch.rpm</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-downloading-server-package-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the server package</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Quipucords server package contains the server, database, and graphical user interface (GUI) client.</p>
+</div>
+<div class="paragraph">
+<p>The server package is available as a container image. Download the server package to the connected machine.</p>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>To download the server package, use the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From a browser session on the connected machine, go to the following link for information about the Quipucords server package and for the link to download the latest version: <a href="https://github.com/quipucords/quipucords/releases/latest/" target="_blank" rel="noopener">Quipucords server package latest version</a>.</p>
+</li>
+<li>
+<p>To download the server package, click quipucords_server_image.tar.gz.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-building-database-container-image-inst_assembly-installing-scripted-offline-inst-ctxt">Building the database container image</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Quipucords server requires a container image for the PostgreSQL database. You must build the image on the connected machine. The type of container image that you need to build depends on the version of your operating system.</p>
+</div>
+<div class="paragraph">
+<div class="title">Prerequisites</div>
+<p>Before you begin, the applicable container software must be installed&#8230;&#8203;as described in (link to dependencies section&#8230;&#8203;.)</p>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>Select one of the following procedures, as appropriate for your operating system:</p>
+</div>
+<div class="sect2">
+<h3 id="_building_the_database_container_image_for_rhel_7_and_8_and_centos_7_and_8">Building the database container image for RHEL 7 and 8 and CentOS 7 and 8</h3>
+<div class="paragraph">
+<p>To build the database container image for for RHEL 7 and 8 and CentOS 7 and 8, use the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create the PostgreSQL image TAR file with the following commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code># podman pull postgres:9.6.10
+# podman save -o postgres.9.6.10.tar postgres:9.6.10</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+The offline installation script requires the TAR file to be named <code>postgres.9.6.10.tar</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_building_the_database_container_image_for_rhel_6_and_centos_6">Building the database container image for RHEL 6 and CentOS 6</h3>
+<div class="paragraph">
+<p>To build the database container image for for RHEL 6 and CentOS 6, use the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create the PostgreSQL image TAR file with the following commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code># docker pull postgres:9.6.10
+# docker save -o postgres.9.6.10.tar postgres:9.6.10</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+The offline installation script requires the TAR file to be named <code>postgres.9.6.10.tar</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-downloading-cli-package-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the command line interface package</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Quipucords command line interface (CLI) package contains a command line interface to interact with the server.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>From a browser session on the connected machine, go to the following link for information about the Quipucords CLI package and for the link to download the latest version: <a href="https://github.com/quipucords/qpc/releases/latest/" target="_blank" rel="noopener">Quipucords CLI package latest version</a>.</p>
+</li>
+<li>
+<p>To download the server package, click the following CLI package download link that applies to your operating system:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>For RHEL 8 and CentOS 8, click <strong>qpc.el8.noarch.rpm</strong>.</p>
+</li>
+<li>
+<p>For RHEL 7 and CentOS 7, click <strong>qpc.el7.noarch.rpm</strong>.</p>
+</li>
+<li>
+<p>For RHEL 6 and CentOS 6, click <strong>qpc.el6.noarch.rpm</strong>.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-transferring-packages-offline-inst_assembly-installing-scripted-offline-inst-ctxt">Transferring the packages to the offline machine</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After you download the Quipucords server and CLI packages and build the PostgreSQL database container image, you must transfer them to the offline machine where Quipucords will be installed.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a <code>packages</code> directory on the disconnected machine to use for the package transfer, where <code><em>lib</em> is the library version, either `lib</code> or <code>lib64</code>, and <code><em>version.release.patch</em></code> is the complete version number of the qpc-tools RPM package. Use the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code># mkdir -p /usr/_lib_/qpc-tools-_version.release.patch_/install/packages</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Move the downloaded packages from the connected machine into the <code>packages</code> directory on the disconnected machine, where <code><em>pathtopackages</em></code> is the path to the <code>packages</code> directory. Use the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code># mv /_pathtopackages_/usr/_lib_/qpc-tools-_version.release.patch_/install/packages</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-installing-scripted-offline-qpc-inst_assembly-installing-scripted-offline-inst-ctxt">Installing with the offline installation process</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>&#8230;&#8203;intro text about running the command with options to change password <strong><strong>*changing soon, pw prompt</strong></strong>*, user ID, email address (no prompt for these)&#8230;&#8203;.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Prerequisites</div>
+<ol class="arabic">
+<li>
+<p>&#8230;&#8203;</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p><strong><strong>*procedures need changes for new prompts during installer run</strong></strong>*</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Start the installation by entering the following command, where <code><em>admin</em></code> is the new administrator user name, <code><em>qpcpassw0rd</em></code> is the new password, and <code><em>admin@example.com</em></code> is the email address for the Quipucords server user:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code># qpc-tools install -e server_username=<em>admin</em> -e server_password=<em>qpcpassw0rd</em> -e server_user_email=<em>admin@example.com</em></code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification steps</div>
+<ol class="arabic">
+<li>
+<p>For a successful installation, the output appears similar to the following example:</p>
 <div class="listingblock">
 <div class="content">
 <pre>Installation complete.</pre>
@@ -533,7 +1293,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-09-14 11:59:27 -0400
+Last updated 2019-10-10 20:58:21 UTC
 </div>
 </div>
 </body>
