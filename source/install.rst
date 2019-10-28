@@ -8,8 +8,8 @@ Next, you can use ``qpc-tools`` to configure and install the Quipucords CLI and 
 
 .. |qpc-tools installation| raw:: html
 
-    <a href="https://github.com/quipucords/qpc-tools/blob/master/README.md#-installation" target="_blank">qpc-tools installation</a>
+    <a href="https://github.com/quipucords/qpc-tools/blob/latest/README.md#-installation" target="_blank">qpc-tools installation</a>
 
 .. |qpc-tools manpage| raw:: html
 
-    <a href="https://github.com/quipucords/qpc-tools/blob/master/docs/man.md" target="_blank">qpc-tools manpage</a>
+    <a href="https://github.com/quipucords/qpc-tools/blob/latest/docs/man.md#qpc-tools" target="_blank">qpc-tools manpage</a>
