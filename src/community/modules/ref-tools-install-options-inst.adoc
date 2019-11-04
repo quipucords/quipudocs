@@ -12,9 +12,14 @@ The following information lists the `install` subcommand options, along with app
 
 == Server installation options
 
+ifdef::qpc_install_guide[]
 `--offline-files=_offline_files_path`:: Sets the fully qualified path to the files on the disconnected machine, for example, the transferred server and command line interface packages, that are needed to complete an offline installation. This option has no default value and is used only when specified during an offline installation.
+endif::qpc_install_guide[]
 
-`--version=_version.patch.release_`:: Enables the installation of a specific {ProductNameShort} server version. Contains the semantic versioning format (version.release.patch, such as 0.9.0) of the {ProductNameShort} server that you want to install. Required if the `offline-files` option is specified. This option has a default of the latest version.
+`--version=_version.patch.release_`:: Enables the installation of a specific {ProductNameShort} server version. Contains the semantic versioning format (version.release.patch, such as 0.9.0) of the {ProductNameShort} server that you want to install. This option has a default of the latest version.
+ifdef::qpc_install_guide[]
+This option is required if the `offline-files` option is specified.
+endif::qpc_install_guide[]
 
 `--home-dir=_server_home_dir_`:: Sets the fully qualified path to the installation directory for the {ProductNameShort} server. Defaults to `~/{ProductInCommands}/`.
 
@@ -41,9 +46,14 @@ endif::discovery_install_guide[]
 
 == Command line interface installation options
 
+ifdef::qpc_install_guide[]
 `--offline-files=_offline_files_path_`:: Sets the fully qualified path to the files on the disconnected machine, for example, the transferred server and command line interface packages, that are needed to complete an offline installation. This option has no default value and is used only when specified during an offline installation.
+endif::qpc_install_guide[]
 
-`--version=_version.patch.release_`:: Enables the installation of a specific {ProductNameShort} CLI version. Contains the semantic versioning format (version.release.patch, such as 0.9.0) of the {ProductNameShort} CLI that you want to install. Required if the `offline-files` option is specified. This option has a default of the latest version.
+`--version=_version.patch.release_`:: Enables the installation of a specific {ProductNameShort} CLI version. Contains the semantic versioning format (version.release.patch, such as 0.9.0) of the {ProductNameShort} CLI that you want to install. This option has a default of the latest version.
+ifdef::qpc_install_guide[]
+This option is required if the `offline-files` option is specified.
+endif::qpc_install_guide[]
 
 `--home-dir=_cli_home_dir_`:: Sets the fully qualified path to the installation directory for the {ProductNameShort} CLI. Defaults to `~/{ProductInCommands}/`.
 

@@ -19,7 +19,7 @@ To add an SSH keyfile to the {ProductNameShort} server:
 
 . Copy the private key from the keyfile, using the copy method of your choice.
 
-. Add the private key to the `/{ProductInCommands}/sshkeys` directory on the {ProductNameShort} server, the default location for this directory at the time of server installation.
+. Add the private key to the `~/{ProductInCommands}/server/volumes/sshkeys` directory on the {ProductNameShort} server, the default location for this directory at the time of server installation.
 
 . Repeat these steps as needed for all credentials that use SSH keyfiles as the authentication method.
 

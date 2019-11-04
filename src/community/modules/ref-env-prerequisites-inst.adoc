@@ -23,7 +23,7 @@ On the systems where {ProductNameShort} runs scans:
 * Any network sources that are targeted for scanning must be running the Secure Shell (SSH) protocol.
 * A user account that is used as a credential for a scan requires the `bash` shell. The shell cannot be the `/sbin/nologin` shell or the `/bin/false` shell.
 * A user account that is used as a credential for a network scan must have adequate permissions to run commands and read certain files on those systems. For example, some commands that run during a scan require privilege elevation to gather the complete set of facts for the scan. The _{UserGuide}_ guide has additional information about the creation of credentials for network scans and the privileges that must be associated with those credentials to enable a more complete scan of network assets.
-* A user account that is used as a credential for a network scan where authentication is done with an SSH key must have a copy of the private key on the {ProductNameShort} server. The private key must be stored in the `/{ProductInCommands}/sshkeys` directory, the default location for this directory at the time of server installation. 
+* A user account that is used as a credential for a network scan where authentication is done with an SSH key must have a copy of the private key on the {ProductNameShort} server. The private key must be stored in the `~/{ProductInCommands}/server/volumes/sshkeys` directory, the default location for this directory at the time of server installation. 
 
 
 
