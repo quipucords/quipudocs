@@ -5,6 +5,8 @@ include::attributes/attributes-qpc.adoc[]
 [[quipucords_user_guide]]
 = Using {ProductNameMedium}
 
+// :toc: left
+
 // Contents
 include::assemblies/assembly-about-common.adoc[]
 

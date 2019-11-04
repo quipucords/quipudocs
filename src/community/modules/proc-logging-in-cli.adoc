@@ -1,0 +1,39 @@
+// Module included in the following assemblies:
+// assembly-accessing-client-gui.adoc
+
+[id="proc-logging-in-cli_{context}"]
+
+= Logging in to the {ProductNameShort} command line interface
+
+.Prerequisites
+
+To log in to the {ProductNameShort} command line interface, you need the IP address of the system where the {ProductNameShort} server is installed and the port number for the connection. These values are set for the command line interface either during the installation of the CLI package or after installation as a configuration step. You also need the user name and password to use when logging in. If you do not have this information, contact the administrator who installed the {ProductNameShort} server.
+
+The login command retrieves a token that is used for authentication with subsequent command line interface commands. That token is removed when you log out of the server, and expires daily.
+
+.Procedure
+
+. To log in to the command line interface, enter the following command, where `server_port` is the port that the {ProductNameShort} server is using for HTTPS communication and `_server_host_` is the IP address of the server:
+ifdef::discovery_install_guide[]
++
+[source,options="nowrap",subs="+quotes"]
+----
+# dsc server login --port=_server_port_ --host=_server_host_
+----
+endif::discovery_install_guide[]
+ifdef::qpc_install_guide[]
++
+[source,options="nowrap",subs="+quotes"]
+----
+# qpc server login --port=_server_port_ --host=_server_host_
+----
+endif::qpc_install_guide[]
+
+. At the prompts, enter the user name and password for {ProductNameShort}.
+
+// .Verification steps
+// (Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.

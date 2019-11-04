@@ -9,7 +9,7 @@ The {ProductNameShort} server requires a container image for the {PostgreSQLName
 
 .Prerequisites
 
-Before you begin, the applicable container software must be installed...as described in (link to dependencies section....)
+Before you begin, the applicable container software must be installed as described in xref:proc-installing-dependencies-offline-install-inst_assembly-installing-scripted-offline-inst-ctxt[Installing dependencies for the offline installation].
 
 .Procedure
 

@@ -5,48 +5,102 @@
 
 = Installing with the online installation process
 
-****CHANGING with change to installer to prompt for passwords (BUT some of this text will still be needed if user NOT prompted for user ID or email)****
-The simplest method for installing {ProductNameShort} is to run the online installation with all of the default options. However, accepting all of the default options does not change the default administrator user name and password for {ProductNameShort}, a process that does not meet common recommended security practices. In addition, the default server administrator email address for {ProductNameShort} is set to an `example.com` email domain, a process that does not provide the proper contact information for your organization.
+During the {ProductNameShort} installation process, you enter commands to install the server and the command line interface (CLI). The simplest method for installing {ProductNameShort} is to run the online installation with all of the default options. With this method, the install process prompts you to do the following actions:
+ifdef::discovery_install_guide[]
 
-Therefore, the recommended method is to run the online installation with the options that change the default administrator user name and password for {ProductNameShort} and change the email address for that primary administrator, or server user, to one that is appropriate for your organization. The following information describes this method.
+* Enter your user name and password for the {ContainerCatalogName}.
+endif::discovery_install_guide[]
+* Set a password for the {ProductNameShort} server administrator.
+* Set a password for the database user.
 
-.Prerequisites
 
-* Download the {ProductNameShort} installer. For more information, see (...link to download inst topic...).
+The following information includes commands for the default installation process. However, you can change some of the defaults used by the installation process by setting options that are defined in xref:ref-tools-install-options-inst_assembly-installing-scripted-online-inst-ctxt[Options for the {ProductToolsName} install command].
+
+// .Prerequisites
+
+// * Download the {ProductNameShort} installer. For more information, see (...link to download inst topic...).
 
 .Procedure
 
-****Command syntax for options changing...****
+To install the {ProductNameShort} server and CLI packages, use the following steps:
 
-// do not change underscore coding for variables in commands
+== Installing the server
+
+Install the server. The default server installation process prompts you to enter your user name and password for the {ContainerCatalogName} (the registry.redhat.io website). It also prompts you to supply a password for the {ProductNameShort} server administrator and a password for the {PostgreSQLName} database user.
+[IMPORTANT]
+====
+As a best practice, note the {ProductNameShort} server administrator and the {PostgreSQLName} database user passwords in the password management system that is used by your organization. {ProductNameStartSentence} does not offer a method to recover these passwords.
+====
+
 ifdef::discovery_install_guide[]
-. Start the installation by entering the following command, where `_admin_` is the new administrator user name, `_qpcpassw0rd_` is the new password, and `_admin@example.com_` is the email address for the {ProductNameShort} server user:
+. Install the server by entering the following command:
++
+[source,options="nowrap",subs="attributes,+quotes"]
+----
+# dsc-tools server install
+----
+
+. At the prompt, enter your user name for the {ContainerCatalogName}, also known as the registry.redhat.io image registry website.
+
+. At the prompt, enter your password for the {ContainerCatalogName}.
+
+. At the prompt, set a password for the {ProductNameShort} server administrator.
+
+. At the prompt, set a password for the {PostgreSQLName} database user.
+endif::discovery_install_guide[]
+
+ifdef::qpc_install_guide[]
+. Install the server by entering the following command:
 +
 [source,options="nowrap",subs="+quotes"]
 ----
-# ****command****
+# qpc-tools server install
+----
+
+. At the prompt, set a password for the {ProductNameShort} server administrator.
+
+. At the prompt, set a password for the {PostgreSQLName} database user.
+endif::qpc_install_guide[]
+
+.Verification steps
+
+. For a successful installation of the server package, the output appears similar to the following example:
++
+----
+Installation of the server was successful.
+----
+
+== Installing the command line interface
+
+Install the command line interface.
+
+The recommended method is to include the options to set the port and IP address of the {ProductNameShort} server. These options must be set so that the {ProductNameShort} command line interface can communicate with the server.
+
+ifdef::discovery_install_guide[]
+. Install the command line interface by entering the following command, where `server_port` is the port that the {ProductNameShort} server is using for communication and `_server_host_` is the IP address of the server:
++
+[source,options="nowrap",subs="+quotes"]
+----
+# dsc-tools cli install --server-port=_server_port_ --server-host=_server_host_
 ----
 endif::discovery_install_guide[]
 
 ifdef::qpc_install_guide[]
-. Start the installation by entering the following command, where `_admin_` is the new administrator user name, `_qpcpassw0rd_` is the new password, and `_admin@example.com_` is the email address for the {ProductNameShort} server user:
+. Install the command line interface by entering the following command, where `server_port` is the port that the {ProductNameShort} server is using for HTTPS communication and `_server_host_` is the IP address of the server:
 +
 [source,options="nowrap",subs="+quotes"]
 ----
-# qpc-tools install -e server_username=__admin__ -e server_password=__qpcpassw0rd__ -e server_user_email=__admin@example.com__
+# qpc-tools cli install --server-port=_server_port_ --server-host=_server_host_
 ----
 endif::qpc_install_guide[]
 
-
 .Verification steps
 
-. For a successful installation, the output appears similar to the following example:
+. For a successful installation command line interface packages the output appears similar to the following example:
 +
 ----
-Installation complete.
+Installation of the CLI was successful.
 ----
-
-// ....link to a topic that contains the description about the default config when running this simple install?
 
 // .Additional resources
 // * A bulleted list of links to other material closely related to the contents of the procedure module.

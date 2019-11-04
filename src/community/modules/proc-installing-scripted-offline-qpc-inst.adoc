@@ -5,39 +5,91 @@
 
 = Installing with the offline installation process
 
-...intro text about running the command with options to change password ****changing soon, pw prompt****, user ID, email address (no prompt for these)....
+During the {ProductNameShort} installation process, you enter commands to install the server and the command line interface (CLI).
 
-.Prerequisites
+The following information includes commands for the default installation process. However, you can change some of the defaults used by the installation process by setting options that are defined in xref:ref-tools-install-options-inst_assembly-installing-scripted-offline-inst-ctxt[Options for the {ProductToolsName} install command].
 
-. ...
+// .Prerequisites
+
+// . ...
 
 .Procedure
 
-****procedures need changes for new prompts during installer run****
+To install {ProductNameShort}, you install three packages, the {ProductToolsName} package, the {ProductNameShort} server package, and the {ProductNameShort} CLI package. Use the following steps:
 
-// do not change underscore coding for variables in commands
-ifdef::discovery_install_guide[]
-. Start the installation by entering the following command, where `_admin_` is the new administrator user name, `_qpcpassw0rd_` is the new password, and `_admin@example.com_` is the email address for the {ProductNameShort} server user:
+== Installing {ProductToolsName}
+
+Install {ProductToolsName}.
+
+ifdef::qpc_install_guide[]
+. Run the following command, where `_/path_` is the full path to the location on the disconnected machine where you transferred the packages.
 +
 [source,options="nowrap",subs="+quotes"]
 ----
-# ****command****
+# rpm -Uvh --force`_/path_`
+----
+endif::qpc_install_guide[]
+
+== Installing the server
+
+Install the server. The default server installation process prompts you to supply a password for the {ProductNameShort} server administrator and a password for the {PostgreSQLName} database user.
+
+ifdef::discovery_install_guide[]
+. Install the server by entering the following command:
++
+[source,options="nowrap",subs="+quotes"]
+----
+# dsc-tools server install
+----
+
+. Enter a password for the {ProductNameShort} server administrator.
+
+. Enter a password for the {PostgreSQLName} database user.
+
+. Enter your username for the {ContainerCatalogName}, also known as the `registry.redhat.io` image registry website.
+
+. Enter your password for the {ContainerCatalogName}.
+endif::discovery_install_guide[]
+
+ifdef::qpc_install_guide[]
+. Install the server by entering the following command, where `_/path_` is the full path to the location on the disconnected machine where you transferred the packages and `_version.release.patch_` is the version of the {ProductNameShort} server package:
++
+[source,options="nowrap",subs="+quotes"]
+----
+# qpc-tools server install --offline-files=`_/path_` --version=`_version.release.patch_`
+----
+
+. Enter a value for the {ProductNameShort} server administrator password.
+
+. Enter a value for the {PostgreSQLName} database password.
+endif::qpc_install_guide[]
+
+== Installing the command line interface
+
+Install the command line interface.
+
+ifdef::discovery_install_guide[]
+. Install the command line interface by entering the following command, where `_/path_` is the full path to the location on the disconnected machine where you transferred the packages:
++
+[source,options="nowrap",subs="+quotes"]
+----
+# dsc-tools cli install --offline-files=`_/path_`
 ----
 endif::discovery_install_guide[]
 
 ifdef::qpc_install_guide[]
-. Start the installation by entering the following command, where `_admin_` is the new administrator user name, `_qpcpassw0rd_` is the new password, and `_admin@example.com_` is the email address for the {ProductNameShort} server user:
+. Install the command line interface by entering the following command, where `_/path_` is the full path to the location on the disconnected machine where you transferred the packages:
 +
 [source,options="nowrap",subs="+quotes"]
 ----
-# qpc-tools install -e server_username=__admin__ -e server_password=__qpcpassw0rd__ -e server_user_email=__admin@example.com__
+# qpc-tools cli install --offline-files=`_/path_`
 ----
 endif::qpc_install_guide[]
 
 
 .Verification steps
 
-. For a successful installation, the output appears similar to the following example:
+. For a successful installation of the packages, the output appears similar to the following example:
 +
 ----
 Installation complete.

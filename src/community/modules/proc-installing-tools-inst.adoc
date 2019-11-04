@@ -1,0 +1,77 @@
+// Module included in the following assemblies:
+// assembly-installing-scripted-online-inst.adoc
+
+[id="proc-installing-tools-inst_{context}"]
+
+ifdef::qpc_install_guide[]
+= Installing {ProductToolsName}
+endif::qpc_install_guide[]
+
+ifdef::discovery_install_guide[]
+= Enabling and installing {AnsibleName} and {ProductToolsName}
+endif::discovery_install_guide[]
+
+The {ProductToolsName} package includes tools that you use to install and maintain {ProductNameShort}.
+
+ifdef::discovery_install_guide[]
+The {ProductToolsName} installation process integrates with an {AnsibleName} playbook to complete the installation. Therefore, {AnsibleName} version 2.4 or later (depending on the requirements of your operating system) is a depenency for {ProductToolsName}. As part of the installation process, {ProductToolsName} installs {AnsibleName}, but you must manually enable the required repositories for {AnsibleName}.
+endif::discovery_install_guide[]
+
+// .Prerequisites
+
+// Before you begin, review the prerequisites for {ProductNameShort}.
+
+.Procedure
+
+// change steps to not auto-start installing from docs link
+
+ifdef::discovery_install_guide[]
+. Enable the {RHELNameShort} {AnsibleEngineName} repositories. For more information about this step, see the instructions for enabling repositories for the limited support version of {AnsibleName} in the "How do I Download and Install Red Hat Ansible Engine? Customer Portal article: https://access.redhat.com/articles/3174981[^] For more detailed information about {AnsibleName}, see https://docs.ansible.com/#coreversionselect[^].
++
+[NOTE]
+====
+The procedure at this link includes a step to install {AnsibleName}. Because {ProductToolsName} installs {AnsibleName} for you, running the command to install {AnsibleName} is not required.
+====
+
+. Register your system to {RHSMName}:
+[source,options="nowrap",subs="attributes"]
+# subscription-manager register
+
+. Use the following command to help you find the {ProductNameShort} subscription and then note the pool ID of the subscription:
+[source,options="nowrap",subs="attributes"]
+# subscription-manager list --available
+
+. Attach the subscription, where `_pool_ID_` is the pool ID for the {ProductNameShort} subscription.
+[source,options="nowrap",subs="attributes,+quotes"]
+# subscription-manager attach --pool=_pool_ID_
+
+. Enable the {ProductNameShort} repository:
+[source,options="nowrap",subs="attributes"]
+# subscription-manager repos --enable discovery-0-for-rhel8-x86_64-rpms
+
+. Install {ProductToolsName}:
+[source,options="nowrap",subs="attributes"]
+# yum install {ProductToolsName}
+
+endif::discovery_install_guide[]
+
+ifdef::qpc_install_guide[]
+. Install {ProductToolsName} by using the following command, based on your operating system version:
+* For {RHELNameShort} 8, use the following command:
+[source,options="nowrap",subs=attributes]
+{QPCcommandInstallToolsRHEL8}
+* For {RHELNameShort} 7 and {CentOSName} 7, use the following command:
+[source,options="nowrap",subs=attributes]
+{QPCcommandInstallToolsRHEL7}
+* For {RHELNameShort} 6 and {CentOSName} 6, use the following command:
+[source,options="nowrap",subs=attributes]
+{QPCcommandInstallToolsRHEL6}
+endif::qpc_install_guide[]
+
+
+// .Verification steps
+// (Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.

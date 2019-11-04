@@ -1,0 +1,25 @@
+// Module included in the following assemblies:
+// assembly-configuring-maintaining-inst.adoc NOT ADDED YET
+
+[id="proc-changing-server-admin-pw-inst_{context}"]
+
+= Changing the password for the server administrator user
+
+During the installation of {ProductNameShort}, you set a password for the server administrator user. You might need to change this password periodically to meet the security policies of your organization.
+
+// .Prerequisites
+
+// Before you begin, review the prerequisites for {ProductNameShort}.
+
+.Procedure
+
+To change the password for the {ProductNameShort} server administrator user, use the following steps:
+
+. Run the following command, NEED CLARIFICATION IF CAN DO FROM qpc-tools/discovery-tools
+
+// .Verification steps
+// (Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.

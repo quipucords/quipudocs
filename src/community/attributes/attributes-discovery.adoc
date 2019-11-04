@@ -7,10 +7,11 @@
 :ProductNameStartSentence: The product discovery tool
 :ProductInCommands: discovery
 :ProductInCommandsShort: dsc
-:ProductInstallerToolName: dsc-tools
+:ProductToolsName: discovery-tools
+:ProductToolsNameInCommands: dsc-tools
 
 // Product discovery *SPECIFIC* attributes
-:discoverycommandDownloadInstallerRHEL8: ****NO INSTRUCTIONS YET****
+:discoverycommandInstallToolsRHEL8: ****NO INSTRUCTIONS YET****
 
 // Red Hat product attributes
 :CompanyName: Red Hat
@@ -37,8 +38,13 @@
 :SatelliteServerNameShort: Satellite Server
 :SatelliteNameBrandedShort: Red Hat Satellite
 :SatelliteNameVeryShort: Satellite
+:RHSMName: Red Hat Subscription Manager
+:RHSMNameShort: RHSM
 
 :AnsibleName: Ansible
+:AnsibleEngineName: Ansible Engine
+
+:ContainerCatalogName: Red Hat Container Catalog
 
 // External product attributes
 :vCenterServerName: vCenter Server

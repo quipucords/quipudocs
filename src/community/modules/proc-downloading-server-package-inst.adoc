@@ -5,7 +5,7 @@
 
 = Downloading the server package
 
-The {ProductNameShort} server package contains the server, database, and graphical user interface (GUI) client.
+The {ProductNameShort} server package contains the server and graphical user interface (GUI) client.
 
 The server package is available as a container image. Download the server package to the connected machine.
 
@@ -17,9 +17,9 @@ The server package is available as a container image. Download the server packag
 
 To download the server package, use the following steps:
 
-. From a browser session on the connected machine, go to the following link for information about the {ProductNameShort} server package and for the link to download the latest version: {QPCcommandOfflineDownloadServerPackageLanding}[{ProductNameShort} server package latest version^].
+. From a browser session on the connected machine, go to the following link for information about the {ProductNameShort} server package and for the link to download the latest version: {QPCcommandOfflineDownloadServerPackageLanding}[{QPCcommandOfflineDownloadServerPackageLanding}^].
 
-. To download the server package, click {QPCcommandOfflineDownloadServerPackageName}.
+. To download the server package, click *{QPCcommandOfflineDownloadServerPackageName}*.
 
 
 // .Verification steps

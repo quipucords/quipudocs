@@ -7,9 +7,11 @@ ifdef::context[:parent-context: {context}]
 
 :context: assembly-landing-page-gh_pages-ctxt
 
+{ProductNameStartSentence} is the upstream version of a {CompanyName} inspection and reporting tool. It is designed to help find, identify, and report data about the usage of specific {CompanyName} software. By using {ProductNameShort}, users can reduce the amount of time and effort that is required to calculate and report usage of those {CompanyName} products.
+
 To learn more about the purpose, benefits, and characteristics of {ProductNameShort}, see the following information:
 
-.Install
+.Installing
 * link:install.html[Installing and Configuring Quipucords]
 
 .Using

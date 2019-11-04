@@ -1,0 +1,41 @@
+// Module included in the following assemblies:
+// assembly-configuring-maintaining-inst.adoc
+
+[id="proc-configuring-connections-inst_{context}"]
+
+= Configuring {ProductNameShort} connections
+
+The {ProductNameShort} command line interface must communicate with the {ProductNameShort} server through a specific port and IP address.
+
+During the installation of the CLI package, you might have provided this information by setting values for the `--server-port` and `--server-host` options. If you did not provide those values during CLI package installation, you must configure those values. You can also use this procedure to edit these values, as needed.
+
+// .Prerequisites
+
+// Before you begin, review the prerequisites for {ProductNameShort}.
+
+.Procedure
+
+To configure the command line interface to communicate with the server, run the following command. If the server and CLI packages are installed on different machines, run this command from the machine where the CLI package is installed:
+
+. Enter the following command, where `_server_port_` is the port that the {ProductNameShort} server is using for HTTPS communication `_server_host_` is the IP address of the server:
+ifdef::discovery_install_guide[]
++
+[source,options="nowrap",subs="+quotes"]
+----
+# dsc server config --port=_server_port_ --host=_server_host_
+----
+endif::discovery_install_guide[]
+ifdef::qpc_install_guide[]
++
+[source,options="nowrap",subs="+quotes"]
+----
+# qpc server config --port=_server_port_ --host=_server_host_
+----
+endif::qpc_install_guide[]
+
+// .Verification steps
+// (Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.

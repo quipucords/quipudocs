@@ -27,11 +27,17 @@ To learn more about the products and product versions that {ProductNameShort} ca
 
 * xref:ref-what-prods-find-common_{context}[What products does {ProductNameShort} find?]
 
+To evaluate whether {ProductNameShort} is a correct solution for you, see the following information: 
+
+* xref:con-right-for-me-common_{context}[Is {ProductNameShort} right for me?]
+
 // do you need level offset in each assembly? at master doc level only? confused about this one.
 
 include::modules/con-what-is-prod-common.adoc[leveloffset=+1]
 
 include::modules/ref-what-prods-find-common.adoc[leveloffset=+1]
+
+include::modules/con-right-for-me-common.adoc[leveloffset=+1]
 
 
 // .Related Information

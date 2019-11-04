@@ -11,19 +11,21 @@ To log in to the {ProductNameShort} user interface, you need the IP address of t
 
 .Procedure
 
-. In a browser, enter the URL for the {ProductNameShort} server in the following format: `https://__IPaddress__:__port__`, where `_IPaddress_` is the IP address of the {ProductNameShort} server and `_port_` is the exposed server port. Including the default port is optional. However, you must include the port in the address if the default port was changed during server installation.
+// Text omitted from steps: Including the port is optional. However, you must include the port in the address if the default port was changed during server installation.
+
+. In a browser, enter the URL for the {ProductNameShort} server in the following format: `https://__IPaddress__:__port__`, where `_IPaddress_` is the IP address of the {ProductNameShort} server and `_port_` is the exposed server port.
 +
 The following examples show two different ways to enter the URL, based on the system that you are logging in from and whether the default port is used:
 
-  * If you log in from the system where the server is installed and the default port is used, you can use the loopback address as the IP address, as shown in the following example:
+  * If you log in from the system where the server is installed and the default port is used, you can use the loopback address (also known as localhost) as the IP address, as shown in the following example:
 +
 ----
-https://127.0.0.1
+https://127.0.0.1:9443
 ----
   * If you log in from a system that is remote from the server, the server is running on the IP address `192.0.2.0`, and the default port was changed during installation to `8443`, you would log in as shown in the following example:
 +
 ----
-https:192.0.2.0:8443
+https://192.0.2.0:8443
 ----
 
 +

@@ -1,0 +1,31 @@
+// Module included in the following assemblies:
+// assembly-configuring-maintaining-inst.adoc
+
+[id="proc-adding-sshkeys-to-server-inst_{context}"]
+
+= Adding SSH keys to the {ProductNameShort} server for network scans
+
+When you configure sources and credentials for a network scan, you select the type of credential to use to authenticate to the network assets that are being scanned. One of the available options for the credential is to authenticate with a user name and SSH keyfile. If you choose this option, you must add a copy of the the private key to a specific directory on the server so that {ProductNameShort} can authenticate to those assets and complete the processes that occur during a scan.
+
+You might have to perform these steps as an ongoing maintenance task as you create and refine the credentials needed for your network scans.
+
+// .Prerequisites
+
+// Before you begin, review the prerequisites for {ProductNameShort}.
+
+.Procedure
+
+To add an SSH keyfile to the {ProductNameShort} server:
+
+. Copy the private key from the keyfile, using the copy method of your choice.
+
+. Add the private key to the `/{ProductInCommands}/sshkeys` directory on the {ProductNameShort} server, the default location for this directory at the time of server installation.
+
+. Repeat these steps as needed for all credentials that use SSH keyfiles as the authentication method.
+
+// .Verification steps
+// (Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.
