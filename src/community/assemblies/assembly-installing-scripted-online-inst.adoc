@@ -9,37 +9,68 @@ ifdef::context[:parent-context: {context}]
 
 = Installing {ProductNameShort} with the online installation process
 
-The online, or automated, installation process runs an installer that uses Ansible to install the command line interface tool, the server image, and the database image.
+The online installation process runs an installer that uses Ansible to install the command line interface tool, the server image, and the database image.
 
-When you run the online installation process, the server is installed and started as described in (....link to the default config description topic from Configuring and Starting Quipucords...). However, you can change some of the defaults used by the automated installation with the (....link to Installation Options topic....).
+When you run the online installation process, the server and CLI packages are installed with the default options. However, you can change some of the defaults used by the installation process by setting options that are defined in xref:ref-tools-install-options-inst_assembly-installing-scripted-online-inst-ctxt[Options for the {ProductToolsName} install command].
 
 .Prerequisites
 
 * Ensure that all prerequisites are installed and configured.
 
-* To use the online installation process, the machine on which you are downloading the installer and installing {ProductNameShort} must be connected to the internet.
+* To use the online installation process, the machine on which you are downloading the installer and installing {ProductNameShort} must be connected to the Internet.
 
 .Procedure
 
+ifdef::discovery_install_guide[]
 To install {ProductNameShort} with the online installation process, you do the following tasks:
 
-ifdef::discovery_install_guide[]
-. Enable the YUM repository. ****not sure of full instruction here****. For more information, see xref:proc-enabling-yum-repository-inst_assembly-installing-scripted-online-inst-ctxt[Enabling the YUM repository].
+. Enable the {AnsibleName} and {ProductToolsName} repositories and install {ProductToolsName}. For more information, see xref:proc-installing-tools-inst_assembly-installing-scripted-online-inst-ctxt[Enabling and installing {AnsibleName} and {ProductToolsName}].
+
+. Run the {ProductNameShort} installation with {ProductToolsName}. For more informa
+tion, see xref:proc-installing-scripted-online-inst_assembly-installing-scripted-online-inst-ctxt[Installing with the online installation process].
++
+[NOTE]
+====
+This installation process installs {ProductNameShort} with default settings for all of the options. However, other settings are available for you to customize your installation. For more information about these settings, see xref:ref-tools-install-options-inst_assembly-installing-scripted-online-inst-ctxt[Options for the {ProductToolsName} install command].
+====
 endif::discovery_install_guide[]
 
-. Download the installer. For more information, see xref:proc-downloading-installer-inst_assembly-installing-scripted-online-inst-ctxt[Downloading the installer].
+ifdef::qpc_install_guide[]
+To install {ProductNameShort} with the online installation process, you do the following tasks:
 
-. Run the installation. For more information, see xref:proc-installing-scripted-online-inst_assembly-installing-scripted-online-inst-ctxt[Installing with the online installation process].
+. Run the command to install {ProductToolsName}. For more information, see xref:proc-installing-tools-inst_assembly-installing-scripted-online-inst-ctxt[Installing {ProductToolsName}].
+
+. Run the {ProductNameShort} installation with {ProductToolsName}. For more information, see xref:proc-installing-scripted-online-inst_assembly-installing-scripted-online-inst-ctxt[Installing with the online installation process].
++
+[NOTE]
+====
+This installation process installs {ProductNameShort} with default settings for all of the options. However, other settings are available for you to customize your installation. For more information about these settings, see xref:ref-tools-install-options-inst_assembly-installing-scripted-online-inst-ctxt[Options for the {ProductToolsName} install command].
+====
+endif::qpc_install_guide[]
 
 // do you need level offset in each assembly? at master doc level only? confused about this one.
 
 ifdef::discovery_install_guide[]
-include::modules/proc-enabling-yum-repository-inst.adoc[leveloffset=+1]
+:context: assembly-installing-scripted-online-inst-ctxt
+include::modules/proc-installing-tools-inst.adoc[leveloffset=+1]
+
+:context: assembly-installing-scripted-online-inst-ctxt
+include::modules/proc-installing-scripted-online-inst.adoc[leveloffset=+1]
+
+:context: assembly-installing-scripted-online-inst-ctxt
+include::modules/ref-tools-install-options-inst.adoc[leveloffset=+1]
 endif::discovery_install_guide[]
 
-include::modules/proc-downloading-installer-inst.adoc[leveloffset=+1]
+ifdef::qpc_install_guide[]
+:context: assembly-installing-scripted-online-inst-ctxt
+include::modules/proc-installing-tools-inst.adoc[leveloffset=+1]
 
+:context: assembly-installing-scripted-online-inst-ctxt
 include::modules/proc-installing-scripted-online-inst.adoc[leveloffset=+1]
+
+:context: assembly-installing-scripted-online-inst-ctxt
+include::modules/ref-tools-install-options-inst.adoc[leveloffset=+1]
+endif::qpc_install_guide[]
 
 // .Related Information
 // * Bulleted list of links to concepts, reference, or other tasks closely related to this user story.

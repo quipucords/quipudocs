@@ -14,7 +14,7 @@ endif::discovery_install_guide[]
 ifdef::qpc_install_guide[]
 You must install the dependencies on the disconnected machine where you are installing and using {ProductNameShort}.
 
-You must also install most of the dependencies, such as {AnsibleName}, the correct {PythonName} version, and the applicable container software, on the connected machine where you are downloading the packages before installation. For example, the `yum install` command that you use to get the {ProductNameShort} qpc-tools package also does an RPM package check for certain runtime requirements. This package check checks for the {AnsibleName} and {PythonName} dependencies. In addition, the container software (either {PodmanName} or {DockerName}, depending on your {RHELNameShort} or {CentOSName} version) is required to be installed on the connected machine to build a container for the {PostgreSQLName} database.
+You must also install the applicable container software dependency on the connected machine where you are downloading the packages before installation. The container software (either {PodmanName} or {DockerName}, depending on your {RHELNameShort} or {CentOSName} version) is required to be installed on the connected machine to build a container for the {PostgreSQLName} database.
 endif::qpc_install_guide[]
 
 // .Prerequisites
@@ -31,24 +31,34 @@ ifdef::qpc_install_guide[]
 
 Use one of the following procedures, as appropriate for your operating system.
 
+[IMPORTANT]
+====
+In the following procedures, a dependency might be duplicated in the {ProductToolsName}, server, or command line interface sections. This duplication is intended to clarify which dependencies are required for these individual packages, for example, in a scenario where packages are installed on different machines. If you are installing all of the packages on the same machine, you are not required to install a dependency more than once.
+====
+
 // QPC with RHEL 7 and 8
 
 == Installing dependencies for {RHELNameShort} 7 and 8 or {CentOSName} 7 and 8
 
 To install the dependencies on {RHELNameShort} 7 and 8 or {CentOSName} 7 and 8, use the following steps:
 
+=== Dependencies for the {ProductToolsName} package
+
+. _On the disconnected machine only:_ Install {AnsibleName} 2.4 or later, depending on the requirements of your operating system version. For more information, see the documentation about installing the control node (also known as the control manager in previous versions) in the {AnsibleName} _Installation Guide_. You can find a link to the _Installation Guide_ for more current versions plus a link to previous documentation versions at https://docs.ansible.com/#coreversionselect[^].
+
+. _On the disconnected machine only:_ Make sure that you are running a minimum of {PythonName} 3.6.
+
 === Dependencies for the {ProductNameShort} server package
 
-. _On both the connected and disconnected machine:_ Install {AnsibleName} 2.4 or later, depending on the requirements of your operating system version. For more information, see the documentation about installing the control node (also known as the control manager in previous versions) in the {AnsibleName} _Installation Guide_. You can find a link to the _Installation Guide_ for more current versions plus a link to previous documentation versions at https://docs.ansible.com/#coreversionselect[^].
+. _On the disconnected machine only:_ Install {AnsibleName} 2.4 or later, depending on the requirements of your operating system version. For more information, see the documentation about installing the control node (also known as the control manager in previous versions) in the {AnsibleName} _Installation Guide_. You can find a link to the _Installation Guide_ for more current versions plus a link to previous documentation versions at https://docs.ansible.com/#coreversionselect[^]. Skip this step if {AnsibleName} was installed on this machine for the {ProductToolsName} package.
 
-. _On both the connected and disconnected machine:_ Install the latest version of {PodmanName}. For more information, see the documentation about installation located in the _Getting Started with {PodmanName}_ guide, at https://podman.io/getting-started/[^].
+. _On the connected and disconnected machine:_ Install the latest version of {PodmanName}. For more information, see the documentation about installation located in the _Getting Started with {PodmanName}_ guide, at https://podman.io/getting-started/[^].
 
 === Dependencies for the {ProductNameShort} CLI package
 
 . _On the disconnected machine only:_ Install the Extra Packages for Enterprise Linux (EPEL) package. Select the package that is appropriate for your operating system from the options in the "Quickstart" section at the following link: https://fedoraproject.org/wiki/EPEL[^].
 
-// Need to confirm that "requests" is a "module," also saw "library" and "package" used in references to "requests."
-. _On both the connected and disconnected machine:_ Make sure that you are running a minimum of {PythonName} 3.6. In addition, make sure that the {PythonName} 3.6-requests module is installed.
+. _On the disconnected machine only:_ Make sure that you are running a minimum of {PythonName} 3.6. In addition, make sure that the {PythonName} 3.6-requests package is installed. If you already checked the minimum version of {PythonName} on this machine during the installation of {ProductToolsName} dependencies, you must still complete the check for the correct version of the {PythonName} 3.6-requests package.
 
 // QPC with RHEL 6
 
@@ -56,18 +66,23 @@ To install the dependencies on {RHELNameShort} 7 and 8 or {CentOSName} 7 and 8, 
 
 To install the dependencies on {RHELNameShort} 6 and {CentOSName} 6, use the following steps:
 
+=== Dependencies for the {ProductToolsName} package
+
+. _On the disconnected machine only:_ Install {AnsibleName} 2.4 or later, depending on the requirements of your operating system version. For more information, see the documentation about installing the control node (also known as the control manager in previous versions) in the {AnsibleName} _Installation Guide_. You can find a link to the _Installation Guide_ for more current versions plus a link to previous documentation versions at https://docs.ansible.com/#coreversionselect[^].
+
+. _On the disconnected machine only:_ Make sure that you are running a minimum of {PythonName} 3.4.
+
 === Dependencies for the {ProductNameShort} server package
 
-. _On both the connected and disconnected machine:_ Install {AnsibleName} 2.4 or later, depending on the requirements of your operating system version. For more information, see the documentation about installing the control node (also known as the control manager in previous versions) in the {AnsibleName} _Installation Guide_. You can find a link to the _Installation Guide_ for more current versions plus a link to previous documentation versions at https://docs.ansible.com/#coreversionselect[^].
+. _On the disconnected machine only:_ Install {AnsibleName} 2.4 or later, depending on the requirements of your operating system version. For more information, see the documentation about installing the control node (also known as the control manager in previous versions) in the {AnsibleName} _Installation Guide_. You can find a link to the _Installation Guide_ for more current versions plus a link to previous documentation versions at https://docs.ansible.com/#coreversionselect[^]. Skip this step if {AnsibleName} was installed on this machine for the {ProductToolsName} package.
 
-. _On both the connected and disconnected machine:_ Install {DockerName}. An older version of {DockerName} that is compatible with {RHELNameShort} 6 and {CentOSName} 6 is required. This version of {DockerName} is no longer formally supported. To download and install this version of {DockerName}, select the */docker-engine-1.7.1-1.el6.x86_64.rpm* package at the following link: https://yum.dockerproject.org/repo/main/centos/6/Packages/[^].
+. _On the connected and disconnected machine:_ Install {DockerName}. An older version of {DockerName} that is compatible with {RHELNameShort} 6 and {CentOSName} 6 is required. This version of {DockerName} is no longer supported. To download and install this version of {DockerName}, select the */docker-engine-1.7.1-1.el6.x86_64.rpm* package at the following link: https://yum.dockerproject.org/repo/main/centos/6/Packages/[^].
 
 === Dependencies for the {ProductNameShort} CLI package
 
 . _On the disconnected machine only:_ Install the Extra Packages for Enterprise Linux (EPEL) package. Select the package that is appropriate for your operating system from the options in the "Quickstart" section at the following link: https://fedoraproject.org/wiki/EPEL[^].
 
-// Need to confirm that "requests" is a "module," also saw "library" and "package" used in references to "requests."
-. _On both the connected and disconnected machine:_ Make sure that you are running a minimum of {PythonName} 3.4. In addition, make sure that the {PythonName} 3.4-requests module is installed.
+. _On the disconnected machine only:_ Make sure that you are running a minimum of {PythonName} 3.4. In addition, make sure that the {PythonName} 3.4-requests package is installed. If you already checked the minimum version of {PythonName} on this machine during the installation of {ProductToolsName} dependencies, you must still complete the check for the correct version of the {PythonName} 3.4-requests package.
 
 endif::qpc_install_guide[]
 

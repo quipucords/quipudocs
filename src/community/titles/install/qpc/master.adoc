@@ -17,3 +17,7 @@ include::assemblies/assembly-installing-prerequisites-inst.adoc[]
 include::assemblies/assembly-installing-scripted-online-inst.adoc[]
 
 include::assemblies/assembly-installing-scripted-offline-inst.adoc[]
+
+include::assemblies/assembly-configuring-maintaining-inst.adoc[]
+
+include::assemblies/assembly-accessing-client-gui.adoc[]

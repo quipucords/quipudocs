@@ -13,20 +13,14 @@ After you download the {ProductNameShort} server and CLI packages and build the 
 
 .Procedure
 
-. Create a `packages` directory on the disconnected machine to use for the package transfer, where `_lib_ is the library version, either `lib` or `lib64`, and `_version.release.patch_` is the complete version number of the {ProductInstallerToolName} RPM package. Use the following command:
-+
-[source,options="nowrap"]
-----
-# mkdir -p /usr/_lib_/qpc-tools-_version.release.patch_/install/packages
-----
+. Create a directory on the disconnected machine to use for the package transfer. During the steps to install the server and command line interface, you enter the path to this directory as part of the commands.
 
-// path...path to the offline machine? double-check that this has all the steps needed if two physical machines are involved.
-. Move the downloaded packages from the connected machine into the `packages` directory on the disconnected machine, where `_pathtopackages_` is the path to the `packages` directory. Use the following command:
+. Move the following packages from the connected machine into the directory that you just created on the disconnected machine:
 +
-[source,options="nowrap"]
-----
-# mv /_pathtopackages_/usr/_lib_/qpc-tools-_version.release.patch_/install/packages
-----
+* The {ProductToolsName} package that applies to your operating system version, qpc-tools.el8.noarch.rpm, qpc-tools.el7.noarch.rpm, or qpc-tools.el6.noarch.rpm.
+* The {ProductNameShort} server package `quipucords_server_image.tar.gz`.
+* The database container image `postgres.9.6.10.tar`.
+* The {ProductNameShort} command line interface package that applies to your operating system version, `qpc.el6.noarch.rpm`, `qpc.el7.noarch.rpm`, or `qpc.el8.noarch.rpm`.
 
 // .Verification steps
 // (Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.

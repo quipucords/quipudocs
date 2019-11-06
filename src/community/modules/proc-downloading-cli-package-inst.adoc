@@ -13,9 +13,9 @@ The {ProductNameShort} command line interface (CLI) package contains a command l
 
 .Procedure
 
-. From a browser session on the connected machine, go to the following link for information about the {ProductNameShort} CLI package and for the link to download the latest version: {QPCcommandOfflineDownloadCLIPackageLandingGeneric}[{ProductNameShort} CLI package latest version^].
+. From a browser session on the connected machine, go to the following link for information about the {ProductNameShort} CLI package and for the link to download the latest version: {QPCcommandOfflineDownloadCLIPackageLandingGeneric}[{QPCcommandOfflineDownloadCLIPackageLandingGeneric}^].
 
-. To download the server package, click the following CLI package download link that applies to your operating system:
+. To download the CLI package, click the following package download link that applies to your operating system:
 .. For {RHELNameShort} 8 and {CentOSName} 8, click *{QPCcommandOfflineDownloadCLIPackageNameRHEL8}*.
 .. For {RHELNameShort} 7 and {CentOSName} 7, click *{QPCcommandOfflineDownloadCLIPackageNameRHEL7}*.
 .. For {RHELNameShort} 6 and {CentOSName} 6, click *{QPCcommandOfflineDownloadCLIPackageNameRHEL6}*.

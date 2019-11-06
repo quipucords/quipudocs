@@ -9,7 +9,12 @@ ifdef::context[:parent-context: {context}]
 
 = Accessing the {ProductNameShort} user interface
 
-You access the {ProductNameShort} user interface through a browser connection. To use the {ProductNameShort} user interface, the system on which you want to run the user interface must be able to communicate with the system on which the {ProductNameShort} server is installed.
+You access the {ProductNameShort} graphical user interface through a browser connection.
+ifdef::qpc_install_guide,discovery_install_guide[]
+You access the command line interface by running a command to connect to the server.
+endif::qpc_install_guide,discovery_install_guide[]
+
+To use the {ProductNameShort} user interface, the system on which you want to run the user interface must be able to communicate with the system on which the {ProductNameShort} server is installed.
 
 // .Prerequisites
 // * (keeping here temporarily, but probably not using this section in this topic)
@@ -19,18 +24,27 @@ You access the {ProductNameShort} user interface through a browser connection. T
 
 .Learn more
 
-To learn more about the {ProductNameShort} user interface login requirements and steps, see the following information:
+To learn more about the requirements and steps to log in to and out of the {ProductNameShort} graphical user interface, see the following information:
 
 * xref:proc-logging-in-gui_{context}[Logging in to the {ProductNameShort} user interface]
-
-To learn more about logging out of the user interface, see the following information:
-
 * xref:proc-logging-out-gui_{context}[Logging out of the {ProductNameShort} user interface]
+
+ifdef::discovery_install_guide,qpc_install_guide[]
+To learn more about the requirements and steps to log in to and out of the {ProductNameShort} command line interface, see the following information:
+
+* xref:proc-logging-in-cli_{context}[Logging in to the {ProductNameShort} command line interface]
+* xref:proc-logging-out-cli_{context}[Logging out of the {ProductNameShort} command line interface]
+endif::discovery_install_guide,qpc_install_guide[]
 
 include::modules/proc-logging-in-gui.adoc[leveloffset=+1]
 
 include::modules/proc-logging-out-gui.adoc[leveloffset=+1]
 
+ifdef::discovery_install_guide,qpc_install_guide[]
+include::modules/proc-logging-in-cli.adoc[leveloffset=+1]
+
+include::modules/proc-logging-out-cli.adoc[leveloffset=+1]
+endif::discovery_install_guide,qpc_install_guide[]
 
 // .Related Information
 // * Bulleted list of links to concepts, reference, or other tasks closely related to this user story.

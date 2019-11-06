@@ -21,17 +21,20 @@ ifdef::qpc_install_guide[]
 {RHELNameShort} 7 or 8 or {CentOSName} 7 are the recommended operating system versions. For {RHELNameShort} 6 or {CentOSName} 6, the minimum required kernel is 2.6.32-431 or later.
 ====
 endif::qpc_install_guide[]
-* *Database:*
-** PostgreSQL 9.6.10
-+
-[NOTE]
-====
-The database is automatically installed for you if you use the online installation.
-// CHECK: remove this note for discovery, if handled by the Satellite offline install?
-====
-* *Programming language for the {ProductNameShort} command line interface (CLI):*
-** Python 3.4 or later
 
+In addition to these software requirements, {ProductNameShort} has dependencies on other software. However, in some cases these dependencies are installed for you during installation, or instructions for their installation is integrated as part of the {ProductNameShort} installation process. The process to install dependencies can vary according several factors, including your operating system and whether you are doing an offline or online installation. Therefore, install the dependencies only as instructed by the {ProductNameShort} installation steps.
+
+The {ProductNameShort} dependencies include the following software:
+
+* Ansible 2.4 or later, depending on the requirements of your operating system.
+ifdef::discovery_install_guide[]
+* {PodmanName} container software.
+endif::discovery_install_guide[]
+ifdef::qpc_install_guide[]
+* Container software, either {PodmanName} or {DockerName}, depending on the requirements of your operating system.
+endif::qpc_install_guide[]
+* The PostgreSQL database.
+* {PythonName}, 3.4 or 3.6, depending on the requirements of your operating system.
 
 // Topics from AsciiDoc conversion that were used as source for this topic:
 // ...

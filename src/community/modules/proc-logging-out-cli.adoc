@@ -1,0 +1,37 @@
+// Module included in the following assemblies:
+// assembly-accessing-client-gui.adoc
+
+[id="proc-logging-out-cli_{context}"]
+
+= Logging out of the {ProductNameShort} command line interface
+
+The command to log out of the server removes the token that was created when you logged in to the server. This token also expires daily.
+
+// .Prerequisites
+
+// ...none
+
+.Procedure
+
+. To log out of the command line interface, enter the following command:
+ifdef::discovery_install_guide[]
++
+[source,options="nowrap",subs="+quotes"]
+----
+# dsc server logout
+----
+endif::discovery_install_guide[]
+ifdef::qpc_install_guide[]
++
+[source,options="nowrap",subs="+quotes"]
+----
+# qpc server logout
+----
+endif::qpc_install_guide[]
+
+// .Verification steps
+// (Optional) Provide the user with verification method(s) for the procedure, such as expected output or commands that can be used to check for success or failure.
+
+// .Additional resources
+// * A bulleted list of links to other material closely related to the contents of the procedure module.
+// * Currently, modules cannot include xrefs, so you cannot include links to other content in your collection. If you need to link to another assembly, add the xref to the assembly that includes this module.

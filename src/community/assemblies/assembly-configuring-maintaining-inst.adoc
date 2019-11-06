@@ -1,0 +1,39 @@
+// This assembly is included in the following assemblies:
+//
+
+ifdef::context[:parent-context: {context}]
+
+[id="assembly-configuring-maintaining-inst_{context}"]
+
+:context: assembly-configuring-maintaining-inst-ctxt
+
+= Configuring and maintaining {ProductNameShort}
+
+After installation is complete, you might have to complete other steps to configure or maintain {ProductNameShort}. The options that you choose during installation and the way in which you use {ProductNameShort} can determine the types of configuration and maintenance tasks that you need to perform.
+
+// .Prerequisites
+// * (keeping here temporarily, but probably not using this section in this topic)
+
+.Learn more
+
+If you did not provide values to configure the connection between the {ProductNameShort} server and command line interface during installation, then you must configure those values before you can begin using {ProductNameShort}. To learn more, see the following information:
+
+* xref:proc-configuring-connections-inst_{context}[Configuring {ProductNameShort} connections]
+
+If you are going to run network scans with credentials that include SSH keys as the authentication method, then the {ProductNameShort} server must have access to the keyfile information. To learn more about adding SSH keys to the {ProductNameShort} server, see the following information:
+
+* xref:proc-adding-sshkeys-to-server-inst_{context}[Adding SSH keys to the {ProductNameShort} server for network scans]
+
+
+include::modules/proc-configuring-connections-inst.adoc[leveloffset=+1]
+
+include::modules/proc-adding-sshkeys-to-server-inst.adoc[leveloffset=+1]
+
+// .Related Information
+// * Bulleted list of links to concepts, reference, or other tasks closely related to this user story.
+// * Include only the most relevant items as links, not every possible related item.
+// * Delete section title and bullets if no related information is needed.
+
+// Restore the context to what it was before this assembly.
+ifdef::parent-context[:context: {parent-context}]
+ifndef::parent-context[:!context:]
