@@ -445,6 +445,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#con-what-is-prod-common_assembly-about-common-ctxt">What is Quipucords?</a></li>
 <li><a href="#ref-what-prods-find-common_assembly-about-common-ctxt">What products does Quipucords find?</a></li>
+<li><a href="#con-right-for-me-common_assembly-about-common-ctxt">Is Quipucords right for me?</a></li>
 </ul>
 </li>
 <li><a href="#assembly-installing-prerequisites-inst_{context}">Installing prerequisites for Quipucords</a>
@@ -456,8 +457,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#assembly-installing-scripted-online-inst_{context}">Installing Quipucords with the online installation process</a>
 <ul class="sectlevel1">
-<li><a href="#proc-downloading-installer-inst_assembly-installing-scripted-online-inst-ctxt">Downloading the installer</a></li>
-<li><a href="#proc-installing-scripted-online-inst_assembly-installing-scripted-online-inst-ctxt">Installing with the online installation process</a></li>
+<li><a href="#proc-installing-tools-inst_assembly-installing-scripted-online-inst-ctxt">Installing qpc-tools</a></li>
+<li><a href="#proc-installing-scripted-online-inst_assembly-installing-scripted-online-inst-ctxt">Installing with the online installation process</a>
+<ul class="sectlevel2">
+<li><a href="#_installing_the_server">Installing the server</a></li>
+<li><a href="#_installing_the_command_line_interface">Installing the command line interface</a></li>
+</ul>
+</li>
+<li><a href="#ref-tools-install-options-inst_assembly-installing-scripted-online-inst-ctxt">Options for the qpc-tools install command</a>
+<ul class="sectlevel2">
+<li><a href="#_server_installation_options">Server installation options</a></li>
+<li><a href="#_command_line_interface_installation_options">Command line interface installation options</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#assembly-installing-scripted-offline-inst_{context}">Installing Quipucords with the offline installation process</a>
@@ -466,19 +478,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_installing_dependencies_for_rhel_7_and_8_or_centos_7_and_8">Installing dependencies for RHEL 7 and 8 or CentOS 7 and 8</a>
 <ul class="sectlevel3">
+<li><a href="#_dependencies_for_the_qpc_tools_package">Dependencies for the qpc-tools package</a></li>
 <li><a href="#_dependencies_for_the_quipucords_server_package">Dependencies for the Quipucords server package</a></li>
 <li><a href="#_dependencies_for_the_quipucords_cli_package">Dependencies for the Quipucords CLI package</a></li>
 </ul>
 </li>
 <li><a href="#_installing_dependencies_for_rhel_6_and_centos_6">Installing dependencies for RHEL 6 and CentOS 6</a>
 <ul class="sectlevel3">
+<li><a href="#_dependencies_for_the_qpc_tools_package_2">Dependencies for the qpc-tools package</a></li>
 <li><a href="#_dependencies_for_the_quipucords_server_package_2">Dependencies for the Quipucords server package</a></li>
 <li><a href="#_dependencies_for_the_quipucords_cli_package_2">Dependencies for the Quipucords CLI package</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#proc-downloading-installer-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the installer</a></li>
+<li><a href="#proc-downloading-tools-package-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the qpc-tools package</a></li>
 <li><a href="#proc-downloading-server-package-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the server package</a></li>
 <li><a href="#proc-building-database-container-image-inst_assembly-installing-scripted-offline-inst-ctxt">Building the database container image</a>
 <ul class="sectlevel2">
@@ -488,7 +502,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#proc-downloading-cli-package-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the command line interface package</a></li>
 <li><a href="#proc-transferring-packages-offline-inst_assembly-installing-scripted-offline-inst-ctxt">Transferring the packages to the offline machine</a></li>
-<li><a href="#proc-installing-scripted-offline-qpc-inst_assembly-installing-scripted-offline-inst-ctxt">Installing with the offline installation process</a></li>
+<li><a href="#proc-installing-scripted-offline-qpc-inst_assembly-installing-scripted-offline-inst-ctxt">Installing with the offline installation process</a>
+<ul class="sectlevel2">
+<li><a href="#_installing_qpc_tools">Installing qpc-tools</a></li>
+<li><a href="#_installing_the_server_2">Installing the server</a></li>
+<li><a href="#_installing_the_command_line_interface_2">Installing the command line interface</a></li>
+</ul>
+</li>
+<li><a href="#ref-tools-install-options-inst_assembly-installing-scripted-offline-inst-ctxt">Options for the qpc-tools install command</a>
+<ul class="sectlevel2">
+<li><a href="#_server_installation_options_2">Server installation options</a></li>
+<li><a href="#_command_line_interface_installation_options_2">Command line interface installation options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#assembly-configuring-maintaining-inst_{context}">Configuring and maintaining Quipucords</a>
+<ul class="sectlevel1">
+<li><a href="#proc-configuring-connections-inst_assembly-configuring-maintaining-inst-ctxt">Configuring Quipucords connections</a></li>
+<li><a href="#proc-adding-sshkeys-to-server-inst_assembly-configuring-maintaining-inst-ctxt">Adding SSH keys to the Quipucords server for network scans</a></li>
+</ul>
+</li>
+<li><a href="#assembly-accessing-client-gui_{context}">Accessing the Quipucords user interface</a>
+<ul class="sectlevel1">
+<li><a href="#proc-logging-in-gui_assembly-accessing-client-gui-ctxt">Logging in to the Quipucords user interface</a></li>
+<li><a href="#proc-logging-out-gui_assembly-accessing-client-gui-ctxt">Logging out of the Quipucords user interface</a></li>
+<li><a href="#proc-logging-in-cli_assembly-accessing-client-gui-ctxt">Logging in to the Quipucords command line interface</a></li>
+<li><a href="#proc-logging-out-cli_assembly-accessing-client-gui-ctxt">Logging out of the Quipucords command line interface</a></li>
 </ul>
 </li>
 </ul>
@@ -519,6 +559,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul>
 <li>
 <p><a href="#ref-what-prods-find-common_assembly-about-common-ctxt">What products does Quipucords find?</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To evaluate whether Quipucords is a correct solution for you, see the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#con-right-for-me-common_assembly-about-common-ctxt">Is Quipucords right for me?</a></p>
 </li>
 </ul>
 </div>
@@ -592,6 +642,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="con-right-for-me-common_assembly-about-common-ctxt">Is Quipucords right for me?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Quipucords tool is intended to help you find and understand your Red Hat product inventory, including unknown product usage across complex networks. The reports generated by Quipucords are best understood through your partnership with a Red Hat Solution Architect (SA) or Technical Account Manager (TAM) or through the analysis and assistance supplied by the Subscription Education and Awareness Program (SEAP). Pilot programs that are currently underway include Quipucords as one tool that can help integrate your software inventory with other new and established Red Hat management offerings.</p>
+</div>
+<div class="paragraph">
+<p>As an upstream project, Quipucords is not formally supported by Red Hat. However, there are certain customer scenarios and configurations where use of the upstream tool for scanning your environments and reporting your inventory is an ideal solution. If you are engaged with your SA, TAM, or a member of the SEAP team and have been instructed to use Quipucords as your inventory scanning tool, you will be supported by those groups as you install and use Quipucords.</p>
+</div>
+</div>
+</div>
 <h1 id="assembly-installing-prerequisites-inst_{context}" class="sect0">Installing prerequisites for Quipucords</h1>
 <div class="openblock partintro">
 <div class="content">
@@ -660,39 +721,27 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </li>
-<li>
-<p><strong>Database:</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p>PostgreSQL 9.6.10</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
+</ul>
+</div>
 <div class="paragraph">
-<p>The database is automatically installed for you if you use the online installation.</p>
+<p>In addition to these software requirements, Quipucords has dependencies on other software. However, in some cases these dependencies are installed for you during installation, or instructions for their installation is integrated as part of the Quipucords installation process. The process to install dependencies can vary according several factors, including your operating system and whether you are doing an offline or online installation. Therefore, install the dependencies only as instructed by the Quipucords installation steps.</p>
 </div>
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>The Quipucords dependencies include the following software:</p>
 </div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Programming language for the Quipucords command line interface (CLI):</strong></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Python 3.4 or later</p>
+<p>Ansible 2.4 or later, depending on the requirements of your operating system.</p>
 </li>
-</ul>
-</div>
+<li>
+<p>Container software, either Podman or Docker, depending on the requirements of your operating system.</p>
+</li>
+<li>
+<p>The PostgreSQL database.</p>
+</li>
+<li>
+<p>Python, 3.4 or 3.6, depending on the requirements of your operating system.</p>
 </li>
 </ul>
 </div>
@@ -710,10 +759,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>The machine that Quipucords is installed on must have access to the IT infrastructure assets that are to be scanned.</p>
+<p>If you install the Quipucords server and CLI packages on different machines, qpc-tools must be installed on both machines to run each installation.</p>
 </li>
 <li>
-<p>If you install the Quipucords server and command line interface (CLI) tool on different machines, the CLI machine must have must have access to the IT infrastructure assets that are to be scanned and must be able to connect to the server machine.</p>
+<p>If you install the Quipucords server and CLI packages on different machines, the CLI machine must be able to connect to the server machine.</p>
+</li>
+<li>
+<p>The Quipucords server must have access to the IT infrastructure assets that are to be scanned.</p>
 </li>
 </ul>
 </div>
@@ -726,10 +778,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Any network sources that are targeted for scanning must be running the Secure Shell (SSH) protocol.</p>
 </li>
 <li>
-<p>A user account that is used as credential for a scan requires the <code>bash</code> shell. The shell cannot be the <code>/sbin/nologin</code> shell or the <code>/bin/false</code> shell.</p>
+<p>A user account that is used as a credential for a scan requires the <code>bash</code> shell. The shell cannot be the <code>/sbin/nologin</code> shell or the <code>/bin/false</code> shell.</p>
 </li>
 <li>
-<p>A user account that is used as a credential for a network scan must have adequate permissions to run commands and read certain files on those systems. For example, some commands that run during a scan require privilege elevation to gather the complete set of facts for the scan. For more information about these commands, see "Commands that are used in scans of remote network assets" in Using Quipucords.</p>
+<p>A user account that is used as a credential for a network scan must have adequate permissions to run commands and read certain files on those systems. For example, some commands that run during a scan require privilege elevation to gather the complete set of facts for the scan. The <em>Using Quipucords</em> guide has additional information about the creation of credentials for network scans and the privileges that must be associated with those credentials to enable a more complete scan of network assets.</p>
+</li>
+<li>
+<p>A user account that is used as a credential for a network scan where authentication is done with an SSH key must have a copy of the private key on the Quipucords server. The private key must be stored in the <code>~/quipucords/server/volumes/sshkeys</code> directory, the default location for this directory at the time of server installation.</p>
 </li>
 </ul>
 </div>
@@ -739,10 +794,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="openblock partintro">
 <div class="content">
 <div class="paragraph">
-<p>The online, or automated, installation process runs an installer that uses Ansible to install the command line interface tool, the server image, and the database image.</p>
+<p>The online installation process runs an installer that uses Ansible to install the command line interface tool, the server image, and the database image.</p>
 </div>
 <div class="paragraph">
-<p>When you run the online installation process, the server is installed and started as described in (&#8230;&#8203;.link to the default config description topic from Configuring and Starting Quipucords&#8230;&#8203;). However, you can change some of the defaults used by the automated installation with the (&#8230;&#8203;.link to Installation Options topic&#8230;&#8203;.).</p>
+<p>When you run the online installation process, the server and CLI packages are installed with the default options. However, you can change some of the defaults used by the installation process by setting options that are defined in <a href="#ref-tools-install-options-inst_assembly-installing-scripted-online-inst-ctxt">Options for the qpc-tools install command</a>.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -751,7 +806,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Ensure that all prerequisites are installed and configured.</p>
 </li>
 <li>
-<p>To use the online installation process, the machine on which you are downloading the installer and installing Quipucords must be connected to the internet.</p>
+<p>To use the online installation process, the machine on which you are downloading the installer and installing Quipucords must be connected to the Internet.</p>
 </li>
 </ul>
 </div>
@@ -762,26 +817,40 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Download the installer. For more information, see <a href="#proc-downloading-installer-inst_assembly-installing-scripted-online-inst-ctxt">Downloading the installer</a>.</p>
+<p>Run the command to install qpc-tools. For more information, see <a href="#proc-installing-tools-inst_assembly-installing-scripted-online-inst-ctxt">Installing qpc-tools</a>.</p>
 </li>
 <li>
-<p>Run the installation. For more information, see <a href="#proc-installing-scripted-online-inst_assembly-installing-scripted-online-inst-ctxt">Installing with the online installation process</a>.</p>
+<p>Run the Quipucords installation with qpc-tools. For more information, see <a href="#proc-installing-scripted-online-inst_assembly-installing-scripted-online-inst-ctxt">Installing with the online installation process</a>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This installation process installs Quipucords with default settings for all of the options. However, other settings are available for you to customize your installation. For more information about these settings, see <a href="#ref-tools-install-options-inst_assembly-installing-scripted-online-inst-ctxt">Options for the qpc-tools install command</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </li>
 </ol>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="proc-downloading-installer-inst_assembly-installing-scripted-online-inst-ctxt">Downloading the installer</h2>
+<h2 id="proc-installing-tools-inst_assembly-installing-scripted-online-inst-ctxt">Installing qpc-tools</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Download&#8230;&#8203;..intro text&#8230;&#8203;.</p>
+<p>The qpc-tools package includes tools that you use to install and maintain Quipucords.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Download the Quipucords installer by using the following command, based on your operating system version:</p>
+<p>Install qpc-tools by using the following command, based on your operating system version:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -804,7 +873,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>For RHEL 6 and CentOS 6, use the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight nowrap"><code># yum install -y https://github.com/quipucords/quipucords-installer/releases/latest/download/quipucords_installer.el6.noarch.rpm</code></pre>
+<pre class="highlight nowrap"><code># yum install -y https://github.com/quipucords/qpc-tools/releases/latest/download/qpc_tools.el6.noarch.rpm</code></pre>
 </div>
 </div>
 </li>
@@ -819,31 +888,91 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="proc-installing-scripted-online-inst_assembly-installing-scripted-online-inst-ctxt">Installing with the online installation process</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong><strong>*CHANGING with change to installer to prompt for passwords (BUT some of this text will still be needed if user NOT prompted for user ID or email)</strong></strong>*
-The simplest method for installing Quipucords is to run the online installation with all of the default options. However, accepting all of the default options does not change the default administrator user name and password for Quipucords, a process that does not meet common recommended security practices. In addition, the default server administrator email address for Quipucords is set to an <code>example.com</code> email domain, a process that does not provide the proper contact information for your organization.</p>
-</div>
-<div class="paragraph">
-<p>Therefore, the recommended method is to run the online installation with the options that change the default administrator user name and password for Quipucords and change the email address for that primary administrator, or server user, to one that is appropriate for your organization. The following information describes this method.</p>
+<p>During the Quipucords installation process, you enter commands to install the server and the command line interface (CLI). The simplest method for installing Quipucords is to run the online installation with all of the default options. With this method, the install process prompts you to do the following actions:</p>
 </div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>Download the Quipucords installer. For more information, see (&#8230;&#8203;link to download inst topic&#8230;&#8203;).</p>
+<p>Set a password for the Quipucords server administrator.</p>
+</li>
+<li>
+<p>Set a password for the database user.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
+<p>The following information includes commands for the default installation process. However, you can change some of the defaults used by the installation process by setting options that are defined in <a href="#ref-tools-install-options-inst_assembly-installing-scripted-online-inst-ctxt">Options for the qpc-tools install command</a>.</p>
+</div>
+<div class="paragraph">
 <div class="title">Procedure</div>
-<p><strong><strong>*Command syntax for options changing&#8230;&#8203;</strong></strong>*</p>
+<p>To install the Quipucords server and CLI packages, use the following steps:</p>
+</div>
+<div class="sect2">
+<h3 id="_installing_the_server">Installing the server</h3>
+<div class="paragraph">
+<p>Install the server. The default server installation process prompts you to enter your user name and password for the Red Hat Container Catalog (the registry.redhat.io website). It also prompts you to supply a password for the Quipucords server administrator and a password for the PostgreSQL database user.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>As a best practice, note the Quipucords server administrator and the PostgreSQL database user passwords in the password management system that is used by your organization. The Quipucords tool does not offer a method to recover these passwords.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Start the installation by entering the following command, where <code><em>admin</em></code> is the new administrator user name, <code><em>qpcpassw0rd</em></code> is the new password, and <code><em>admin@example.com</em></code> is the email address for the Quipucords server user:</p>
+<p>Install the server by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight nowrap"><code># qpc-tools install -e server_username=<em>admin</em> -e server_password=<em>qpcpassw0rd</em> -e server_user_email=<em>admin@example.com</em></code></pre>
+<pre class="highlight nowrap"><code># qpc-tools server install</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>At the prompt, set a password for the Quipucords server administrator.</p>
+</li>
+<li>
+<p>At the prompt, set a password for the PostgreSQL database user.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification steps</div>
+<ol class="arabic">
+<li>
+<p>For a successful installation of the server package, the output appears similar to the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre>Installation of the server was successful.</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installing_the_command_line_interface">Installing the command line interface</h3>
+<div class="paragraph">
+<p>Install the command line interface.</p>
+</div>
+<div class="paragraph">
+<p>The recommended method is to include the options to set the port and IP address of the Quipucords server. These options must be set so that the Quipucords command line interface can communicate with the server.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Install the command line interface by entering the following command, where <code>server_port</code> is the port that the Quipucords server is using for HTTPS communication and <code><em>server_host</em></code> is the IP address of the server:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code># qpc-tools cli install --server-port=<em>server_port</em> --server-host=<em>server_host</em></code></pre>
 </div>
 </div>
 </li>
@@ -853,10 +982,10 @@ The simplest method for installing Quipucords is to run the online installation 
 <div class="title">Verification steps</div>
 <ol class="arabic">
 <li>
-<p>For a successful installation, the output appears similar to the following example:</p>
+<p>For a successful installation command line interface packages the output appears similar to the following example:</p>
 <div class="listingblock">
 <div class="content">
-<pre>Installation complete.</pre>
+<pre>Installation of the CLI was successful.</pre>
 </div>
 </div>
 </li>
@@ -864,17 +993,101 @@ The simplest method for installing Quipucords is to run the online installation 
 </div>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="ref-tools-install-options-inst_assembly-installing-scripted-online-inst-ctxt">Options for the qpc-tools install command</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The installation procedures in this guide install the Quipucords server and CLI packages with all of the default options. However, the <code>install</code> subcommand that installs the Quipucords server and command line interface packages includes options to customize the installation process.</p>
+</div>
+<div class="paragraph">
+<p>The following information lists the <code>install</code> subcommand options, along with applicable usage information and default values, for the server and CLI packages.</p>
+</div>
+<div class="sect2">
+<h3 id="_server_installation_options">Server installation options</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>--offline-files=_offline_files_path</code></dt>
+<dd>
+<p>Sets the fully qualified path to the files on the disconnected machine, for example, the transferred server and command line interface packages, that are needed to complete an offline installation. This option has no default value and is used only when specified during an offline installation.</p>
+</dd>
+<dt class="hdlist1"><code>--version=<em>version.patch.release</em></code></dt>
+<dd>
+<p>Enables the installation of a specific Quipucords server version. Contains the semantic versioning format (version.release.patch, such as 0.9.0) of the Quipucords server that you want to install. This option has a default of the latest version.
+This option is required if the <code>offline-files</code> option is specified.</p>
+</dd>
+<dt class="hdlist1"><code>--home-dir=<em>server_home_dir</em></code></dt>
+<dd>
+<p>Sets the fully qualified path to the installation directory for the Quipucords server. Defaults to <code>~/quipucords/</code>.</p>
+</dd>
+<dt class="hdlist1"><code>--port=<em>server_port</em></code></dt>
+<dd>
+<p>Sets the port number for the Quipucords server. Defaults to <code>9443</code>.</p>
+</dd>
+<dt class="hdlist1"><code>--open-port=true|false</code></dt>
+<dd>
+<p>Determines whether to open the port in the firewall during the installation. This option enables communication between the Quipucords server and any remote clients over the port defined in the <code>port</code> option. Contains a true or false value. Defaults to true. Supply <code>false</code> to install without opening the server port in the firewall. The installation script must run with elevated privileges to open the server port.</p>
+</dd>
+<dt class="hdlist1"><code>--db-user=<em>database_username</em></code></dt>
+<dd>
+<p>Sets the database user name for PostgreSQL. Defaults to <code>postgres</code>.</p>
+</dd>
+<dt class="hdlist1"><code>--db-password=<em>database_password</em></code></dt>
+<dd>
+<p>Sets the database user password for PostgreSQL. This option has no default value. If omitted, qpc-tools prompts for a password.</p>
+</dd>
+<dt class="hdlist1"><code>--username=<em>server_username</em></code></dt>
+<dd>
+<p>Sets the Quipucords server administrator user name. Defaults to <code>admin</code>.</p>
+</dd>
+<dt class="hdlist1"><code>--password=<em>server_password</em></code></dt>
+<dd>
+<p>Sets the Quipucords server administrator password. This option has no default value. If omitted, qpc-tools prompts for a password.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_command_line_interface_installation_options">Command line interface installation options</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>--offline-files=<em>offline_files_path</em></code></dt>
+<dd>
+<p>Sets the fully qualified path to the files on the disconnected machine, for example, the transferred server and command line interface packages, that are needed to complete an offline installation. This option has no default value and is used only when specified during an offline installation.</p>
+</dd>
+<dt class="hdlist1"><code>--version=<em>version.patch.release</em></code></dt>
+<dd>
+<p>Enables the installation of a specific Quipucords CLI version. Contains the semantic versioning format (version.release.patch, such as 0.9.0) of the Quipucords CLI that you want to install. This option has a default of the latest version.
+This option is required if the <code>offline-files</code> option is specified.</p>
+</dd>
+<dt class="hdlist1"><code>--home-dir=<em>cli_home_dir</em></code></dt>
+<dd>
+<p>Sets the fully qualified path to the installation directory for the Quipucords CLI. Defaults to <code>~/quipucords/</code>.</p>
+</dd>
+<dt class="hdlist1"><code>--server-host=<em>server_IP_address</em></code></dt>
+<dd>
+<p>Sets the IP address to use to connect to the Quipucords server. This option has no default value. You must either set a value during the CLI package installation or set a value by configuring the server connection for the command line interface.</p>
+</dd>
+<dt class="hdlist1"><code>--server-port=<em>server_port</em></code></dt>
+<dd>
+<p>Sets the port number to use to connect to the Quipucords server. This option has no default value. You must either set a value during the CLI package installation or set a value by configuring the server connection for the command line interface.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
 <h1 id="assembly-installing-scripted-offline-inst_{context}" class="sect0">Installing Quipucords with the offline installation process</h1>
 <div class="openblock partintro">
 <div class="content">
 <div class="paragraph">
-<p>The offline installation process is required when you install Quipucords in an offline environment, also commonly referred to as a disconnected or air-gapped environment. If you must install the server, command line interface (CLI) tool, or both on machines that do not have internet access, then you must use the offline installation process.</p>
+<p>The offline installation process is required when you install Quipucords on a machine that does not have Internet access, also commonly referred to as an offline, air-gapped, or disconnected environment. The information in this section describes the installation process when you are installing the qpc-tools, the server, and the command line interface (CLI) tool in this type of environment.</p>
 </div>
 <div class="paragraph">
-<p>For the offline installation process, you must complete some steps from a <em>connected</em> machine, one that has internet connectivity. These steps include downloading the installer, downloading the server and CLI packages, building a container image for the database, transferring packages to the disconnected machine, and others. You also complete steps on the <em>disconnected</em> machine, including installing dependencies to enable the offline installation, receiving the prepared packages and images transferred from the connected machine, and running the installer itself. The dependencies that enable offline installation are in addition to the standard prerequisites.</p>
+<p>When you run the offline installation process, the server and CLI packages are installed with the default options. However, you can change some of the defaults used by the installation process by setting options that are defined in <a href="#ref-tools-install-options-inst_assembly-installing-scripted-offline-inst-ctxt">Options for the qpc-tools install command</a>.</p>
 </div>
 <div class="paragraph">
-<p>When you run the offline installation process, the server is installed and started as described in (&#8230;&#8203;.link to the default config description topic from Configuring and Starting Quipucords&#8230;&#8203;). However, you can change some of the defaults used by the automated installation with the (&#8230;&#8203;.link to Installation Options topic&#8230;&#8203;.).</p>
+<p>For the offline installation process, you must complete some steps from a <em>connected</em> machine, one that has Internet connectivity. These steps include downloading the Red Hat Package Manager (RPM) package for qpc-tools, downloading the server and CLI packages, building a container image for the database, transferring packages to the disconnected machine, and others. You also complete steps on the <em>disconnected</em> machine, including installing dependencies to enable the offline installation, receiving the prepared packages and images transferred from the connected machine, and running the installer itself.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -883,7 +1096,7 @@ The simplest method for installing Quipucords is to run the online installation 
 <p>Ensure that all prerequisites are installed and configured.</p>
 </li>
 <li>
-<p>Ensure that the connected machine where you download packages can connect to the disconnected machine or machines where you want to install the Quipucords server and CLI tool.</p>
+<p>Ensure that the connected machine where you download packages can connect to the disconnected machine or machines where you want to install qpc-tools and the Quipucords server and CLI tool.</p>
 </li>
 </ul>
 </div>
@@ -894,27 +1107,10 @@ The simplest method for installing Quipucords is to run the online installation 
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Install dependencies. These dependencies are additional prerequisites that cannot be installed by the installer in an offline installation process. For more information, see <a href="#proc-installing-dependencies-offline-install-inst_assembly-installing-scripted-offline-inst-ctxt">Installing dependencies for the offline installation</a>.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>These dependencies are required on both the connected machine where you are obtaining the packages and the disconnected machine where you are installing Quipucords.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
+<p>Install dependencies on the connected and disconnected machine, as required. These dependencies are additional required software that cannot be installed by qpc-tools in an offline installation process. For more information, see <a href="#proc-installing-dependencies-offline-install-inst_assembly-installing-scripted-offline-inst-ctxt">Installing dependencies for the offline installation</a>.</p>
 </li>
 <li>
-<p>Download the installer. For more information, see <a href="#proc-downloading-installer-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the installer</a>.</p>
-</li>
-<li>
-<p><strong><strong>*Maybe new step with newest installer changes&#8212;&#8203;create a dir on the connected machine?</strong></strong>*</p>
+<p>Download the qpc-tools package to the connected machine. For more information, see <a href="#proc-downloading-tools-package-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the qpc-tools package</a>.</p>
 </li>
 <li>
 <p>Download the server package to the connected machine. For more information, see <a href="#proc-downloading-server-package-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the server package</a>.</p>
@@ -923,13 +1119,27 @@ The simplest method for installing Quipucords is to run the online installation 
 <p>Build the database container image. For more information, see <a href="#proc-building-database-container-image-inst_assembly-installing-scripted-offline-inst-ctxt">Building the database container image</a>.</p>
 </li>
 <li>
-<p>Download the CLI package. For more information, see <a href="#proc-downloading-cli-package-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the command line interface package</a>.</p>
+<p>Download the CLI package to the connected machine. For more information, see <a href="#proc-downloading-cli-package-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the command line interface package</a>.</p>
 </li>
 <li>
-<p>Transfer the packages from the connected machine where they were downloaded to the disconnected machine where you are going to run the installation. For more information, see <a href="#proc-transferring-packages-offline-inst_assembly-installing-scripted-offline-inst-ctxt">Transferring packages to the offline machine</a>.</p>
+<p>Transfer the packages from the connected machine to the disconnected machine where you are going to run the installation. For more information, see <a href="#proc-transferring-packages-offline-inst_assembly-installing-scripted-offline-inst-ctxt">Transferring packages to the offline machine</a>.</p>
 </li>
 <li>
 <p>Run the installation. For more information, see <a href="#proc-installing-scripted-offline-qpc-inst_assembly-installing-scripted-offline-inst-ctxt">Installing with the offline installation process</a>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This installation process installs Quipucords with default settings for all of the options. However, other settings are available for you to customize your installation. For more information about these settings, see <a href="#ref-tools-install-options-inst_assembly-installing-scripted-offline-inst-ctxt">Options for the qpc-tools install command</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </li>
 </ol>
 </div>
@@ -945,11 +1155,25 @@ The simplest method for installing Quipucords is to run the online installation 
 <p>You must install the dependencies on the disconnected machine where you are installing and using Quipucords.</p>
 </div>
 <div class="paragraph">
-<p>You must also install most of the dependencies, such as Ansible, the correct Python version, and the applicable container software, on the connected machine where you are downloading the packages before installation. For example, the <code>yum install</code> command that you use to get the Quipucords qpc-tools package also does an RPM package check for certain runtime requirements. This package check checks for the Ansible and Python dependencies. In addition, the container software (either Podman or Docker, depending on your RHEL or CentOS version) is required to be installed on the connected machine to build a container for the PostgreSQL database.</p>
+<p>You must also install the applicable container software dependency on the connected machine where you are downloading the packages before installation. The container software (either Podman or Docker, depending on your RHEL or CentOS version) is required to be installed on the connected machine to build a container for the PostgreSQL database.</p>
 </div>
 <div class="paragraph">
 <div class="title">Procedure</div>
 <p>Use one of the following procedures, as appropriate for your operating system.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In the following procedures, a dependency might be duplicated in the qpc-tools, server, or command line interface sections. This duplication is intended to clarify which dependencies are required for these individual packages, for example, in a scenario where packages are installed on different machines. If you are installing all of the packages on the same machine, you are not required to install a dependency more than once.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_installing_dependencies_for_rhel_7_and_8_or_centos_7_and_8">Installing dependencies for RHEL 7 and 8 or CentOS 7 and 8</h3>
@@ -957,14 +1181,27 @@ The simplest method for installing Quipucords is to run the online installation 
 <p>To install the dependencies on RHEL 7 and 8 or CentOS 7 and 8, use the following steps:</p>
 </div>
 <div class="sect3">
+<h4 id="_dependencies_for_the_qpc_tools_package">Dependencies for the qpc-tools package</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><em>On the disconnected machine only:</em> Install Ansible 2.4 or later, depending on the requirements of your operating system version. For more information, see the documentation about installing the control node (also known as the control manager in previous versions) in the Ansible <em>Installation Guide</em>. You can find a link to the <em>Installation Guide</em> for more current versions plus a link to previous documentation versions at <a href="https://docs.ansible.com/#coreversionselect" class="bare" target="_blank" rel="noopener">https://docs.ansible.com/#coreversionselect</a>.</p>
+</li>
+<li>
+<p><em>On the disconnected machine only:</em> Make sure that you are running a minimum of Python 3.6.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
 <h4 id="_dependencies_for_the_quipucords_server_package">Dependencies for the Quipucords server package</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><em>On both the connected and disconnected machine:</em> Install Ansible 2.4 or later, depending on the requirements of your operating system version. For more information, see the documentation about installing the control node (also known as the control manager in previous versions) in the Ansible <em>Installation Guide</em>. You can find a link to the <em>Installation Guide</em> for more current versions plus a link to previous documentation versions at <a href="https://docs.ansible.com/#coreversionselect" class="bare" target="_blank" rel="noopener">https://docs.ansible.com/#coreversionselect</a>.</p>
+<p><em>On the disconnected machine only:</em> Install Ansible 2.4 or later, depending on the requirements of your operating system version. For more information, see the documentation about installing the control node (also known as the control manager in previous versions) in the Ansible <em>Installation Guide</em>. You can find a link to the <em>Installation Guide</em> for more current versions plus a link to previous documentation versions at <a href="https://docs.ansible.com/#coreversionselect" class="bare" target="_blank" rel="noopener">https://docs.ansible.com/#coreversionselect</a>. Skip this step if Ansible was installed on this machine for the qpc-tools package.</p>
 </li>
 <li>
-<p><em>On both the connected and disconnected machine:</em> Install the latest version of Podman. For more information, see the documentation about installation located in the <em>Getting Started with Podman</em> guide, at <a href="https://podman.io/getting-started/" class="bare" target="_blank" rel="noopener">https://podman.io/getting-started/</a>.</p>
+<p><em>On the connected and disconnected machine:</em> Install the latest version of Podman. For more information, see the documentation about installation located in the <em>Getting Started with Podman</em> guide, at <a href="https://podman.io/getting-started/" class="bare" target="_blank" rel="noopener">https://podman.io/getting-started/</a>.</p>
 </li>
 </ol>
 </div>
@@ -976,12 +1213,8 @@ The simplest method for installing Quipucords is to run the online installation 
 <li>
 <p><em>On the disconnected machine only:</em> Install the Extra Packages for Enterprise Linux (EPEL) package. Select the package that is appropriate for your operating system from the options in the "Quickstart" section at the following link: <a href="https://fedoraproject.org/wiki/EPEL" class="bare" target="_blank" rel="noopener">https://fedoraproject.org/wiki/EPEL</a>.</p>
 </li>
-</ol>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
 <li>
-<p><em>On both the connected and disconnected machine:</em> Make sure that you are running a minimum of Python 3.6. In addition, make sure that the Python 3.6-requests module is installed.</p>
+<p><em>On the disconnected machine only:</em> Make sure that you are running a minimum of Python 3.6. In addition, make sure that the Python 3.6-requests package is installed. If you already checked the minimum version of Python on this machine during the installation of qpc-tools dependencies, you must still complete the check for the correct version of the Python 3.6-requests package.</p>
 </li>
 </ol>
 </div>
@@ -993,14 +1226,27 @@ The simplest method for installing Quipucords is to run the online installation 
 <p>To install the dependencies on RHEL 6 and CentOS 6, use the following steps:</p>
 </div>
 <div class="sect3">
+<h4 id="_dependencies_for_the_qpc_tools_package_2">Dependencies for the qpc-tools package</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><em>On the disconnected machine only:</em> Install Ansible 2.4 or later, depending on the requirements of your operating system version. For more information, see the documentation about installing the control node (also known as the control manager in previous versions) in the Ansible <em>Installation Guide</em>. You can find a link to the <em>Installation Guide</em> for more current versions plus a link to previous documentation versions at <a href="https://docs.ansible.com/#coreversionselect" class="bare" target="_blank" rel="noopener">https://docs.ansible.com/#coreversionselect</a>.</p>
+</li>
+<li>
+<p><em>On the disconnected machine only:</em> Make sure that you are running a minimum of Python 3.4.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
 <h4 id="_dependencies_for_the_quipucords_server_package_2">Dependencies for the Quipucords server package</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><em>On both the connected and disconnected machine:</em> Install Ansible 2.4 or later, depending on the requirements of your operating system version. For more information, see the documentation about installing the control node (also known as the control manager in previous versions) in the Ansible <em>Installation Guide</em>. You can find a link to the <em>Installation Guide</em> for more current versions plus a link to previous documentation versions at <a href="https://docs.ansible.com/#coreversionselect" class="bare" target="_blank" rel="noopener">https://docs.ansible.com/#coreversionselect</a>.</p>
+<p><em>On the disconnected machine only:</em> Install Ansible 2.4 or later, depending on the requirements of your operating system version. For more information, see the documentation about installing the control node (also known as the control manager in previous versions) in the Ansible <em>Installation Guide</em>. You can find a link to the <em>Installation Guide</em> for more current versions plus a link to previous documentation versions at <a href="https://docs.ansible.com/#coreversionselect" class="bare" target="_blank" rel="noopener">https://docs.ansible.com/#coreversionselect</a>. Skip this step if Ansible was installed on this machine for the qpc-tools package.</p>
 </li>
 <li>
-<p><em>On both the connected and disconnected machine:</em> Install Docker. An older version of Docker that is compatible with RHEL 6 and CentOS 6 is required. This version of Docker is no longer formally supported. To download and install this version of Docker, select the <strong>/docker-engine-1.7.1-1.el6.x86_64.rpm</strong> package at the following link: <a href="https://yum.dockerproject.org/repo/main/centos/6/Packages/" class="bare" target="_blank" rel="noopener">https://yum.dockerproject.org/repo/main/centos/6/Packages/</a>.</p>
+<p><em>On the connected and disconnected machine:</em> Install Docker. An older version of Docker that is compatible with RHEL 6 and CentOS 6 is required. This version of Docker is no longer supported. To download and install this version of Docker, select the <strong>/docker-engine-1.7.1-1.el6.x86_64.rpm</strong> package at the following link: <a href="https://yum.dockerproject.org/repo/main/centos/6/Packages/" class="bare" target="_blank" rel="noopener">https://yum.dockerproject.org/repo/main/centos/6/Packages/</a>.</p>
 </li>
 </ol>
 </div>
@@ -1012,12 +1258,8 @@ The simplest method for installing Quipucords is to run the online installation 
 <li>
 <p><em>On the disconnected machine only:</em> Install the Extra Packages for Enterprise Linux (EPEL) package. Select the package that is appropriate for your operating system from the options in the "Quickstart" section at the following link: <a href="https://fedoraproject.org/wiki/EPEL" class="bare" target="_blank" rel="noopener">https://fedoraproject.org/wiki/EPEL</a>.</p>
 </li>
-</ol>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
 <li>
-<p><em>On both the connected and disconnected machine:</em> Make sure that you are running a minimum of Python 3.4. In addition, make sure that the Python 3.4-requests module is installed.</p>
+<p><em>On the disconnected machine only:</em> Make sure that you are running a minimum of Python 3.4. In addition, make sure that the Python 3.4-requests package is installed. If you already checked the minimum version of Python on this machine during the installation of qpc-tools dependencies, you must still complete the check for the correct version of the Python 3.4-requests package.</p>
 </li>
 </ol>
 </div>
@@ -1026,43 +1268,31 @@ The simplest method for installing Quipucords is to run the online installation 
 </div>
 </div>
 <div class="sect1">
-<h2 id="proc-downloading-installer-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the installer</h2>
+<h2 id="proc-downloading-tools-package-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the qpc-tools package</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Download&#8230;&#8203;..intro text&#8230;&#8203;.</p>
+<p>The qpc-tools package contains tools to install and maintain Quipucords.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Download the Quipucords installer by using the following command, based on your operating system version:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>For RHEL 8, use the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code># yum install -y https://github.com/quipucords/qpc-tools/releases/latest/download/qpc_tools.el8.noarch.rpm</code></pre>
-</div>
-</div>
+<p>From a browser session on the connected machine, go to the following link for information about the qpc-tools package and for the link to download the latest version: <a href="https://github.com/quipucords/qpc-tools/releases/latest/" target="_blank" rel="noopener">https://github.com/quipucords/qpc-tools/releases/latest/</a>.</p>
 </li>
 <li>
-<p>For RHEL 7 and CentOS 7, use the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code># yum install -y https://github.com/quipucords/qpc-tools/releases/latest/download/qpc_tools.el7.noarch.rpm</code></pre>
-</div>
-</div>
+<p>To download the qpc-tools package, click the following package download link that applies to your operating system:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>For RHEL 8 and CentOS 8, click <strong>qpc-tools.el8.noarch.rpm</strong>.</p>
 </li>
 <li>
-<p>For RHEL 6 and CentOS 6, use the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code># yum install -y https://github.com/quipucords/quipucords-installer/releases/latest/download/quipucords_installer.el6.noarch.rpm</code></pre>
-</div>
-</div>
+<p>For RHEL 7 and CentOS 7, click <strong>qpc-tools.el7.noarch.rpm</strong>.</p>
 </li>
-</ul>
+<li>
+<p>For RHEL 6 and CentOS 6, click <strong>qpc-tools.el6.noarch.rpm</strong>.</p>
+</li>
+</ol>
 </div>
 </li>
 </ol>
@@ -1073,7 +1303,7 @@ The simplest method for installing Quipucords is to run the online installation 
 <h2 id="proc-downloading-server-package-inst_assembly-installing-scripted-offline-inst-ctxt">Downloading the server package</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Quipucords server package contains the server, database, and graphical user interface (GUI) client.</p>
+<p>The Quipucords server package contains the server and graphical user interface (GUI) client.</p>
 </div>
 <div class="paragraph">
 <p>The server package is available as a container image. Download the server package to the connected machine.</p>
@@ -1085,10 +1315,10 @@ The simplest method for installing Quipucords is to run the online installation 
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>From a browser session on the connected machine, go to the following link for information about the Quipucords server package and for the link to download the latest version: <a href="https://github.com/quipucords/quipucords/releases/latest/" target="_blank" rel="noopener">Quipucords server package latest version</a>.</p>
+<p>From a browser session on the connected machine, go to the following link for information about the Quipucords server package and for the link to download the latest version: <a href="https://github.com/quipucords/quipucords/releases/latest/" target="_blank" rel="noopener">https://github.com/quipucords/quipucords/releases/latest/</a>.</p>
 </li>
 <li>
-<p>To download the server package, click quipucords_server_image.tar.gz.</p>
+<p>To download the server package, click <strong>quipucords_server_image.tar.gz</strong>.</p>
 </li>
 </ol>
 </div>
@@ -1102,7 +1332,7 @@ The simplest method for installing Quipucords is to run the online installation 
 </div>
 <div class="paragraph">
 <div class="title">Prerequisites</div>
-<p>Before you begin, the applicable container software must be installed&#8230;&#8203;as described in (link to dependencies section&#8230;&#8203;.)</p>
+<p>Before you begin, the applicable container software must be installed as described in <a href="#proc-installing-dependencies-offline-install-inst_assembly-installing-scripted-offline-inst-ctxt">Installing dependencies for the offline installation</a>.</p>
 </div>
 <div class="paragraph">
 <div class="title">Procedure</div>
@@ -1190,10 +1420,10 @@ The offline installation script requires the TAR file to be named <code>postgres
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>From a browser session on the connected machine, go to the following link for information about the Quipucords CLI package and for the link to download the latest version: <a href="https://github.com/quipucords/qpc/releases/latest/" target="_blank" rel="noopener">Quipucords CLI package latest version</a>.</p>
+<p>From a browser session on the connected machine, go to the following link for information about the Quipucords CLI package and for the link to download the latest version: <a href="https://github.com/quipucords/qpc/releases/latest/" target="_blank" rel="noopener">https://github.com/quipucords/qpc/releases/latest/</a>.</p>
 </li>
 <li>
-<p>To download the server package, click the following CLI package download link that applies to your operating system:</p>
+<p>To download the CLI package, click the following package download link that applies to your operating system:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -1222,23 +1452,25 @@ The offline installation script requires the TAR file to be named <code>postgres
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Create a <code>packages</code> directory on the disconnected machine to use for the package transfer, where <code><em>lib</em> is the library version, either `lib</code> or <code>lib64</code>, and <code><em>version.release.patch</em></code> is the complete version number of the qpc-tools RPM package. Use the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code># mkdir -p /usr/_lib_/qpc-tools-_version.release.patch_/install/packages</code></pre>
-</div>
-</div>
+<p>Create a directory on the disconnected machine to use for the package transfer. During the steps to install the server and command line interface, you enter the path to this directory as part of the commands.</p>
 </li>
-</ol>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
 <li>
-<p>Move the downloaded packages from the connected machine into the <code>packages</code> directory on the disconnected machine, where <code><em>pathtopackages</em></code> is the path to the <code>packages</code> directory. Use the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code># mv /_pathtopackages_/usr/_lib_/qpc-tools-_version.release.patch_/install/packages</code></pre>
-</div>
+<p>Move the following packages from the connected machine into the directory that you just created on the disconnected machine:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The qpc-tools package that applies to your operating system version, qpc-tools.el8.noarch.rpm, qpc-tools.el7.noarch.rpm, or qpc-tools.el6.noarch.rpm.</p>
+</li>
+<li>
+<p>The Quipucords server package <code>quipucords_server_image.tar.gz</code>.</p>
+</li>
+<li>
+<p>The database container image <code>postgres.9.6.10.tar</code>.</p>
+</li>
+<li>
+<p>The Quipucords command line interface package that applies to your operating system version, <code>qpc.el6.noarch.rpm</code>, <code>qpc.el7.noarch.rpm</code>, or <code>qpc.el8.noarch.rpm</code>.</p>
+</li>
+</ul>
 </div>
 </li>
 </ol>
@@ -1249,27 +1481,69 @@ The offline installation script requires the TAR file to be named <code>postgres
 <h2 id="proc-installing-scripted-offline-qpc-inst_assembly-installing-scripted-offline-inst-ctxt">Installing with the offline installation process</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>&#8230;&#8203;intro text about running the command with options to change password <strong><strong>*changing soon, pw prompt</strong></strong>*, user ID, email address (no prompt for these)&#8230;&#8203;.</p>
+<p>During the Quipucords installation process, you enter commands to install the server and the command line interface (CLI).</p>
 </div>
-<div class="olist arabic">
-<div class="title">Prerequisites</div>
-<ol class="arabic">
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-</ol>
+<div class="paragraph">
+<p>The following information includes commands for the default installation process. However, you can change some of the defaults used by the installation process by setting options that are defined in <a href="#ref-tools-install-options-inst_assembly-installing-scripted-offline-inst-ctxt">Options for the qpc-tools install command</a>.</p>
 </div>
 <div class="paragraph">
 <div class="title">Procedure</div>
-<p><strong><strong>*procedures need changes for new prompts during installer run</strong></strong>*</p>
+<p>To install Quipucords, you install three packages, the qpc-tools package, the Quipucords server package, and the Quipucords CLI package. Use the following steps:</p>
+</div>
+<div class="sect2">
+<h3 id="_installing_qpc_tools">Installing qpc-tools</h3>
+<div class="paragraph">
+<p>Install qpc-tools.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Start the installation by entering the following command, where <code><em>admin</em></code> is the new administrator user name, <code><em>qpcpassw0rd</em></code> is the new password, and <code><em>admin@example.com</em></code> is the email address for the Quipucords server user:</p>
+<p>Run the following command, where <code><em>/path</em></code> is the full path to the location on the disconnected machine where you transferred the packages.</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight nowrap"><code># qpc-tools install -e server_username=<em>admin</em> -e server_password=<em>qpcpassw0rd</em> -e server_user_email=<em>admin@example.com</em></code></pre>
+<pre class="highlight nowrap"><code># rpm -Uvh --force`<em>/path</em>`</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installing_the_server_2">Installing the server</h3>
+<div class="paragraph">
+<p>Install the server. The default server installation process prompts you to supply a password for the Quipucords server administrator and a password for the PostgreSQL database user.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Install the server by entering the following command, where <code><em>/path</em></code> is the full path to the location on the disconnected machine where you transferred the packages and <code><em>version.release.patch</em></code> is the version of the Quipucords server package:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code># qpc-tools server install --offline-files=<code><em>/path</em></code> --version=<code><em>version.release.patch</em></code></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Enter a value for the Quipucords server administrator password.</p>
+</li>
+<li>
+<p>Enter a value for the PostgreSQL database password.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installing_the_command_line_interface_2">Installing the command line interface</h3>
+<div class="paragraph">
+<p>Install the command line interface.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Install the command line interface by entering the following command, where <code><em>/path</em></code> is the full path to the location on the disconnected machine where you transferred the packages:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code># qpc-tools cli install --offline-files=<code><em>/path</em></code></code></pre>
 </div>
 </div>
 </li>
@@ -1279,7 +1553,7 @@ The offline installation script requires the TAR file to be named <code>postgres
 <div class="title">Verification steps</div>
 <ol class="arabic">
 <li>
-<p>For a successful installation, the output appears similar to the following example:</p>
+<p>For a successful installation of the packages, the output appears similar to the following example:</p>
 <div class="listingblock">
 <div class="content">
 <pre>Installation complete.</pre>
@@ -1291,9 +1565,331 @@ The offline installation script requires the TAR file to be named <code>postgres
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="ref-tools-install-options-inst_assembly-installing-scripted-offline-inst-ctxt">Options for the qpc-tools install command</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The installation procedures in this guide install the Quipucords server and CLI packages with all of the default options. However, the <code>install</code> subcommand that installs the Quipucords server and command line interface packages includes options to customize the installation process.</p>
+</div>
+<div class="paragraph">
+<p>The following information lists the <code>install</code> subcommand options, along with applicable usage information and default values, for the server and CLI packages.</p>
+</div>
+<div class="sect2">
+<h3 id="_server_installation_options_2">Server installation options</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>--offline-files=_offline_files_path</code></dt>
+<dd>
+<p>Sets the fully qualified path to the files on the disconnected machine, for example, the transferred server and command line interface packages, that are needed to complete an offline installation. This option has no default value and is used only when specified during an offline installation.</p>
+</dd>
+<dt class="hdlist1"><code>--version=<em>version.patch.release</em></code></dt>
+<dd>
+<p>Enables the installation of a specific Quipucords server version. Contains the semantic versioning format (version.release.patch, such as 0.9.0) of the Quipucords server that you want to install. This option has a default of the latest version.
+This option is required if the <code>offline-files</code> option is specified.</p>
+</dd>
+<dt class="hdlist1"><code>--home-dir=<em>server_home_dir</em></code></dt>
+<dd>
+<p>Sets the fully qualified path to the installation directory for the Quipucords server. Defaults to <code>~/quipucords/</code>.</p>
+</dd>
+<dt class="hdlist1"><code>--port=<em>server_port</em></code></dt>
+<dd>
+<p>Sets the port number for the Quipucords server. Defaults to <code>9443</code>.</p>
+</dd>
+<dt class="hdlist1"><code>--open-port=true|false</code></dt>
+<dd>
+<p>Determines whether to open the port in the firewall during the installation. This option enables communication between the Quipucords server and any remote clients over the port defined in the <code>port</code> option. Contains a true or false value. Defaults to true. Supply <code>false</code> to install without opening the server port in the firewall. The installation script must run with elevated privileges to open the server port.</p>
+</dd>
+<dt class="hdlist1"><code>--db-user=<em>database_username</em></code></dt>
+<dd>
+<p>Sets the database user name for PostgreSQL. Defaults to <code>postgres</code>.</p>
+</dd>
+<dt class="hdlist1"><code>--db-password=<em>database_password</em></code></dt>
+<dd>
+<p>Sets the database user password for PostgreSQL. This option has no default value. If omitted, qpc-tools prompts for a password.</p>
+</dd>
+<dt class="hdlist1"><code>--username=<em>server_username</em></code></dt>
+<dd>
+<p>Sets the Quipucords server administrator user name. Defaults to <code>admin</code>.</p>
+</dd>
+<dt class="hdlist1"><code>--password=<em>server_password</em></code></dt>
+<dd>
+<p>Sets the Quipucords server administrator password. This option has no default value. If omitted, qpc-tools prompts for a password.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_command_line_interface_installation_options_2">Command line interface installation options</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>--offline-files=<em>offline_files_path</em></code></dt>
+<dd>
+<p>Sets the fully qualified path to the files on the disconnected machine, for example, the transferred server and command line interface packages, that are needed to complete an offline installation. This option has no default value and is used only when specified during an offline installation.</p>
+</dd>
+<dt class="hdlist1"><code>--version=<em>version.patch.release</em></code></dt>
+<dd>
+<p>Enables the installation of a specific Quipucords CLI version. Contains the semantic versioning format (version.release.patch, such as 0.9.0) of the Quipucords CLI that you want to install. This option has a default of the latest version.
+This option is required if the <code>offline-files</code> option is specified.</p>
+</dd>
+<dt class="hdlist1"><code>--home-dir=<em>cli_home_dir</em></code></dt>
+<dd>
+<p>Sets the fully qualified path to the installation directory for the Quipucords CLI. Defaults to <code>~/quipucords/</code>.</p>
+</dd>
+<dt class="hdlist1"><code>--server-host=<em>server_IP_address</em></code></dt>
+<dd>
+<p>Sets the IP address to use to connect to the Quipucords server. This option has no default value. You must either set a value during the CLI package installation or set a value by configuring the server connection for the command line interface.</p>
+</dd>
+<dt class="hdlist1"><code>--server-port=<em>server_port</em></code></dt>
+<dd>
+<p>Sets the port number to use to connect to the Quipucords server. This option has no default value. You must either set a value during the CLI package installation or set a value by configuring the server connection for the command line interface.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<h1 id="assembly-configuring-maintaining-inst_{context}" class="sect0">Configuring and maintaining Quipucords</h1>
+<div class="openblock partintro">
+<div class="content">
+<div class="paragraph">
+<p>After installation is complete, you might have to complete other steps to configure or maintain Quipucords. The options that you choose during installation and the way in which you use Quipucords can determine the types of configuration and maintenance tasks that you need to perform.</p>
+</div>
+<div class="paragraph">
+<div class="title">Learn more</div>
+<p>If you did not provide values to configure the connection between the Quipucords server and command line interface during installation, then you must configure those values before you can begin using Quipucords. To learn more, see the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#proc-configuring-connections-inst_assembly-configuring-maintaining-inst-ctxt">Configuring Quipucords connections</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you are going to run network scans with credentials that include SSH keys as the authentication method, then the Quipucords server must have access to the keyfile information. To learn more about adding SSH keys to the Quipucords server, see the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#proc-adding-sshkeys-to-server-inst_assembly-configuring-maintaining-inst-ctxt">Adding SSH keys to the Quipucords server for network scans</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-configuring-connections-inst_assembly-configuring-maintaining-inst-ctxt">Configuring Quipucords connections</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Quipucords command line interface must communicate with the Quipucords server through a specific port and IP address.</p>
+</div>
+<div class="paragraph">
+<p>During the installation of the CLI package, you might have provided this information by setting values for the <code>--server-port</code> and <code>--server-host</code> options. If you did not provide those values during CLI package installation, you must configure those values. You can also use this procedure to edit these values, as needed.</p>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>To configure the command line interface to communicate with the server, run the following command. If the server and CLI packages are installed on different machines, run this command from the machine where the CLI package is installed:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Enter the following command, where <code><em>server_port</em></code> is the port that the Quipucords server is using for HTTPS communication <code><em>server_host</em></code> is the IP address of the server:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code># qpc server config --port=<em>server_port</em> --host=<em>server_host</em></code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-adding-sshkeys-to-server-inst_assembly-configuring-maintaining-inst-ctxt">Adding SSH keys to the Quipucords server for network scans</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you configure sources and credentials for a network scan, you select the type of credential to use to authenticate to the network assets that are being scanned. One of the available options for the credential is to authenticate with a user name and SSH keyfile. If you choose this option, you must add a copy of the the private key to a specific directory on the server so that Quipucords can authenticate to those assets and complete the processes that occur during a scan.</p>
+</div>
+<div class="paragraph">
+<p>You might have to perform these steps as an ongoing maintenance task as you create and refine the credentials needed for your network scans.</p>
+</div>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>To add an SSH keyfile to the Quipucords server:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Copy the private key from the keyfile, using the copy method of your choice.</p>
+</li>
+<li>
+<p>Add the private key to the <code>~/quipucords/server/volumes/sshkeys</code> directory on the Quipucords server, the default location for this directory at the time of server installation.</p>
+</li>
+<li>
+<p>Repeat these steps as needed for all credentials that use SSH keyfiles as the authentication method.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h1 id="assembly-accessing-client-gui_{context}" class="sect0">Accessing the Quipucords user interface</h1>
+<div class="openblock partintro">
+<div class="content">
+<div class="paragraph">
+<p>You access the Quipucords graphical user interface through a browser connection.
+You access the command line interface by running a command to connect to the server.</p>
+</div>
+<div class="paragraph">
+<p>To use the Quipucords user interface, the system on which you want to run the user interface must be able to communicate with the system on which the Quipucords server is installed.</p>
+</div>
+<div class="paragraph">
+<div class="title">Learn more</div>
+<p>To learn more about the requirements and steps to log in to and out of the Quipucords graphical user interface, see the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#proc-logging-in-gui_assembly-accessing-client-gui-ctxt">Logging in to the Quipucords user interface</a></p>
+</li>
+<li>
+<p><a href="#proc-logging-out-gui_assembly-accessing-client-gui-ctxt">Logging out of the Quipucords user interface</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To learn more about the requirements and steps to log in to and out of the Quipucords command line interface, see the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#proc-logging-in-cli_assembly-accessing-client-gui-ctxt">Logging in to the Quipucords command line interface</a></p>
+</li>
+<li>
+<p><a href="#proc-logging-out-cli_assembly-accessing-client-gui-ctxt">Logging out of the Quipucords command line interface</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-logging-in-gui_assembly-accessing-client-gui-ctxt">Logging in to the Quipucords user interface</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">Prerequisites</div>
+<p>To log in to the Quipucords user interface, you need the IP address of the system where the Quipucords server is installed, the port number for the connection if the default port was changed during server installation, and the user name and password to use when logging in. If you do not have this information, contact the administrator who installed the Quipucords server.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>In a browser, enter the URL for the Quipucords server in the following format: <code>https://<em>IPaddress</em>:<em>port</em></code>, where <code><em>IPaddress</em></code> is the IP address of the Quipucords server and <code><em>port</em></code> is the exposed server port.</p>
+<div class="paragraph">
+<p>The following examples show two different ways to enter the URL, based on the system that you are logging in from and whether the default port is used:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If you log in from the system where the server is installed and the default port is used, you can use the loopback address (also known as localhost) as the IP address, as shown in the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre>https://127.0.0.1:9443</pre>
+</div>
+</div>
+</li>
+<li>
+<p>If you log in from a system that is remote from the server, the server is running on the IP address <code>192.0.2.0</code>, and the default port was changed during installation to <code>8443</code>, you would log in as shown in the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre>https://192.0.2.0:8443</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>After you enter the URL for the server, the Quipucords login page displays.</p>
+</div>
+</li>
+<li>
+<p>On the login page, enter the user name and password  and then click <strong>Log in</strong> to log in to the server.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Verification steps</div>
+<p>If this is the first time that you have logged in to Quipucords, the Welcome page displays. You can begin by adding sources and credentials that can be used in scans. If you have previously logged in to Quipucords, the Welcome page is skipped and you can interact with your previously created sources, credentials, and scans.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-logging-out-gui_assembly-accessing-client-gui-ctxt">Logging out of the Quipucords user interface</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>In the application toolbar, click the person icon or your user name.</p>
+</li>
+<li>
+<p>Click <strong>Logout</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-logging-in-cli_assembly-accessing-client-gui-ctxt">Logging in to the Quipucords command line interface</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">Prerequisites</div>
+<p>To log in to the Quipucords command line interface, you need the IP address of the system where the Quipucords server is installed and the port number for the connection. These values are set for the command line interface either during the installation of the CLI package or after installation as a configuration step. You also need the user name and password to use when logging in. If you do not have this information, contact the administrator who installed the Quipucords server.</p>
+</div>
+<div class="paragraph">
+<p>The login command retrieves a token that is used for authentication with subsequent command line interface commands. That token is removed when you log out of the server, and expires daily.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>To log in to the command line interface, enter the following command, where <code>server_port</code> is the port that the Quipucords server is using for HTTPS communication and <code><em>server_host</em></code> is the IP address of the server:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code># qpc server login --port=<em>server_port</em> --host=<em>server_host</em></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>At the prompts, enter the user name and password for Quipucords.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc-logging-out-cli_assembly-accessing-client-gui-ctxt">Logging out of the Quipucords command line interface</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The command to log out of the server removes the token that was created when you logged in to the server. This token also expires daily.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>To log out of the command line interface, enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code># qpc server logout</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-10-10 20:58:21 UTC
+Last updated 2019-11-06 18:46:27 UTC
 </div>
 </div>
 </body>
