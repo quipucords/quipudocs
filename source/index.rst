@@ -7,7 +7,7 @@
 Quipucords Documentation
 ========================
 
-Quipucords documentation has moved.   Please update update bookmarks to point to the new |new qpc docs|.
+Quipucords documentation has moved.   Please update bookmarks to point to the new |new qpc docs|.
 
 .. |new qpc docs| raw:: html
 
