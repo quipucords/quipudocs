@@ -7,9 +7,9 @@
 Quipucords Documentation
 ========================
 
-Quipucords documentation has moved.   See |Quipucords documentation|.
+Quipucords documentation has moved.   Please update update bookmarks to point to the new |new qpc docs|.
 
-.. |qpc-tools installation| raw:: html
+.. |new qpc docs| raw:: html
 
     <a href="https://quipucords.github.io/quipudocs/" target="_blank">Quipucords documentation</a>
 
