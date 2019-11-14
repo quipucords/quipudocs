@@ -18,9 +18,9 @@
 :QPCcommandOfflineDownloadToolsPackageStartDownloadRHEL7: https://github.com/quipucords/qpc-tools/releases/latest/download/qpc-tools.el7.noarch.rpm
 :QPCcommandOfflineDownloadToolsPackageNameRHEL6: qpc-tools.el6.noarch.rpm
 :QPCcommandOfflineDownloadToolsPackageStartDownloadRHEL6: https://github.com/quipucords/qpc-tools/releases/latest/download/qpc-tools.el6.noarch.rpm
-:QPCcommandInstallToolsRHEL8: # yum install -y https://github.com/quipucords/qpc-tools/releases/latest/download/qpc_tools.el8.noarch.rpm
-:QPCcommandInstallToolsRHEL7: # yum install -y https://github.com/quipucords/qpc-tools/releases/latest/download/qpc_tools.el7.noarch.rpm
-:QPCcommandInstallToolsRHEL6: # yum install -y https://github.com/quipucords/qpc-tools/releases/latest/download/qpc_tools.el6.noarch.rpm
+:QPCcommandInstallToolsRHEL8: # yum install -y https://github.com/quipucords/qpc-tools/releases/latest/download/qpc-tools.el8.noarch.rpm
+:QPCcommandInstallToolsRHEL7: # yum install -y https://github.com/quipucords/qpc-tools/releases/latest/download/qpc-tools.el7.noarch.rpm
+:QPCcommandInstallToolsRHEL6: # yum install -y https://github.com/quipucords/qpc-tools/releases/latest/download/qpc-tools.el6.noarch.rpm
 
 :QPCcommandOfflineDownloadServerPackageLanding: https://github.com/quipucords/quipucords/releases/latest/
 :QPCcommandOfflineDownloadServerPackageName: quipucords_server_image.tar.gz
