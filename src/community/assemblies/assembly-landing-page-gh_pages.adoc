@@ -17,6 +17,11 @@ To learn more about the purpose, benefits, and characteristics of {ProductNameSh
 .Using
 * link:user.html[Using Quipucords]
 
+To access information about previous versions of {ProductNameShort} documentation, see the following information:
+
+.Accessing previous documentation
+* link:archive.html[Quipucords documentation archive]
+
 // Restore the context to what it was before this assembly.
 ifdef::parent-context[:context: {parent-context}]
 ifndef::parent-context[:!context:]
