@@ -27,8 +27,10 @@ exports[`Distribution should match a specific docs file output 1`] = `
 Array [
   "",
   "./docs/README.md",
+  "./docs/archive.html",
   "./docs/index.html",
   "./docs/install.html",
+  "./docs/quipucords_docs_14nov2019*gz",
   "./docs/user.html",
 ]
 `;
