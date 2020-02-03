@@ -35,8 +35,16 @@ ifdef::discovery_install_guide[]
 endif::discovery_install_guide[]
 
 `--db-user=_database_username_`:: Sets the database user name for PostgreSQL. Defaults to `postgres`.
+[IMPORTANT]
+====
+If you later use {ProductToolsName} to upgrade {ProductNameShort}, you must use the same database user name and password during the upgrade. The failure to use the same database credentials could result in data loss.
+====
 
 `--db-password=_database_password_`:: Sets the database user password for PostgreSQL. This option has no default value. If omitted, {ProductToolsName} prompts for a password.
+[IMPORTANT]
+====
+If you later use {ProductToolsName} to upgrade {ProductNameShort}, you must use the same database user name and password during the upgrade. The failure to use the same database credentials could result in data loss.
+====
 
 `--username=_server_username_`:: Sets the {ProductNameShort} server administrator user name. Defaults to `admin`.
 
