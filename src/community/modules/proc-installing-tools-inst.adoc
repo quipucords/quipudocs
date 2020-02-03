@@ -47,7 +47,7 @@ The procedure at this link includes a step to install {AnsibleName}. Because {Pr
 
 . Enable the {ProductNameShort} repository:
 [source,options="nowrap",subs="attributes"]
-# subscription-manager repos --enable discovery-0-for-rhel8-x86_64-rpms
+# subscription-manager repos --enable discovery-0-for-rhel-8-x86_64-rpms
 
 . Install {ProductToolsName}:
 [source,options="nowrap",subs="attributes"]
