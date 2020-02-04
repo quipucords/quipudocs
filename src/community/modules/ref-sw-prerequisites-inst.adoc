@@ -14,12 +14,15 @@ ifdef::discovery_install_guide[]
 endif::discovery_install_guide[]
 ifdef::qpc_install_guide[]
 ** {RHELName} 6, 7, or 8
-** {CentOSName} 6 or 7
+** {CentOSName} 6, 7, or 8
 +
 [NOTE]
 ====
-{RHELNameShort} 7 or 8 or {CentOSName} 7 are the recommended operating system versions. For {RHELNameShort} 6 or {CentOSName} 6, the minimum required kernel is 2.6.32-431 or later.
+{RHELNameShort} 7 or 8 or {CentOSName} 7 or 8 are the recommended operating system versions. For {RHELNameShort} 6 or {CentOSName} 6, the minimum required kernel is 2.6.32-431 or later.
 ====
+
+* *Additional repositories:* For a {CentOSName} 8 installation, the Extra Packages for Enterprise Linux (EPEL) repository is required to install and use the {ProductToolsName} package. If you are doing an offline installation of {ProductNameShort}, the EPEL repository must be installed on both the connected machine where you download the {ProductNameShort} packages and on the disconnected machine where you install the {ProductNameShort} packages.
+
 endif::qpc_install_guide[]
 
 In addition to these software requirements, {ProductNameShort} has dependencies on other software. However, in some cases these dependencies are installed for you during installation, or instructions for their installation is integrated as part of the {ProductNameShort} installation process. The process to install dependencies can vary according several factors, including your operating system and whether you are doing an offline or online installation. Therefore, install the dependencies only as instructed by the {ProductNameShort} installation steps.
