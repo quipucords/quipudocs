@@ -33,6 +33,12 @@ endif::qpc_install_guide[]
 == Installing the server
 
 Install the server. The default server installation process prompts you to supply a password for the {ProductNameShort} server administrator and a password for the {PostgreSQLName} database user.
+[IMPORTANT]
+====
+As a best practice, note the {ProductNameShort} server administrator and the {PostgreSQLName} database user passwords in the password management system that is used by your organization. {ProductNameStartSentence} does not offer a method to recover these passwords.
+
+In addition, if you later use {ProductToolsName} to upgrade {ProductNameShort}, you must use the same database user name and password during the upgrade. The failure to use the same database credentials could result in data loss.
+====
 
 ifdef::discovery_install_guide[]
 . Install the server by entering the following command:
