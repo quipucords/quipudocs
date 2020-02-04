@@ -815,7 +815,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_installing_the_server">Installing the server</h3>
 <div class="paragraph">
-<p>Install the server. The default server installation process prompts you to enter your user name and password for the Red Hat Container Catalog (the registry.redhat.io website). It also prompts you to supply a password for the Quipucords server administrator and a password for the PostgreSQL database user.</p>
+<p>Install the server. The default server installation process prompts you to supply a password for the Quipucords server administrator and a password for the PostgreSQL database user.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -826,6 +826,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="content">
 <div class="paragraph">
 <p>As a best practice, note the Quipucords server administrator and the PostgreSQL database user passwords in the password management system that is used by your organization. The Quipucords tool does not offer a method to recover these passwords.</p>
+</div>
+<div class="paragraph">
+<p>In addition, if you later use qpc-tools to upgrade Quipucords, you must use the same database user name and password during the upgrade. The failure to use the same database credentials could result in data loss.</p>
 </div>
 </td>
 </tr>
@@ -937,10 +940,46 @@ This option is required if the <code>offline-files</code> option is specified.</
 <dd>
 <p>Sets the database user name for PostgreSQL. Defaults to <code>postgres</code>.</p>
 </dd>
+</dl>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you later use qpc-tools to upgrade Quipucords, you must use the same database user name and password during the upgrade. The failure to use the same database credentials could result in data loss.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1"><code>--db-password=<em>database_password</em></code></dt>
 <dd>
 <p>Sets the database user password for PostgreSQL. This option has no default value. If omitted, qpc-tools prompts for a password.</p>
 </dd>
+</dl>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you later use qpc-tools to upgrade Quipucords, you must use the same database user name and password during the upgrade. The failure to use the same database credentials could result in data loss.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1"><code>--username=<em>server_username</em></code></dt>
 <dd>
 <p>Sets the Quipucords server administrator user name. Defaults to <code>admin</code>.</p>
@@ -1418,6 +1457,23 @@ The offline installation script requires the TAR file to be named <code>postgres
 <div class="paragraph">
 <p>Install the server. The default server installation process prompts you to supply a password for the Quipucords server administrator and a password for the PostgreSQL database user.</p>
 </div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>As a best practice, note the Quipucords server administrator and the PostgreSQL database user passwords in the password management system that is used by your organization. The Quipucords tool does not offer a method to recover these passwords.</p>
+</div>
+<div class="paragraph">
+<p>In addition, if you later use qpc-tools to upgrade Quipucords, you must use the same database user name and password during the upgrade. The failure to use the same database credentials could result in data loss.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1508,10 +1564,46 @@ This option is required if the <code>offline-files</code> option is specified.</
 <dd>
 <p>Sets the database user name for PostgreSQL. Defaults to <code>postgres</code>.</p>
 </dd>
+</dl>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you later use qpc-tools to upgrade Quipucords, you must use the same database user name and password during the upgrade. The failure to use the same database credentials could result in data loss.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1"><code>--db-password=<em>database_password</em></code></dt>
 <dd>
 <p>Sets the database user password for PostgreSQL. This option has no default value. If omitted, qpc-tools prompts for a password.</p>
 </dd>
+</dl>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you later use qpc-tools to upgrade Quipucords, you must use the same database user name and password during the upgrade. The failure to use the same database credentials could result in data loss.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1"><code>--username=<em>server_username</em></code></dt>
 <dd>
 <p>Sets the Quipucords server administrator user name. Defaults to <code>admin</code>.</p>
@@ -1794,7 +1886,7 @@ You access the command line interface by running a command to connect to the ser
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-02-03 18:43:44 UTC
+Last updated 2020-02-04 18:42:07 UTC
 </div>
 </div>
 </body>

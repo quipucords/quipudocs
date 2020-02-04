@@ -843,6 +843,9 @@ tion, see <a href="#proc-installing-scripted-online-inst_assembly-installing-scr
 <div class="paragraph">
 <p>As a best practice, note the discovery server administrator and the PostgreSQL database user passwords in the password management system that is used by your organization. The product discovery tool does not offer a method to recover these passwords.</p>
 </div>
+<div class="paragraph">
+<p>In addition, if you later use discovery-tools to upgrade discovery, you must use the same database user name and password during the upgrade. The failure to use the same database credentials could result in data loss.</p>
+</div>
 </td>
 </tr>
 </table>
@@ -962,10 +965,46 @@ tion, see <a href="#proc-installing-scripted-online-inst_assembly-installing-scr
 <dd>
 <p>Sets the database user name for PostgreSQL. Defaults to <code>postgres</code>.</p>
 </dd>
+</dl>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you later use discovery-tools to upgrade discovery, you must use the same database user name and password during the upgrade. The failure to use the same database credentials could result in data loss.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1"><code>--db-password=<em>database_password</em></code></dt>
 <dd>
 <p>Sets the database user password for PostgreSQL. This option has no default value. If omitted, discovery-tools prompts for a password.</p>
 </dd>
+</dl>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you later use discovery-tools to upgrade discovery, you must use the same database user name and password during the upgrade. The failure to use the same database credentials could result in data loss.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1"><code>--username=<em>server_username</em></code></dt>
 <dd>
 <p>Sets the discovery server administrator user name. Defaults to <code>admin</code>.</p>
@@ -1243,7 +1282,7 @@ You access the command line interface by running a command to connect to the ser
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-02-03 18:43:44 UTC
+Last updated 2020-02-04 18:42:07 UTC
 </div>
 </div>
 </body>
