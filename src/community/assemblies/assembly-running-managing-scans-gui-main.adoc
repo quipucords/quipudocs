@@ -3,7 +3,7 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-running-managing-scans-gui-main_{context}"]
+[id="assembly-running-managing-scans-gui-main"]
 
 :context: assembly-running-managing-scans-gui-main-ctxt
 

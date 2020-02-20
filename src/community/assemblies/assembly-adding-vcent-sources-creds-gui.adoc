@@ -3,7 +3,7 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-adding-vcent-sources-creds-gui_{context}"]
+[id="assembly-adding-vcent-sources-creds-gui"]
 
 :context: assembly-adding-vcent-sources-creds-gui-ctxt
 

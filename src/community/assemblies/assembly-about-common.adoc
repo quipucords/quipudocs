@@ -3,7 +3,7 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-about-common_{context}"]
+[id="assembly-about-common"]
 
 :context: assembly-about-common-ctxt
 
@@ -27,7 +27,7 @@ To learn more about the products and product versions that {ProductNameShort} ca
 
 * xref:ref-what-prods-find-common_{context}[What products does {ProductNameShort} find?]
 
-To evaluate whether {ProductNameShort} is a correct solution for you, see the following information: 
+To evaluate whether {ProductNameShort} is a correct solution for you, see the following information:
 
 * xref:con-right-for-me-common_{context}[Is {ProductNameShort} right for me?]
 
