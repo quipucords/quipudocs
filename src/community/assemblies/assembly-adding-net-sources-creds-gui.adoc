@@ -3,7 +3,7 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-adding-net-sources-creds-gui_{context}"]
+[id="assembly-adding-net-sources-creds-gui"]
 
 :context: assembly-adding-net-sources-creds-gui-ctxt
 

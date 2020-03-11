@@ -3,7 +3,7 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-landing-page-gh_pages_{context}"]
+[id="assembly-landing-page-gh_pages"]
 
 :context: assembly-landing-page-gh_pages-ctxt
 

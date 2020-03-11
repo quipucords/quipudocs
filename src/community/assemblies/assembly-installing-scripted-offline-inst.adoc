@@ -3,7 +3,7 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-installing-scripted-offline-inst_{context}"]
+[id="assembly-installing-scripted-offline-inst"]
 
 :context: assembly-installing-scripted-offline-inst-ctxt
 

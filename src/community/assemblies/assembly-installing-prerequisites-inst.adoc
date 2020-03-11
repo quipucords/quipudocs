@@ -3,7 +3,7 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-installing-prerequisites-inst_{context}"]
+[id="assembly-installing-prerequisites-inst"]
 
 :context: assembly-installing-prerequisites-inst-ctxt
 

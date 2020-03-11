@@ -3,7 +3,7 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-adding-sources-creds-gui-main_{context}"]
+[id="assembly-adding-sources-creds-gui-main"]
 
 :context: assembly-adding-sources-creds-gui-main-ctxt
 
@@ -23,15 +23,15 @@ As part of the general process of adding sources and credentials that encompass 
 
 Add network sources and credentials to scan assets such as physical machines, virtual machines, or containers in your network. To learn more, see the following information:
 
-* xref:assembly-adding-net-sources-creds-gui_{context}[Adding network sources and credentials]
+* xref:assembly-adding-net-sources-creds-gui[Adding network sources and credentials]
 
 Add satellite sources and credentials to scan your deployment of {SatelliteServerName} to find the assets that it manages. To learn more, see the following information:
 
-* xref:assembly-adding-sat-sources-creds-gui_{context}[Adding satellite sources and credentials]
+* xref:assembly-adding-sat-sources-creds-gui[Adding satellite sources and credentials]
 
 Add vcenter sources and credentials to scan your deployment of {vCenterServerName} to find the assets that it manages. To learn more, see the following information:
 
-* xref:assembly-adding-vcent-sources-creds-gui_{context}[Adding vcenter sources and credentials]
+* xref:assembly-adding-vcent-sources-creds-gui[Adding vcenter sources and credentials]
 
 // do you need level offset in each assembly? at master doc level only? confused about this one.
 

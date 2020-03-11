@@ -3,7 +3,7 @@
 
 ifdef::context[:parent-context: {context}]
 
-[id="assembly-downloading-reports-gui_{context}"]
+[id="assembly-downloading-reports-gui"]
 
 :context: assembly-downloading-reports-gui-ctxt
 
